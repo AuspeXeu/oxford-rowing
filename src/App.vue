@@ -10,7 +10,7 @@
           :items="boats"
           item-text="short"
           v-model="boatsSelected"
-          label="Crews"
+          label="Crew"
           autocomplete
           dense
           multiple
@@ -784,6 +784,7 @@ export default {
     selectBoat(boat) {
       this.boatsHigh.forEach((boat) => this.chartData[boat.id][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = [boat]
+      this.boatsSelected = [boat]
       this.chartData[boat.id][boat.gender][boat.number].color = 'orange'
     },
     curPos(boat) {
