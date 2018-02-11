@@ -9,15 +9,15 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="27.093334mm"
-   height="27.093334mm"
-   viewBox="0 0 96.000003 96.000003"
-   id="svg5486"
+   width="27.093332mm"
+   height="27.093332mm"
+   viewBox="0 0 95.999996 95.999996"
+   id="svg12367"
    version="1.1"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="MAG.svg">
+   sodipodi:docname="BAL.svg">
   <defs
-     id="defs5488" />
+     id="defs12369" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="-183.68956"
-     inkscape:cy="7.4617858"
+     inkscape:zoom="3.959798"
+     inkscape:cx="49.909752"
+     inkscape:cy="55.184013"
      inkscape:document-units="px"
-     inkscape:current-layer="svg5486"
+     inkscape:current-layer="svg12367"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -41,31 +41,25 @@
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata5491">
+     id="metadata12372">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     id="MAG">
+  <g id="BAL">
     <circle
-       style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4304-4-7"
+       style="opacity:1;fill:#0f2e61;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        cx="48"
-       cy="48.000004"
+       cy="48"
        r="47.5" />
-    <ellipse
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4304-4-7-5"
-       cx="48.59795"
-       cy="47.638832"
-       rx="24.422501"
-       ry="24.422476" />
+    <path
+       style="opacity:1;fill:#c91a17;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 48.486685,1.1825945 a 47.5,47.053571 0 0 0 -12.5,1.66778 V 93.577474 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.8948645 a 47.5,47.053571 0 0 0 -12.5,-1.71227 z"/>
   </g>
 </svg>

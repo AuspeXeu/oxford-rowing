@@ -12,12 +12,12 @@
    width="27.093334mm"
    height="27.093334mm"
    viewBox="0 0 96.000003 96.000003"
-   id="svg8367"
+   id="svg20004"
    version="1.1"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="JEO.svg">
+   sodipodi:docname="QCO.svg">
   <defs
-     id="defs8369" />
+     id="defs20006" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-1038.4286"
-     inkscape:cy="-60.571433"
+     inkscape:zoom="3.959798"
+     inkscape:cx="86.8275"
+     inkscape:cy="70.807538"
      inkscape:document-units="px"
-     inkscape:current-layer="svg8367"
+     inkscape:current-layer="svg20004"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -41,7 +41,7 @@
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata8372">
+     id="metadata20009">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -52,16 +52,14 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     id="JEO">
+  <g id="QCO">
     <circle
-       style="opacity:1;fill:#0e922b;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4304-7-02"
-       cx="48"
+       r="47.5"
        cy="48.000004"
-       r="47.5">
-      <title
-         id="title4386">Jesus</title>
-    </circle>
+       cx="48"
+       style="opacity:1;fill:#03035c;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="m 94.817404,47.809263 a 47.053571,47.5 0 0 0 -1.66778,-12.5 H 2.4225235 a 47.053571,47.5 0 0 0 -1.71226002,12.5 47.053571,47.5 0 0 0 1.66776002,12.5 H 93.105134 a 47.053571,47.5 0 0 0 1.71227,-12.5 z"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
 </svg>

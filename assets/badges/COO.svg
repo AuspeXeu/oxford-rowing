@@ -12,12 +12,12 @@
    width="27.093334mm"
    height="27.093334mm"
    viewBox="0 0 96.000003 96.000003"
-   id="svg10651"
+   id="svg12943"
    version="1.1"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
-   sodipodi:docname="CHB.svg">
+   sodipodi:docname="COO.svg">
   <defs
-     id="defs10653" />
+     id="defs12945" />
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="285.85179"
-     inkscape:cy="-258.97995"
+     inkscape:zoom="22.4"
+     inkscape:cx="48.913296"
+     inkscape:cy="99.945976"
      inkscape:document-units="px"
-     inkscape:current-layer="svg10651"
+     inkscape:current-layer="svg12943"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
@@ -41,7 +41,7 @@
      inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
-     id="metadata10656">
+     id="metadata12948">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -52,16 +52,14 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <g
-     id="CHB">
+  <g id="COO">
     <circle
-       style="opacity:1;fill:#12266e;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4304-7-0"
+       style="opacity:1;fill:#121078;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        cx="48"
        cy="48.000004"
-       r="47.5">
-      <title
-         id="title4343">ChristChurch</title>
-    </circle>
+       r="47.5" />
+    <path
+       style="opacity:1;fill:#740404;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 48.172393,1.0077731 a 47.5,47.053571 0 0 0 -12.5,1.66778 V 93.402653 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.7200431 a 47.5,47.053571 0 0 0 -12.5,-1.71227 z"/>
   </g>
 </svg>
