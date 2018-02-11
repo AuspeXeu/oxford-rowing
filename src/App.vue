@@ -2,15 +2,15 @@
 <div id="app">
   <v-app>
     <v-toolbar fixed app dense>
-      <v-toolbar-title>{{'Live Bumps - ' + event.name + ' ' + event.year}}</v-toolbar-title>
+      <v-toolbar-title>{{'Live Bumps' + (event ? (' - ' + event.name + ' ' + event.year) : '')}}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-select
           :items="boats"
+          item-text="short"
           v-model="boatsSelected"
-          v-show="false"
-          label="Select"
+          label="Crews"
           autocomplete
           dense
           multiple
@@ -614,8 +614,8 @@
           <g id="containerMen" transform="scale(0.5),translate(5,7)">
             <path v-for="div in divsMen" :transform="'translate(0,'+ (((13 * div)  * (47.5 + 10)) -5) +')'" d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
             <g v-for="(boat, idx) in boatsMen" :transform="'translate(0,' + ((boat.start - 1) * (47.5 + 10)) + ')'">
-              <path :d="makeLine(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
-              <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
+              <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
+              <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
               <use v-bind:xlink:href="'#' + boat.id" @click="selectBoat(boat)"></use>
               <use v-bind:xlink:href="'#' + boat.id" @click="selectBoat(boat)" :transform="'translate('+curPos(boat).x+',' + curPos(boat).y + ')'"></use>
             </g>
@@ -623,8 +623,8 @@
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
             <path v-for="div in divsWomen" :transform="'translate(0,'+ (((13 * div)  * (47.5 + 10)) -5) +')'" d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
             <g v-for="(boat,idx) in boatsWomen" :transform="'translate(0,' + ((boat.start - 1) * (47.5 + 10)) + ')'">
-              <path :d="makeLine(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
-              <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
+              <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
+              <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
               <use v-bind:xlink:href="'#' + boat.id" @click="selectBoat(boat)"></use>
               <use v-bind:xlink:href="'#' + boat.id" @click="selectBoat(boat)" :transform="'translate('+curPos(boat).x+',' + curPos(boat).y + ')'"></use>
             </g>
@@ -648,6 +648,8 @@ export default {
       boatsSelected: [],
       name: 'live',
       event: {},
+      points: {},
+      boatsHigh: [],
       events: [{year: 2018, name: 'Torpids'}, {year: 2017, name: 'Eights'}],
       chartData: {}
     }
@@ -680,15 +682,24 @@ export default {
           })
       })*/
   },
+  watch: {
+    boatsSelected() {
+      this.boatsHigh.forEach((boat) => this.chartData[boat.id][boat.gender][boat.number].color = 'gray')
+      this.boatsHigh = []
+      this.boatsSelected.forEach((boat) => {
+        this.chartData[boat.id][boat.gender][boat.number].color = 'orange'
+        this.boatsHigh.push(boat)
+      })
+    }
+  },
   computed: {
     boats() {
-      const boats = new Set()
+      let boats = []
       for (let key in this.chartData) {
         const club = this.chartData[key]
-        club.men.forEach((boat, idx) => boats.add(`${key} ${idx+1}`))
-        club.women.forEach((boat, idx) => boats.add(`${key} ${idx+1}`))
+        boats = boats.concat(club.men).concat(club.women)
       }
-      return Array.from(boats)
+      return boats
     },
     divsMen() {
       const ary = Array.from({length: Math.ceil(this.rowsMen / 13)}, (x,i) => i)
@@ -732,16 +743,48 @@ export default {
     }
   },
   methods: {
+    romanize(num) {
+      if (!+num)
+        return NaN;
+      var digits = String(+num).split(""),
+        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+               "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+               "","I","II","III","IV","V","VI","VII","VIII","IX"],
+        roman = "",
+        i = 3;
+      while (i--)
+        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+      return Array(+digits.join("") + 1).join("M") + roman;
+    },
     loadData(event) {
       axios.get(`./static/data/${(event.name === 'Torpids' ? 'torpids' : 'eights')}_${event.year}.json`)
         .then((response) => {
-          for (let key in response.data)
+          for (let key in response.data) {
+            response.data[key].men = response.data[key].men.map((boat, idx) => {
+              boat.id = key
+              boat.gender = 'men'
+              boat.number = idx
+              boat.color = 'gray'
+              boat.short = `${boat.id} M${this.romanize(boat.number + 1)}`
+              return boat
+            })
+            response.data[key].women = response.data[key].women.map((boat, idx) => {
+              boat.id = key
+              boat.gender = 'women'
+              boat.number = idx
+              boat.short = `${boat.id} W${this.romanize(boat.number + 1)}`
+              boat.color = 'gray'
+              return boat
+            })
             Vue.set(this.chartData, key, response.data[key])
+          }
           this.event = event
         })
     },
     selectBoat(boat) {
-      console.log(boat.id, boat.start)
+      this.boatsHigh.forEach((boat) => this.chartData[boat.id][boat.gender][boat.number].color = 'gray')
+      this.boatsHigh = [boat]
+      this.chartData[boat.id][boat.gender][boat.number].color = 'orange'
     },
     curPos(boat) {
       return {
