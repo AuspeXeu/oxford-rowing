@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="-20.851151"
-     inkscape:cy="54.4094"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="-69.260537"
+     inkscape:cy="72.662854"
      inkscape:document-units="px"
      inkscape:current-layer="svg5486"
      showgrid="false"
@@ -48,17 +48,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="ORO"
-     transform="translate(630.85712,-101.24918)">
+     id="ORO">
     <path
        style="opacity:1;fill:#1c4882;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 53.09375,0.7890625 V 24.126953 A 24.422476,24.422476 0 0 1 72.421875,48 24.422476,24.422476 0 0 1 53.09375,71.855469 V 95.169922 A 47.5,47.5 0 0 0 95.5,48 47.5,47.5 0 0 0 53.09375,0.7890625 Z M 42.759766,0.84765625 A 47.5,47.5 0 0 0 0.5,48 47.5,47.5 0 0 0 42.759766,95.185547 V 71.835938 A 24.422476,24.422476 0 0 1 23.578125,48 24.422476,24.422476 0 0 1 42.759766,24.177734 Z"
-       transform="translate(-630.85712,101.50507)"
+       d="M 53.09375,1.0449449 V 24.382835 a 24.422476,24.422476 0 0 1 19.328125,23.87305 24.422476,24.422476 0 0 1 -19.328125,23.85547 v 23.31445 A 47.5,47.5 0 0 0 95.5,48.255885 47.5,47.5 0 0 0 53.09375,1.0449449 Z m -10.333984,0.0586 A 47.5,47.5 0 0 0 0.50000016,48.255885 47.5,47.5 0 0 0 42.759766,95.441435 V 72.091825 A 24.422476,24.422476 0 0 1 23.578125,48.255885 24.422476,24.422476 0 0 1 42.759766,24.433615 Z"
        id="path4304-4-7"
        inkscape:connector-curvature="0" />
   </g>

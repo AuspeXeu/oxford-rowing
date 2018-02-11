@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-734.14286"
-     inkscape:cy="402.28568"
+     inkscape:zoom="1.979899"
+     inkscape:cx="46.818401"
+     inkscape:cy="30.778617"
      inkscape:document-units="px"
      inkscape:current-layer="svg6074"
      showgrid="false"
@@ -48,34 +48,33 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="MAN"
-     transform="translate(-186.28572,-838.64788)">
+     id="MAN">
     <circle
        style="opacity:1;fill:#eb0707;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-31"
-       cx="234.28572"
-       cy="886.64789"
+       cx="48"
+       cy="48.000004"
        r="47.5" />
     <rect
-       style="opacity:1;fill:#dec30a;fill-opacity:1;stroke:none;stroke-width:1.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#dec30a;fill-opacity:1;stroke:none;stroke-width:1.80000639;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4218-3"
        width="14.338641"
-       height="54.185242"
-       x="879.47858"
-       y="-261.3783"
+       height="54.185627"
+       x="39.992569"
+       y="-74.546516"
        transform="rotate(90)" />
     <rect
-       style="opacity:1;fill:#dec30a;fill-opacity:1;stroke:none;stroke-width:1.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#dec30a;fill-opacity:1;stroke:none;stroke-width:1.80002642;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4218-3-9"
-       width="14.338641"
+       width="14.339063"
        height="54.185242"
-       x="-241.45503"
-       y="-913.74054"
+       x="-54.58733"
+       y="-74.692101"
        transform="scale(-1)" />
   </g>
 </svg>

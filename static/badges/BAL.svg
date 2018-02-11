@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="27.093334mm"
-   height="27.093334mm"
-   viewBox="0 0 96.000003 96.000003"
+   width="27.093332mm"
+   height="27.093332mm"
+   viewBox="0 0 95.999996 95.999996"
    id="svg12367"
    version="1.1"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="-136.35871"
-     inkscape:cy="1.2532189"
+     inkscape:zoom="3.959798"
+     inkscape:cx="49.909752"
+     inkscape:cy="55.184013"
      inkscape:document-units="px"
      inkscape:current-layer="svg12367"
      showgrid="false"
@@ -53,17 +53,15 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="BAL"
-     transform="translate(45.142855,-370.0765)">
+     id="BAL">
     <circle
        style="opacity:1;fill:#0f2e61;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path4304-5"
-       cx="2.8571453"
-       cy="418.07651"
+       cx="48"
+       cy="47.999996"
        r="47.5" />
     <path
        style="opacity:1;fill:#c91a17;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 2.85711,371.00081 a 47.5,47.053571 0 0 0 -12.5,1.66778 v 90.7271 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 v -90.72711 a 47.5,47.053571 0 0 0 -12.5,-1.71227 z"
+       d="m 48.486685,1.1825945 a 47.5,47.053571 0 0 0 -12.5,1.66778 V 93.577474 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.8948645 a 47.5,47.053571 0 0 0 -12.5,-1.71227 z"
        id="rect4858-3"
        inkscape:connector-curvature="0" />
   </g>

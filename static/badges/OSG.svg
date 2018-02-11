@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-896.99999"
-     inkscape:cy="-31.999992"
+     inkscape:zoom="2.8"
+     inkscape:cx="59.605753"
+     inkscape:cy="37.060569"
      inkscape:document-units="px"
      inkscape:current-layer="svg19433"
      showgrid="false"
@@ -48,24 +48,24 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="OSG"
-     transform="translate(-349.14285,-404.36221)">
+     id="OSG">
     <circle
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-4-7-7"
-       cx="397.14285"
-       cy="452.36221"
+       cx="48"
+       cy="48.000004"
        r="47.5" />
-    <circle
+    <ellipse
        style="opacity:1;fill:#ba0a0a;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-4-7-5-3"
-       cx="397.14285"
-       cy="452.36221"
-       r="24.422476" />
+       cx="48.025181"
+       cy="48.309673"
+       rx="24.422501"
+       ry="24.422476" />
   </g>
 </svg>

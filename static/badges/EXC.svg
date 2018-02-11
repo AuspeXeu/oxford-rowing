@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.175"
-     inkscape:cx="-1113.458"
+     inkscape:cx="-2116.3151"
      inkscape:cy="-75.132958"
      inkscape:document-units="px"
      inkscape:current-layer="svg10085"
@@ -48,18 +48,17 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="EXC"
-     transform="translate(-386.28571,-192.93363)">
+     id="EXC">
     <circle
        style="opacity:1;fill:#c30b0b;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-7-0-8"
-       cx="434.28571"
-       cy="240.93364"
+       cx="48"
+       cy="48.000004"
        r="47.5">
       <title
          id="title4345">Exeter</title>

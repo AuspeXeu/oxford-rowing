@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-319.85714"
-     inkscape:cy="356.57145"
+     inkscape:zoom="2.8"
+     inkscape:cx="30.183493"
+     inkscape:cy="92.353924"
      inkscape:document-units="px"
      inkscape:current-layer="svg22320"
      showgrid="false"
@@ -48,24 +48,24 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="SCO"
-     transform="translate(228,-792.93365)">
+     id="SCO">
     <circle
        style="opacity:1;fill:#46bada;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-4-7-7-2"
-       cx="-180"
-       cy="840.93365"
+       cx="48"
+       cy="48.000004"
        r="47.5" />
-    <circle
+    <ellipse
        style="opacity:1;fill:#761b2e;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-4-7-5-3-7"
-       cx="-180"
-       cy="840.93365"
-       r="24.422476" />
+       cx="47.891251"
+       cy="48.10878"
+       rx="24.422501"
+       ry="24.422476" />
   </g>
 </svg>

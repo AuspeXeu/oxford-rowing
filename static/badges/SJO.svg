@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-1134.1429"
-     inkscape:cy="282.28568"
+     inkscape:zoom="2.8"
+     inkscape:cx="58.825195"
+     inkscape:cy="17.840887"
      inkscape:document-units="px"
      inkscape:current-layer="svg23484"
      showgrid="false"
@@ -48,27 +48,26 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="SJO"
-     transform="translate(-586.28571,-718.64788)">
+     id="SJO">
     <circle
        style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-01-5-3-6"
-       cx="634.28571"
-       cy="766.64789"
+       cx="48"
+       cy="48.000004"
        r="47.5" />
     <path
        style="opacity:1;fill:#00007f;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 681.33926,766.64797 a 47.053571,47.5 0 0 0 -1.66778,-12.5 h -90.7271 a 47.053571,47.5 0 0 0 -1.71226,12.5 47.053571,47.5 0 0 0 1.66776,12.5 h 90.72711 a 47.053571,47.5 0 0 0 1.71227,-12.5 z"
+       d="m 95.054207,48.19399 a 47.053596,47.5 0 0 0 -1.667781,-12.5 H 2.6592789 a 47.053596,47.5 0 0 0 -1.71226091,12.5 47.053596,47.5 0 0 0 1.66776091,12.5 H 93.341936 a 47.053596,47.5 0 0 0 1.712271,-12.5 z"
        id="rect4858-2-1-2-3"
        inkscape:connector-curvature="0" />
     <path
-       style="opacity:1;fill:#00007f;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 634.28569,813.70154 a 47.5,47.053571 0 0 0 12.5,-1.66778 v -90.7271 a 47.5,47.053571 0 0 0 -12.5,-1.71226 47.5,47.053571 0 0 0 -12.5,1.66776 v 90.72711 a 47.5,47.053571 0 0 0 12.5,1.71227 z"
+       style="opacity:1;fill:#00007f;fill-opacity:1;stroke:none;stroke-width:1.0000062;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 48.013333,95.025495 A 47.500595,47.053571 0 0 0 60.51349,93.357715 V 2.6306155 A 47.500595,47.053571 0 0 0 48.013333,0.91835546 47.500595,47.053571 0 0 0 35.513177,2.5861155 V 93.313225 a 47.500595,47.053571 0 0 0 12.500156,1.71227 z"
        id="rect4858-2-1-2-5-7"
        inkscape:connector-curvature="0" />
   </g>

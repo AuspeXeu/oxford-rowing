@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-537"
+     inkscape:cx="-1038.4286"
      inkscape:cy="-60.571433"
      inkscape:document-units="px"
      inkscape:current-layer="svg8367"
@@ -48,18 +48,17 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="JEO"
-     transform="translate(10.857143,-375.79077)">
+     id="JEO">
     <circle
        style="opacity:1;fill:#0e922b;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-7-02"
-       cx="37.142857"
-       cy="423.79077"
+       cx="48"
+       cy="48.000004"
        r="47.5">
       <title
          id="title4386">Jesus</title>

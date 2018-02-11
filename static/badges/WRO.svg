@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="-1114.1429"
-     inkscape:cy="-23.42858"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-46.089511"
+     inkscape:cy="23.147979"
      inkscape:document-units="px"
      inkscape:current-layer="svg13526"
      showgrid="false"
@@ -48,34 +48,33 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="WRO"
-     transform="translate(-566.28571,-412.93362)">
+     id="WRO">
     <circle
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4304-31-1-8"
-       cx="614.28571"
-       cy="460.93362"
+       cx="48"
+       cy="48.000004"
        r="47.5" />
     <rect
-       style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.80000639;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4218-3-6-0"
        width="14.338641"
-       height="54.185242"
-       x="453.76431"
-       y="-641.3783"
+       height="54.185627"
+       x="40.702831"
+       y="-75.256775"
        transform="rotate(90)" />
     <rect
-       style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.79999995;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1.80002642;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4218-3-6-6-2"
-       width="14.338641"
+       width="14.339063"
        height="54.185242"
-       x="-621.45502"
-       y="-488.02628"
+       x="-55.297592"
+       y="-75.875877"
        transform="scale(-1)" />
   </g>
 </svg>
