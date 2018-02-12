@@ -35,26 +35,25 @@ const authReq = (req, res, next) => {
 
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 app.post('/bump', authReq, (req, res) => {
-  const event = (req.body.event.name === 'Torpids' ? 'torpids' : 'eights')
-  const year = parseInt(req.body.event.year, 10)
-  const bump = req.body.bump
-  const club = bump.boat.club
-  const gender = bump.boat.gender
-  const number = parseInt(bump.boat.number, 10)
-  const day = parseInt(bump.day, 10)
-  const moves = parseInt(bump.moves, 10)
+  const name = req.body.name.toLowerCase()
+  const year = parseInt(req.body.year, 10)
+  const club = req.body.club
+  const gender = req.body.gender
+  const number = parseInt(req.body.number, 10)
+  const day = parseInt(req.body.day, 10)
+  const moves = parseInt(req.body.moves, 10)
 
-  fs.access(`${__dirname}/dist/static/data/${event}_${year}.json`, fs.F_OK, (err) => {
+  fs.access(`${__dirname}/dist/static/data/${name}_${year}.json`, fs.F_OK, (err) => {
     if (err)
       res.sendStatus(400)
     else {
-      const data = require(`${__dirname}/dist/static/data/${event}_${year}.json`)
+      const data = require(`${__dirname}/dist/static/data/${name}_${year}.json`)
       if (data[club][gender][number].moves.length >= day)
         data[club][gender][number].moves[day-1] = moves
       else
         data[club][gender][number].moves.push(moves)
-      clients.forEach((ws) => ws.send(JSON.stringify(bump)))
-      fs.writeFile(`${__dirname}/dist/static/data/${event}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
+      clients.forEach((ws) => ws.send(JSON.stringify({name: name,year: year,club: club,gender: gender,number: number,day: day,moves: moves})))
+      fs.writeFile(`${__dirname}/dist/static/data/${name}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
     }
   })
 })

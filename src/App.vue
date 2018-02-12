@@ -744,16 +744,20 @@ export default {
     const socket = new WebSocket(`${window.location.origin.replace('http','ws')}/live`)
     socket.onmessage = (event) => {
       const bump = JSON.parse(event.data)
-      const club = bump.boat.club
-      const gender = bump.boat.gender
-      const number = parseInt(bump.boat.number, 10)
+      const club = bump.club
+      const gender = bump.gender
+      const name = bump.name
+      const year = parseInt(bump.year, 10)
+      const number = parseInt(bump.number, 10)
       const day = parseInt(bump.day, 10)
       const moves = parseInt(bump.moves, 10)
+      if (this.event.year !== year || this.event.name.toLowerCase() !=== 'name')
+        return
       if (this.chartData[club][gender][number].moves.length >= day)
         Vue.set(this.chartData[club][gender][number].moves, day-1, moves)
       else
         this.chartData[club][gender][number].moves.push(moves)
-      this.notify(`${bump.boat.short} moves ${moves}`, 'info')
+      this.notify(`${this.clubToName(club)} M${this.romanize(number + 1)} moves ${moves}`, 'info')
     }
   },
   mounted() {
@@ -872,8 +876,13 @@ export default {
     submitBump() {
       this.bumpDialog = false
       axios.post('/bump', {
-        event: this.event,
-        bump: this.bump
+        year: this.event.year,
+        name: this.event.name,
+        day: this.bump.day,
+        moves: this.bump.moves,
+        club: this.bump.boat.club,
+        gender: this.bump.boat.gender,
+        number: this.bump.boat.number
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
       .catch((error) => this.notify('Failed to submit bump', 'error'))
@@ -901,7 +910,7 @@ export default {
       return table[club]
     },
     loadData(event) {
-      axios.get(`./static/data/${(event.name === 'Torpids' ? 'torpids' : 'eights')}_${event.year}.json`)
+      axios.get(`./static/data/${event.name.toLowerCase()}_${event.year}.json`)
         .then((response) => {
           for (let key in response.data) {
             response.data[key].men = response.data[key].men.map((boat, idx) => {
@@ -925,7 +934,7 @@ export default {
           this.bump.boat = this.boats[0]
           this.event = event
         })
-      axios.get(`./static/data/${(event.name === 'Torpids' ? 'torpids' : 'eights')}_${event.year}_divs.json`)
+      axios.get(`./static/data/${event.name.toLowerCase()}_${event.year}_divs.json`)
         .then((response) => {
           this.divs = response.data
         })
