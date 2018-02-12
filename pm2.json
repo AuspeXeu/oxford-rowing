@@ -1,0 +1,7 @@
+{
+  apps : [{
+    name: 'bumps',
+    script: './server.js',
+    watch: false
+  }]
+}
