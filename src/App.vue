@@ -642,6 +642,8 @@
           <v-card>
             <v-card-title>
               <span class="headline">Update Bump</span>
+              <v-spacer></v-spacer>
+              <v-icon>{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
             </v-card-title>
             <v-card-text>
               <v-container grid-list-md>
@@ -656,9 +658,9 @@
                   </v-flex>
                   <v-flex xs12 sm6 md4>
                     <v-select
-                      label="Club"
+                      label="Boat"
                       item-text="short"
-                      v-model="bump.club"
+                      v-model="bump.boat"
                       required
                       autocomplete
                       :items="boats"
@@ -674,12 +676,12 @@
                   </v-flex>
                 </v-layout>
               </v-container>
-              <small>*indicates required field</small>
             </v-card-text>
             <v-card-actions>
+              <small class="pl-3">*indicates required field</small>
               <v-spacer></v-spacer>
               <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Close</v-btn>
-              <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Update</v-btn>
+              <v-btn color="blue darken-1" flat :disabled="!verified" @click.native="submitBump()">Submit</v-btn>
             </v-card-actions>
           </v-card>
         </v-dialog>  
@@ -694,6 +696,15 @@
       </v-btn>
       <div>© {{ new Date().getFullYear() }}</div>
     </v-footer>
+    <v-snackbar
+      :timeout="snack.timeout"
+      :color="snack.color"
+      :multi-line="snack.multi"
+      v-model="snack.visible"
+    >
+      {{ snack.text }}
+      <v-btn dark flat @click.native="snack.visible = false">Close</v-btn>
+    </v-snackbar>
   </v-app>
 </div>
 </template>
@@ -711,6 +722,14 @@ export default {
       name: 'live',
       event: false,
       auth: false,
+      snack: {
+        multi: false,
+        visible: false,
+        timeout: 5000,
+        color: 'success',
+        text: ''
+      },
+      verified: false,
       bump: {moves: 0},
       bumpDialog: false,
       bumpRules: [(v) => !isNaN(v) || 'Has to be a number'],
@@ -719,6 +738,22 @@ export default {
       divs: false,
       events: [{year: 2018, name: 'Torpids'}, {year: 2017, name: 'Eights'}],
       chartData: {}
+    }
+  },
+  beforeMount () {
+    const socket = new WebSocket('ws://localhost:3019/live')//window.location.origin.replace('http','ws') + '/live')
+    socket.onmessage = (event) => {
+      const bump = JSON.parse(event.data)
+      const club = bump.boat.club
+      const gender = bump.boat.gender
+      const number = parseInt(bump.boat.number, 10)
+      const day = parseInt(bump.day, 10)
+      const moves = parseInt(bump.moves, 10)
+      if (this.chartData[club][gender][number].moves.length >= day)
+        Vue.set(this.chartData[club][gender][number].moves, day-1, moves)
+      else
+        this.chartData[club][gender][number].moves.push(moves)
+      this.notify(`${bump.boat.short} moves ${moves}`, 'info')
     }
   },
   mounted() {
@@ -753,6 +788,11 @@ export default {
       })*/
   },
   watch: {
+    auth() {
+      axios.get('http://localhost:3019/verify', {headers: {'authorization': this.auth}})
+        .then(() => this.verified = true)
+        .catch(() => this.verified = false)
+    },
     boatsSelected() {
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = []
@@ -823,6 +863,21 @@ export default {
     }
   },
   methods: {
+    notify(text, type) {
+      this.snack.text = text
+      this.snack.color = type
+      this.snack.multi = type === 'error'
+      this.snack.visible = true
+    },
+    submitBump() {
+      this.bumpDialog = false
+      axios.post('http://localhost:3019/bump', {
+        event: this.event,
+        bump: this.bump
+      }, {headers: {'authorization': this.auth}})
+      .then((response) => this.notify('Bump submitted', 'success'))
+      .catch((error) => this.notify('Failed to submit bump', 'error'))
+    },
     romanize(num) {
       if (!+num)
         return NaN;
@@ -867,6 +922,7 @@ export default {
             })
             Vue.set(this.chartData, key, response.data[key])
           }
+          this.bump.boat = this.boats[0]
           this.event = event
         })
       axios.get(`./static/data/${(event.name === 'Torpids' ? 'torpids' : 'eights')}_${event.year}_divs.json`)
