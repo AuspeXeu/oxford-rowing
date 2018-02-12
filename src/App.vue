@@ -741,7 +741,7 @@ export default {
     }
   },
   beforeMount () {
-    const socket = new WebSocket('ws://localhost:3019/live')//window.location.origin.replace('http','ws') + '/live')
+    const socket = new WebSocket(`${window.location.origin.replace('http','ws')}/live`)
     socket.onmessage = (event) => {
       const bump = JSON.parse(event.data)
       const club = bump.boat.club
@@ -789,7 +789,7 @@ export default {
   },
   watch: {
     auth() {
-      axios.get('http://localhost:3019/verify', {headers: {'authorization': this.auth}})
+      axios.get('/verify', {headers: {'authorization': this.auth}})
         .then(() => this.verified = true)
         .catch(() => this.verified = false)
     },
@@ -871,7 +871,7 @@ export default {
     },
     submitBump() {
       this.bumpDialog = false
-      axios.post('http://localhost:3019/bump', {
+      axios.post('/bump', {
         event: this.event,
         bump: this.bump
       }, {headers: {'authorization': this.auth}})
