@@ -751,7 +751,7 @@ export default {
       const number = parseInt(bump.number, 10)
       const day = parseInt(bump.day, 10)
       const moves = parseInt(bump.moves, 10)
-      if (this.event.year !== year || this.event.name.toLowerCase() !== 'name')
+      if (this.event.year !== year || this.event.name.toLowerCase() !== name)
         return
       if (this.chartData[club][gender][number].moves.length >= day)
         Vue.set(this.chartData[club][gender][number].moves, day-1, moves)
