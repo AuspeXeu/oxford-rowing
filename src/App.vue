@@ -4,7 +4,7 @@
     <v-toolbar fixed app dense>
       <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
+      <v-toolbar-side-icon v-show="false" class="hidden-md-and-up"></v-toolbar-side-icon>
       <v-toolbar-items>
         <v-select
           :items="boats"
@@ -17,7 +17,6 @@
           dense
           multiple
         ></v-select>
-        <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = true">Bump</v-btn>
         <v-menu offset-y left>
           <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark slot="activator" ripple>Events</v-btn>
           <v-list dense>
@@ -687,6 +686,7 @@
       </v-container>
     </v-content>
     <v-footer app fixed>
+      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = true" v-show="auth">Bump</v-btn>
       <v-spacer></v-spacer>
       <div>Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
