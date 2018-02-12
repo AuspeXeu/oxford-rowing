@@ -910,7 +910,7 @@ export default {
       return table[club]
     },
     loadData(event) {
-      axios.get(`./static/data/${event.name.toLowerCase()}_${event.year}.json`)
+      axios.get(`./data/${event.name.toLowerCase()}_${event.year}.json`)
         .then((response) => {
           for (let key in response.data) {
             response.data[key].men = response.data[key].men.map((boat, idx) => {
@@ -934,7 +934,7 @@ export default {
           this.bump.boat = this.boats[0]
           this.event = event
         })
-      axios.get(`./static/data/${event.name.toLowerCase()}_${event.year}_divs.json`)
+      axios.get(`./data/${event.name.toLowerCase()}_${event.year}_divs.json`)
         .then((response) => {
           this.divs = response.data
         })

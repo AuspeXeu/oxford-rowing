@@ -15,6 +15,7 @@ conf.defaults({
 })
 
 app.use('/static', express.static(`${__dirname}/dist/static`))
+app.use('/data', express.static(`${__dirname}/data`))
 app.use(bodyParser.json())
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Credentials', true)
@@ -43,17 +44,17 @@ app.post('/bump', authReq, (req, res) => {
   const day = parseInt(req.body.day, 10)
   const moves = parseInt(req.body.moves, 10)
 
-  fs.access(`${__dirname}/dist/static/data/${name}_${year}.json`, fs.F_OK, (err) => {
+  fs.access(`${__dirname}/data/${name}_${year}.json`, fs.F_OK, (err) => {
     if (err)
       res.sendStatus(400)
     else {
-      const data = require(`${__dirname}/dist/static/data/${name}_${year}.json`)
+      const data = require(`${__dirname}/data/${name}_${year}.json`)
       if (data[club][gender][number].moves.length >= day)
         data[club][gender][number].moves[day-1] = moves
       else
         data[club][gender][number].moves.push(moves)
       clients.forEach((ws) => ws.send(JSON.stringify({name: name,year: year,club: club,gender: gender,number: number,day: day,moves: moves})))
-      fs.writeFile(`${__dirname}/dist/static/data/${name}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
+      fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
     }
   })
 })
