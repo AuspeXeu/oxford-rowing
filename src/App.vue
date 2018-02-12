@@ -2,22 +2,25 @@
 <div id="app">
   <v-app>
     <v-toolbar fixed app dense>
-      <v-toolbar-title>{{'Live Bumps' + (event ? (' - ' + event.name + ' ' + event.year) : '')}}</v-toolbar-title>
+      <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon class="hidden-md-and-up"></v-toolbar-side-icon>
-      <v-toolbar-items class="hidden-sm-and-down">
+      <v-toolbar-items>
         <v-select
           :items="boats"
           item-text="short"
           v-model="boatsSelected"
-          label="Crew"
+          :label="lblCrewSel"
           autocomplete
+          append-icon="search"
+          clearable
           dense
           multiple
         ></v-select>
-        <v-menu offset-y>
-          <v-btn color="primary" dark slot="activator" ripple>Events</v-btn>
-          <v-list>
+        <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = true">Bump</v-btn>
+        <v-menu offset-y left>
+          <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark slot="activator" ripple>Events</v-btn>
+          <v-list dense>
             <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
               <v-list-tile-title>{{ event.name + ' ' + event.year }}</v-list-tile-title>
             </v-list-tile>
@@ -27,7 +30,7 @@
     </v-toolbar>
     <v-content>
       <v-container>
-        <svg width="432" :height="Math.max(rowsMen, rowsWomen) * 28.75">
+        <svg width="452" :height="Math.max(rowsMen, rowsWomen) * 28.75">
           <defs>
             <g id="UCO" transform="scale(0.5)">
               <circle
@@ -543,7 +546,7 @@
                  style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.0000062;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                  d="m 48.004303,0.9930311 a 47.500594,47.053571 0 0 0 -12.500156,1.66778 V 93.387911 a 47.500594,47.053571 0 0 0 12.500156,1.71226 47.500594,47.053571 0 0 0 12.500157,-1.66776 V 2.7053011 a 47.500594,47.053571 0 0 0 -12.500157,-1.71227 z"/>
             </g>
-          <g id="TRO" transform="scale(0.5)">
+            <g id="TRO" transform="scale(0.5)">
               <circle
                  style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                  cx="48"
@@ -553,7 +556,7 @@
                  style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                  d="m 48.249931,0.94584657 a 47.5,47.053571 0 0 0 -12.5,1.66778003 V 93.340727 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.6581166 a 47.5,47.053571 0 0 0 -12.5,-1.71227003 z" />
             </g>
-          <g id="WRO" transform="scale(0.5)">
+            <g id="WRO" transform="scale(0.5)">
               <circle
                  style="opacity:1;fill:#000000;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                  id="path4304-31-1-8"
@@ -612,26 +615,85 @@
             </g>
           </defs>
           <g id="containerMen" transform="scale(0.5),translate(5,7)">
-            <path v-for="div in divsMen" :transform="'translate(0,'+ (((13 * div)  * (47.5 + 10)) -5) +')'" d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
+            <g v-for="(time, idx) in divsMen" :transform="'translate(0,'+ (((13 * (idx+1))  * (47.5 + 10)) -5) +')'">
+              <path d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
+              <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(time, idx)}}</text>
+            </g>
             <g v-for="(boat, idx) in boatsMen" :transform="'translate(0,' + ((boat.start - 1) * (47.5 + 10)) + ')'">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-              <use v-bind:xlink:href="'#' + boat.id" @click="selectBoat(boat)"></use>
-              <use v-bind:xlink:href="'#' + boat.id" @click="selectBoat(boat)" :transform="'translate('+curPos(boat).x+',' + curPos(boat).y + ')'"></use>
+              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)"></use>
+              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)" :transform="'translate('+curPos(boat).x+',' + curPos(boat).y + ')'"></use>
             </g>
           </g>
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
-            <path v-for="div in divsWomen" :transform="'translate(0,'+ (((13 * div)  * (47.5 + 10)) -5) +')'" d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
+            <g v-for="(time, idx) in divsWomen" :transform="'translate(0,'+ (((13 * (idx+1))  * (47.5 + 10)) -5) +')'">
+              <path d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
+              <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(time, idx)}}</text>
+            </g>
             <g v-for="(boat,idx) in boatsWomen" :transform="'translate(0,' + ((boat.start - 1) * (47.5 + 10)) + ')'">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-              <use v-bind:xlink:href="'#' + boat.id" @click="selectBoat(boat)"></use>
-              <use v-bind:xlink:href="'#' + boat.id" @click="selectBoat(boat)" :transform="'translate('+curPos(boat).x+',' + curPos(boat).y + ')'"></use>
+              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)"></use>
+              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)" :transform="'translate('+curPos(boat).x+',' + curPos(boat).y + ')'"></use>
             </g>
           </g>
-        </svg>        
+        </svg>
+        <v-dialog v-model="bumpDialog" max-width="500px">
+          <v-card>
+            <v-card-title>
+              <span class="headline">Update Bump</span>
+            </v-card-title>
+            <v-card-text>
+              <v-container grid-list-md>
+                <v-layout wrap>
+                  <v-flex xs12 sm6 md4>
+                    <v-select
+                      label="Day"
+                      required
+                      v-model="bump.day"
+                      :items="[1,2,3,4]"
+                    ></v-select>
+                  </v-flex>
+                  <v-flex xs12 sm6 md4>
+                    <v-select
+                      label="Club"
+                      item-text="short"
+                      v-model="bump.club"
+                      required
+                      autocomplete
+                      :items="boats"
+                    ></v-select>
+                  </v-flex>
+                  <v-flex xs12 sm6 md4>
+                    <v-text-field
+                      label="Moves"
+                      v-model="bump.moves"
+                      :rules="bumpRules"
+                      required
+                    ></v-text-field>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+              <small>*indicates required field</small>
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Close</v-btn>
+              <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Update</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>  
       </v-container>
     </v-content>
+    <v-footer app fixed>
+      <v-spacer></v-spacer>
+      <div>Chris Vaas</div>
+      <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
+        <v-icon>fa-github</v-icon>
+      </v-btn>
+      <div>© {{ new Date().getFullYear() }}</div>
+    </v-footer>
   </v-app>
 </div>
 </template>
@@ -647,14 +709,22 @@ export default {
     return {
       boatsSelected: [],
       name: 'live',
-      event: {},
+      event: false,
+      auth: false,
+      bump: {moves: 0},
+      bumpDialog: false,
+      bumpRules: [(v) => !isNaN(v) || 'Has to be a number'],
       points: {},
       boatsHigh: [],
+      divs: false,
       events: [{year: 2018, name: 'Torpids'}, {year: 2017, name: 'Eights'}],
       chartData: {}
     }
   },
   mounted() {
+    const dow = new Date().getDay()
+    this.bump.day = Math.max(Math.min(4, dow - 2), 1)
+    this.auth = this.$route.query.auth
     this.loadData(this.events.sort((a,b) => b.year-a.year)[0])
     /*axios.get('./static/data/torpids_2017_men.csv')
       .then((response) => {
@@ -684,15 +754,21 @@ export default {
   },
   watch: {
     boatsSelected() {
-      this.boatsHigh.forEach((boat) => this.chartData[boat.id][boat.gender][boat.number].color = 'gray')
+      this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = []
       this.boatsSelected.forEach((boat) => {
-        this.chartData[boat.id][boat.gender][boat.number].color = 'orange'
+        this.chartData[boat.club][boat.gender][boat.number].color = 'orange'
         this.boatsHigh.push(boat)
       })
     }
   },
   computed: {
+    lblCrewSel() {
+      return (this.boatsHigh.length > 1 ? 'Crews' : 'Crew')
+    },
+    title() {
+      return `Live Bumps${(this.event ? (' - ' + this.event.name + ' ' + this.event.year) : '')}`
+    },
     boats() {
       let boats = []
       for (let key in this.chartData) {
@@ -702,11 +778,15 @@ export default {
       return boats
     },
     divsMen() {
+      if (this.divs)
+        return this.divs.men
       const ary = Array.from({length: Math.ceil(this.rowsMen / 13)}, (x,i) => i)
       ary.shift()
       return ary
     },
     divsWomen() {
+      if (this.divs)
+        return this.divs.women
       const ary = Array.from({length: Math.ceil(this.rowsWomen / 13)}, (x,i) => i)
       ary.shift()
       return ary
@@ -756,23 +836,32 @@ export default {
         roman = (key[+digits.pop() + (i * 10)] || "") + roman;
       return Array(+digits.join("") + 1).join("M") + roman;
     },
+    divName(time, idx) {
+      return `Division ${this.romanize(idx+1)}${(isNaN(time) ? ` - ${time}` : '')}`
+    },
+    clubToName(club) {
+      const table = {
+        BAL: 'Balliol',BRC: 'Brasenose', CHB: 'Christ Church', COO: 'Corpus Christi', EXC: 'Exeter', GTM: 'Green Templeton', HEC: 'Hertford', JEO: 'Jesus', KEB: 'Keble', LMH: 'Lady Margaret', LIN: 'Linacre', LIC: 'Lincoln', MAG: 'Magdalen', MAN: 'Mansfield', MER: 'Merton', NEC: 'New College', ORO: 'Oriel', OSG: 'Osler House', PMB: 'Pembroke', QCO: `Queen's`, RPC: `Regent's`, SOM: 'Somerville', SAC: `Anne's`, SAY: `Antony's`, SBH: `Benet's`, SCO: `Catherine's`, SEH: `Teddy`, SHI: `Hilda's`, SHG: `Hugh's`, SJO: `John's`, SPC: `Peter's`, TRO: 'Trinity', UCO: 'Univ', WAD: 'Wadham', WOO: 'Wolfson', WRO: 'Worcester'
+      }
+      return table[club]
+    },
     loadData(event) {
       axios.get(`./static/data/${(event.name === 'Torpids' ? 'torpids' : 'eights')}_${event.year}.json`)
         .then((response) => {
           for (let key in response.data) {
             response.data[key].men = response.data[key].men.map((boat, idx) => {
-              boat.id = key
+              boat.club = key
               boat.gender = 'men'
               boat.number = idx
               boat.color = 'gray'
-              boat.short = `${boat.id} M${this.romanize(boat.number + 1)}`
+              boat.short = `${this.clubToName(boat.club)} M${this.romanize(boat.number + 1)}`
               return boat
             })
             response.data[key].women = response.data[key].women.map((boat, idx) => {
-              boat.id = key
+              boat.club = key
               boat.gender = 'women'
               boat.number = idx
-              boat.short = `${boat.id} W${this.romanize(boat.number + 1)}`
+              boat.short = `${this.clubToName(boat.club)} W${this.romanize(boat.number + 1)}`
               boat.color = 'gray'
               return boat
             })
@@ -780,12 +869,17 @@ export default {
           }
           this.event = event
         })
+      axios.get(`./static/data/${(event.name === 'Torpids' ? 'torpids' : 'eights')}_${event.year}_divs.json`)
+        .then((response) => {
+          this.divs = response.data
+        })
+        .catch(() => this.divs = false)
     },
     selectBoat(boat) {
-      this.boatsHigh.forEach((boat) => this.chartData[boat.id][boat.gender][boat.number].color = 'gray')
+      this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = [boat]
       this.boatsSelected = [boat]
-      this.chartData[boat.id][boat.gender][boat.number].color = 'orange'
+      this.chartData[boat.club][boat.gender][boat.number].color = 'orange'
     },
     curPos(boat) {
       return {
@@ -820,8 +914,15 @@ export default {
 </script>
 
 <style>
+.menu-btn {
+  height: 35px !important;
+}
+#btn-github {
+  margin: 0px;
+}
 svg {
   display:block;
   margin:auto;
+  background: #fafafa;
 }
 </style>
