@@ -44,17 +44,17 @@ app.post('/bump', authReq, (req, res) => {
   const day = parseInt(bump.day, 10)
   const moves = parseInt(bump.moves, 10)
 
-  fs.access(`./static/data/${event}_${year}.json`, fs.F_OK, (err) => {
+  fs.access(`${__dirname}/dist/static/data/${event}_${year}.json`, fs.F_OK, (err) => {
     if (err)
       res.sendStatus(400)
     else {
-      const data = require(`./static/data/${event}_${year}.json`)
+      const data = require(`${__dirname}/dist/static/data/${event}_${year}.json`)
       if (data[club][gender][number].moves.length >= day)
         data[club][gender][number].moves[day-1] = moves
       else
         data[club][gender][number].moves.push(moves)
       clients.forEach((ws) => ws.send(JSON.stringify(bump)))
-      fs.writeFile(`./static/data/${event}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
+      fs.writeFile(`${__dirname}/dist/static/data/${event}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
     }
   })
 })

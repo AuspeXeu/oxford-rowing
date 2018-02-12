@@ -725,7 +725,7 @@ export default {
       snack: {
         multi: false,
         visible: false,
-        timeout: 5000,
+        timeout: 3000,
         color: 'success',
         text: ''
       },
