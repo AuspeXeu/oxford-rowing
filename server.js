@@ -14,7 +14,7 @@ conf.defaults({
   auth: []
 })
 
-app.use('/static', express.static(`${__dirname}/static`))
+app.use('/static', express.static(`${__dirname}/dist/static`))
 app.use(bodyParser.json())
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Credentials', true)
@@ -33,6 +33,7 @@ const authReq = (req, res, next) => {
     res.status(401).send('')
 }
 
+app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 app.post('/bump', authReq, (req, res) => {
   const event = (req.body.event.name === 'Torpids' ? 'torpids' : 'eights')
   const year = parseInt(req.body.event.year, 10)
