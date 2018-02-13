@@ -648,7 +648,7 @@
             <v-card-text>
               <v-container grid-list-md>
                 <v-layout wrap>
-                  <v-flex xs12 sm6 md2>
+                  <v-flex xs12 sm2 md2>
                     <v-select
                       label="Day"
                       required
@@ -656,7 +656,7 @@
                       :items="[1,2,3,4]"
                     ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm6 md3>
+                  <v-flex xs12 sm5 md5>
                     <v-select
                       label="Division"
                       required
@@ -666,7 +666,7 @@
                       :items="(bump.gender === 'men' ? divsMen : divsWomen)"
                     ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm6 md3>
+                  <v-flex xs12 sm5 md5>
                     <v-select
                       label="Gender"
                       required
@@ -676,7 +676,7 @@
                   </v-flex>
                 </v-layout>
                 <v-layout wrap>
-                  <v-flex xs12 sm6 md6>
+                  <v-flex xs12 sm6 md9>
                     <v-select
                       label="Boat"
                       item-text="short"
@@ -686,7 +686,7 @@
                       :items="bumpBoats"
                     ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm6 md2>
+                  <v-flex xs12 sm6 md3>
                     <v-text-field
                       label="Moves"
                       v-model="bump.moves"
