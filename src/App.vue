@@ -614,9 +614,9 @@
             </g>
           </defs>
           <g id="containerMen" transform="scale(0.5),translate(5,7)">
-            <g v-for="(time, idx) in divsMen" :transform="'translate(0,'+ (((13 * (idx+1))  * (47.5 + 10)) -5) +')'">
+            <g v-for="div in divsMen" :transform="'translate(0,'+ (((13 * div.number)  * (47.5 + 10)) -5) +')'">
               <path d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
-              <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(time, idx)}}</text>
+              <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
             <g v-for="(boat, idx) in boatsMen" :transform="'translate(0,' + ((boat.start - 1) * (47.5 + 10)) + ')'">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
@@ -626,9 +626,9 @@
             </g>
           </g>
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
-            <g v-for="(time, idx) in divsWomen" :transform="'translate(0,'+ (((13 * (idx+1))  * (47.5 + 10)) -5) +')'">
+            <g v-for="div in divsWomen" :transform="'translate(0,'+ (((13 * div.number)  * (47.5 + 10)) -5) +')'">
               <path d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
-              <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(time, idx)}}</text>
+              <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
             <g v-for="(boat,idx) in boatsWomen" :transform="'translate(0,' + ((boat.start - 1) * (47.5 + 10)) + ')'">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
@@ -730,7 +730,7 @@ export default {
         text: ''
       },
       verified: false,
-      bump: {moves: 0},
+      bump: {division: 1, gender: 'men', moves: 0},
       bumpDialog: false,
       bumpRules: [(v) => !isNaN(v) || 'Has to be a number'],
       points: {},
@@ -823,17 +823,17 @@ export default {
     },
     divsMen() {
       if (this.divs)
-        return this.divs.men
+        return this.divs.men.map((time, idx) => ({time: time, number: idx + 1}))
       const ary = Array.from({length: Math.ceil(this.rowsMen / 13)}, (x,i) => i)
       ary.shift()
-      return ary
+      return ary.map((itm, idx) => ({number: idx+1}))
     },
     divsWomen() {
       if (this.divs)
-        return this.divs.women
+        return this.divs.women.map((time, idx) => ({time: time, number: idx + 1}))
       const ary = Array.from({length: Math.ceil(this.rowsWomen / 13)}, (x,i) => i)
       ary.shift()
-      return ary
+      return ary.map((itm, idx) => ({number: idx+1}))
     },
     boatsMen() {
       let boats = []
@@ -841,7 +841,7 @@ export default {
         this.chartData[key].men.forEach((boat) => Vue.set(boat, 'id', key))
         boats = boats.concat(this.chartData[key].men)
       }
-      return boats
+      return boats.sort((a,b) => a.start-b.start)
     },
     boatsWomen() {
       let boats = []
@@ -849,7 +849,7 @@ export default {
         this.chartData[key].women.forEach((boat) => Vue.set(boat, 'id', key))
         boats = boats.concat(this.chartData[key].women)
       }
-      return boats
+      return boats.sort((a,b) => a.start-b.start)
     },
     rowsMen() {
       let rows = 0
@@ -900,8 +900,8 @@ export default {
         roman = (key[+digits.pop() + (i * 10)] || "") + roman;
       return Array(+digits.join("") + 1).join("M") + roman;
     },
-    divName(time, idx) {
-      return `Division ${this.romanize(idx+1)}${(isNaN(time) ? ` - ${time}` : '')}`
+    divName(div) {
+      return `Division ${this.romanize(div.number)}${(div.time ? ` - ${div.time}` : '')}`
     },
     clubToName(club) {
       const table = {
