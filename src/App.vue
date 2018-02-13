@@ -648,7 +648,7 @@
             <v-card-text>
               <v-container grid-list-md>
                 <v-layout wrap>
-                  <v-flex xs12 sm6 md4>
+                  <v-flex xs12 sm6 md2>
                     <v-select
                       label="Day"
                       required
@@ -656,6 +656,26 @@
                       :items="[1,2,3,4]"
                     ></v-select>
                   </v-flex>
+                  <v-flex xs12 sm6 md3>
+                    <v-select
+                      label="Division"
+                      required
+                      item-value="number"
+                      item-text="number"
+                      v-model="bump.division"
+                      :items="(bump.gender === 'men' ? divsMen : divsWomen)"
+                    ></v-select>
+                  </v-flex>
+                  <v-flex xs12 sm6 md3>
+                    <v-select
+                      label="Gender"
+                      required
+                      v-model="bump.gender"
+                      :items="['men','women']"
+                    ></v-select>
+                  </v-flex>
+                </v-layout>
+                <v-layout wrap>
                   <v-flex xs12 sm6 md4>
                     <v-select
                       label="Boat"
@@ -807,6 +827,15 @@ export default {
     }
   },
   computed: {
+    bumpBoats() {
+      const rows = (this.bump.gender === 'men' ? this.rowsMen : this.rowsWomen)
+      const boats = (this.bump.gender === 'men' ? this.boatsMen : this.boatsWomen)
+      const start = Math.max(0, ((this.bump.division - 1) * 13)-1)
+      const end = Math.min(rows, (this.bump.division * 13)+1)
+      const ary = boats.slice(start, end)
+      this.bump.boatA = ary[0]
+      return ary
+    },
     lblCrewSel() {
       return (this.boatsHigh.length > 1 ? 'Crews' : 'Crew')
     },
