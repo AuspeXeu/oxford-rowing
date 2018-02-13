@@ -38,9 +38,11 @@ app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 app.post('/bump', authReq, (req, res) => {
   const name = req.body.name.toLowerCase()
   const year = parseInt(req.body.year, 10)
-  const club = req.body.club
+  const bumpBoat = req.body.bumpBoat
+  const bumpedBoat = req.body.bumpedBoat
+  const club = bumpBoat.club
   const gender = req.body.gender
-  const number = parseInt(req.body.number, 10)
+  const number = parseInt(bumpBoat.number, 10)
   const day = parseInt(req.body.day, 10)
   const moves = parseInt(req.body.moves, 10)
 

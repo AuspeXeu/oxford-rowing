@@ -645,42 +645,72 @@
               <v-spacer></v-spacer>
               <v-icon>{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
             </v-card-title>
-            <v-card-text>
+            <v-card-text class="custom-card">
               <v-container grid-list-md>
                 <v-layout wrap>
                   <v-flex xs12 sm2 md2>
                     <v-select
                       label="Day"
                       required
-                      v-model="bump.day"
+                      v-model="bumpDay"
                       :items="[1,2,3,4]"
                     ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm5 md5>
+                  <v-flex xs12 sm3 md3>
                     <v-select
                       label="Division"
                       required
                       item-value="number"
                       item-text="number"
-                      v-model="bump.division"
-                      :items="(bump.gender === 'men' ? divsMen.concat({number: 'all'}) : divsWomen.concat({number: 'all'}))"
+                      v-model="bumpDivision"
+                      :items="(bumpGender === 'men' ? divsMen.concat({number: 'all'}) : divsWomen.concat({number: 'all'}))"
                     ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm5 md5>
+                  <v-flex xs12 sm3 md3>
                     <v-select
                       label="Gender"
                       required
-                      v-model="bump.gender"
+                      v-model="bumpGender"
                       :items="['men','women']"
                     ></v-select>
                   </v-flex>
+                  <v-flex xs12 sm4 md4>
+                    <v-tabs right v-model="bumpTab">
+                      <v-tab v-for="n in ['Bump','Free']" :key="n" value="a">{{ n }}</v-tab>
+                    </v-tabs>
+                  </v-flex>
                 </v-layout>
-                <v-layout wrap>
+                <v-layout wrap v-show="bumpTab === '0'">
+                  <v-flex xs12 sm5 md5>
+                    <v-select
+                      label="Boat"
+                      item-text="short"
+                      v-model="bumpBoat"
+                      required
+                      autocomplete
+                      :items="bumpBoats"
+                    ></v-select>
+                  </v-flex>
+                  <v-flex xs12 sm2 md2 pt-4 class="text-xs-center">
+                    bumps
+                  </v-flex>
+                  <v-flex xs12 sm5 md5>
+                    <v-select
+                      label="Boat"
+                      item-text="short"
+                      v-model="bumpedBoat"
+                      required
+                      autocomplete
+                      :items="bumpedBoats"
+                    ></v-select>
+                  </v-flex>
+                </v-layout>
+                <v-layout wrap v-show="bumpTab === '1'">
                   <v-flex xs12 sm6 md9>
                     <v-select
                       label="Boat"
                       item-text="short"
-                      v-model="bump.boat"
+                      v-model="bumpBoat"
                       required
                       autocomplete
                       :items="bumpBoats"
@@ -689,7 +719,7 @@
                   <v-flex xs12 sm6 md3>
                     <v-text-field
                       label="Moves"
-                      v-model="bump.moves"
+                      v-model="bumpMoves"
                       :rules="bumpRules"
                       required
                     ></v-text-field>
@@ -740,6 +770,8 @@ export default {
     return {
       boatsSelected: [],
       name: 'live',
+      bumpedBoat: false,
+      bumpBoat: false,
       event: false,
       auth: false,
       snack: {
@@ -750,8 +782,12 @@ export default {
         text: ''
       },
       verified: false,
-      bump: {division: 1, gender: 'men', moves: 0},
+      bumpGender: 'men',
+      bumpMoves: 0,
+      bumpDay: 1,
+      bumpDivision: 1,
       bumpDialog: false,
+      bumpTab: '0',
       bumpRules: [(v) => !isNaN(v) || 'Has to be a number'],
       points: {},
       boatsHigh: [],
@@ -782,7 +818,7 @@ export default {
   },
   mounted() {
     const dow = new Date().getDay()
-    this.bump.day = Math.max(Math.min(4, dow - 2), 1)
+    this.bumpDay = Math.max(Math.min(4, dow - 2), 1)
     this.auth = this.$route.query.auth
     this.loadData(this.events.sort((a,b) => b.year-a.year)[0])
     /*axios.get('./static/data/torpids_2017_men.csv')
@@ -828,14 +864,27 @@ export default {
   },
   computed: {
     bumpBoats() {
-      const rows = (this.bump.gender === 'men' ? this.rowsMen : this.rowsWomen)
-      let boats = (this.bump.gender === 'men' ? this.boatsMen : this.boatsWomen)
-      if (this.bump.division !== 'all') {
-        const start = Math.max(0, ((this.bump.division - 1) * 13)-1)
-        const end = Math.min(rows, (this.bump.division * 13)+1)
+      const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
+      let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
+      if (this.bumpDivision !== 'all') {
+        const start = Math.max(0, ((this.bumpDivision - 1) * 13)-1)
+        const end = Math.min(rows, (this.bumpDivision * 13)+1)
         boats = boats.slice(start, end)
       }
-      this.bump.boat = boats[0]
+      this.bumpBoat = boats[0]
+      return boats
+    },
+    bumpedBoats() {
+      if (!this.bumpBoat)
+        return
+      const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
+      let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
+      boats.forEach((boat) => {
+        boat.cur = boat.moves.slice(0,this.bumpDay).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
+      })
+      const cur = this.bumpBoat.moves.slice(0,this.bumpDay).reduce((acc, itm) => acc + itm, 0) * -1 + this.bumpBoat.start
+      boats = boats.filter((boat) => boat.cur < cur).sort((a,b) => b.cur-a.cur)
+      this.bumpedBoat = boats[0]
       return boats
     },
     lblCrewSel() {
@@ -909,11 +958,10 @@ export default {
       axios.post('/bump', {
         year: this.event.year,
         name: this.event.name,
-        day: this.bump.day,
-        moves: this.bump.moves,
-        club: this.bump.boat.club,
-        gender: this.bump.boat.gender,
-        number: this.bump.boat.number
+        day: this.bumpDay,
+        moves: this.bumpMoves,
+        bumpBoat: this.bumpBoat,
+        bumpedBoat: (bumpTab === '1' ? undefined : this.bumpedBoat)
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
       .catch((error) => this.notify('Failed to submit bump', 'error'))
@@ -962,7 +1010,7 @@ export default {
             })
             Vue.set(this.chartData, key, response.data[key])
           }
-          this.bump.boat = this.boats[0]
+          this.bumpBoat = this.boats[0]
           this.event = event
         })
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}_divs.json`)
@@ -1015,6 +1063,10 @@ export default {
 }
 #btn-github {
   margin: 0px;
+}
+.custom-card {
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 svg {
   display:block;
