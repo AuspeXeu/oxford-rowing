@@ -760,6 +760,7 @@
 </template>
 
 <script>
+import ReWebSocket from 'reconnectingwebsocket'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import axios from 'axios'
@@ -797,7 +798,7 @@ export default {
     }
   },
   beforeMount () {
-    const socket = new WebSocket(`${window.location.origin.replace('http','ws')}/live`)
+    const socket = new ReWebSocket(`${window.location.origin.replace('http','ws')}/live`)
     socket.onmessage = (event) => {
       const bump = JSON.parse(event.data)
       const club = bump.club
