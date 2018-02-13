@@ -833,7 +833,7 @@ export default {
       const start = Math.max(0, ((this.bump.division - 1) * 13)-1)
       const end = Math.min(rows, (this.bump.division * 13)+1)
       const ary = boats.slice(start, end)
-      this.bump.boatA = ary[0]
+      this.bump.boat = ary[0]
       return ary
     },
     lblCrewSel() {
@@ -908,8 +908,7 @@ export default {
         year: this.event.year,
         name: this.event.name,
         day: this.bump.day,
-        boatA: this.bump.boatA,
-        boatB: this.bump.boatB,
+        boat: this.bump.boat,
         gender: this.bump.gender
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
@@ -959,7 +958,7 @@ export default {
             })
             Vue.set(this.chartData, key, response.data[key])
           }
-          this.bump.boatA = this.boats[0]
+          this.bump.boat = this.boats[0]
           this.event = event
         })
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}_divs.json`)
