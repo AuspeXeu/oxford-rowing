@@ -676,17 +676,17 @@
                   </v-flex>
                 </v-layout>
                 <v-layout wrap>
-                  <v-flex xs12 sm6 md4>
+                  <v-flex xs12 sm6 md6>
                     <v-select
                       label="Boat"
                       item-text="short"
                       v-model="bump.boat"
                       required
                       autocomplete
-                      :items="boats"
+                      :items="bumpBoats"
                     ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm6 md4>
+                  <v-flex xs12 sm6 md2>
                     <v-text-field
                       label="Moves"
                       v-model="bump.moves"
@@ -908,10 +908,9 @@ export default {
         year: this.event.year,
         name: this.event.name,
         day: this.bump.day,
-        moves: this.bump.moves,
-        club: this.bump.boat.club,
-        gender: this.bump.boat.gender,
-        number: this.bump.boat.number
+        boatA: this.bump.boatA,
+        boatB: this.bump.boatB,
+        gender: this.bump.gender
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
       .catch((error) => this.notify('Failed to submit bump', 'error'))
@@ -960,7 +959,7 @@ export default {
             })
             Vue.set(this.chartData, key, response.data[key])
           }
-          this.bump.boat = this.boats[0]
+          this.bump.boatA = this.boats[0]
           this.event = event
         })
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}_divs.json`)
