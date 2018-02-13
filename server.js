@@ -51,7 +51,7 @@ app.post('/bump', authReq, (req, res) => {
       res.sendStatus(400)
     else {
       const data = require(`${__dirname}/data/${name}_${year}.json`)
-      if (data[club][gender][number].moves.length >= day)
+      if (!isNaN(data[club][gender][number].moves[day-1]))
         data[club][gender][number].moves[day-1] = moves
       else
         data[club][gender][number].moves.push(moves)

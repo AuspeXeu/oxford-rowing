@@ -961,7 +961,7 @@ export default {
         day: this.bumpDay,
         moves: this.bumpMoves,
         bumpBoat: this.bumpBoat,
-        bumpedBoat: (bumpTab === '1' ? undefined : this.bumpedBoat)
+        bumpedBoat: (this.bumpTab === '1' ? undefined : this.bumpedBoat)
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
       .catch((error) => this.notify('Failed to submit bump', 'error'))
