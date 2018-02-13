@@ -22,6 +22,11 @@ module.exports = {
     '/data': {
       target: 'https://bumps.auspex.eu',
       changeOrigin: true
+    },
+    '/live': {
+      target: 'wss://bumps.auspex.eu',
+      changeOrigin: true,
+      ws: true
     }
   },
 
