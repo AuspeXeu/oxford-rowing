@@ -663,7 +663,7 @@
                       item-value="number"
                       item-text="number"
                       v-model="bump.division"
-                      :items="(bump.gender === 'men' ? divsMen : divsWomen)"
+                      :items="(bump.gender === 'men' ? divsMen.concat({number: 'all'}) : divsWomen.concat({number: 'all'}))"
                     ></v-select>
                   </v-flex>
                   <v-flex xs12 sm5 md5>
@@ -829,12 +829,14 @@ export default {
   computed: {
     bumpBoats() {
       const rows = (this.bump.gender === 'men' ? this.rowsMen : this.rowsWomen)
-      const boats = (this.bump.gender === 'men' ? this.boatsMen : this.boatsWomen)
-      const start = Math.max(0, ((this.bump.division - 1) * 13)-1)
-      const end = Math.min(rows, (this.bump.division * 13)+1)
-      const ary = boats.slice(start, end)
-      this.bump.boat = ary[0]
-      return ary
+      let boats = (this.bump.gender === 'men' ? this.boatsMen : this.boatsWomen)
+      if (this.bump.division !== 'all') {
+        const start = Math.max(0, ((this.bump.division - 1) * 13)-1)
+        const end = Math.min(rows, (this.bump.division * 13)+1)
+        boats = boats.slice(start, end)
+      }
+      this.bump.boat = boats[0]
+      return boats
     },
     lblCrewSel() {
       return (this.boatsHigh.length > 1 ? 'Crews' : 'Crew')
