@@ -908,8 +908,10 @@ export default {
         year: this.event.year,
         name: this.event.name,
         day: this.bump.day,
-        boat: this.bump.boat,
-        gender: this.bump.gender
+        moves: this.bump.moves,
+        club: this.bump.boat.club,
+        gender: this.bump.boat.gender,
+        number: this.bump.boat.number
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
       .catch((error) => this.notify('Failed to submit bump', 'error'))
