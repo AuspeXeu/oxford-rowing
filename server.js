@@ -37,18 +37,21 @@ const authReq = (req, res, next) => {
 }
 
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
+const updateEntry = (data, name, year, club, gender, number, day, moves) => {
+  if (!isNaN(data[club][gender][number].moves[day-1]))
+    if (moves.op === 'set')
+      data[club][gender][number].moves[day-1] = moves
+    else
+      data[club][gender][number].moves[day-1] += moves
+  else
+    data[club][gender][number].moves.push(moves.val)
+  clients.forEach((ws) => ws.send(JSON.stringify({type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: moves})))
+}
 app.post('/bump', authReq, (req, res) => {
-  //TODO - if bumpBoat is array -> row over
-  //TODO - if action is 'bumps' -> arrange new positions -> moves
-  //TODO - bump at torpids is one up one down - bump at eights is swap
-  //TODO - bump/row over in bumpAction
   const name = req.body.name.toLowerCase()
   const year = parseInt(req.body.year, 10)
   const bumpBoat = req.body.bumpBoat
   const bumpedBoat = req.body.bumpedBoat
-  const club = bumpBoat.club
-  const gender = bumpBoat.gender
-  const number = parseInt(bumpBoat.number, 10)
   const day = parseInt(req.body.day, 10)
   const moves = parseInt(req.body.moves, 10)
 
@@ -57,11 +60,19 @@ app.post('/bump', authReq, (req, res) => {
       res.sendStatus(400)
     else {
       const data = require(`${__dirname}/data/${name}_${year}.json`)
-      if (!isNaN(data[club][gender][number].moves[day-1]))
-        data[club][gender][number].moves[day-1] = moves
-      else
-        data[club][gender][number].moves.push(moves)
-      clients.forEach((ws) => ws.send(JSON.stringify({type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: moves})))
+      //All bumpBoat(s) rowed over
+      if (Array.isArray(bumpBoat))
+        bumpBoat.forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, parseInt(boat.number,10), day, {op: 'set', val: 0}))
+      //Manual entry
+      else if (!bumpedBoat)
+        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: moves})
+      //bumpBoat bumps bumpedBoat
+      //TODO - torpids/eights specific logic here
+      else if (bumpedBoat) {
+        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: 1})
+        updateEntry(data, name, year, bumpedBoat.club, bumpBoat.gender, bumpedBoat.number, day, {op: 'mod', val: -1})
+      } else
+        log('No idea what to do with the data!', req.body)
       fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
     }
   })
