@@ -28,8 +28,9 @@ app.use((req, res, next) => {
 const clients = new Map()
 const reporters = new Set()
 
+const isAuth = (code) => conf.get('auth').indexOf(code) !== -1
 const authReq = (req, res, next) => {
-  if (conf.get('auth').indexOf(req.get('authorization')) !== -1)
+  if (isAuth(req.get('authorization')))
     next()
   else
     res.status(401).send('')
@@ -73,9 +74,10 @@ app.ws('/live', (ws, req) => {
     clients.delete(id)
   })
   ws.on('message', (msg) => {
-    log(msg)
-    //reporters.add(id)
-    //clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
+    if (msg.type === 'reporter' && isAuth(msg.auth)) {
+      reporters.add(id)
+      clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
+    }
   })
 })
 
