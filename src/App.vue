@@ -877,7 +877,7 @@ export default {
   },
   watch: {
     reporters() {
-      if (this.reporters > 0)
+      if (this.reporters > 0 && ! this.liveTimer)
         this.liveTimer = setInterval(() => this.isLive = !this.isLive, 1000)
       else if (this.liveTimer) {
         clearInterval(this.liveTimer)
