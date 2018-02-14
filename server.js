@@ -57,7 +57,7 @@ app.post('/bump', authReq, (req, res) => {
   const moves = parseInt(req.body.moves, 10)
 
   fs.access(`${__dirname}/data/${name}_${year}.json`, fs.F_OK, (err) => {
-    if (err)
+    if (err || year !== new Date().getFullYear())
       res.sendStatus(400)
     else {
       const data = require(`${__dirname}/data/${name}_${year}.json`)
