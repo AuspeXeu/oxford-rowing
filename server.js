@@ -40,12 +40,12 @@ app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 const updateEntry = (data, name, year, club, gender, number, day, moves) => {
   if (!isNaN(data[club][gender][number].moves[day-1]))
     if (moves.op === 'set')
-      data[club][gender][number].moves[day-1] = moves
+      data[club][gender][number].moves[day-1] = moves.val
     else
-      data[club][gender][number].moves[day-1] += moves
+      data[club][gender][number].moves[day-1] += moves.val
   else
     data[club][gender][number].moves.push(moves.val)
-  clients.forEach((ws) => ws.send(JSON.stringify({type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: moves})))
+  clients.forEach((ws) => ws.send(JSON.stringify({type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: data[club][gender][number].moves[day-1]})))
 }
 app.post('/bump', authReq, (req, res) => {
   const name = req.body.name.toLowerCase()
