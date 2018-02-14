@@ -2,7 +2,10 @@
 <div id="app">
   <v-app>
     <v-toolbar fixed app dense>
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
+      <v-toolbar-title>
+        <i id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i>
+        {{ title }}
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon v-show="false" class="hidden-md-and-up"></v-toolbar-side-icon>
       <v-toolbar-items>
@@ -676,30 +679,38 @@
                   </v-flex>
                   <v-flex xs12 sm4 md4>
                     <v-tabs right v-model="bumpTab">
-                      <v-tab v-for="n in ['Bump','Free']" :key="n" value="a">{{ n }}</v-tab>
+                      <v-tab v-for="n in ['Bump','Manual']" :key="n" value="a">{{ n }}</v-tab>
                     </v-tabs>
                   </v-flex>
                 </v-layout>
                 <v-layout wrap v-show="bumpTab === '0'">
-                  <v-flex xs12 sm5 md5>
+                  <v-flex xs12 sm5 md5 :md8="bumpAction ==='rows over'" :sm8="bumpAction ==='rows over'">
                     <v-select
                       label="Boat"
                       item-text="short"
                       v-model="bumpBoat"
                       required
+                      :clearable="bumpAction === 'rows over'"
                       autocomplete
+                      :multiple="bumpAction === 'rows over'"
                       :items="bumpBoats"
                     ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm2 md2 pt-4 class="text-xs-center">
-                    bumps
+                  <v-flex xs12 sm3 md3 :md4="bumpAction ==='rows over'" :sm4="bumpAction ==='rows over'">
+                    <v-select
+                      label="Action"
+                      required
+                      v-model="bumpAction"
+                      :items="['bumps','rows over']"
+                    ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm5 md5>
+                  <v-flex xs12 sm4 md4>
                     <v-select
                       label="Boat"
+                      v-show="bumpAction === 'bumps'"
                       item-text="short"
                       v-model="bumpedBoat"
-                      required
+                      :required="bumpAction === 'bumps'"
                       autocomplete
                       :items="bumpedBoats"
                     ></v-select>
@@ -713,7 +724,7 @@
                       v-model="bumpBoat"
                       required
                       autocomplete
-                      :items="bumpBoats"
+                      :items="divBoats"
                     ></v-select>
                   </v-flex>
                   <v-flex xs12 sm6 md3>
@@ -771,7 +782,11 @@ export default {
     return {
       boatsSelected: [],
       name: 'live',
+      isLive: false,
+      liveTimer: false,
+      bumpAction: 'bumps',
       bumpedBoat: false,
+      reporters: 0,
       bumpBoat: false,
       event: false,
       auth: false,
@@ -798,30 +813,42 @@ export default {
     }
   },
   beforeMount () {
+    this.auth = this.$route.query.auth
     const socket = new ReWebSocket(`${window.location.origin.replace('http','ws')}/live`)
     socket.onmessage = (event) => {
-      const bump = JSON.parse(event.data)
-      const club = bump.club
-      const gender = bump.gender
-      const name = bump.name
-      const year = parseInt(bump.year, 10)
-      const number = parseInt(bump.number, 10)
-      const day = parseInt(bump.day, 10)
-      const moves = parseInt(bump.moves, 10)
-      if (this.event.year !== year || this.event.name.toLowerCase() !== name)
-        return
-      if (this.chartData[club][gender][number].moves.length >= day)
-        Vue.set(this.chartData[club][gender][number].moves, day-1, moves)
-      else
-        this.chartData[club][gender][number].moves.push(moves)
-      this.notify(`${this.clubToName(club)} M${this.romanize(number + 1)} moves ${moves}`, 'info')
+      const message = JSON.parse(event.data)
+      if (message.type === 'update') {
+        const bump = message
+        const club = bump.club
+        const gender = bump.gender
+        const name = bump.name
+        const year = parseInt(bump.year, 10)
+        const number = parseInt(bump.number, 10)
+        const day = parseInt(bump.day, 10)
+        const moves = parseInt(bump.moves, 10)
+        if (this.event.year !== year || this.event.name.toLowerCase() !== name)
+          return
+        if (this.chartData[club][gender][number].moves.length >= day)
+          Vue.set(this.chartData[club][gender][number].moves, day-1, moves)
+        else
+          this.chartData[club][gender][number].moves.push(moves)
+        this.notify(`${this.clubToName(club)} M${this.romanize(number + 1)} moves ${moves}`, 'info')
+      } else if (message.type === 'reporters') {
+        if (this.reporters < message.number)
+          this.notify(`A reporter connected`, 'info')
+        this.reporters = message.number
+      }
+    }
+    socket.onopen = () => {
+      if (this.auth)
+        socket.send(JSON.stringify({type: 'reporter', auth: this.auth}))
     }
   },
   mounted() {
     const dow = new Date().getDay()
     this.bumpDay = Math.max(Math.min(4, dow - 2), 1)
-    this.auth = this.$route.query.auth
     this.loadData(this.events.sort((a,b) => b.year-a.year)[0])
+    
     /*axios.get('./static/data/torpids_2017_men.csv')
       .then((response) => {
         const data = response.data.split('\n').map((line) => line.split(','))
@@ -849,6 +876,14 @@ export default {
       })*/
   },
   watch: {
+    reporters() {
+      if (this.reporters > 0)
+        this.liveTimer = setInterval(() => this.isLive = !this.isLive, 1000)
+      else if (this.liveTimer) {
+        clearInterval(this.liveTimer)
+        this.liveTimer = false
+      }
+    },
     auth() {
       axios.get('/verify', {headers: {'authorization': this.auth}})
         .then(() => this.verified = true)
@@ -864,7 +899,7 @@ export default {
     }
   },
   computed: {
-    bumpBoats() {
+    divBoats() {
       const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
       let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
       if (this.bumpDivision !== 'all') {
@@ -875,17 +910,43 @@ export default {
       this.bumpBoat = boats[0]
       return boats
     },
-    bumpedBoats() {
-      if (!this.bumpBoat)
-        return
+    bumpBoats() {
       const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
       let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
+      if (this.bumpDivision !== 'all') {
+        const start = Math.max(0, ((this.bumpDivision - 1) * 13)-1)
+        const end = Math.min(rows, (this.bumpDivision * 13)+1)
+        boats = boats.slice(start, end)
+      }
+      boats = boats.filter((boat) => {
+        if (this.event.name.toLowerCase() === 'torpids')
+          if (isNaN(boat.moves[this.bumpDay-1]) || boat.moves[this.bumpDay-1] < 0)
+            return true
+          else
+            return false
+        else if (this.event.name.toLowerCase() === 'eights')
+          if (isNaN(boat.moves[this.bumpDay-1]))
+            return true
+          else
+            return false
+      })
+      this.bumpBoat = boats[0]
+      return boats
+    },
+    bumpedBoats() {
+      if (!this.bumpBoat || Array.isArray(this.bumpBoat))
+        return []
+      let boats = this.bumpBoats.filter((boat) => boat.short !== this.bumpBoat.short)
       boats.forEach((boat) => {
         boat.cur = boat.moves.slice(0,this.bumpDay).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
       })
       const cur = this.bumpBoat.moves.slice(0,this.bumpDay).reduce((acc, itm) => acc + itm, 0) * -1 + this.bumpBoat.start
       boats = boats.filter((boat) => boat.cur < cur).sort((a,b) => b.cur-a.cur)
       this.bumpedBoat = boats[0]
+      if (boats.length === 0)
+        this.bumpAction = 'rows over'
+      else
+        this.bumpAction = 'bumps'
       return boats
     },
     lblCrewSel() {
@@ -1059,6 +1120,9 @@ export default {
 </script>
 
 <style>
+.live {
+  color: red !important;
+}
 .menu-btn {
   height: 35px !important;
 }
