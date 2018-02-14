@@ -846,7 +846,7 @@ export default {
         this.notify(`${this.clubToName(club)} M${this.romanize(number + 1)} moves ${moves}`, 'info')
       } else if (message.type === 'reporters') {
         if (this.reporters < message.number)
-          this.notify(`A reporter connected`, 'info')
+          this.notify(`A reporter is live`, 'info')
         this.reporters = message.number
       }
     }
