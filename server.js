@@ -28,12 +28,8 @@ app.use((req, res, next) => {
 const clients = new Map()
 const reporters = new Set()
 
-const isAuth = (req) => {
-  log(req.get('authorization'))
-  conf.get('auth').indexOf(req.get('authorization')) !== -1
-}
 const authReq = (req, res, next) => {
-  if (isAuth(req))
+  if (conf.get('auth').indexOf(req.get('authorization')) !== -1)
     next()
   else
     res.status(401).send('')
@@ -69,16 +65,17 @@ app.get('/verify', authReq, (req, res) => res.status(200).send(''))
 app.ws('/live', (ws, req) => {
   const id = uuid()
   clients.set(id, ws)
-  if (isAuth(req)) {
-    reporters.add(id)
-    clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
-  }
   ws.on('close', () => {
     if (reporters.has(id)) {
       reporters.delete(id)
       clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
     }
     clients.delete(id)
+  })
+  ws.on('message', (msg) => {
+    log(msg)
+    //reporters.add(id)
+    //clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
   })
 })
 
