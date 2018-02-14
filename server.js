@@ -67,11 +67,11 @@ app.ws('/live', (ws, req) => {
   const id = uuid()
   clients.set(id, ws)
   ws.on('close', () => {
+    clients.delete(id)
     if (reporters.has(id)) {
       reporters.delete(id)
       clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
     }
-    clients.delete(id)
   })
   ws.on('message', (msg) => {
     msg = JSON.parse(msg)
