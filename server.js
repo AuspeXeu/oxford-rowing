@@ -52,7 +52,7 @@ app.post('/bump', authReq, (req, res) => {
   const year = parseInt(req.body.year, 10)
   const bumpBoat = req.body.bumpBoat
   const bumpedBoat = req.body.bumpedBoat
-  const rowOverBoats = req.body.rowOverBoats
+  const rowOvers = req.body.rowOvers
   const day = parseInt(req.body.day, 10)
   const moves = parseInt(req.body.moves, 10)
 
@@ -62,7 +62,7 @@ app.post('/bump', authReq, (req, res) => {
     else {
       const data = require(`${__dirname}/data/${name}_${year}.json`)
       //All bumpBoat(s) rowed over
-      if (rowOverBoats)
+      if (rowOvers)
         bumpBoat.forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, parseInt(boat.number,10), day, {op: 'set', val: 0}))
       //Manual entry
       else if (!bumpedBoat)

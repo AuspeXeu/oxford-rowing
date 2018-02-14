@@ -689,12 +689,12 @@
                       v-show="bumpAction === 'row over'"
                       label="Boats"
                       item-text="short"
-                      v-model="rowOverBoats"
+                      v-model="rowOvers"
                       required
                       clearable
                       autocomplete
                       multiple
-                      :items="bumpBoats"
+                      :items="rowOverBoats"
                     ></v-select>
                     <v-select
                       v-show="bumpAction === 'bumps'"
@@ -797,7 +797,7 @@ export default {
       bumpAction: 'bumps',
       bumpedBoat: false,
       reporters: 0,
-      rowOverBoats: [],
+      rowOvers: [],
       bumpBoat: false,
       event: false,
       auth: false,
@@ -944,6 +944,9 @@ export default {
       this.bumpBoat = boats[0]
       return boats
     },
+    rowOverBoats() {
+      return this.bumpBoats.filter((boat) => isNaN(boat.moves[this.bumpDay-1]))
+    },
     bumpedBoats() {
       if (!this.bumpBoat || Array.isArray(this.bumpBoat))
         return []
@@ -1034,7 +1037,7 @@ export default {
         day: this.bumpDay,
         moves: this.bumpMoves,
         bumpBoat: this.bumpBoat,
-        rowOverBoats: (this.bumpTab === '0' && this.bumpAction === 'row over' ? this.rowOverBoats : undefined),
+        rowOvers: (this.bumpTab === '0' && this.bumpAction === 'row over' ? this.rowOvers : undefined),
         bumpedBoat: (this.bumpTab === '0' && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
