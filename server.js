@@ -26,6 +26,7 @@ app.use((req, res, next) => {
 })
 
 const clients = new Map()
+const reporters = new Set()
 
 const authReq = (req, res, next) => {
   if (conf.get('auth').indexOf(req.get('authorization')) !== -1)
@@ -55,7 +56,7 @@ app.post('/bump', authReq, (req, res) => {
         data[club][gender][number].moves[day-1] = moves
       else
         data[club][gender][number].moves.push(moves)
-      clients.forEach((ws) => ws.send(JSON.stringify({name: name,year: year,club: club,gender: gender,number: number,day: day,moves: moves})))
+      clients.forEach((ws) => ws.send(JSON.stringify({type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: moves})))
       fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
     }
   })
@@ -64,7 +65,17 @@ app.get('/verify', authReq, (req, res) => res.status(200).send(''))
 app.ws('/live', (ws, req) => {
   const id = uuid()
   clients.set(id, ws)
-  ws.on('close', () => clients.delete(id))
+  if (isAuth(req)) {
+    reporters.add(id)
+    clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
+  }
+  ws.on('close', () => {
+    if (reporters.has(id)) {
+      reporters.delete(id)
+      clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
+    }
+    clients.delete(id)
+  })
 })
 
 if (!conf.get('auth').length) {
