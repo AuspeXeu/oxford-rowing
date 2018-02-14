@@ -683,31 +683,41 @@
                     </v-tabs>
                   </v-flex>
                 </v-layout>
-                <v-layout wrap v-if="bumpTab === '0'">
-                  <v-flex xs12 sm5 md5 :md8="bumpAction ==='rows over'" :sm8="bumpAction ==='rows over'">
+                <v-layout wrap v-show="bumpTab === '0'">
+                  <v-flex xs12 sm5 md5 :md8="bumpAction ==='row over'" :sm8="bumpAction ==='row over'">
                     <v-select
+                      v-show="bumpAction === 'row over'"
+                      label="Boats"
+                      item-text="short"
+                      v-model="rowOverBoats"
+                      required
+                      clearable
+                      autocomplete
+                      multiple
+                      :items="bumpBoats"
+                    ></v-select>
+                    <v-select
+                      v-show="bumpAction === 'bumps'"
                       label="Boat"
                       item-text="short"
                       v-model="bumpBoat"
                       required
-                      :clearable="bumpAction === 'rows over'"
                       autocomplete
-                      :multiple="bumpAction === 'rows over'"
                       :items="bumpBoats"
                     ></v-select>
                   </v-flex>
-                  <v-flex xs12 sm3 md3 :md4="bumpAction ==='rows over'" :sm4="bumpAction ==='rows over'">
+                  <v-flex xs12 sm3 md3 :md4="bumpAction ==='row over'" :sm4="bumpAction ==='row over'">
                     <v-select
                       label="Action"
                       required
                       v-model="bumpAction"
-                      :items="['bumps','rows over']"
+                      :items="['bumps','row over']"
                     ></v-select>
                   </v-flex>
                   <v-flex xs12 sm4 md4>
                     <v-select
                       label="Boat"
-                      v-if="bumpAction === 'bumps'"
+                      v-show="bumpAction === 'bumps'"
                       item-text="short"
                       v-model="bumpedBoat"
                       :required="bumpAction === 'bumps'"
@@ -716,7 +726,7 @@
                     ></v-select>
                   </v-flex>
                 </v-layout>
-                <v-layout wrap v-if="bumpTab === '1'">
+                <v-layout wrap v-show="bumpTab === '1'">
                   <v-flex xs12 sm6 md9>
                     <v-select
                       label="Boat"
@@ -787,6 +797,7 @@ export default {
       bumpAction: 'bumps',
       bumpedBoat: false,
       reporters: 0,
+      rowOverBoats: [],
       bumpBoat: false,
       event: false,
       auth: false,
@@ -943,10 +954,10 @@ export default {
       const cur = this.bumpBoat.moves.slice(0,this.bumpDay).reduce((acc, itm) => acc + itm, 0) * -1 + this.bumpBoat.start
       boats = boats.filter((boat) => boat.cur < cur).sort((a,b) => b.cur-a.cur)
       this.bumpedBoat = boats[0]
-      if (boats.length === 0)
-        this.bumpAction = 'rows over'
+      /*if (boats.length === 0)
+        this.bumpAction = 'row over'
       else
-        this.bumpAction = 'bumps'
+        this.bumpAction = 'bumps'*/
       return boats
     },
     lblCrewSel() {
@@ -1023,7 +1034,8 @@ export default {
         day: this.bumpDay,
         moves: this.bumpMoves,
         bumpBoat: this.bumpBoat,
-        bumpedBoat: (this.bumpTab === '1' ? undefined : this.bumpedBoat)
+        rowOverBoats: (this.bumpTab === '0' && this.bumpAction === 'row over' ? this.rowOverBoats : undefined),
+        bumpedBoat: (this.bumpTab === '0' && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
       .catch((error) => this.notify('Failed to submit bump', 'error'))
