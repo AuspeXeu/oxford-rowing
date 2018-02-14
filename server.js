@@ -77,6 +77,7 @@ app.ws('/live', (ws, req) => {
       clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
     }
   })
+  ws.on('error', (err) => log(err))
   ws.on('message', (msg) => {
     msg = JSON.parse(msg)
     if (msg.type === 'reporter' && isAuth(msg.auth)) {
