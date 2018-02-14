@@ -28,8 +28,9 @@ app.use((req, res, next) => {
 const clients = new Map()
 const reporters = new Set()
 
+const isAuth = (req) => conf.get('auth').indexOf(req.get('authorization')) !== -1
 const authReq = (req, res, next) => {
-  if (conf.get('auth').indexOf(req.get('authorization')) !== -1)
+  if (isAuth(req))
     next()
   else
     res.status(401).send('')
