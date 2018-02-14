@@ -82,6 +82,7 @@ app.get('/verify', authReq, (req, res) => res.status(200).send(''))
 app.ws('/live', (ws, req) => {
   const id = uuid()
   clients.set(id, ws)
+  ws.send(JSON.stringify({type: 'reporters', number: reporters.size}))
   ws.on('close', () => {
     clients.delete(id)
     if (reporters.has(id)) {
