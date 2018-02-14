@@ -683,7 +683,7 @@
                     </v-tabs>
                   </v-flex>
                 </v-layout>
-                <v-layout wrap v-show="bumpTab === '0'">
+                <v-layout wrap v-if="bumpTab === '0'">
                   <v-flex xs12 sm5 md5 :md8="bumpAction ==='rows over'" :sm8="bumpAction ==='rows over'">
                     <v-select
                       label="Boat"
@@ -707,7 +707,7 @@
                   <v-flex xs12 sm4 md4>
                     <v-select
                       label="Boat"
-                      v-show="bumpAction === 'bumps'"
+                      v-if="bumpAction === 'bumps'"
                       item-text="short"
                       v-model="bumpedBoat"
                       :required="bumpAction === 'bumps'"
@@ -716,7 +716,7 @@
                     ></v-select>
                   </v-flex>
                 </v-layout>
-                <v-layout wrap v-show="bumpTab === '1'">
+                <v-layout wrap v-if="bumpTab === '1'">
                   <v-flex xs12 sm6 md9>
                     <v-select
                       label="Boat"
@@ -749,13 +749,13 @@
       </v-container>
     </v-content>
     <v-footer app fixed>
-      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = true" v-show="auth">Bump</v-btn>
+      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = true" v-if="auth">Bump</v-btn>
       <v-spacer></v-spacer>
       <div>Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
         <v-icon>fa-github</v-icon>
       </v-btn>
-      <div>© {{ new Date().getFullYear() }}</div>
+      <div class="pr-2">© {{ new Date().getFullYear() }}</div>
     </v-footer>
     <v-snackbar
       :timeout="snack.timeout"
