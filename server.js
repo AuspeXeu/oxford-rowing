@@ -38,6 +38,10 @@ const authReq = (req, res, next) => {
 
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 app.post('/bump', authReq, (req, res) => {
+  //TODO - if bumpBoat is array -> row over
+  //TODO - if action is 'bumps' -> arrange new positions -> moves
+  //TODO - bump at torpids is one up one down - bump at eights is swap
+  //TODO - bump/row over in bumpAction
   const name = req.body.name.toLowerCase()
   const year = parseInt(req.body.year, 10)
   const bumpBoat = req.body.bumpBoat
