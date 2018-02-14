@@ -63,7 +63,7 @@ app.post('/bump', authReq, (req, res) => {
       const data = require(`${__dirname}/data/${name}_${year}.json`)
       //All bumpBoat(s) rowed over
       if (rowOvers)
-        bumpBoat.forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, parseInt(boat.number,10), day, {op: 'set', val: 0}))
+        rowOvers.forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, parseInt(boat.number,10), day, {op: 'set', val: 0}))
       //Manual entry
       else if (!bumpedBoat)
         updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: moves})
