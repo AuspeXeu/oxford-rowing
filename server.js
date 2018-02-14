@@ -74,6 +74,7 @@ app.ws('/live', (ws, req) => {
     clients.delete(id)
   })
   ws.on('message', (msg) => {
+    msg = JSON.parse(msg)
     if (msg.type === 'reporter' && isAuth(msg.auth)) {
       reporters.add(id)
       clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
