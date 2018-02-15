@@ -859,7 +859,7 @@ export default {
     const dow = new Date().getDay()
     this.bumpDay = Math.max(Math.min(4, dow - 2), 1)
     this.loadData(this.events.sort((a,b) => b.year-a.year)[0])
-    
+    //Graveyard
     /*axios.get('./static/data/torpids_2017_men.csv')
       .then((response) => {
         const data = response.data.split('\n').map((line) => line.split(','))
@@ -887,6 +887,10 @@ export default {
       })*/
   },
   watch: {
+    bumpBoat() {
+      if (this.bumpBoat && !isNaN(this.bumpBoat.moves[this.bumpDay-1]))
+        this.bumpMoves = this.bumpBoat.moves[this.bumpDay-1]
+    },
     reporters() {
       if (this.reporters > 0 && ! this.liveTimer)
         this.liveTimer = setInterval(() => this.isLive = !this.isLive, 1000)
