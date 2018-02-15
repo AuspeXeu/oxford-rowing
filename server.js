@@ -39,6 +39,8 @@ const authReq = (req, res, next) => {
 
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 const updateEntry = (data, name, year, club, gender, number, day, moves) => {
+  if (day > data[club][gender][number].moves.length+1)
+    return
   if (!isNaN(data[club][gender][number].moves[day-1]))
     if (moves.op === 'set')
       data[club][gender][number].moves[day-1] = moves.val
