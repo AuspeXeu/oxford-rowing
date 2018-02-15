@@ -641,122 +641,122 @@
             </g>
           </g>
         </svg>
-        <v-dialog v-model="bumpDialog" max-width="500px">
-          <v-card>
-            <v-card-title>
-              <span class="headline">Update Bump</span>
-              <v-spacer></v-spacer>
-              <v-icon>{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
-            </v-card-title>
-            <v-card-text class="custom-card">
-              <v-container grid-list-md>
-                <v-layout wrap>
-                  <v-flex xs12 sm2 md2>
-                    <v-select
-                      label="Day"
-                      required
-                      v-model="bumpDay"
-                      :items="[1,2,3,4]"
-                    ></v-select>
-                  </v-flex>
-                  <v-flex xs12 sm3 md3>
-                    <v-select
-                      label="Division"
-                      required
-                      item-value="number"
-                      item-text="number"
-                      v-model="bumpDivision"
-                      :items="(bumpGender === 'men' ? divsMen.concat({number: 'all'}) : divsWomen.concat({number: 'all'}))"
-                    ></v-select>
-                  </v-flex>
-                  <v-flex xs12 sm3 md3>
-                    <v-select
-                      label="Gender"
-                      required
-                      v-model="bumpGender"
-                      :items="['men','women']"
-                    ></v-select>
-                  </v-flex>
-                  <v-flex xs12 sm4 md4>
-                    <v-tabs right v-model="bumpTab">
-                      <v-tab v-for="n in ['Bump','Manual']" :key="n" value="a">{{ n }}</v-tab>
-                    </v-tabs>
-                  </v-flex>
-                </v-layout>
-                <v-layout wrap v-show="bumpTab === '0'">
-                  <v-flex xs12 sm5 md5 :md8="bumpAction ==='row over'" :sm8="bumpAction ==='row over'">
-                    <v-select
-                      v-show="bumpAction === 'row over'"
-                      label="Boats"
-                      item-text="short"
-                      v-model="rowOvers"
-                      required
-                      clearable
-                      autocomplete
-                      multiple
-                      :items="rowOverBoats"
-                    ></v-select>
-                    <v-select
-                      v-show="bumpAction === 'bumps'"
-                      label="Boat"
-                      item-text="short"
-                      v-model="bumpBoat"
-                      required
-                      autocomplete
-                      :items="bumpBoats"
-                    ></v-select>
-                  </v-flex>
-                  <v-flex xs12 sm3 md3 :md4="bumpAction ==='row over'" :sm4="bumpAction ==='row over'">
-                    <v-select
-                      label="Action"
-                      required
-                      v-model="bumpAction"
-                      :items="['bumps','row over']"
-                    ></v-select>
-                  </v-flex>
-                  <v-flex xs12 sm4 md4>
-                    <v-select
-                      label="Boat"
-                      v-show="bumpAction === 'bumps'"
-                      item-text="short"
-                      v-model="bumpedBoat"
-                      :required="bumpAction === 'bumps'"
-                      autocomplete
-                      :items="bumpedBoats"
-                    ></v-select>
-                  </v-flex>
-                </v-layout>
-                <v-layout wrap v-show="bumpTab === '1'">
-                  <v-flex xs12 sm6 md9>
-                    <v-select
-                      label="Boat"
-                      item-text="short"
-                      v-model="bumpBoat"
-                      required
-                      autocomplete
-                      :items="divBoats"
-                    ></v-select>
-                  </v-flex>
-                  <v-flex xs12 sm6 md3>
-                    <v-text-field
-                      label="Moves"
-                      v-model="bumpMoves"
-                      :rules="bumpRules"
-                      required
-                    ></v-text-field>
-                  </v-flex>
-                </v-layout>
-              </v-container>
-            </v-card-text>
-            <v-card-actions>
-              <small class="pl-3">*indicates required field</small>
-              <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Close</v-btn>
-              <v-btn color="blue darken-1" flat :disabled="!verified" @click.native="submitBump()">Submit</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-dialog>  
       </v-container>
+      <v-bottom-sheet v-model="bumpDialog" max-width="500" hide-overlay inset>
+        <v-card>
+          <v-card-title>
+            <span class="headline">Update Bump</span>
+            <v-spacer></v-spacer>
+            <v-icon>{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
+          </v-card-title>
+          <v-card-text class="custom-card">
+            <v-container grid-list-md>
+              <v-layout wrap>
+                <v-flex xs12 sm2 md2>
+                  <v-select
+                    label="Day"
+                    required
+                    v-model="bumpDay"
+                    :items="[1,2,3,4]"
+                  ></v-select>
+                </v-flex>
+                <v-flex xs12 sm3 md3>
+                  <v-select
+                    label="Division"
+                    required
+                    item-value="number"
+                    item-text="number"
+                    v-model="bumpDivision"
+                    :items="(bumpGender === 'men' ? divsMen.concat({number: 'all'}) : divsWomen.concat({number: 'all'}))"
+                  ></v-select>
+                </v-flex>
+                <v-flex xs12 sm3 md3>
+                  <v-select
+                    label="Gender"
+                    required
+                    v-model="bumpGender"
+                    :items="['men','women']"
+                  ></v-select>
+                </v-flex>
+                <v-flex xs12 sm4 md4>
+                  <v-tabs right v-model="bumpTab">
+                    <v-tab v-for="n in ['Bump','Manual']" :key="n" value="a">{{ n }}</v-tab>
+                  </v-tabs>
+                </v-flex>
+              </v-layout>
+              <v-layout wrap v-show="bumpTab === '0'">
+                <v-flex xs12 sm5 md5 :md8="bumpAction ==='row over'" :sm8="bumpAction ==='row over'">
+                  <v-select
+                    v-show="bumpAction === 'row over'"
+                    label="Boats"
+                    item-text="short"
+                    v-model="rowOvers"
+                    required
+                    clearable
+                    autocomplete
+                    multiple
+                    :items="rowOverBoats"
+                  ></v-select>
+                  <v-select
+                    v-show="bumpAction === 'bumps'"
+                    label="Boat"
+                    item-text="short"
+                    v-model="bumpBoat"
+                    required
+                    autocomplete
+                    :items="bumpBoats"
+                  ></v-select>
+                </v-flex>
+                <v-flex xs12 sm3 md3 :md4="bumpAction ==='row over'" :sm4="bumpAction ==='row over'">
+                  <v-select
+                    label="Action"
+                    required
+                    v-model="bumpAction"
+                    :items="['bumps','row over']"
+                  ></v-select>
+                </v-flex>
+                <v-flex xs12 sm4 md4>
+                  <v-select
+                    label="Boat"
+                    v-show="bumpAction === 'bumps'"
+                    item-text="short"
+                    v-model="bumpedBoat"
+                    :required="bumpAction === 'bumps'"
+                    autocomplete
+                    :items="bumpedBoats"
+                  ></v-select>
+                </v-flex>
+              </v-layout>
+              <v-layout wrap v-show="bumpTab === '1'">
+                <v-flex xs12 sm6 md9>
+                  <v-select
+                    label="Boat"
+                    item-text="short"
+                    v-model="bumpBoat"
+                    required
+                    autocomplete
+                    :items="divBoats"
+                  ></v-select>
+                </v-flex>
+                <v-flex xs12 sm6 md3>
+                  <v-text-field
+                    label="Moves"
+                    v-model="bumpMoves"
+                    :rules="bumpRules"
+                    required
+                  ></v-text-field>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-card-text>
+          <v-card-actions>
+            <small class="pl-3">*indicates required field</small>
+            <v-spacer></v-spacer>
+            <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Close</v-btn>
+            <v-btn color="blue darken-1" flat :disabled="!verified" @click.native="submitBump()">Submit</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-bottom-sheet>
     </v-content>
     <v-footer app fixed>
       <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = true" v-if="auth">Bump</v-btn>
