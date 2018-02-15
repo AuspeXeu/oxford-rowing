@@ -641,8 +641,8 @@
             </g>
           </g>
         </svg>
-        <v-dialog v-model="bumpDialog" max-width="500px">
-          <v-card>
+        <modal name="dlg-bump" :maxWidth="500" :draggable="true">
+          <v-card id="dlg-bump-card">
             <v-card-title>
               <span class="headline">Update Bump</span>
               <v-spacer></v-spacer>
@@ -751,15 +751,15 @@
             <v-card-actions>
               <small class="pl-3">*indicates required field</small>
               <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Close</v-btn>
+              <v-btn color="blue darken-1" flat @click.native="closeBumpDlg()">Close</v-btn>
               <v-btn color="blue darken-1" flat :disabled="!verified" @click.native="submitBump()">Submit</v-btn>
             </v-card-actions>
           </v-card>
-        </v-dialog>  
+        </modal>
       </v-container>
     </v-content>
     <v-footer app fixed>
-      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = true" v-if="auth">Bump</v-btn>
+      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="openBumpDlg()" v-if="auth">Bump</v-btn>
       <v-spacer></v-spacer>
       <div>Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
@@ -785,7 +785,9 @@ import ReWebSocket from 'reconnectingwebsocket'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import axios from 'axios'
- 
+import VModal from 'vue-js-modal'
+
+Vue.use(VModal)
 Vue.use(Vuetify)
 export default {
   data() {
@@ -813,7 +815,6 @@ export default {
       bumpMoves: 0,
       bumpDay: 1,
       bumpDivision: 1,
-      bumpDialog: false,
       bumpTab: '0',
       bumpRules: [(v) => !isNaN(v) || 'Has to be a number'],
       points: {},
@@ -1021,6 +1022,12 @@ export default {
     }
   },
   methods: {
+    openBumpDlg() {
+      this.$modal.show('dlg-bump')
+    },
+    closeBumpDlg() {
+      this.$modal.hide('dlg-bump')
+    },
     notify(text, type) {
       this.snack.text = text
       this.snack.color = type
@@ -1028,7 +1035,7 @@ export default {
       this.snack.visible = true
     },
     submitBump() {
-      this.bumpDialog = false
+      this.closeBumpDlg()
       axios.post('/bump', {
         year: this.event.year,
         name: this.event.name,
@@ -1149,9 +1156,15 @@ export default {
   padding-bottom: 0px;
   padding-top: 0px;
 }
+#dlg-bump-card {
+  height: 100% !important;
+}
 svg {
   display:block;
   margin:auto;
   background: #fafafa;
+}
+.v--modal-overlay {
+  background: transparent;
 }
 </style>
