@@ -40,7 +40,7 @@ const authReq = (req, res, next) => {
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 const updateEntry = (data, name, year, club, gender, number, day, moves) => {
   if (day > data[club][gender][number].moves.length+1)
-    return
+    return false
   if (!isNaN(data[club][gender][number].moves[day-1]))
     if (moves.op === 'set')
       data[club][gender][number].moves[day-1] = moves.val
@@ -49,6 +49,7 @@ const updateEntry = (data, name, year, club, gender, number, day, moves) => {
   else
     data[club][gender][number].moves.push(moves.val)
   clients.forEach((ws) => ws.send(JSON.stringify({type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: data[club][gender][number].moves[day-1]})))
+  return true
 }
 const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
 app.post('/bump', authReq, (req, res) => {
