@@ -14,13 +14,13 @@
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "express-ws": "^3.0.0",
     "nconf": "^0.10.0",
     "reconnectingwebsocket": "^1.0.0",
     "uuid": "^3.2.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vuetify": "^1.0.0"
+    "vuetify": "^1.0.0",
+    "ws": "^4.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

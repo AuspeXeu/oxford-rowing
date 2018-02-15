@@ -1,7 +1,9 @@
 const fs = require('fs')
+const http = require('http')
 const express = require('express')
 const app = express()
-const expressWs = require('express-ws')(app)
+const WebSocket = require('ws')
+const url = require('url')
 const conf = require('nconf')
 const bodyParser = require('body-parser')
 const uuid = require('uuid/v1')
@@ -13,6 +15,10 @@ conf.defaults({
   bind: '127.0.0.1',
   auth: []
 })
+if (!conf.get('auth').length) {
+  conf.set('auth', [uuid()])
+  conf.save()
+}
 
 app.use('/static', express.static(`${__dirname}/dist/static`))
 app.use('/data', express.static(`${__dirname}/data`))
@@ -36,6 +42,14 @@ const authReq = (req, res, next) => {
   else
     res.status(401).send('')
 }
+const broadcast = (msg) => {
+  clients.forEach((ws) => {
+    ws.send(JSON.stringify(msg), (err) => {
+      if (err)
+        log(err)
+    })
+  })
+}
 
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 const updateEntry = (data, name, year, club, gender, number, day, moves) => {
@@ -48,7 +62,8 @@ const updateEntry = (data, name, year, club, gender, number, day, moves) => {
       data[club][gender][number].moves[day-1] += moves.val
   else
     data[club][gender][number].moves.push(moves.val)
-  clients.forEach((ws) => ws.send(JSON.stringify({type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: data[club][gender][number].moves[day-1]})))
+  const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: data[club][gender][number].moves[day-1]}
+  broadcast(payload)
   return true
 }
 const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
@@ -119,15 +134,22 @@ app.post('/bump', authReq, (req, res) => {
   }).catch((err) => res.sendStatus(400))
 })
 app.get('/verify', authReq, (req, res) => res.status(200).send(''))
-app.ws('/live', (ws, req) => {
+
+const server = http.createServer(app)
+const wss = new WebSocket.Server({server})
+
+wss.on('connection', (ws) => {
   const id = uuid()
   clients.set(id, ws)
-  ws.send(JSON.stringify({type: 'reporters', number: reporters.size}))
+  ws.send(JSON.stringify({type: 'reporters', number: reporters.size}), (err) => {
+    if (err)
+      log(err)
+  })
   ws.on('close', () => {
     clients.delete(id)
     if (reporters.has(id)) {
       reporters.delete(id)
-      clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
+      broadcast({type: 'reporters', number: reporters.size})
     }
   })
   ws.on('error', (err) => {
@@ -138,13 +160,9 @@ app.ws('/live', (ws, req) => {
     msg = JSON.parse(msg)
     if (msg.type === 'reporter' && isAuth(msg.auth)) {
       reporters.add(id)
-      clients.forEach((ws) => ws.send(JSON.stringify({type: 'reporters', number: reporters.size})))
+      broadcast({type: 'reporters', number: reporters.size})
     }
   })
 })
 
-if (!conf.get('auth').length) {
-  conf.set('auth', [uuid()])
-  conf.save()
-}
-app.listen(conf.get('port'), conf.get('bind'))
+server.listen({host: conf.get('bind'),port: conf.get('port'),exclusive: true})
