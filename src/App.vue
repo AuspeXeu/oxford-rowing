@@ -24,7 +24,7 @@
           <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark slot="activator" ripple>Events</v-btn>
           <v-list dense>
             <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
-              <v-list-tile-title>{{ event.name + ' ' + event.year }}</v-list-tile-title>
+              <v-list-tile-title>{{`${event.name} ${event.year}` }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
         </v-menu>
@@ -617,27 +617,27 @@
             </g>
           </defs>
           <g id="containerMen" transform="scale(0.5),translate(5,7)">
-            <g v-for="div in divsMen" :transform="'translate(0,'+ (((13 * div.number)  * (47.5 + 10)) -5) +')'">
+            <g v-for="div in divsMen" :transform="`translate(0,${(((13 * div.number)  * (47.5 + 10)) -5)})`">
               <path d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
-            <g v-for="(boat, idx) in boatsMen" :transform="'translate(0,' + ((boat.start - 1) * (47.5 + 10)) + ')'">
+            <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)"></use>
-              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)" :transform="'translate('+curPoint(boat).x+',' + curPoint(boat).y + ')'"></use>
+              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)"></use>
+              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
           </g>
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
-            <g v-for="div in divsWomen" :transform="'translate(0,'+ (((13 * div.number)  * (47.5 + 10)) -5) +')'">
+            <g v-for="div in divsWomen" :transform="`translate(0,${(((13 * div.number)  * (47.5 + 10)) -5)})`">
               <path d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
-            <g v-for="(boat,idx) in boatsWomen" :transform="'translate(0,' + ((boat.start - 1) * (47.5 + 10)) + ')'">
+            <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)"></use>
-              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)" :transform="'translate('+curPoint(boat).x+',' + curPoint(boat).y + ')'"></use>
+              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)"></use>
+              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
           </g>
         </svg>
@@ -965,7 +965,7 @@ export default {
       return (this.boatsHigh.length > 1 ? 'Crews' : 'Crew')
     },
     title() {
-      return `Live Bumps${(this.event ? (' - ' + this.event.name + ' ' + this.event.year) : '')}`
+      return `Live Bumps${(this.event ? (` - ${this.event.name} ${this.event.year}`) : '')}`
     },
     boats() {
       let boats = []
@@ -1044,15 +1044,15 @@ export default {
     romanize(num) {
       if (!+num)
         return NaN;
-      var digits = String(+num).split(""),
-        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
-               "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
-               "","I","II","III","IV","V","VI","VII","VIII","IX"],
-        roman = "",
+      var digits = String(+num).split(''),
+        key = ['','C','CC','CCC','CD','D','DC','DCC','DCCC','CM',
+               '','X','XX','XXX','XL','L','LX','LXX','LXXX','XC',
+               '','I','II','III','IV','V','VI','VII','VIII','IX'],
+        roman = '',
         i = 3;
       while (i--)
-        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
-      return Array(+digits.join("") + 1).join("M") + roman;
+        roman = (key[+digits.pop() + (i * 10)] || '') + roman;
+      return Array(+digits.join('') + 1).join('M') + roman;
     },
     divName(div) {
       return `Division ${this.romanize(div.number)}${(div.time ? ` - ${div.time}` : '')}`
