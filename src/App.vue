@@ -625,7 +625,7 @@
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
               <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)"></use>
-              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)" :transform="'translate('+curPos(boat).x+',' + curPos(boat).y + ')'"></use>
+              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)" :transform="'translate('+curPoint(boat).x+',' + curPoint(boat).y + ')'"></use>
             </g>
           </g>
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
@@ -637,7 +637,7 @@
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
               <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)"></use>
-              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)" :transform="'translate('+curPos(boat).x+',' + curPos(boat).y + ')'"></use>
+              <use v-bind:xlink:href="'#' + boat.club" @click="selectBoat(boat)" :transform="'translate('+curPoint(boat).x+',' + curPoint(boat).y + ')'"></use>
             </g>
           </g>
         </svg>
@@ -952,19 +952,13 @@ export default {
       return this.bumpBoats.filter((boat) => isNaN(boat.moves[this.bumpDay-1]))
     },
     bumpedBoats() {
-      if (!this.bumpBoat || Array.isArray(this.bumpBoat))
+      if (!this.bumpBoat)
         return []
       let boats = this.bumpBoats.filter((boat) => boat.short !== this.bumpBoat.short)
-      boats.forEach((boat) => {
-        boat.cur = boat.moves.slice(0,this.bumpDay).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
-      })
-      const cur = this.bumpBoat.moves.slice(0,this.bumpDay).reduce((acc, itm) => acc + itm, 0) * -1 + this.bumpBoat.start
+      boats.forEach((boat) => boat.cur = this.curPos(boat, this.bumpDay))
+      const cur = this.curPos(this.bumpBoat, this.bumpDay)
       boats = boats.filter((boat) => boat.cur < cur).sort((a,b) => b.cur-a.cur)
       this.bumpedBoat = boats[0]
-      /*if (boats.length === 0)
-        this.bumpAction = 'row over'
-      else
-        this.bumpAction = 'bumps'*/
       return boats
     },
     lblCrewSel() {
@@ -1106,7 +1100,10 @@ export default {
       this.boatsSelected = [boat]
       this.chartData[boat.club][boat.gender][boat.number].color = 'orange'
     },
-    curPos(boat) {
+    curPos(boat, day) {
+      return boat.moves.slice(0,day).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
+    },
+    curPoint(boat) {
       return {
         x: 90 * boat.moves.length,
         y: boat.moves.reduce((acc, itm) => acc + itm, 0) * (47.5 + 10) * -1
