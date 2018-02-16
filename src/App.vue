@@ -5,9 +5,9 @@
       <v-toolbar-title>
         <v-tooltip bottom>
           <i slot="activator" id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i>
-          <span>{{`${reporters} reporters are online`}}</span>
+          <span>{{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</span>
         </v-tooltip>
-        Live Bumps
+        <span class="hidden-sm-and-down">Live Bumps</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon v-show="false" class="hidden-md-and-up"></v-toolbar-side-icon>
