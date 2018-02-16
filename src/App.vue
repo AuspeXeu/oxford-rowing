@@ -627,8 +627,8 @@
             <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)"></use>
-              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpBoat = boat;bumpDialog = true"></use>
+              <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
           </g>
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
@@ -639,8 +639,8 @@
             <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)"></use>
-              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpBoat = boat;bumpDialog = true"></use>
+              <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
           </g>
         </svg>
@@ -1165,5 +1165,21 @@ svg {
   display:block;
   margin:auto;
   background: #fafafa;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+svg text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 </style>
