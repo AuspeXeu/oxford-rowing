@@ -67,6 +67,20 @@ const updateEntry = (data, name, year, club, gender, number, day, moves) => {
   return true
 }
 const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
+const getBoats = (data, gender, day) => {
+  let boats = []
+  for (let club in data) {
+    let ary = data[club][gender].map((boat, idx) => {
+      boat.club = club
+      boat.gender = gender
+      boat.number = idx
+      boat.cur = curPos(boat, day)
+      return boat
+    })
+    boats = boats.concat(ary)
+  }
+  return boats
+}
 app.post('/bump', authReq, (req, res) => {
   const name = req.body.name.toLowerCase()
   const year = parseInt(req.body.year, 10)
@@ -102,32 +116,32 @@ app.post('/bump', authReq, (req, res) => {
     if (rowOvers)
       rowOvers.forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, parseInt(boat.number,10), day, {op: 'set', val: 0}))
     //Manual entry
-    else if (!bumpedBoat)
-      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: moves})
+    else if (!bumpedBoat) {
+      bumpBoat.cur = curPos(bumpBoat, day)
+      const boats = getBoats(data, bumpBoat.gender, day)
+      boats.filter((boat) => {
+        if (moves < 0)
+          return boat.cur > bumpBoat.cur && boat.cur <= bumpBoat.cur + (moves * -1)
+        else if (moves > 0)
+          return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (moves * -1)
+        else
+          return false
+        }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(moves) * -1}))
+      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: moves})
+    }
     //bumpBoat bumps bumpedBoat
     else if (bumpedBoat && name === 'torpids') {
       bumpBoat.cur = curPos(bumpBoat, day)
       bumpedBoat.cur = curPos(bumpedBoat, day)
-      let boats = []
-      for (let club in data) {
-        let ary = data[club][bumpBoat.gender].map((boat, idx) => {
-          boat.club = club
-          boat.gender = bumpBoat.gender
-          boat.number = idx
-          boat.cur = curPos(boat, day)
-          return boat
-        })
-        boats = boats.concat(ary)
-      }
-      boats = boats.sort((a,b) => a.cur-b.cur)
+      const boats = getBoats(data, bumpBoat.gender, day)
       boats.filter((boat) => boat.cur > bumpedBoat.cur && boat.cur <= bumpBoat.cur)
         .forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: 1}))
       updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'mod', val: bumpedBoat.cur - bumpBoat.cur})
     } else if (bumpedBoat && name === 'eights') {
       bumpBoat.cur = curPos(bumpBoat, day)
       bumpedBoat.cur = curPos(bumpedBoat, day)
-      updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'mod', val: bumpedBoat.cur - bumpBoat.cur})
-      updateEntry(data, name, year, bumpedBoat.club, bumpBoat.gender, bumpedBoat.number, day, {op: 'mod', val: Math.abs(bumpedBoat.cur - bumpBoat.cur)})
+      updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'set', val: bumpedBoat.cur - bumpBoat.cur})
+      updateEntry(data, name, year, bumpedBoat.club, bumpBoat.gender, bumpedBoat.number, day, {op: 'set', val: Math.abs(bumpedBoat.cur - bumpBoat.cur)})
     } else
       log('No idea what to do with the data!', req.body)
     fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
