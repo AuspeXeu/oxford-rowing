@@ -3,7 +3,10 @@
   <v-app>
     <v-toolbar fixed app dense>
       <v-toolbar-title>
-        <i id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i>
+        <v-tooltip bottom>
+          <i slot="activator" id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i>
+          <span>{{`${reporters} reporters are online`}}</span>
+        </v-tooltip>
         Live Bumps
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -647,7 +650,10 @@
           <v-card-title>
             <span class="headline">Update Bump</span>
             <v-spacer></v-spacer>
-            <v-icon>{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
+            <v-tooltip bottom>
+              <v-icon slot="activator">{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
+              <span>{{(!verified ? 'Not authenticated' : 'Authenticated')}}</span>
+            </v-tooltip>
           </v-card-title>
           <v-card-text class="custom-card">
             <v-container grid-list-md>
@@ -759,7 +765,7 @@
       </v-bottom-sheet>
     </v-content>
     <v-footer app fixed>
-      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = true" v-if="auth">Bump</v-btn>
+      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="auth">Bump</v-btn>
       <v-spacer></v-spacer>
       <div>Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
@@ -898,9 +904,9 @@ export default {
         this.bumpGender = this.bumpBoat.gender
     },
     reporters() {
-      if (this.reporters > 0 && ! this.liveTimer)
+      if (this.reporters > 0 && !this.liveTimer)
         this.liveTimer = setInterval(() => this.isLive = !this.isLive, 1000)
-      else if (this.liveTimer) {
+      else if (this.reporters === 0 && this.liveTimer) {
         clearInterval(this.liveTimer)
         this.liveTimer = false
       }
