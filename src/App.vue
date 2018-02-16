@@ -15,6 +15,7 @@
         <v-select
           :items="boats"
           item-text="short"
+          attach
           v-model="boatsSelected"
           :label="lblCrewSel"
           autocomplete
@@ -23,7 +24,7 @@
           dense
           multiple
         ></v-select>
-        <v-menu offset-y left>
+        <v-menu offset-y left attach>
           <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
           <v-list dense>
             <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
@@ -645,7 +646,7 @@
           </g>
         </svg>
       </v-container>
-      <v-bottom-sheet v-model="bumpDialog" max-width="500" hide-overlay inset persistent>
+      <v-bottom-sheet v-model="bumpDialog" max-width="500" hide-overlay inset persistent lazy>
         <v-card>
           <v-card-title>
             <span class="headline">Update Bump</span>
@@ -660,6 +661,8 @@
               <v-layout wrap>
                 <v-flex xs12 sm2 md2>
                   <v-select
+                    attach
+                    top
                     label="Day"
                     required
                     v-model="bumpDay"
@@ -670,6 +673,7 @@
                   <v-select
                     label="Division"
                     required
+                    attach
                     item-value="number"
                     item-text="number"
                     v-model="bumpDivision"
@@ -680,6 +684,7 @@
                   <v-select
                     label="Gender"
                     required
+                    attach
                     v-model="bumpGender"
                     :items="['men','women']"
                   ></v-select>
@@ -698,6 +703,7 @@
                     item-text="short"
                     v-model="rowOvers"
                     required
+                    attach
                     clearable
                     autocomplete
                     multiple
@@ -706,6 +712,7 @@
                   <v-select
                     v-show="bumpAction === 'bumps'"
                     label="Boat"
+                    attach
                     item-text="short"
                     v-model="bumpBoat"
                     required
@@ -717,6 +724,7 @@
                   <v-select
                     label="Action"
                     required
+                    attach
                     v-model="bumpAction"
                     :items="['bumps','row over']"
                   ></v-select>
@@ -726,6 +734,7 @@
                     label="Boat"
                     v-show="bumpAction === 'bumps'"
                     item-text="short"
+                    attach
                     v-model="bumpedBoat"
                     :required="bumpAction === 'bumps'"
                     autocomplete
@@ -740,6 +749,7 @@
                     item-text="short"
                     v-model="bumpBoat"
                     required
+                    attach
                     autocomplete
                     :items="divBoats"
                   ></v-select>
