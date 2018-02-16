@@ -742,7 +742,7 @@
                   <v-text-field
                     label="Moves"
                     v-model="bumpMoves"
-                    :rules="bumpRules"
+                    :rules="[(v) => !isNaN(v) || 'Has to be a number']"
                     required
                   ></v-text-field>
                 </v-flex>
@@ -815,7 +815,6 @@ export default {
       bumpDivision: 1,
       bumpDialog: false,
       bumpTab: '0',
-      bumpRules: [(v) => !isNaN(v) || 'Has to be a number'],
       points: {},
       boatsHigh: [],
       divs: false,
@@ -856,8 +855,7 @@ export default {
     }
   },
   mounted() {
-    const dow = new Date().getDay()
-    this.bumpDay = Math.max(Math.min(4, dow - 2), 1)
+    this.bumpDay = this.curDay()
     this.loadData(this.events.sort((a,b) => b.year-a.year)[0])
     //Graveyard
     /*axios.get('./static/data/torpids_2017_men.csv')
@@ -887,6 +885,12 @@ export default {
       })*/
   },
   watch: {
+    bumpDay() {
+      if (this.bumpDay < this.curDay() && !confirm('You are about to change a past division, do you know what you are doing?'))
+        setTimeout(() => this.bumpDay = this.curDay(), 1)
+      else if (this.bumpDay > this.curDay() && !confirm('You are about to change a future division, do you know what you are doing?'))
+        setTimeout(() => this.bumpDay = this.curDay(), 1)
+    },
     bumpBoat() {
       if (this.bumpBoat && !isNaN(this.bumpBoat.moves[this.bumpDay-1]))
         this.bumpMoves = this.bumpBoat.moves[this.bumpDay-1]
@@ -1023,6 +1027,9 @@ export default {
     }
   },
   methods: {
+    curDay() {
+      return Math.max(Math.min(4, new Date().getDay() - 2), 1)
+    },
     notify(text, type) {
       this.snack.text = text
       this.snack.color = type
