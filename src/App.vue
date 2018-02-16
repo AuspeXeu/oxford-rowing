@@ -767,20 +767,22 @@
     <v-footer app fixed>
       <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="auth">Bump</v-btn>
       <v-spacer></v-spacer>
-      <div>Chris Vaas</div>
+      <div class="noselect">Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
         <v-icon>fa-github</v-icon>
       </v-btn>
-      <div class="pr-2">© {{ new Date().getFullYear() }}</div>
+      <div class="noselect pr-2">© {{ new Date().getFullYear() }}</div>
     </v-footer>
     <v-snackbar
       :timeout="snack.timeout"
       :color="snack.color"
       :multi-line="snack.multi"
-      v-model="snack.visible"
-    >
-      {{ snack.text }}
-      <v-btn dark flat @click.native="snack.visible = false">Close</v-btn>
+      v-model="snack.visible">
+      {{snack.text}}
+      <v-spacer></v-spacer>
+      <v-btn dark flat icon small @click.native="snack.visible = false">
+        <v-icon>close</v-icon>
+      </v-btn>
     </v-snackbar>
   </v-app>
 </div>
