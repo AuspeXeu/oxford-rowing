@@ -890,6 +890,8 @@ export default {
     bumpBoat() {
       if (this.bumpBoat && !isNaN(this.bumpBoat.moves[this.bumpDay-1]))
         this.bumpMoves = this.bumpBoat.moves[this.bumpDay-1]
+      if (this.bumpBoat)
+        this.bumpGender = this.bumpBoat.gender
     },
     reporters() {
       if (this.reporters > 0 && ! this.liveTimer)
