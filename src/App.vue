@@ -23,7 +23,8 @@
           clearable
           dense
           multiple
-          class="pl-1"
+          single-line
+          class="mt-2"
         ></v-select>
         <v-menu offset-y left attach>
           <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
