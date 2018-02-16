@@ -1119,6 +1119,7 @@ export default {
         .catch(() => this.divs = false)
     },
     selectBoat(boat) {
+      this.bumpBoat = boat
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = [boat]
       this.boatsSelected = [boat]
