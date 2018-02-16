@@ -4,7 +4,7 @@
     <v-toolbar fixed app dense>
       <v-toolbar-title>
         <i id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i>
-        {{ title }}
+        Live Bumps
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon v-show="false" class="hidden-md-and-up"></v-toolbar-side-icon>
@@ -21,10 +21,10 @@
           multiple
         ></v-select>
         <v-menu offset-y left>
-          <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark slot="activator" ripple>Events</v-btn>
+          <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
           <v-list dense>
             <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
-              <v-list-tile-title>{{`${event.name} ${event.year}` }}</v-list-tile-title>
+              <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
             </v-list-tile>
           </v-list>
         </v-menu>
@@ -642,7 +642,7 @@
           </g>
         </svg>
       </v-container>
-      <v-bottom-sheet v-model="bumpDialog" max-width="500" hide-overlay inset>
+      <v-bottom-sheet v-model="bumpDialog" max-width="500" hide-overlay inset persistent>
         <v-card>
           <v-card-title>
             <span class="headline">Update Bump</span>
@@ -969,9 +969,6 @@ export default {
     },
     lblCrewSel() {
       return (this.boatsHigh.length > 1 ? 'Crews' : 'Crew')
-    },
-    title() {
-      return `Live Bumps${(this.event ? (` - ${this.event.name} ${this.event.year}`) : '')}`
     },
     boats() {
       let boats = []
