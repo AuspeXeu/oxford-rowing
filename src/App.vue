@@ -661,7 +661,7 @@
           <v-card-text class="custom-card">
             <v-container grid-list-md>
               <v-layout wrap>
-                <v-flex xs12 sm2 md2>
+                <v-flex xs2 sm2 md2>
                   <v-select
                     attach
                     top
@@ -671,7 +671,7 @@
                     :items="[1,2,3,4]"
                   ></v-select>
                 </v-flex>
-                <v-flex xs12 sm3 md3>
+                <v-flex xs2 sm3 md3>
                   <v-select
                     label="Division"
                     required
@@ -682,7 +682,7 @@
                     :items="(bumpGender === 'men' ? divsMen.concat({number: 'all'}) : divsWomen.concat({number: 'all'}))"
                   ></v-select>
                 </v-flex>
-                <v-flex xs12 sm3 md3>
+                <v-flex xs3 sm3 md3>
                   <v-select
                     label="Gender"
                     required
@@ -691,14 +691,14 @@
                     :items="['men','women']"
                   ></v-select>
                 </v-flex>
-                <v-flex xs12 sm4 md4>
+                <v-flex xs5 sm4 md4>
                   <v-tabs right v-model="bumpTab">
                     <v-tab v-for="n in ['Bump','Manual']" :key="n" value="a">{{ n }}</v-tab>
                   </v-tabs>
                 </v-flex>
               </v-layout>
               <v-layout wrap v-show="bumpTab === '0'">
-                <v-flex xs12 sm5 md5 :md8="bumpAction ==='row over'" :sm8="bumpAction ==='row over'">
+                <v-flex xs5 sm5 md5 :md8="bumpAction ==='row over'" :sm8="bumpAction ==='row over'" :xs8="bumpAction ==='row over'">
                   <v-select
                     v-show="bumpAction === 'row over'"
                     label="Boats"
@@ -722,7 +722,7 @@
                     :items="bumpBoats"
                   ></v-select>
                 </v-flex>
-                <v-flex xs12 sm3 md3 :md4="bumpAction ==='row over'" :sm4="bumpAction ==='row over'">
+                <v-flex xs3 sm3 md3 :md4="bumpAction ==='row over'" :sm4="bumpAction ==='row over'" :xs4="bumpAction ==='row over'">
                   <v-select
                     label="Action"
                     required
@@ -731,7 +731,7 @@
                     :items="['bumps','row over']"
                   ></v-select>
                 </v-flex>
-                <v-flex xs12 sm4 md4>
+                <v-flex xs4 sm4 md4>
                   <v-select
                     label="Boat"
                     v-show="bumpAction === 'bumps'"
@@ -745,7 +745,7 @@
                 </v-flex>
               </v-layout>
               <v-layout wrap v-show="bumpTab === '1'">
-                <v-flex xs12 sm6 md9>
+                <v-flex xs9 sm9 md9>
                   <v-select
                     label="Boat"
                     item-text="short"
@@ -756,7 +756,7 @@
                     :items="divBoats"
                   ></v-select>
                 </v-flex>
-                <v-flex xs12 sm6 md3>
+                <v-flex xs3 sm3 md3>
                   <v-text-field
                     label="Moves"
                     v-model="bumpMoves"
