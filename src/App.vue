@@ -2,8 +2,8 @@
 <div id="app">
   <v-app>
     <v-toolbar fixed app dense>
-      <v-toolbar-title>
-        <v-tooltip bottom>
+      <v-toolbar-title style="margin-left:15px;">
+        <v-tooltip bottom style="padding-right: 20px;">
           <i slot="activator" id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i>
           <span>{{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</span>
         </v-tooltip>
@@ -11,7 +11,7 @@
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon v-show="false" class="hidden-md-and-up"></v-toolbar-side-icon>
-      <v-toolbar-items>
+      <v-toolbar-items style="margin-right:15px;">
         <v-select
           :items="boats"
           item-text="short"
@@ -27,7 +27,7 @@
           class="mt-2"
         ></v-select>
         <v-menu offset-y left attach>
-          <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
+          <v-btn class="menu-btn mt-2 ml-1" color="primary" dark slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
           <v-list dense>
             <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
               <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
@@ -651,7 +651,7 @@
       <v-bottom-sheet v-model="bumpDialog" max-width="500" hide-overlay inset persistent lazy>
         <v-card>
           <v-card-title>
-            <span class="headline">Update Bump</span>
+            <span class="headline noselect">Update Bump</span>
             <v-spacer></v-spacer>
             <v-tooltip bottom>
               <v-icon slot="activator">{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
@@ -768,7 +768,7 @@
             </v-container>
           </v-card-text>
           <v-card-actions>
-            <small class="pl-3">*indicates required field</small>
+            <small class="pl-3 noselect">*indicates required field</small>
             <v-spacer></v-spacer>
             <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Close</v-btn>
             <v-btn color="blue darken-1" flat :disabled="!verified" @click.native="submitBump()">Submit</v-btn>
@@ -912,8 +912,11 @@ export default {
         setTimeout(() => this.bumpDay = this.curDay(), 1)
     },
     bumpBoat() {
-      if (this.bumpBoat && !isNaN(this.bumpBoat.moves[this.bumpDay-1]))
-        this.bumpMoves = this.bumpBoat.moves[this.bumpDay-1]
+      if (this.bumpBoat)
+        if (!isNaN(this.bumpBoat.moves[this.bumpDay-1]))
+          this.bumpMoves = this.bumpBoat.moves[this.bumpDay-1]
+        else
+          this.bumpMoves = 0
       if (this.bumpBoat)
         this.bumpGender = this.bumpBoat.gender
     },
