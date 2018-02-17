@@ -7,7 +7,7 @@
           <i slot="activator" id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i>
           <span>{{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</span>
         </v-tooltip>
-        <span class="hidden-sm-and-down">Live Bumps</span>
+        <span class="hidden-sm-and-down noselect">Live Bumps</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-side-icon v-show="false" class="hidden-md-and-up"></v-toolbar-side-icon>
@@ -24,7 +24,7 @@
           dense
           multiple
           single-line
-          class="mt-2"
+          class="mt-2 noselect"
         ></v-select>
         <v-menu offset-y left attach>
           <v-btn class="menu-btn mt-2 ml-1" color="primary" dark slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
@@ -630,8 +630,8 @@
             <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpBoat = boat;bumpDialog = true"></use>
-              <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
+              <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
           </g>
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
@@ -642,8 +642,8 @@
             <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
               <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
               <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpBoat = boat;bumpDialog = true"></use>
-              <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+              <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
+              <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
           </g>
         </svg>
@@ -659,7 +659,7 @@
             </v-tooltip>
           </v-card-title>
           <v-card-text class="custom-card">
-            <v-container grid-list-md>
+            <v-container grid-list-xs>
               <v-layout wrap>
                 <v-flex xs2 sm2 md2>
                   <v-select
@@ -758,7 +758,7 @@
                 </v-flex>
                 <v-flex xs3 sm3 md3>
                   <v-text-field
-                    label="Moves"
+                    label="Move by"
                     v-model="bumpMoves"
                     :rules="[(v) => !isNaN(v) || 'Has to be a number']"
                     required
@@ -777,7 +777,7 @@
       </v-bottom-sheet>
     </v-content>
     <v-footer app fixed>
-      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="auth">Bump</v-btn>
+      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
       <v-spacer></v-spacer>
       <div class="noselect">Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
@@ -786,15 +786,12 @@
       <div class="noselect pr-2">© {{ new Date().getFullYear() }}</div>
     </v-footer>
     <v-snackbar
+      class="noselect"
       :timeout="snack.timeout"
       :color="snack.color"
       :multi-line="snack.multi"
       v-model="snack.visible">
       {{snack.text}}
-      <v-spacer></v-spacer>
-      <v-btn dark flat icon small @click.native="snack.visible = false">
-        <v-icon>close</v-icon>
-      </v-btn>
     </v-snackbar>
   </v-app>
 </div>
@@ -912,11 +909,6 @@ export default {
         setTimeout(() => this.bumpDay = this.curDay(), 1)
     },
     bumpBoat() {
-      if (this.bumpBoat)
-        if (!isNaN(this.bumpBoat.moves[this.bumpDay-1]))
-          this.bumpMoves = this.bumpBoat.moves[this.bumpDay-1]
-        else
-          this.bumpMoves = 0
       if (this.bumpBoat)
         this.bumpGender = this.bumpBoat.gender
     },
@@ -1057,7 +1049,6 @@ export default {
       this.snack.visible = true
     },
     submitBump() {
-      this.bumpDialog = false
       axios.post('/bump', {
         year: this.event.year,
         name: this.event.name,
@@ -1124,6 +1115,8 @@ export default {
         .catch(() => this.divs = false)
     },
     selectBoat(boat) {
+      const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
+      //TODO - set this.bumpDivision
       this.bumpBoat = boat
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = [boat]
