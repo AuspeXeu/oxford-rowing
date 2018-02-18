@@ -778,6 +778,7 @@
     </v-content>
     <v-footer app fixed>
       <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
+      <div class="pl-2">By <a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
       <v-spacer></v-spacer>
       <div class="noselect">Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
@@ -1159,6 +1160,9 @@ export default {
 </script>
 
 <style>
+body {
+  background-color: #fafafa;
+}
 .live {
   color: red !important;
 }
