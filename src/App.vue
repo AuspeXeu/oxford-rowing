@@ -1116,7 +1116,7 @@ export default {
     },
     selectBoat(boat) {
       const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
-      //TODO - set this.bumpDivision
+      this.bumpDivision = Math.min(Math.ceil(boat.start / 13), divs.length)
       this.bumpBoat = boat
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = [boat]
