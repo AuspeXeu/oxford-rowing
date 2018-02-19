@@ -4,8 +4,12 @@
     <v-toolbar fixed app dense>
       <v-toolbar-title style="margin-left:15px;">
         <v-tooltip bottom style="padding-right: 20px;">
-          <i slot="activator" id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i>
-          <span>{{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</span>
+          <!-- <i slot="activator" id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i> -->
+          <v-icon slot="activator" v-show="reporters > 0 || viewers > 0" :class="{ live: isLive }">{{(viewers > 1 ? 'people' : 'person')}}</v-icon>
+          <span>
+            {{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</br>
+            {{`${viewers} viewer${(viewers > 1 ? 's are' : ' is')} online`}}
+          </span>
         </v-tooltip>
         <span class="hidden-sm-and-down noselect">Live Bumps</span>
       </v-toolbar-title>
@@ -814,6 +818,7 @@ export default {
       liveTimer: false,
       bumpAction: 'bumps',
       bumpedBoat: false,
+      viewers: 0,
       reporters: 0,
       rowOvers: [],
       bumpBoat: false,
@@ -861,10 +866,11 @@ export default {
         else
           this.chartData[club][gender][number].moves.push(moves)
         this.notify(`${this.clubToName(club)} M${this.romanize(number + 1)} moves ${moves}`, 'info')
-      } else if (message.type === 'reporters') {
-        if (this.reporters < message.number)
+      } else if (message.type === 'users') {
+        if (this.reporters < message.reporters)
           this.notify(`A reporter is live`, 'info')
-        this.reporters = message.number
+        this.reporters = message.reporters
+        this.viewers = message.viewers
       }
     }
     socket.onopen = () => {
@@ -918,6 +924,7 @@ export default {
         this.liveTimer = setInterval(() => this.isLive = !this.isLive, 1000)
       else if (this.reporters === 0 && this.liveTimer) {
         clearInterval(this.liveTimer)
+        this.isLive = false
         this.liveTimer = false
       }
     },
