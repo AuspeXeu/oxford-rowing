@@ -778,7 +778,7 @@
     </v-content>
     <v-footer app fixed>
       <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
-      <div class="pl-2">By <a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
+      <div class="pl-2 noselect">By <a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
       <v-spacer></v-spacer>
       <div class="noselect">Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
@@ -944,7 +944,8 @@ export default {
         const end = Math.min(rows, (this.bumpDivision * 13)+1)
         boats = boats.slice(start, end)
       }
-      this.bumpBoat = boats[0]
+      if (!boats.find((boat) => boat.short === this.bumpBoat.short))
+        this.bumpBoat = boats[0]
       return boats
     },
     bumpBoats() {
@@ -967,7 +968,8 @@ export default {
           else
             return false
       })
-      this.bumpBoat = boats[0]
+      if (!boats.find((boat) => boat.short === this.bumpBoat.short))
+        this.bumpBoat = boats[0]
       return boats
     },
     rowOverBoats() {
