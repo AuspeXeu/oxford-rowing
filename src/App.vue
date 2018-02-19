@@ -968,7 +968,7 @@ export default {
           else
             return false
       })
-      if (!this.bumpBoat || !boats.find((boat) => boat.short === this.bumpBoat.short))
+      if (!boats.find((boat) => boat.short === this.bumpBoat.short))
         this.bumpBoat = boats[0]
       return boats
     },
