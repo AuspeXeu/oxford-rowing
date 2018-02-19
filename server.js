@@ -155,10 +155,7 @@ const wss = new WebSocket.Server({server})
 wss.on('connection', (ws) => {
   const id = uuid()
   clients.set(id, ws)
-  ws.send(JSON.stringify({type: 'users', viewers: Math.max(0, clients.size - reporters.size) ,reporters: reporters.size}), (err) => {
-    if (err)
-      log(err)
-  })
+  broadcast({type: 'users', viewers: Math.max(0, clients.size - reporters.size) ,reporters: reporters.size})
   ws.on('close', () => {
     clients.delete(id)
     if (reporters.has(id)) {
