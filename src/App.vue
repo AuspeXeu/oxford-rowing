@@ -944,7 +944,7 @@ export default {
         const end = Math.min(rows, (this.bumpDivision * 13)+1)
         boats = boats.slice(start, end)
       }
-      if (!boats.find((boat) => boat.short === this.bumpBoat.short))
+      if (!this.bumpBoat || !boats.find((boat) => boat.short === this.bumpBoat.short))
         this.bumpBoat = boats[0]
       return boats
     },
@@ -968,7 +968,7 @@ export default {
           else
             return false
       })
-      if (!boats.find((boat) => boat.short === this.bumpBoat.short))
+      if (!this.bumpBoat || !boats.find((boat) => boat.short === this.bumpBoat.short))
         this.bumpBoat = boats[0]
       return boats
     },
