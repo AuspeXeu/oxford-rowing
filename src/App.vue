@@ -3,8 +3,7 @@
   <v-app>
     <v-toolbar fixed app dense>
       <v-toolbar-title style="margin-left:15px;">
-        <v-tooltip bottom style="padding-right: 20px;">
-          <!-- <i slot="activator" id="live" v-show="liveTimer" aria-hidden="true" :class="{ live: isLive, 'fa-xs': true, fa: true, 'fa-circle': true}"></i> -->
+        <v-tooltip bottom>
           <v-icon slot="activator" v-show="reporters > 0 || viewers > 0" :class="{ live: isLive }">{{(viewers > 1 ? 'people' : 'person')}}</v-icon>
           <span>
             {{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</br>
