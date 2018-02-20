@@ -625,7 +625,7 @@
                  transform="scale(-1)" />
             </g>
           </defs>
-          <g id="containerMen" transform="scale(0.5),translate(5,7)">
+          <g id="containerMen" :transform="`scale(${scale}),translate(5,7)`">
             <g v-for="div in divsMen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
               <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
@@ -637,7 +637,7 @@
               <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
           </g>
-          <g id="containerWomen" transform="translate(225,3),scale(0.5)">
+          <g id="containerWomen" :transform="`translate(225,3),scale(${scale})`">
             <g v-for="div in divsWomen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
               <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
@@ -813,6 +813,7 @@ export default {
     return {
       boatsSelected: [],
       name: 'live',
+      scale: 0.5,
       isLive: false,
       liveTimer: false,
       bumpAction: 'bumps',
