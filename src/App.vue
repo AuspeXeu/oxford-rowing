@@ -879,7 +879,7 @@ export default {
   },
   mounted() {
     this.bumpDay = this.curDay()
-    this.loadData(this.events.sort((a,b) => b.year-a.year)[0])
+    this.loadData(this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)[0])
   },
   watch: {
     bumpDay() {
