@@ -1120,7 +1120,7 @@ export default {
       return boat.moves.slice(0, boat.moves.length-1).map((move, idx) => {
         cur += move * (47.5 + 10) * -1
         return {
-          x: 95 * (idx+1),
+          x: 40 + (82 * (idx+1)),
           y: cur
         }
       })
@@ -1130,7 +1130,7 @@ export default {
       let cur = 24
       boat.moves.forEach((move, idx) => {
         cur += move * (47.5 + 10) * -1
-        line += ` L ${95 * (idx+1)} ${cur}`
+        line += ` L ${35 + 85 * (idx+1)} ${cur}`
       })
       return line
     },
