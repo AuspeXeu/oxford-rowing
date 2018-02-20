@@ -667,7 +667,6 @@
                 <v-flex xs2 sm2 md2>
                   <v-select
                     attach
-                    top
                     label="Day"
                     required
                     v-model="bumpDay"
