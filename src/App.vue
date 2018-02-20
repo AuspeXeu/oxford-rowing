@@ -626,7 +626,7 @@
             </g>
           </defs>
           <g id="containerMen" transform="scale(0.5),translate(5,7)">
-            <g v-for="div in divsMen" :transform="`translate(0,${(((12 * div.number)  * (47.5 + 10)) -5)})`">
+            <g v-for="div in divsMen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
               <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
@@ -638,7 +638,7 @@
             </g>
           </g>
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
-            <g v-for="div in divsWomen" :transform="`translate(0,${(((12 * div.number)  * (47.5 + 10)) -5)})`">
+            <g v-for="div in divsWomen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
               <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
@@ -916,12 +916,15 @@ export default {
     }
   },
   computed: {
+    boatsPerDiv() {
+      return (this.event && this.event.name.toLowerCase() === 'torpids' ? 12 : 13)
+    },
     divBoats() {
       const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
       let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
       if (this.bumpDivision !== 'all') {
-        const start = Math.max(0, ((this.bumpDivision - 1) * 12)-1)
-        const end = Math.min(rows, (this.bumpDivision * 12)+1)
+        const start = Math.max(0, ((this.bumpDivision - 1) * this.boatsPerDiv)-1)
+        const end = Math.min(rows, (this.bumpDivision * this.boatsPerDiv)+1)
         boats = boats.slice(start, end)
       }
       if (!this.bumpBoat || !boats.find((boat) => boat.short === this.bumpBoat.short))
@@ -932,8 +935,8 @@ export default {
       const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
       let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
       if (this.bumpDivision !== 'all') {
-        const start = Math.max(0, ((this.bumpDivision - 1) * 12)-1)
-        const end = Math.min(rows, (this.bumpDivision * 12)+1)
+        const start = Math.max(0, ((this.bumpDivision - 1) * this.boatsPerDiv)-1)
+        const end = Math.min(rows, (this.bumpDivision * this.boatsPerDiv)+1)
         boats = boats.slice(start, end)
       }
       boats = boats.filter((boat) => {
@@ -979,14 +982,14 @@ export default {
     divsMen() {
       if (this.divs)
         return this.divs.men.map((time, idx) => ({time: time, number: idx + 1}))
-      const ary = Array.from({length: Math.ceil(this.rowsMen / 12)}, (x,i) => i)
+      const ary = Array.from({length: Math.ceil(this.rowsMen / this.boatsPerDiv)}, (x,i) => i)
       ary.shift()
       return ary.map((itm, idx) => ({number: idx+1}))
     },
     divsWomen() {
       if (this.divs)
         return this.divs.women.map((time, idx) => ({time: time, number: idx + 1}))
-      const ary = Array.from({length: Math.ceil(this.rowsWomen / 12)}, (x,i) => i)
+      const ary = Array.from({length: Math.ceil(this.rowsWomen / this.boatsPerDiv)}, (x,i) => i)
       ary.shift()
       return ary.map((itm, idx) => ({number: idx+1}))
     },
@@ -1099,7 +1102,7 @@ export default {
     },
     selectBoat(boat) {
       const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
-      this.bumpDivision = Math.min(Math.ceil(boat.start / 12), divs.length)
+      this.bumpDivision = Math.min(Math.ceil(boat.start / this.boatsPerDiv), divs.length)
       this.bumpBoat = boat
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = [boat]
