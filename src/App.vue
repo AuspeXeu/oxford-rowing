@@ -631,8 +631,10 @@
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
             <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
-              <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
-              <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
+              <g transform="translate(50,0)">
+                <path v-for="line in makeLines(boat)" :d="line" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
+                <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
+              </g>
               <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
               <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
@@ -643,8 +645,10 @@
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
             <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
-              <path :d="makeLine(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
-              <circle v-for="point in makePoints(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
+              <g transform="translate(50,0)">
+                <path v-for="line in makeLines(boat)" :d="line" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
+                <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
+              </g>
               <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
               <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
             </g>
@@ -1111,23 +1115,26 @@ export default {
       }
     },
     makePoints(boat) {
-      let cur = 24
+      let offset = 23.75
       return boat.moves.slice(0, boat.moves.length-1).map((move, idx) => {
-        cur += move * (47.5 + 10) * -1
+        offset += move * (47.5 + 10) * -1
         return {
-          x: 40 + (82 * (idx+1)),
-          y: cur
+          x: (80 * (idx+1)),
+          y: offset
         }
       })
     },
-    makeLine(boat) {
-      let line = 'M 47 23.75'
-      let cur = 24
+    makeLines(boat) {
+      let offset = 23.75
+      let line = `M 0 ${offset}`
+      const lines = []
       boat.moves.forEach((move, idx) => {
-        cur += move * (47.5 + 10) * -1
-        line += ` L ${35 + 85 * (idx+1)} ${cur}`
+        offset += move * (47.5 + 10) * -1
+        line += ` L ${80 * (idx+1)} ${offset}`
+        lines.push(line)
+        line = `M ${80 * (idx+1)} ${offset}`
       })
-      return line
+      return lines
     },
     inc() {
       this.rows += 1
