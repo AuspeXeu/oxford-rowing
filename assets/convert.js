@@ -6,7 +6,7 @@ const out = '../data/torpids_2017.json'
 
 const data = {}
 const men = fs.readFileSync(`./${inMen}`, 'utf8')
-const women = fs.readFileSync(`./${inWomen}.csv`, 'utf8')
+const women = fs.readFileSync(`./${inWomen}`, 'utf8')
 
 const proc = (csv, gender) => {
   csv.split('\n').map((line) => line.replace('\r','').split(',')).forEach((itm, idx) => {
@@ -21,4 +21,4 @@ const proc = (csv, gender) => {
 
 proc(men, 'men')
 proc(women, 'women')
-fs.writeFileSync(file, JSON.stringify(data), 'utf8')
+fs.writeFileSync(out, JSON.stringify(data), 'utf8')
