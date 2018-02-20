@@ -708,7 +708,6 @@
                     item-text="short"
                     v-model="rowOvers"
                     required
-                    attach
                     clearable
                     multiple
                     :items="rowOverBoats"
@@ -716,7 +715,6 @@
                   <v-select
                     v-show="bumpAction === 'bumps'"
                     label="Boat"
-                    attach
                     item-text="short"
                     v-model="bumpBoat"
                     required
@@ -727,7 +725,6 @@
                   <v-select
                     label="Action"
                     required
-                    attach
                     v-model="bumpAction"
                     :items="['bumps','row over']"
                   ></v-select>
@@ -737,7 +734,6 @@
                     label="Boat"
                     v-show="bumpAction === 'bumps'"
                     item-text="short"
-                    attach
                     v-model="bumpedBoat"
                     :required="bumpAction === 'bumps'"
                     :items="bumpedBoats"
@@ -751,7 +747,6 @@
                     item-text="short"
                     v-model="bumpBoat"
                     required
-                    attach
                     :items="divBoats"
                   ></v-select>
                 </v-flex>
