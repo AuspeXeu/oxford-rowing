@@ -725,6 +725,7 @@
                   <v-select
                     label="Action"
                     required
+                    attach
                     v-model="bumpAction"
                     :items="['bumps','row over']"
                   ></v-select>
