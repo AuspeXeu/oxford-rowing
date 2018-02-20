@@ -1,8 +1,8 @@
 const fs = require('fs')
 
-const inMen = 'torpids_2017_men.csv'
-const inWomen = 'torpids_2017_women.csv'
-const out = '../data/torpids_2017.json'
+const inMen = 'eights_2017_men.csv'
+const inWomen = 'eights_2017_women.csv'
+const out = '../data/eights_2017.json'
 
 const data = {}
 const men = fs.readFileSync(`./${inMen}`, 'utf8')
