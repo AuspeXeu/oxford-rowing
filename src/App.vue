@@ -627,7 +627,7 @@
           </defs>
           <g id="containerMen" transform="scale(0.5),translate(5,7)">
             <g v-for="div in divsMen" :transform="`translate(0,${(((12 * div.number)  * (47.5 + 10)) -5)})`">
-              <path d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
+              <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
             <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
@@ -639,7 +639,7 @@
           </g>
           <g id="containerWomen" transform="translate(225,3),scale(0.5)">
             <g v-for="div in divsWomen" :transform="`translate(0,${(((12 * div.number)  * (47.5 + 10)) -5)})`">
-              <path d="M 0 0 L 405 0" fill="transparent" style="stroke:#000;stroke-width:5;" />
+              <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
               <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
             </g>
             <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
