@@ -43,7 +43,7 @@
       <v-container>
         <v-layout row v-resize="onResize">
           <v-flex id="svg-container" xs10 md6 sm10 offset-xs1 offset-sm1 offset-md3>
-            <svg width="100%" :height="Math.max(rowsMen, rowsWomen) * 28.75">
+            <svg width="100%" :height="Math.max(rowsMen, rowsWomen) * 37 * scale / 0.64">
               <defs>
                 <g id="UCO" transform="scale(0.5)">
                   <circle
@@ -1034,7 +1034,6 @@ export default {
       this.timer = setTimeout(function() {
         const width = document.getElementById('svg-container').offsetWidth
         this.scale = width * 0.64 / 577
-        //0.64 577
         console.log(width)
       }.bind(this), 150)
     },
