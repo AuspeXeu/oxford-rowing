@@ -880,32 +880,6 @@ export default {
   mounted() {
     this.bumpDay = this.curDay()
     this.loadData(this.events.sort((a,b) => b.year-a.year)[0])
-    //Graveyard
-    /*axios.get('./static/data/torpids_2017_men.csv')
-      .then((response) => {
-        const data = response.data.split('\n').map((line) => line.split(','))
-        data.forEach((itm, idx) => {
-          if (!this.chartData[itm[1]])
-            Vue.set(this.chartData, itm[1], {men: [], women:[]})
-          this.chartData[itm[1]].men.push({
-            start: idx + 1,
-            moves: itm.slice(2, itm.length).map((move) => parseInt(move, 10))
-          })
-        })
-        axios.get('./static/data/torpids_2017_women.csv')
-          .then((response) => {
-            const data = response.data.split('\n').map((line) => line.split(','))
-            data.forEach((itm, idx) => {
-              if (!this.chartData[itm[1]])
-                Vue.set(this.chartData, itm[1], {men: [], women:[]})
-              this.chartData[itm[1]].women.push({
-                start: idx + 1,
-                moves: itm.slice(2, itm.length).map((move) => parseInt(move, 10))
-              })
-            })
-            console.log(JSON.stringify(this.chartData))
-          })
-      })*/
   },
   watch: {
     bumpDay() {
