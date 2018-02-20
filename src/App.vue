@@ -710,7 +710,6 @@
                     required
                     attach
                     clearable
-                    autocomplete
                     multiple
                     :items="rowOverBoats"
                   ></v-select>
@@ -721,7 +720,6 @@
                     item-text="short"
                     v-model="bumpBoat"
                     required
-                    autocomplete
                     :items="bumpBoats"
                   ></v-select>
                 </v-flex>
@@ -742,7 +740,6 @@
                     attach
                     v-model="bumpedBoat"
                     :required="bumpAction === 'bumps'"
-                    autocomplete
                     :items="bumpedBoats"
                   ></v-select>
                 </v-flex>
@@ -755,7 +752,6 @@
                     v-model="bumpBoat"
                     required
                     attach
-                    autocomplete
                     :items="divBoats"
                   ></v-select>
                 </v-flex>
