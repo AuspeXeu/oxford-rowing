@@ -1126,7 +1126,7 @@ export default {
       })
     },
     makeLine(boat) {
-      let line = 'M 23.75 23.75'
+      let line = 'M 47 23.75'
       let cur = 24
       boat.moves.forEach((move, idx) => {
         cur += move * (47.5 + 10) * -1
