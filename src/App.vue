@@ -1034,7 +1034,6 @@ export default {
       this.timer = setTimeout(function() {
         const width = document.getElementById('svg-container').offsetWidth
         this.scale = width * 0.64 / 577
-        console.log(width)
       }.bind(this), 150)
     },
     curDay() {
