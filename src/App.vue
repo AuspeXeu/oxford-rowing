@@ -1066,6 +1066,7 @@ export default {
       return table[club]
     },
     loadData(event) {
+      this.divs = false
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}.json`)
         .then((response) => {
           for (let key in response.data) {
