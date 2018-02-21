@@ -42,7 +42,7 @@
     <v-content>
       <v-container>
         <v-layout row v-resize="onResize">
-          <v-flex id="svg-container" xs10 md6 sm10 offset-xs1 offset-sm1 offset-md3>
+          <v-flex id="svg-container" xs10 md10 sm10 offset-xs1 offset-sm1 offset-md2 offset-lg3 offset-xl4>
             <svg width="100%" :height="Math.max(rowsMen, rowsWomen) * 37 * scale / 0.64">
               <defs>
                 <g id="UCO" transform="scale(0.5)">
@@ -813,7 +813,7 @@ export default {
     return {
       boatsSelected: [],
       name: 'live',
-      scale: 0.35,//0.5,
+      scale: 0.35,
       timer: 0,
       isLive: false,
       liveTimer: false,
@@ -1034,7 +1034,7 @@ export default {
       clearTimeout(this.timer)
       this.timer = setTimeout(function() {
         const width = document.getElementById('svg-container').offsetWidth
-        this.scale = width * 0.64 / 577
+        this.scale = Math.min(width * 0.64 / 577, 0.64)
       }.bind(this), 150)
     },
     curDay() {
