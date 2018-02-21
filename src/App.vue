@@ -30,7 +30,7 @@
           class="mt-2 noselect"
         ></v-select>
         <v-menu offset-y left attach>
-          <v-btn class="menu-btn mt-2 ml-1" color="primary" dark slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
+          <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
           <v-list dense>
             <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
               <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
@@ -779,8 +779,9 @@
       </v-bottom-sheet>
     </v-content>
     <v-footer app fixed>
-      <v-btn class="menu-btn mt-2 ml-1 mr-1" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
-      <div class="pl-2 noselect">By <a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
+      <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
+      <img src="./assets/woo_crest.png" style="width:24px;" class="pl-1"/>
+      <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
       <v-spacer></v-spacer>
       <div class="noselect">Chris Vaas</div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
@@ -1056,7 +1057,10 @@ export default {
         bumpedBoat: (this.bumpTab === '0' && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
-      .catch((error) => this.notify('Failed to submit bump', 'error'))
+      .catch((error) => {
+        console.log(error)
+        this.notify('Failed to submit bump', 'error')
+      })
     },
     romanize(num) {
       if (!+num)
@@ -1165,9 +1169,6 @@ body {
 }
 .live {
   color: red !important;
-}
-.menu-btn {
-  height: 35px !important;
 }
 #btn-github {
   margin: 0px;
