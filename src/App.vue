@@ -634,7 +634,7 @@
                 </g>
                 <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <g transform="translate(50,0)">
-                    <path v-for="line in makeLines(boat)" :d="line" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
+                    <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
@@ -648,7 +648,7 @@
                 </g>
                 <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <g transform="translate(50,0)">
-                    <path v-for="line in makeLines(boat)" :d="line" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
+                    <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
@@ -859,7 +859,7 @@ export default {
         const year = parseInt(bump.year, 10)
         const number = parseInt(bump.number, 10)
         const day = parseInt(bump.day, 10)
-        const move = {moves: parseInt(bump.moves, 10), status: bump.status} //todo bump status
+        const move = bump.move
         if (this.event.year !== year || this.event.name.toLowerCase() !== name)
           return
         if (this.chartData[club][gender][number].moves.length >= day)
@@ -1151,7 +1151,7 @@ export default {
       boat.moves.forEach((move, idx) => {
         offset += move.moves * (47.5 + 10) * -1
         line += ` L ${80 * (idx+1)} ${offset}`
-        lines.push(line)
+        lines.push({path: line, status: move.status})
         line = `M ${80 * (idx+1)} ${offset}`
       })
       return lines

@@ -64,7 +64,7 @@ const updateEntry = (data, name, year, club, gender, number, day, moves) => {
     }
   else
     data[club][gender][number].moves.push({status: moves.status, moves: moves.val})
-  const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: data[club][gender][number].moves[day-1]}
+  const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,move: data[club][gender][number].moves[day-1]}
   broadcast(payload)
   return true
 }
@@ -90,7 +90,7 @@ app.post('/bump', authReq, (req, res) => {
   const bumpedBoat = req.body.bumpedBoat
   const rowOvers = req.body.rowOvers
   const day = parseInt(req.body.day, 10)
-  const move = {moves: parseInt(req.body.moves, 10), status: (req.body.bumpStatus ? req.body.bumpStatus : false)
+  const move = {moves: parseInt(req.body.moves, 10), status: (req.body.bumpStatus ? req.body.bumpStatus : false)}
 
   if (year !== new Date().getFullYear()) {
     res.sendStatus(400)
