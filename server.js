@@ -55,18 +55,20 @@ app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 const updateEntry = (data, name, year, club, gender, number, day, moves) => {
   if (day > data[club][gender][number].moves.length+1)
     return false
-  if (!isNaN(data[club][gender][number].moves[day-1]))
+  if (data[club][gender][number].moves[day-1])
     if (moves.op === 'set')
-      data[club][gender][number].moves[day-1] = moves.val
-    else
-      data[club][gender][number].moves[day-1] += moves.val
+      data[club][gender][number].moves[day-1] = {status: moves.status, moves: moves.val}
+    else {
+      data[club][gender][number].moves[day-1].moves += moves.val
+      data[club][gender][number].moves[day-1].status = moves.status
+    }
   else
-    data[club][gender][number].moves.push(moves.val)
+    data[club][gender][number].moves.push({status: moves.status, moves: moves.val})
   const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,moves: data[club][gender][number].moves[day-1]}
   broadcast(payload)
   return true
 }
-const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
+const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
 const getBoats = (data, gender, day) => {
   let boats = []
   for (let club in data) {
@@ -88,7 +90,7 @@ app.post('/bump', authReq, (req, res) => {
   const bumpedBoat = req.body.bumpedBoat
   const rowOvers = req.body.rowOvers
   const day = parseInt(req.body.day, 10)
-  const moves = parseInt(req.body.moves, 10)
+  const move = {moves: parseInt(req.body.moves, 10), status: (req.body.bumpStatus ? req.body.bumpStatus : false)
 
   if (year !== new Date().getFullYear()) {
     res.sendStatus(400)
@@ -120,14 +122,14 @@ app.post('/bump', authReq, (req, res) => {
       bumpBoat.cur = curPos(bumpBoat, day)
       const boats = getBoats(data, bumpBoat.gender, day)
       boats.filter((boat) => {
-        if (moves < 0)
-          return boat.cur > bumpBoat.cur && boat.cur <= bumpBoat.cur + (moves * -1)
-        else if (moves > 0)
-          return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (moves * -1)
+        if (move.moves < 0)
+          return boat.cur > bumpBoat.cur && boat.cur <= bumpBoat.cur + (move.moves * -1)
+        else if (move.moves > 0)
+          return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (move.moves * -1)
         else
           return false
-        }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(moves) * -1}))
-      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: moves})
+        }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(move.moves) * -1, status: move.status}))
+      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: move.moves, satus: move.status})
     }
     //bumpBoat bumps bumpedBoat
     else if (bumpedBoat && name === 'torpids') {

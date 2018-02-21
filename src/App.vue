@@ -859,14 +859,14 @@ export default {
         const year = parseInt(bump.year, 10)
         const number = parseInt(bump.number, 10)
         const day = parseInt(bump.day, 10)
-        const moves = parseInt(bump.moves, 10)
+        const move = {moves: parseInt(bump.moves, 10), status: bump.status} //todo bump status
         if (this.event.year !== year || this.event.name.toLowerCase() !== name)
           return
         if (this.chartData[club][gender][number].moves.length >= day)
-          Vue.set(this.chartData[club][gender][number].moves, day-1, moves)
+          Vue.set(this.chartData[club][gender][number].moves, day-1, move)
         else
-          this.chartData[club][gender][number].moves.push(moves)
-        this.notify(`${this.clubToName(club)} M${this.romanize(number + 1)} moves ${moves}`, 'info')
+          this.chartData[club][gender][number].moves.push(move)
+        this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')
       } else if (message.type === 'users') {
         if (this.reporters < message.reporters)
           this.notify(`A reporter is live`, 'info')
@@ -946,12 +946,12 @@ export default {
       }
       boats = boats.filter((boat) => {
         if (this.event.name.toLowerCase() === 'torpids')
-          if (isNaN(boat.moves[this.bumpDay-1]) || boat.moves[this.bumpDay-1] < 0)
+          if (!boat.moves[this.bumpDay-1] || boat.moves[this.bumpDay-1] < 0)
             return true
           else
             return false
         else if (this.event.name.toLowerCase() === 'eights')
-          if (isNaN(boat.moves[this.bumpDay-1]))
+          if (!boat.moves[this.bumpDay-1])
             return true
           else
             return false
@@ -961,7 +961,7 @@ export default {
       return boats
     },
     rowOverBoats() {
-      return this.bumpBoats.filter((boat) => isNaN(boat.moves[this.bumpDay-1]))
+      return this.bumpBoats.filter((boat) => !boat.moves[this.bumpDay-1])
     },
     bumpedBoats() {
       if (!this.bumpBoat)
@@ -1126,18 +1126,18 @@ export default {
       this.chartData[boat.club][boat.gender][boat.number].color = 'orange'
     },
     curPos(boat, day) {
-      return boat.moves.slice(0,day).reduce((acc, itm) => acc + itm, 0) * -1 + boat.start
+      return boat.moves.slice(0,day).reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
     },
     curPoint(boat) {
       return {
         x: 90 * boat.moves.length,
-        y: boat.moves.reduce((acc, itm) => acc + itm, 0) * (47.5 + 10) * -1
+        y: boat.moves.reduce((acc, itm) => acc + itm.moves, 0) * (47.5 + 10) * -1
       }
     },
     makePoints(boat) {
       let offset = 23.75
       return boat.moves.slice(0, boat.moves.length-1).map((move, idx) => {
-        offset += move * (47.5 + 10) * -1
+        offset += move.moves * (47.5 + 10) * -1
         return {
           x: (80 * (idx+1)),
           y: offset
@@ -1149,7 +1149,7 @@ export default {
       let line = `M 0 ${offset}`
       const lines = []
       boat.moves.forEach((move, idx) => {
-        offset += move * (47.5 + 10) * -1
+        offset += move.moves * (47.5 + 10) * -1
         line += ` L ${80 * (idx+1)} ${offset}`
         lines.push(line)
         line = `M ${80 * (idx+1)} ${offset}`
