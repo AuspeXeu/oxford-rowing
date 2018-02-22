@@ -630,13 +630,13 @@
               <g id="containerMen" :transform="`scale(${scale})`">
                 <g v-for="div in divsMen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
+                  <text x="0" y="35" font-size="35" transform="translate(415,-300),rotate(-90)">{{divName(div)}}</text>
                 </g>
                 <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
@@ -644,13 +644,13 @@
               <g id="containerWomen" :transform="`translate(${offset},0),scale(${scale})`">
                 <g v-for="div in divsWomen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" transform="translate(400,-300),rotate(-90)">{{divName(div)}}</text>
+                  <text x="0" y="35" font-size="35" transform="translate(415,-300),rotate(-90)">{{divName(div)}}</text>
                 </g>
                 <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
@@ -1072,8 +1072,28 @@ export default {
       clearTimeout(this.timer)
       this.timer = setTimeout(function() {
         const width = document.getElementById('svg-container').offsetWidth
-        this.scale = Math.min(width * 0.64 / 577, 0.64)
+        this.scale = Math.min(width * 0.63 / 577, 0.63)
       }.bind(this), 150)
+    },
+    clickEnd(boat) {
+      if (!this.verified)
+        this.selectBoat(boat)
+      else {
+        const lastMove = boat.moves[boat.moves.length-1]
+        axios.post('/bump', {
+          year: this.event.year,
+          name: this.event.name,
+          day: boat.moves.length,
+          bumpBoat: boat,
+          moves: lastMove.moves,
+          status: !lastMove.status
+        }, {headers: {'authorization': this.auth}})
+        .then((response) => this.notify(`Bump ${lastMove.status ? 'unconfirmed' : 'confirmed'}`, 'success'))
+        .catch((error) => {
+          console.log(error)
+          this.notify('Failed to change bump status', 'error')
+        })
+      }
     },
     curDay() {
       return Math.max(Math.min(4, new Date().getDay() - 2), 1)
@@ -1168,7 +1188,7 @@ export default {
     },
     curPoint(boat) {
       return {
-        x: -25 + 80 * boat.moves.length,
+        x: -5 + 80 * boat.moves.length,
         y: boat.moves.reduce((acc, itm) => acc + itm.moves, 0) * (47.5 + 10) * -1
       }
     },
