@@ -780,7 +780,7 @@
     </v-content>
     <v-footer app fixed>
       <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
-      <img src="./assets/woo_crest.png" style="width:24px;" class="pl-1"/>
+      <img class="noselect" src="./assets/woo_crest.png" style="width:24px;" class="pl-1"/>
       <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
       <v-spacer></v-spacer>
       <div class="noselect"><a href="mailto:chrisvaas@gmail.com">Chris Vaas</a></div>
