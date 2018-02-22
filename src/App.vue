@@ -663,8 +663,7 @@
         <v-card>
           <v-card-title>
             <span class="headline noselect">Update Bump</span>
-            <v-spacer>
-            </v-spacer>
+            <v-spacer></v-spacer>
             <v-tooltip bottom>
               <v-icon slot="activator">{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
               <span>{{(!verified ? 'Not authenticated' : 'Authenticated')}}</span>
@@ -783,7 +782,7 @@
       <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
       <img class="noselect pl-1" src="./assets/woo_crest.png" style="width:24px;"/>
       <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
-      <v-spacer :class="`text-xs-center ${countDownClass}`">{{countDownVal}}</v-spacer>
+      <v-spacer :class="`noselect text-xs-center ${countDownClass}`">{{countDownVal}}</v-spacer>
       <div class="noselect"><a href="mailto:chrisvaas@gmail.com">Chris Vaas</a></div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
         <v-icon>fa-github</v-icon>
