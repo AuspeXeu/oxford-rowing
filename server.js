@@ -127,9 +127,9 @@ app.post('/bump', authReq, (req, res) => {
         bumpBoat.cur = curPos(bumpBoat, day)
         const boats = getBoats(data, bumpBoat.gender, day)
         boats.filter((boat) => {
-          if (move.moves < 0)
+          if (move.moves < 0 && boat.moves.length >= day)
             return boat.cur > bumpBoat.cur && boat.cur <= bumpBoat.cur + (move.moves * -1)
-          else if (move.moves > 0)
+          else if (move.moves > 0 && boat.moves.length >= day)
             return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (move.moves * -1)
           else
             return false
@@ -142,7 +142,7 @@ app.post('/bump', authReq, (req, res) => {
       bumpBoat.cur = curPos(bumpBoat, day)
       bumpedBoat.cur = curPos(bumpedBoat, day)
       const boats = getBoats(data, bumpBoat.gender, day)
-      boats.filter((boat) => boat.cur > bumpedBoat.cur && boat.cur <= bumpBoat.cur)
+      boats.filter((boat) => boat.cur > bumpedBoat.cur && boat.cur <= bumpBoat.cur && boat.moves.length >= day)
         .forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: 1}))
       updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'mod', val: bumpedBoat.cur - bumpBoat.cur})
     } else if (bumpedBoat && name === 'eights') {
