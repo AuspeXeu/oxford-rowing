@@ -636,9 +636,9 @@
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
-                  <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                 </g>
               </g>
               <g id="containerWomen" :transform="`translate(${offset},0),scale(${scale})`">
@@ -650,9 +650,9 @@
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
-                  <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                 </g>
               </g>
             </svg>
@@ -1130,7 +1130,7 @@ export default {
     },
     curPoint(boat) {
       return {
-        x: 90 * boat.moves.length,
+        x: -25 + 80 * boat.moves.length,
         y: boat.moves.reduce((acc, itm) => acc + itm.moves, 0) * (47.5 + 10) * -1
       }
     },
