@@ -119,17 +119,23 @@ app.post('/bump', authReq, (req, res) => {
       rowOvers.forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, parseInt(boat.number,10), day, {op: 'set', val: 0}))
     //Manual entry
     else if (!bumpedBoat) {
-      bumpBoat.cur = curPos(bumpBoat, day)
-      const boats = getBoats(data, bumpBoat.gender, day)
-      boats.filter((boat) => {
-        if (move.moves < 0)
-          return boat.cur > bumpBoat.cur && boat.cur <= bumpBoat.cur + (move.moves * -1)
-        else if (move.moves > 0)
-          return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (move.moves * -1)
-        else
-          return false
-        }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(move.moves) * -1, status: move.status}))
-      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: move.moves, satus: move.status})
+      const entry = data[bumpBoat.club][bumpBoat.gender][bumpBoat.number].moves[day-1]
+      //Only change status
+      if (entry.status !== move.status)
+        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: move.moves, status: move.status})
+      else {
+        bumpBoat.cur = curPos(bumpBoat, day)
+        const boats = getBoats(data, bumpBoat.gender, day)
+        boats.filter((boat) => {
+          if (move.moves < 0)
+            return boat.cur > bumpBoat.cur && boat.cur <= bumpBoat.cur + (move.moves * -1)
+          else if (move.moves > 0)
+            return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (move.moves * -1)
+          else
+            return false
+          }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(move.moves) * -1, status: move.status}))
+        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: move.moves, status: move.status})
+      }
     }
     //bumpBoat bumps bumpedBoat
     else if (bumpedBoat && name === 'torpids') {
