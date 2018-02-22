@@ -957,7 +957,10 @@ export default {
             return false
       })
       if (!boats.find((boat) => boat.short === this.bumpBoat.short))
-        this.bumpBoat = boats[0]
+        if (boats.length > 1)
+          this.bumpBoat = boats[1]
+        else
+          this.bumpBoat = boats[0]
       return boats
     },
     rowOverBoats() {
