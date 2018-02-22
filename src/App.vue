@@ -898,13 +898,12 @@ export default {
     let now = new Date().getTime()
     if (this.countDownDate - now > 0) {
       this.countDownDlg = true
-      let x = setInterval(() => {
+      const countDown = () => {
         now = new Date().getTime()
         const distance = this.countDownDate - now
         if (distance < 0) {
           this.countDownVal = '0d 0h 0m 0s'
           this.countDownDlg = false
-          clearTimer(x)
         } else {
           const days = Math.floor(distance / (1000 * 60 * 60 * 24))
           const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
@@ -912,7 +911,9 @@ export default {
           const seconds = Math.floor((distance % (1000 * 60)) / 1000)
           this.countDownVal = `${days}d ${hours}h ${minutes}m ${seconds}s`
         }
-      }, 1000)
+      }
+      countDown()
+      setInterval(countDown, 1000)
     }
     this.bumpDay = this.curDay()
     this.loadData(this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)[0])
