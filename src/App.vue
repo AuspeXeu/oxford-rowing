@@ -777,12 +777,23 @@
           </v-card-actions>
         </v-card>
       </v-bottom-sheet>
+      <v-dialog v-model="countDownDlg" max-width="500px">
+        <v-card>
+          <v-card-title>
+            <span class="headline">Time to Bumps</span>
+            <v-spacer></v-spacer>
+            <v-btn icon slot="activator" @click.stop="countDownDlg = false">
+              <v-icon>close</v-icon>
+            </v-btn>
+          </v-card-title>
+          <v-card-text class="text-xs-center headline">{{countDownVal}}</v-card-text>
+        </v-card>
+      </v-dialog>
     </v-content>
     <v-footer app fixed>
       <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
       <img class="noselect pl-1" src="./assets/woo_crest.png" style="width:24px;"/>
       <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
-      <v-spacer :class="`noselect text-xs-center ${countDownClass}`">{{countDownVal}}</v-spacer>
       <div class="noselect"><a href="mailto:chrisvaas@gmail.com">Chris Vaas</a></div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
         <v-icon>fa-github</v-icon>
@@ -813,7 +824,7 @@ export default {
     return {
       countDownDate: new Date('Feb 28, 2018 10:00:00').getTime(),
       countDownVal: '',
-      countDownClass: '',
+      countDownDlg: false,
       boatsSelected: [],
       name: 'live',
       scale: 0.35,
@@ -885,16 +896,15 @@ export default {
   mounted() {
     let now = new Date().getTime()
     if (this.countDownDate - now > 0) {
+      this.countDownDlg = true
       let x = setInterval(() => {
         now = new Date().getTime()
         const distance = this.countDownDate - now
-        if (!this.countDownClass.length)
-          this.countDownClass = 'red-font'
-        else
-          this.countDownClass = ''
-        if (distance < 0)
+        if (distance < 0) {
           this.countDownVal = '0d 0h 0m 0s'
-        else {
+          this.countDownDlg = false
+          clearTimer(x)
+        } else {
           const days = Math.floor(distance / (1000 * 60 * 60 * 24))
           const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
           const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
