@@ -663,7 +663,8 @@
         <v-card>
           <v-card-title>
             <span class="headline noselect">Update Bump</span>
-            <v-spacer></v-spacer>
+            <v-spacer>
+            </v-spacer>
             <v-tooltip bottom>
               <v-icon slot="activator">{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
               <span>{{(!verified ? 'Not authenticated' : 'Authenticated')}}</span>
@@ -780,9 +781,9 @@
     </v-content>
     <v-footer app fixed>
       <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
-      <img class="noselect" src="./assets/woo_crest.png" style="width:24px;" class="pl-1"/>
+      <img class="noselect pl-1" src="./assets/woo_crest.png" style="width:24px;"/>
       <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
-      <v-spacer></v-spacer>
+      <v-spacer :class="`text-xs-center ${countDownClass}`">{{countDownVal}}</v-spacer>
       <div class="noselect"><a href="mailto:chrisvaas@gmail.com">Chris Vaas</a></div>
       <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
         <v-icon>fa-github</v-icon>
@@ -811,6 +812,9 @@ Vue.use(Vuetify)
 export default {
   data() {
     return {
+      countDownDate: new Date('Feb 28, 2018 10:00:00').getTime(),
+      countDownVal: '',
+      countDownClass: '',
       boatsSelected: [],
       name: 'live',
       scale: 0.35,
@@ -880,6 +884,26 @@ export default {
     }
   },
   mounted() {
+    let now = new Date().getTime()
+    if (this.countDownDate - now > 0) {
+      let x = setInterval(() => {
+        now = new Date().getTime()
+        const distance = this.countDownDate - now
+        if (!this.countDownClass.length)
+          this.countDownClass = 'red-font'
+        else
+          this.countDownClass = ''
+        if (distance < 0)
+          this.countDownVal = '0d 0h 0m 0s'
+        else {
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+          this.countDownVal = `${days}d ${hours}h ${minutes}m ${seconds}s`
+        }
+      }, 1000)
+    }
     this.bumpDay = this.curDay()
     this.loadData(this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)[0])
   },
@@ -1179,6 +1203,9 @@ body {
 .custom-card {
   padding-bottom: 0px;
   padding-top: 0px;
+}
+.red-font {
+  color: red;
 }
 svg {
   display:block;
