@@ -753,7 +753,7 @@
                   <v-select
                     label="Boat"
                     item-text="short"
-                    v-model="bumpBoat"
+                    v-model="manualBoat"
                     required
                     :items="divBoats"
                   ></v-select>
@@ -838,6 +838,7 @@ export default {
       reporters: 0,
       rowOvers: [],
       bumpBoat: false,
+      manualBoat: false,
       event: false,
       auth: false,
       snack: {
@@ -1110,7 +1111,7 @@ export default {
         name: this.event.name,
         day: this.bumpDay,
         moves: this.bumpMoves,
-        bumpBoat: this.bumpBoat,
+        bumpBoat: (this.bumpTab === '0' ? this.bumpBoat : this.manualBoat),
         rowOvers: (this.bumpTab === '0' && this.bumpAction === 'row over' ? this.rowOvers : undefined),
         bumpedBoat: (this.bumpTab === '0' && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
       }, {headers: {'authorization': this.auth}})
@@ -1178,6 +1179,7 @@ export default {
       const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
       this.bumpDivision = Math.min(Math.ceil(boat.start / this.boatsPerDiv), divs.length)
       this.bumpBoat = boat
+      this.manualBoat = boat
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       this.boatsHigh = [boat]
       this.boatsSelected = [boat]
