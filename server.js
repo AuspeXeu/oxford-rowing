@@ -160,16 +160,19 @@ app.get('/verify', authReq, (req, res) => res.status(200).send(''))
 const server = http.createServer(app)
 const wss = new WebSocket.Server({server})
 
-const updateUsers = () => broadcast({type: 'users', viewers: Math.max(0, clients.size - reporters.size), reporters: reporters.size})
+const userReport = () => ({type: 'users', viewers: Math.max(0, clients.size - reporters.size), reporters: reporters.size})
+setInterval(() => broadcast(userReport()), 30 * 1000)
 wss.on('connection', (ws) => {
   const id = uuid()
   clients.set(id, ws)
-  updateUsers()
+  ws.send(JSON.stringify(userReport), (err) => {
+    if (err)
+      log(err)
+  })
   ws.on('close', () => {
     clients.delete(id)
     if (reporters.has(id))
       reporters.delete(id)
-    updateUsers()
   })
   ws.on('error', (err) => {
     log(err)
@@ -177,10 +180,8 @@ wss.on('connection', (ws) => {
   })
   ws.on('message', (msg) => {
     msg = JSON.parse(msg)
-    if (msg.type === 'reporter' && isAuth(msg.auth)) {
+    if (msg.type === 'reporter' && isAuth(msg.auth))
       reporters.add(id)
-      updateUsers()
-    }
   })
 })
 
