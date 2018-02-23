@@ -165,7 +165,7 @@ setInterval(() => broadcast(userReport()), 30 * 1000)
 wss.on('connection', (ws) => {
   const id = uuid()
   clients.set(id, ws)
-  ws.send(JSON.stringify(userReport), (err) => {
+  ws.send(JSON.stringify(userReport()), (err) => {
     if (err)
       log(err)
   })
