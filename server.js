@@ -95,7 +95,7 @@ app.post('/bump', authReq, (req, res) => {
   const bumpedBoat = req.body.bumpedBoat
   const rowOvers = req.body.rowOvers
   const day = parseInt(req.body.day, 10)
-  const move = {moves: parseInt(req.body.moves, 10), status: (req.body.status ? req.body.status : false)}
+  const move = {moves: parseInt(req.body.moves, 10), status: (req.body.status ? true : false)}
 
   if (year !== new Date().getFullYear()) {
     res.sendStatus(400)
@@ -131,8 +131,7 @@ app.post('/bump', authReq, (req, res) => {
     //Manual entry
     else if (!bumpedBoat) {
       const entry = data[bumpBoat.club][bumpBoat.gender][bumpBoat.number].moves[day-1]
-      //Only change status
-      if (entry && entry.status !== move.status)
+      if (entry && Boolean(entry.status) !== move.status)
         updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: move.moves, status: move.status})
       else {
         bumpBoat.cur = curPos(bumpBoat, day)
