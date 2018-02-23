@@ -60,6 +60,7 @@ app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 const updateEntry = (data, name, year, club, gender, number, day, move) => {
   if (day > data[club][gender][number].moves.length+1)
     return false
+  move.status = Boolean(move.status)
   let entry = data[club][gender][number].moves[day-1]
   if (!entry || move.op === 'set')
     entry = {status: move.status, moves: move.val}
@@ -152,8 +153,8 @@ app.post('/bump', authReq, (req, res) => {
             return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (move.moves * -1)
           else
             return false
-          }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(move.moves) * -1, status: move.status}))
-        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: move.moves, status: move.status})
+          }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(move.moves) * -1, status: false}))
+        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: move.moves, status: false})
       }
     }
     //bumpBoat bumps bumpedBoat
