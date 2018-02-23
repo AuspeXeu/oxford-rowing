@@ -1147,24 +1147,18 @@ export default {
       this.divs = false
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}.json`)
         .then((response) => {
-          for (let key in response.data) {
-            response.data[key].men = response.data[key].men.map((boat, idx) => {
-              boat.club = key
-              boat.gender = 'men'
-              boat.number = idx
-              boat.color = 'gray'
-              boat.short = `${this.clubToName(boat.club)} M${this.romanize(boat.number + 1)}`
-              return boat
-            })
-            response.data[key].women = response.data[key].women.map((boat, idx) => {
-              boat.club = key
-              boat.gender = 'women'
-              boat.number = idx
-              boat.short = `${this.clubToName(boat.club)} W${this.romanize(boat.number + 1)}`
-              boat.color = 'gray'
-              return boat
-            })
-            Vue.set(this.chartData, key, response.data[key])
+          for (let club in response.data) {
+            for (let gender in response.data[club]) {
+              response.data[club][gender] = response.data[club][gender].map((boat, idx) => {
+                boat.club = club
+                boat.gender = gender
+                boat.number = idx
+                boat.color = 'gray'
+                boat.short = `${this.clubToName(boat.club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(boat.number + 1)}`
+                return boat
+              })
+            }
+            Vue.set(this.chartData, club, response.data[club])
           }
           this.bumpBoat = this.boats[0]
           this.event = event
