@@ -131,7 +131,7 @@ app.post('/bump', authReq, (req, res) => {
     Object.assign(bumpBoat, data[bumpBoat.club][bumpBoat.gender][bumpBoat.number])
     if (!bumpBoat)
       return res.status(400).json({err: 'Boat not found'})
-    if (day > bumpBoat.moves.length + 1)
+    if (day > bumpBoat.moves.length + 1 && !rowOvers)
       return res.status(400).json({err: 'Day out of bounds'})
     //All bumpBoat(s) rowed over
     if (rowOvers)
