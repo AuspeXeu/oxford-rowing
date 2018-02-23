@@ -86,7 +86,7 @@ const getBoats = (data, gender, day) => {
 app.post('/bump', authReq, (req, res) => {
   const name = req.body.name.toLowerCase()
   const year = parseInt(req.body.year, 10)
-  const bumpBoat = req.body.bumpBoat
+  let bumpBoat = req.body.bumpBoat
   const bumpedBoat = req.body.bumpedBoat
   const rowOvers = req.body.rowOvers
   const day = parseInt(req.body.day, 10)
@@ -114,6 +114,12 @@ app.post('/bump', authReq, (req, res) => {
   else
     promise = Promise.resolve(dataCache[`${name}_${year}`])
   promise.then((data) => {
+    //Get ground truth from data
+    Object.assign(bumpBoat, data[bumpBoat.club][bumpBoat.gender][bumpBoat.number])
+    if (!bumpBoat)
+      return res.status(400).json({err: 'Boat not found'})
+    if (day > bumpBoat.moves.length + 1)
+      return res.status(400).json({err: 'Day out of bounds'})
     //All bumpBoat(s) rowed over
     if (rowOvers)
       rowOvers.forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, parseInt(boat.number,10), day, {op: 'set', val: 0}))
@@ -121,7 +127,7 @@ app.post('/bump', authReq, (req, res) => {
     else if (!bumpedBoat) {
       const entry = data[bumpBoat.club][bumpBoat.gender][bumpBoat.number].moves[day-1]
       //Only change status
-      if (entry.status !== move.status)
+      if (entry && entry.status !== move.status)
         updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: move.moves, status: move.status})
       else {
         bumpBoat.cur = curPos(bumpBoat, day)
@@ -142,7 +148,7 @@ app.post('/bump', authReq, (req, res) => {
       bumpBoat.cur = curPos(bumpBoat, day)
       bumpedBoat.cur = curPos(bumpedBoat, day)
       const boats = getBoats(data, bumpBoat.gender, day)
-      boats.filter((boat) => boat.cur > bumpedBoat.cur && boat.cur <= bumpBoat.cur && boat.moves.length >= day)
+      boats.filter((boat) => boat.cur > bumpedBoat.cur && boat.cur <= bumpBoat.cur)
         .forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: 1}))
       updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'mod', val: bumpedBoat.cur - bumpBoat.cur})
     } else if (bumpedBoat && name === 'eights') {
@@ -153,7 +159,7 @@ app.post('/bump', authReq, (req, res) => {
     } else
       log('No idea what to do with the data!', req.body)
     fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
-  }).catch((err) => res.sendStatus(400))
+  }).catch((err) => res.status(400).json({err: err}))
 })
 app.get('/verify', authReq, (req, res) => res.status(200).send(''))
 
