@@ -50,6 +50,11 @@ const broadcast = (msg) => {
     })
   })
 }
+const logEvent = (ev, ip) => {
+  fs.appendFile(`${__dirname}/clients.csv`, `${ev},${ip},${new Date().getTime()}\n`, (err) => {
+    if (err) log(err)
+  })
+}
 
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 const updateEntry = (data, name, year, club, gender, number, day, moves) => {
@@ -168,14 +173,17 @@ const wss = new WebSocket.Server({server})
 
 const userReport = () => ({type: 'users', viewers: Math.max(0, clients.size - reporters.size), reporters: reporters.size})
 setInterval(() => broadcast(userReport()), 30 * 1000)
-wss.on('connection', (ws) => {
+wss.on('connection', (ws, req) => {
   const id = uuid()
+  const ip = req.headers['x-forwarded-for']
   clients.set(id, ws)
+  logEvent('c', ip)
   ws.send(JSON.stringify(userReport()), (err) => {
     if (err)
       log(err)
   })
   ws.on('close', () => {
+    logEvent('d', ip)
     clients.delete(id)
     if (reporters.has(id))
       reporters.delete(id)
