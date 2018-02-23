@@ -1106,11 +1106,17 @@ export default {
       this.snack.visible = true
     },
     submitBump() {
+      if (this.bumpTab === '1' && this.manualBoat 
+        && this.manualBoat.moves[this.bumpDay-1]
+        && this.manualBoat.moves[this.bumpDay-1].status
+        && !confirm('You are about to edit a confirmed result, do you know what you are doing?'))
+        return
       axios.post('/bump', {
         year: this.event.year,
         name: this.event.name,
         day: this.bumpDay,
         moves: this.bumpMoves,
+        status: (this.manualBoat && this.manualBoat.moves[this.bumpDay-1] ? this.manualBoat.moves[this.bumpDay-1].status : undefined),
         bumpBoat: (this.bumpTab === '0' ? this.bumpBoat : this.manualBoat),
         rowOvers: (this.bumpTab === '0' && this.bumpAction === 'row over' ? this.rowOvers : undefined),
         bumpedBoat: (this.bumpTab === '0' && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
