@@ -1090,7 +1090,7 @@ export default {
         }, {headers: {'authorization': this.auth}})
         .then((response) => this.notify(`Bump ${lastMove.status ? 'unconfirmed' : 'confirmed'}`, 'success'))
         .catch((error) => {
-          console.log(error)
+          console.log(error.response.data)
           this.notify('Failed to change bump status', 'error')
         })
       }
@@ -1116,7 +1116,7 @@ export default {
       }, {headers: {'authorization': this.auth}})
       .then((response) => this.notify('Bump submitted', 'success'))
       .catch((error) => {
-        console.log(error)
+        console.log(error.response.data)
         this.notify('Failed to submit bump', 'error')
       })
     },
