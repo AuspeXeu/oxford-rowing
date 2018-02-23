@@ -104,7 +104,7 @@ app.post('/bump', authReq, (req, res) => {
   const bumpedBoat = req.body.bumpedBoat
   const rowOvers = req.body.rowOvers
   const day = parseInt(req.body.day, 10)
-  const move = {moves: parseInt(req.body.moves, 10), status: (req.body.status ? true : false)}
+  const move = {moves: req.body.moves, status: Boolean(req.body.status)}
 
   if (year !== new Date().getFullYear()) {
     res.sendStatus(400)

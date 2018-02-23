@@ -762,6 +762,7 @@
                   <v-text-field
                     label="Move by"
                     v-model="bumpMoves"
+                    mask="###"
                     :rules="[(v) => !isNaN(v) || 'Has to be a number']"
                     required
                   ></v-text-field>
@@ -1115,7 +1116,7 @@ export default {
         year: this.event.year,
         name: this.event.name,
         day: this.bumpDay,
-        moves: this.bumpMoves,
+        moves: parseInt(this.bumpMoves, 10),
         status: (this.manualBoat && this.manualBoat.moves[this.bumpDay-1] ? this.manualBoat.moves[this.bumpDay-1].status : undefined),
         bumpBoat: (this.bumpTab === '0' ? this.bumpBoat : this.manualBoat),
         rowOvers: (this.bumpTab === '0' && this.bumpAction === 'row over' ? this.rowOvers : undefined),
