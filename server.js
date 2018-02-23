@@ -57,18 +57,20 @@ const logEvent = (ev, ip) => {
 }
 
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
-const updateEntry = (data, name, year, club, gender, number, day, moves) => {
+const updateEntry = (data, name, year, club, gender, number, day, move) => {
   if (day > data[club][gender][number].moves.length+1)
     return false
-  if (data[club][gender][number].moves[day-1])
-    if (moves.op === 'set')
-      data[club][gender][number].moves[day-1] = {status: moves.status, moves: moves.val}
-    else {
-      data[club][gender][number].moves[day-1].moves += moves.val
-      data[club][gender][number].moves[day-1].status = moves.status
-    }
+  let entry = data[club][gender][number].moves[day-1]
+  if (!entry || move.op === 'set')
+    entry = {status: move.status, moves: move.val}
   else
-    data[club][gender][number].moves.push({status: moves.status, moves: moves.val})
+    if (move.op === 'conf')
+      entry.status = move.status
+    else {
+      entry.moves += move.val
+      entry.status = move.status
+    }
+  data[club][gender][number].moves[day-1] = entry
   const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,move: data[club][gender][number].moves[day-1]}
   broadcast(payload)
   return true
@@ -131,8 +133,9 @@ app.post('/bump', authReq, (req, res) => {
     //Manual entry
     else if (!bumpedBoat) {
       const entry = data[bumpBoat.club][bumpBoat.gender][bumpBoat.number].moves[day-1]
+      //Change confirmation of entry
       if (entry && Boolean(entry.status) !== move.status)
-        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: move.moves, status: move.status})
+        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'conf', status: move.status})
       else {
         bumpBoat.cur = curPos(bumpBoat, day)
         const boats = getBoats(data, bumpBoat.gender, day)
