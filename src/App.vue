@@ -898,7 +898,7 @@ export default {
   mounted() {
     let now = new Date().getTime()
     if (this.countDownDate - now > 0) {
-      this.countDownDlg = true
+      this.countDownDlg = !auth
       const countDown = () => {
         now = new Date().getTime()
         const distance = this.countDownDate - now
