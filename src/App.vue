@@ -685,7 +685,6 @@
                   <v-select
                     label="Division"
                     required
-                    attach
                     item-value="number"
                     item-text="number"
                     v-model="bumpDivision"
@@ -737,15 +736,10 @@
                     :items="['bumps','row over']"
                   ></v-select>
                 </v-flex>
-                <v-flex xs4 sm4 md4>
-                  <v-select
-                    label="Boat"
-                    v-show="bumpAction === 'bumps'"
-                    item-text="short"
-                    v-model="bumpedBoat"
-                    :required="bumpAction === 'bumps'"
-                    :items="bumpedBoats"
-                  ></v-select>
+                <v-flex xs4 sm4 md4 style="padding-top:22px;">
+                  <span v-show="bumpAction === 'bumps'" class="subheading">
+                    {{(bumpedBoat ? bumpedBoat.short : '')}}
+                  </span>
                 </v-flex>
               </v-layout>
               <v-layout wrap v-show="bumpTab === '1'">
@@ -762,7 +756,6 @@
                   <v-text-field
                     label="Move by"
                     v-model="bumpMoves"
-                    mask="###"
                     :rules="[(v) => !isNaN(v) || 'Has to be a number']"
                     required
                   ></v-text-field>
@@ -834,7 +827,6 @@ export default {
       isLive: false,
       liveTimer: false,
       bumpAction: 'bumps',
-      bumpedBoat: false,
       viewers: 0,
       reporters: 0,
       rowOvers: [],
@@ -917,7 +909,6 @@ export default {
       countDown()
       setInterval(countDown, 1000)
     }
-    this.bumpDay = this.curDay()
     this.loadData(this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)[0])
   },
   watch: {
@@ -930,6 +921,7 @@ export default {
     bumpBoat() {
       if (this.bumpBoat)
         this.bumpGender = this.bumpBoat.gender
+      this.rowOvers = [this.bumpBoat]
     },
     reporters() {
       if (this.reporters > 0 && !this.liveTimer)
@@ -974,44 +966,31 @@ export default {
       return boats
     },
     bumpBoats() {
-      const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
-      let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
-      if (this.bumpDivision !== 'all') {
-        const start = Math.max(0, ((this.bumpDivision - 1) * this.boatsPerDiv)-1)
-        const end = Math.min(rows, (this.bumpDivision * this.boatsPerDiv)+1)
-        boats = boats.slice(start, end)
-      }
-      boats = boats.filter((boat) => {
+      let boats = this.divBoats.filter((boat) => {
         if (this.event.name.toLowerCase() === 'torpids')
-          if (!boat.moves[this.bumpDay-1] || boat.moves[this.bumpDay-1] < 0)
-            return true
-          else
-            return false
+          return !boat.moves[this.bumpDay-1] || boat.moves[this.bumpDay-1].moves < 0
         else if (this.event.name.toLowerCase() === 'eights')
-          if (!boat.moves[this.bumpDay-1])
-            return true
-          else
-            return false
+          return !boat.moves[this.bumpDay-1]
       })
-      if (!boats.find((boat) => boat.short === this.bumpBoat.short))
-        if (boats.length > 1)
-          this.bumpBoat = boats[1]
-        else
-          this.bumpBoat = boats[0]
+      if (!boats.find((boat) => boat.short === this.bumpBoat.short) && boats.length > 1)
+        this.bumpBoat = boats[1]
+      else if (boats.length === 1)
+        this.bumpBoat = boats[0]
       return boats
     },
     rowOverBoats() {
       return this.bumpBoats.filter((boat) => !boat.moves[this.bumpDay-1])
     },
-    bumpedBoats() {
+    bumpedBoat() {
       if (!this.bumpBoat)
         return []
-      let boats = this.bumpBoats.filter((boat) => boat.short !== this.bumpBoat.short)
-      boats.forEach((boat) => boat.cur = this.curPos(boat, this.bumpDay))
-      const cur = this.curPos(this.bumpBoat, this.bumpDay)
-      boats = boats.filter((boat) => boat.cur < cur).sort((a,b) => b.cur-a.cur)
-      this.bumpedBoat = boats[0]
-      return boats
+      let boats = this.bumpBoats.filter((boat) => this.curPos(boat, this.bumpDay) < this.curPos(this.bumpBoat, this.bumpDay))
+      boats.sort((a, b) => this.curPos(a, this.bumpDay) < this.curPos(b, this.bumpDay))
+      if (!boats.length)
+        this.bumpAction = 'row over'
+      else
+        this.bumpAction = 'bumps'
+      return boats[0]
     },
     lblCrewSel() {
       return (this.boatsHigh.length > 1 ? 'Crews' : 'Crew')
@@ -1022,6 +1001,20 @@ export default {
         const club = this.chartData[key]
         boats = boats.concat(club.men).concat(club.women)
       }
+      const compare = (a,b) => {
+        if (a.number < b.number)
+          return -1
+        if (a.number > b.number)
+          return 1
+        if (a.number === b.number) {
+          if (a.short < b.short)
+            return -1
+          if (a.short > b.short)
+            return 1
+          return 0
+        }
+      }
+      boats.sort(compare)
       return boats
     },
     divsMen() {
@@ -1098,6 +1091,7 @@ export default {
       }
     },
     curDay() {
+
       return Math.max(Math.min(4, new Date().getDay() - 2), 1)
     },
     notify(text, type) {
