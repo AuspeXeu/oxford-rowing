@@ -912,11 +912,14 @@ export default {
     this.loadData(this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)[0])
   },
   watch: {
+    bumpDivision() {
+      this.bumpDay = this.divDay
+    },
     bumpDay() {
-      if (this.bumpDay < this.curDay() && !confirm('You are about to change a past division, do you know what you are doing?'))
-        setTimeout(() => this.bumpDay = this.curDay(), 1)
-      else if (this.bumpDay > this.curDay() && !confirm('You are about to change a future division, do you know what you are doing?'))
-        setTimeout(() => this.bumpDay = this.curDay(), 1)
+      if (this.bumpDay < this.divDay && !confirm('You are about to change a past division, do you know what you are doing?'))
+        setTimeout(() => this.bumpDay = this.divDay, 1)
+      else if (this.bumpDay > this.divDay && !confirm('You are about to change a future division, do you know what you are doing?'))
+        setTimeout(() => this.bumpDay = this.divDay, 1)
     },
     bumpBoat() {
       if (this.bumpBoat)
@@ -947,6 +950,9 @@ export default {
     }
   },
   computed: {
+    divDay () {
+      return Math.min.apply(null, this.divBoats.map((boat) => boat.moves.length)) + 1
+    },
     offset() {
       return this.scale * 460
     },
@@ -1090,10 +1096,6 @@ export default {
         })
       }
     },
-    curDay() {
-
-      return Math.max(Math.min(4, new Date().getDay() - 2), 1)
-    },
     notify(text, type) {
       this.snack.text = text
       this.snack.color = type
@@ -1162,6 +1164,7 @@ export default {
             Vue.set(this.chartData, club, response.data[club])
           }
           this.bumpBoat = this.boats[0]
+          this.bumpDay = this.divDay
           this.event = event
         })
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}_divs.json`)
