@@ -783,7 +783,7 @@
                 <v-list-tile-content>
                     <v-text-field
                       label="Message"
-                      :rules="[(v) => v.trim().length || 'An announcement must not be empty']"
+                      :rules="[(v) => Boolean(v.trim().length) || 'An announcement must not be empty']"
                       v-model="announcementDraft"
                       required
                     ></v-text-field>
@@ -825,18 +825,18 @@
           </v-list-tile>
         </v-list>
       </v-menu>
-      <v-list class="pt-0" dense v-show="announcement && announcement.text.length">
+      <v-list class="pt-0" dense v-if="announcement">
         <v-list-tile>
           <v-list-tile-action>
             <v-tooltip bottom>
               <v-icon slot="activator">announcement</v-icon>
-              <span>{{`${formatDate(announcement.date)}`}}</span>
+              <span>{{announcementDate}}</span>
             </v-tooltip>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-tooltip bottom>
-              <v-list-tile-title slot="activator">{{announcement.text}}</v-list-tile-title>
-              <span>{{`${formatDate(announcement.date)} ${announcement.text}`}}</span>
+              <v-list-tile-title slot="activator">{{announcementText}}</v-list-tile-title>
+              <span>{{`${announcementText}`}}</span>
             </v-tooltip>
           </v-list-tile-content>
         </v-list-tile>
@@ -949,8 +949,8 @@ export default {
         this.reporters = message.reporters
         this.viewers = message.viewers
       } else if (message.type === 'announcement') {
-        this.announcement = message.announcement
-        this.notify(message.announcement.text, 'info')
+        this.announcement = {text: message.text, date: message.date}
+        this.notify(message.text, 'info')
       }
     }
     socket.onopen = () => {
@@ -1021,6 +1021,18 @@ export default {
     }
   },
   computed: {
+    announcementText() {
+      if (this.announcement && this.announcement.text)
+        return this.announcement.text
+      else
+        return '' 
+    },
+    announcementDate() {
+      if (this.announcement && this.announcement.date)
+        return moment(this.announcement.date).format('LTS')
+      else
+        return ''
+    },
     divDay () {
       return Math.min.apply(null, this.divBoats.map((boat) => boat.moves.length)) + 1
     },
@@ -1147,12 +1159,9 @@ export default {
     makeAnnouncement() {
       const txt = this.announcementDraft.trim()
       if (txt.length)
-        this.socket.send(JSON.stringify({type: 'announcement', text: txt}))
+        this.socket.send(JSON.stringify({type: 'announcement', text: txt, auth: this.auth}))
       this.announcementDraft = ''
       this.announceDialog = false
-    },
-    formatDate(ts) {
-      return moment(ts).format('LTS')
     },
     onResize () {
       clearTimeout(this.timer)
