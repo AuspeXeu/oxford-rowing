@@ -939,11 +939,14 @@ export default {
         const move = bump.move
         if (this.event.year !== year || this.event.name.toLowerCase() !== name)
           return
+        if (this.chartData[club][gender][number].moves[day-1].status !== move.status)
+          this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} result ${(move.status ? 'confirmed' : 'withdrawn')}`, 'info')
+        else
+          this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')
         if (this.chartData[club][gender][number].moves.length >= day)
           Vue.set(this.chartData[club][gender][number].moves, day-1, move)
         else
           this.chartData[club][gender][number].moves.push(move)
-        this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')
       } else if (message.type === 'users') {
         if (this.reporters < message.reporters)
           this.notify(`A reporter is live`, 'info')
@@ -1045,10 +1048,13 @@ export default {
     },
     divBoats() {
       const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
+      const divs = (this.bumpGender === 'men' ? this.divsMen : this.divsWomen)
       let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
       if (this.bumpDivision !== 'all') {
         const start = Math.max(0, ((this.bumpDivision - 1) * this.boatsPerDiv)-1)
-        const end = Math.min(rows, (this.bumpDivision * this.boatsPerDiv)+1)
+        let end = Math.min(rows, (this.bumpDivision * this.boatsPerDiv)+1)
+        if (this.bumpDivision === divs.length)
+          end = rows+1
         boats = boats.slice(start, end)
       }
       if (!this.bumpBoat || !boats.find((boat) => boat.short === this.bumpBoat.short))
@@ -1056,16 +1062,7 @@ export default {
       return boats
     },
     bumpBoats() {
-      const isActive = (boat) => {
-        const hasBumped = (boat) => {
-          return this.divBoats.find((b) => this.curPos(b, this.bumpDay - 1) < this.curPos(boat, this.bumpDay - 1) && this.curPos(b, this.bumpDay) > this.curPos(boat, this.bumpDay))
-        }
-        if (this.event.name.toLowerCase() === 'torpids')
-          return !boat.moves[this.bumpDay-1] || !hasBumped(boat)
-        else if (this.event.name.toLowerCase() === 'eights')
-          return !boat.moves[this.bumpDay-1]
-      }
-      let boats = this.divBoats.filter((boat) => isActive(boat))
+      let boats = this.divBoats.filter((boat) => this.isActive(boat))
       if (!boats.find((boat) => boat.short === this.bumpBoat.short) && boats.length > 1)
         this.bumpBoat = boats[1]
       else if (boats.length === 1)
@@ -1078,8 +1075,10 @@ export default {
     bumpedBoat() {
       if (!this.bumpBoat)
         return []
-      let boats = this.bumpBoats.filter((boat) => this.curPos(boat, this.bumpDay) < this.curPos(this.bumpBoat, this.bumpDay))
-      boats.sort((a, b) => this.curPos(a, this.bumpDay) < this.curPos(b, this.bumpDay))
+      let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
+      boats = boats.filter((boat) => this.curPos(boat, this.bumpDay) < this.curPos(this.bumpBoat, this.bumpDay))
+      boats = boats.filter((boat) => this.isActive(boat))
+      boats.sort((a, b) => this.curPos(b, this.bumpDay) - this.curPos(a, this.bumpDay))
       if (!boats.length)
         this.bumpAction = 'row over'
       else
@@ -1157,6 +1156,15 @@ export default {
     }
   },
   methods: {
+    isActive(boat) {
+      const hasBumped = (boat) => {
+        return this.divBoats.find((b) => this.curPos(b, this.bumpDay - 1) < this.curPos(boat, this.bumpDay - 1) && this.curPos(b, this.bumpDay) > this.curPos(boat, this.bumpDay))
+      }
+      if (this.event.name.toLowerCase() === 'torpids')
+        return !boat.moves[this.bumpDay-1] || !hasBumped(boat)
+      else if (this.event.name.toLowerCase() === 'eights')
+        return !boat.moves[this.bumpDay-1]
+    },
     makeAnnouncement() {
       const txt = this.announcementDraft.trim()
       if (txt.length) {
@@ -1185,7 +1193,7 @@ export default {
           moves: lastMove.moves,
           status: !lastMove.status
         }, {headers: {'authorization': this.auth}})
-        .then((response) => this.notify(`Bump ${lastMove.status ? 'unconfirmed' : 'confirmed'}`, 'success'))
+        .then((response) => this.notify(`Bump ${lastMove.status ? 'withdrawn' : 'confirmed'}`, 'success'))
         .catch((error) => {
           console.log(error.response.data)
           this.notify('Failed to change bump status', 'error')
