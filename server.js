@@ -34,7 +34,7 @@ app.use((req, res, next) => {
 const clients = new Map()
 const reporters = new Set()
 const dataCache = {}
-let announcement = {}
+let announcement = {text: 'We are live!', date: new Date().getTime()}
 
 const isAuth = (code) => conf.get('auth').indexOf(code) !== -1
 const authReq = (req, res, next) => {

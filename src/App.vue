@@ -771,7 +771,7 @@
       <v-dialog v-model="announceDialog" max-width="500px">
         <v-card>
           <v-card-title>
-            <span class="subheading">Make announcement</span>
+            <span class="subheading noselect">Make announcement</span>
             <v-spacer></v-spacer>
             <v-btn icon slot="activator" @click.stop="announceDialog = false">
               <v-icon>close</v-icon>
@@ -782,6 +782,7 @@
               <v-list-tile avatar>
                 <v-list-tile-content>
                     <v-text-field
+                      autofocus
                       label="Message"
                       :rules="[(v) => Boolean(v.trim().length) || 'An announcement must not be empty']"
                       v-model="announcementDraft"
@@ -1158,10 +1159,11 @@ export default {
   methods: {
     makeAnnouncement() {
       const txt = this.announcementDraft.trim()
-      if (txt.length)
+      if (txt.length) {
         this.socket.send(JSON.stringify({type: 'announcement', text: txt, auth: this.auth}))
+        this.announceDialog = false
+      }
       this.announcementDraft = ''
-      this.announceDialog = false
     },
     onResize () {
       clearTimeout(this.timer)
