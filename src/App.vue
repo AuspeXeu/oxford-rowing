@@ -3,14 +3,7 @@
   <v-app>
     <v-toolbar fixed app dense>
       <v-toolbar-title style="margin-left:15px;">
-        <v-toolbar-side-icon class="hidden-md-and-up" @click.native="drawer = !drawer"></v-toolbar-side-icon>
-        <v-tooltip bottom class="hidden-sm-and-down">
-          <v-icon slot="activator" v-show="reporters > 0 || viewers > 0" :class="{ live: isLive }">{{(viewers > 1 ? 'people' : 'person')}}</v-icon>
-          <span>
-            {{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</br>
-            {{`${viewers} viewer${(viewers > 1 ? 's are' : ' is')} online`}}
-          </span>
-        </v-tooltip>
+        <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
         <span class="noselect hidden-sm-and-down">Live Bumps</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
@@ -29,14 +22,6 @@
           single-line
           class="mt-2 noselect"
         ></v-select>
-        <v-menu offset-y left attach class="hidden-sm-and-down">
-          <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
-          <v-list dense>
-            <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
-              <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
-            </v-list-tile>
-          </v-list>
-        </v-menu>
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
@@ -783,12 +768,48 @@
           <v-card-text class="text-xs-center headline">{{countDownVal}}</v-card-text>
         </v-card>
       </v-dialog>
+      <v-dialog v-model="announceDialog" max-width="500px">
+        <v-card>
+          <v-card-title>
+            <span class="subheading">Make announcement</span>
+            <v-spacer></v-spacer>
+            <v-btn icon slot="activator" @click.stop="announceDialog = false">
+              <v-icon>close</v-icon>
+            </v-btn>
+          </v-card-title>
+          <v-card-text>
+            <v-list>
+              <v-list-tile avatar>
+                <v-list-tile-content>
+                    <v-text-field
+                      label="Message"
+                      :rules="[(v) => v.trim().length || 'An announcement must not be empty']"
+                      v-model="announcementDraft"
+                      required
+                    ></v-text-field>
+                </v-list-tile-content>
+                <v-list-tile-avatar>
+                  <v-btn icon slot="activator" @click.stop="makeAnnouncement()">
+                    <v-icon>send</v-icon>
+                  </v-btn>
+                </v-list-tile-avatar>
+              </v-list-tile>
+            </v-list>
+          </v-card-text>
+        </v-card>
+      </v-dialog>
     </v-content>
     <v-navigation-drawer temporary v-model="drawer" absolute class="text-xs-center">
       <v-list class="pa-1">
         <v-list-tile avatar>
           <v-list-tile-avatar class="text-xs-center">
-            <v-icon v-show="reporters > 0 || viewers > 0" :class="{ live: isLive }">{{(viewers > 1 ? 'people' : 'person')}}</v-icon>
+            <v-tooltip bottom>
+              <v-icon slot="activator" v-show="reporters > 0 || viewers > 0" :class="{ live: isLive }">{{(viewers > 1 ? 'people' : 'person')}}</v-icon>
+              <span>
+                {{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</br>
+                {{`${viewers} viewer${(viewers > 1 ? 's are' : ' is')} online`}}
+              </span>
+            </v-tooltip>
           </v-list-tile-avatar>
           <v-list-tile-content>
             <v-list-tile-title>Reporters: {{reporters}} Viewers: {{viewers}}</v-list-tile-title>
@@ -796,7 +817,7 @@
         </v-list-tile>
         <v-divider></v-divider>
       </v-list>
-      <v-menu offset-y left attach class="pr-2">
+      <v-menu offset-y left attach>
         <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
         <v-list dense>
           <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
@@ -804,9 +825,28 @@
           </v-list-tile>
         </v-list>
       </v-menu>
+      <v-list class="pt-0" dense v-show="announcement && announcement.text.length">
+        <v-list-tile>
+          <v-list-tile-action>
+            <v-tooltip bottom>
+              <v-icon slot="activator">announcement</v-icon>
+              <span>{{`${formatDate(announcement.date)}`}}</span>
+            </v-tooltip>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-tooltip bottom>
+              <v-list-tile-title slot="activator">{{announcement.text}}</v-list-tile-title>
+              <span>{{`${formatDate(announcement.date)} ${announcement.text}`}}</span>
+            </v-tooltip>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
     </v-navigation-drawer>
     <v-footer app fixed>
       <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
+      <v-btn flat @click.native.stop="announceDialog = !announceDialog" icon small v-if="verified">
+        <v-icon>announcement</v-icon>
+      </v-btn>
       <img class="noselect pl-1" src="./assets/woo_crest.png" style="width:24px;"/>
       <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
       <v-spacer></v-spacer>
@@ -829,6 +869,7 @@
 </template>
 
 <script>
+import moment from 'moment'
 import ReWebSocket from 'reconnectingwebsocket'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
@@ -840,6 +881,9 @@ export default {
     return {
       countDownDate: new Date('Feb 28, 2018 10:00:00').getTime(),
       countDownVal: '',
+      announcementDraft: '',
+      announcement: '',
+      socket: false,
       countDownDlg: false,
       boatsSelected: [],
       name: 'live',
@@ -869,6 +913,7 @@ export default {
       bumpDay: 1,
       bumpDivision: 1,
       bumpDialog: false,
+      announceDialog: false,
       bumpTab: '0',
       points: {},
       boatsHigh: [],
@@ -903,11 +948,15 @@ export default {
           this.notify(`A reporter is live`, 'info')
         this.reporters = message.reporters
         this.viewers = message.viewers
+      } else if (message.type === 'announcement') {
+        this.announcement = message.announcement
+        this.notify(message.announcement.text, 'info')
       }
     }
     socket.onopen = () => {
       if (this.auth)
         socket.send(JSON.stringify({type: 'reporter', auth: this.auth}))
+      this.socket = socket
     }
   },
   mounted() {
@@ -1095,6 +1144,16 @@ export default {
     }
   },
   methods: {
+    makeAnnouncement() {
+      const txt = this.announcementDraft.trim()
+      if (txt.length)
+        this.socket.send(JSON.stringify({type: 'announcement', text: txt}))
+      this.announcementDraft = ''
+      this.announceDialog = false
+    },
+    formatDate(ts) {
+      return moment(ts).format('LTS')
+    },
     onResize () {
       clearTimeout(this.timer)
       this.timer = setTimeout(function() {

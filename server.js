@@ -34,6 +34,7 @@ app.use((req, res, next) => {
 const clients = new Map()
 const reporters = new Set()
 const dataCache = {}
+let announcement = {}
 
 const isAuth = (code) => conf.get('auth').indexOf(code) !== -1
 const authReq = (req, res, next) => {
@@ -191,6 +192,10 @@ wss.on('connection', (ws, req) => {
     if (err)
       log(err)
   })
+  ws.send(JSON.stringify({type: 'announcement', text: announcement.text, date: announcement.date}), (err) => {
+    if (err)
+      log(err)
+  })
   ws.on('close', () => {
     logEvent('d', ip)
     clients.delete(id)
@@ -203,8 +208,13 @@ wss.on('connection', (ws, req) => {
   })
   ws.on('message', (msg) => {
     msg = JSON.parse(msg)
-    if (msg.type === 'reporter' && isAuth(msg.auth))
+    if (msg.type === 'reporter' && isAuth(msg.auth)) {
       reporters.add(id)
+      broadcast(userReport())
+    } else if (msg.type === 'announcement' && isAuth(msg.auth)) {
+      announcement = {text: msg.text, date: new Date().getTime()}
+      broadcast({type: 'announcement', text: announcement.text, date: announcement.date})
+    }
   })
 })
 
