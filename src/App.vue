@@ -802,6 +802,14 @@
     </v-content>
     <v-navigation-drawer temporary v-model="drawer" absolute class="text-xs-center">
       <v-list class="pa-1">
+        <v-flex>
+          <v-btn color="primary"  @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">
+            <v-icon>timeline</v-icon> Data
+          </v-btn>
+          <v-btn color="primary"  @click.native.stop="announceDialog = !announceDialog" v-if="verified">
+            <v-icon>hearing</v-icon> Announce
+          </v-btn>
+        </v-flex>
         <v-list-tile avatar>
           <v-list-tile-avatar class="text-xs-center">
             <v-tooltip bottom>
@@ -835,7 +843,7 @@
         </v-list-tile>
       </v-list>
       <v-menu offset-y left attach>
-        <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
+        <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator">{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
         <v-list dense>
           <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
             <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
@@ -844,10 +852,6 @@
       </v-menu>
     </v-navigation-drawer>
     <v-footer app fixed>
-      <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
-      <v-btn flat @click.native.stop="announceDialog = !announceDialog" icon small v-if="verified">
-        <v-icon>announcement</v-icon>
-      </v-btn>
       <img class="noselect pl-1" src="./assets/woo_crest.png" style="width:24px;"/>
       <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
       <v-spacer></v-spacer>
