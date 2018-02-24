@@ -972,12 +972,16 @@ export default {
       return boats
     },
     bumpBoats() {
-      let boats = this.divBoats.filter((boat) => {
+      const isActive = (boat) => {
+        const hasBumped = (boat) => {
+          return this.divBoats.find((b) => this.curPos(b, this.bumpDay - 1) < this.curPos(boat, this.bumpDay - 1) && this.curPos(b, this.bumpDay) > this.curPos(boat, this.bumpDay))
+        }
         if (this.event.name.toLowerCase() === 'torpids')
-          return !boat.moves[this.bumpDay-1] || boat.moves[this.bumpDay-1].moves < 0
+          return !boat.moves[this.bumpDay-1] || !hasBumped(boat)
         else if (this.event.name.toLowerCase() === 'eights')
           return !boat.moves[this.bumpDay-1]
-      })
+      }
+      let boats = this.divBoats.filter((boat) => isActive(boat))
       if (!boats.find((boat) => boat.short === this.bumpBoat.short) && boats.length > 1)
         this.bumpBoat = boats[1]
       else if (boats.length === 1)
