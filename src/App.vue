@@ -3,17 +3,17 @@
   <v-app>
     <v-toolbar fixed app dense>
       <v-toolbar-title style="margin-left:15px;">
-        <v-tooltip bottom>
+        <v-toolbar-side-icon class="hidden-md-and-up" @click.native="drawer = !drawer"></v-toolbar-side-icon>
+        <v-tooltip bottom class="hidden-sm-and-down">
           <v-icon slot="activator" v-show="reporters > 0 || viewers > 0" :class="{ live: isLive }">{{(viewers > 1 ? 'people' : 'person')}}</v-icon>
           <span>
             {{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</br>
             {{`${viewers} viewer${(viewers > 1 ? 's are' : ' is')} online`}}
           </span>
         </v-tooltip>
-        <span class="hidden-sm-and-down noselect">Live Bumps</span>
+        <span class="noselect hidden-sm-and-down">Live Bumps</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-side-icon v-show="false" class="hidden-md-and-up"></v-toolbar-side-icon>
       <v-toolbar-items style="margin-right:15px;">
         <v-select
           :items="boats"
@@ -29,7 +29,7 @@
           single-line
           class="mt-2 noselect"
         ></v-select>
-        <v-menu offset-y left attach>
+        <v-menu offset-y left attach class="hidden-sm-and-down">
           <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
           <v-list dense>
             <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
@@ -784,6 +784,27 @@
         </v-card>
       </v-dialog>
     </v-content>
+    <v-navigation-drawer temporary v-model="drawer" absolute class="text-xs-center">
+      <v-list class="pa-1">
+        <v-list-tile avatar>
+          <v-list-tile-avatar class="text-xs-center">
+            <v-icon v-show="reporters > 0 || viewers > 0" :class="{ live: isLive }">{{(viewers > 1 ? 'people' : 'person')}}</v-icon>
+          </v-list-tile-avatar>
+          <v-list-tile-content>
+            <v-list-tile-title>Reporters: {{reporters}} Viewers: {{viewers}}</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-divider></v-divider>
+      </v-list>
+      <v-menu offset-y left attach class="pr-2">
+        <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
+        <v-list dense>
+          <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
+            <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
+    </v-navigation-drawer>
     <v-footer app fixed>
       <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
       <img class="noselect pl-1" src="./assets/woo_crest.png" style="width:24px;"/>
@@ -822,6 +843,7 @@ export default {
       countDownDlg: false,
       boatsSelected: [],
       name: 'live',
+      drawer: false,
       scale: 0.35,
       timer: 0,
       isLive: false,
