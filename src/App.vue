@@ -818,14 +818,6 @@
         </v-list-tile>
         <v-divider></v-divider>
       </v-list>
-      <v-menu offset-y left attach>
-        <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
-        <v-list dense>
-          <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
-            <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-menu>
       <v-list class="pt-0" dense v-if="announcement">
         <v-list-tile>
           <v-list-tile-action>
@@ -842,6 +834,14 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
+      <v-menu offset-y left attach>
+        <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator" ripple>{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
+        <v-list dense>
+          <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
+            <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
     </v-navigation-drawer>
     <v-footer app fixed>
       <v-btn class="mt-1 ml-1 mr-1" style="height:28px;" color="primary" dark @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">Bump</v-btn>
