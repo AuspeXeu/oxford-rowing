@@ -802,7 +802,7 @@
         </v-card>
       </v-dialog>
     </v-content>
-    <v-navigation-drawer temporary v-model="drawer" absolute class="text-xs-center">
+    <v-navigation-drawer temporary hide-overlay v-model="drawer" absolute class="text-xs-center">
       <v-list class="pa-1">
         <v-flex>
           <v-btn color="primary"  @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">
