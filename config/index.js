@@ -12,19 +12,19 @@ module.exports = {
   assetsPublicPath: '/',
   proxyTable: {
     '/verify': {
-      target: 'https://bumps.auspex.eu',
+      target: 'https://stage.bumps.live',
       changeOrigin: true
     },
     '/bump': {
-      target: 'https://bumps.auspex.eu',
+      target: 'https://stage.bumps.live',
       changeOrigin: true
     },
     '/data': {
-      target: 'https://bumps.auspex.eu',
+      target: 'https://stage.bumps.live',
       changeOrigin: true
     },
     '/live': {
-      target: 'wss://bumps.auspex.eu',
+      target: 'wss://stage.bumps.live',
       changeOrigin: true,
       ws: true
     }
