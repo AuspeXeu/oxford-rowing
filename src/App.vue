@@ -612,7 +612,8 @@
                      transform="scale(-1)" />
                 </g>
               </defs>
-              <g id="containerMen" :transform="`scale(${scale})`">
+              <g id="containerMen" :transform="`translate(0,15),scale(${scale})`">
+                <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
                 <g v-for="div in divsMen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-300),rotate(-90)">{{divName(div)}}</text>
@@ -626,7 +627,8 @@
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
               </g>
-              <g id="containerWomen" :transform="`translate(${offset},0),scale(${scale})`">
+              <g id="containerWomen" :transform="`translate(${offset},15),scale(${scale})`">
+                <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
                 <g v-for="div in divsWomen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-300),rotate(-90)">{{divName(div)}}</text>
