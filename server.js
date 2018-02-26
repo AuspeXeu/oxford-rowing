@@ -3,7 +3,7 @@ const compression = require('compression')
 const fs = require('fs')
 const http = require('http')
 const express = require('express')
-const WebSocket = require('ws')
+const expressWs = require('express-uws')
 const url = require('url')
 const conf = require('nconf')
 const bodyParser = require('body-parser')
@@ -36,7 +36,8 @@ if (cluster.isMaster) {
     cluster.fork()
   }
 } else {
-  const app = express()
+  const expressWs = expressWs(express())
+  const app = expressWs.app
   app.use(compression())
   //Server static data
   app.use('/static', express.static(`${__dirname}/dist/static`))
@@ -222,14 +223,13 @@ if (cluster.isMaster) {
 
   //Set up HTTP and WebSocket servers
   const server = http.createServer(app)
-  const wss = new WebSocket.Server({server})
 
   //Generate a user report
   const userReport = () => ({type: 'users', viewers: Math.max(0, clients.size - reporters.size), reporters: reporters.size})
   //Send user report to all WebSocket clients every 30 seconds
   setInterval(() => broadcast(userReport()), 30 * 1000)
   //Accept new WebSocket connections
-  wss.on('connection', (ws, req) => {
+  app.ws('/live', (ws, req) => {
     const id = uuid()
     const ip = req.headers['x-forwarded-for']
     //Add clients to repository
