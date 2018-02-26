@@ -266,4 +266,4 @@ wss.on('connection', (ws, req) => {
 })
 
 //Finally start listening
-server.listen({host: conf.get('bind'),port: conf.get('port'),exclusive: true})
+server.listen({host: conf.get('bind'),port: conf.get('port')})
