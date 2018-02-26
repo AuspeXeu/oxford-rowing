@@ -1,3 +1,4 @@
+const compression = require('compression')
 const fs = require('fs')
 const http = require('http')
 const express = require('express')
@@ -32,6 +33,7 @@ app.use('/static', express.static(`${__dirname}/dist/static`))
 app.use('/data', express.static(`${__dirname}/data`))
 //Parse JSON of incoming requests
 app.use(bodyParser.json())
+app.use(compression())
 //Enable CORS
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Credentials', true)

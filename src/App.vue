@@ -854,11 +854,11 @@
       </v-menu>
     </v-navigation-drawer>
     <v-footer app fixed>
-      <img class="noselect pl-1" src="./assets/woo_crest.png" style="width:24px;"/>
-      <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank">Wolfson Boat Club</a></div>
+      <img class="noselect pl-1" src="./assets/woo_crest.png" alt="Wolfson" style="width:24px;"/>
+      <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank" rel="noopener">Wolfson Boat Club</a></div>
       <v-spacer></v-spacer>
       <div class="noselect"><a href="mailto:chrisvaas@gmail.com">Chris Vaas</a></div>
-      <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" small>
+      <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" rel="noopener" small>
         <v-icon>fa-github</v-icon>
       </v-btn>
       <div class="noselect pr-2">© {{ new Date().getFullYear() }}</div>
