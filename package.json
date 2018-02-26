@@ -11,16 +11,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "moment": "^2.20.1",
     "nconf": "^0.10.0",
-    "reconnectingwebsocket": "^1.0.0",
     "uuid": "^3.2.1",
-    "vue": "^2.5.13",
-    "vue-router": "^3.0.1",
-    "vuetify": "^1.0.2",
     "ws": "^4.0.0"
   },
   "devDependencies": {

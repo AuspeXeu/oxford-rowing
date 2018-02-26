@@ -875,13 +875,7 @@
 </div>
 </template>
 
-<script>
-import moment from 'moment'
-import ReWebSocket from 'reconnectingwebsocket'
-import Vue from 'vue'
-import Vuetify from 'vuetify'
-import axios from 'axios'
- 
+<script> 
 Vue.use(Vuetify)
 export default {
   data() {
@@ -931,7 +925,7 @@ export default {
   },
   beforeMount () {
     this.auth = this.$route.query.auth
-    const socket = new ReWebSocket(`${window.location.origin.replace('http','ws')}/live`)
+    const socket = new ReconnectingWebSocket(`${window.location.origin.replace('http','ws')}/live`)
     socket.onmessage = (event) => {
       const message = JSON.parse(event.data)
       if (message.type === 'update') {

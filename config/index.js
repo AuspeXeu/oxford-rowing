@@ -42,6 +42,7 @@ module.exports = {
   // If true, your code will be linted during bundling and
   // linting errors and warnings will be shown in the console.
   useEslint: false,
+  externals: ['moment','ReWebSocket','axios','vuetify','vue'],
   // If true, eslint errors and warnings will also be shown in the error overlay
   // in the browser.
   showEslintErrorsInOverlay: false,
@@ -69,6 +70,7 @@ module.exports = {
   assetsRoot: path.resolve(__dirname, '../dist'),
   assetsSubDirectory: 'static',
   assetsPublicPath: '/',
+  externals: ['moment','ReWebSocket','axios','vuetify','vue'],
 
   /**
    * Source Maps
