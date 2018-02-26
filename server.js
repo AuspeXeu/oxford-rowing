@@ -29,7 +29,8 @@ let announcement = {text: 'We are live!', date: new Date().getTime()}
 
 if (cluster.isMaster) {
   //Create a worker for each CPU
-  const cpuCount = require('os').cpus().length
+  //const cpuCount = require('os').cpus().length
+  const cpuCount = 1
   for (let i = 0; i < cpuCount; i += 1) {
     log(`Launching worker ${i}`)
     cluster.fork()
@@ -220,9 +221,6 @@ if (cluster.isMaster) {
   //Endpoint to verify authorization code
   app.get('/verify', authReq, (req, res) => res.status(200).send(''))
 
-  //Set up HTTP and WebSocket servers
-  //const server = http.createServer(app)
-
   //Generate a user report
   const userReport = () => ({type: 'users', viewers: Math.max(0, aWss.clients.length - reporters.size), reporters: reporters.size})
   //Send user report to all WebSocket clients every 30 seconds
@@ -277,5 +275,4 @@ if (cluster.isMaster) {
 
   //Finally start listening
   app.listen(conf.get('port'))
-  //server.listen({host: conf.get('bind'),port: conf.get('port')})
 }
