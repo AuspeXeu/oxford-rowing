@@ -273,7 +273,7 @@ if (cluster.isMaster) {
     })
   })
 
-  const aWss = expressWs.getWss('/a')
+  const aWss = wss.getWss('/live')
 
   //Finally start listening
   app.listen(3020)
