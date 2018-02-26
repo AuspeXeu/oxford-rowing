@@ -276,6 +276,6 @@ if (cluster.isMaster) {
   const aWss = wss.getWss('/live')
 
   //Finally start listening
-  app.listen(3020)
+  app.listen(conf.get('port'))
   //server.listen({host: conf.get('bind'),port: conf.get('port')})
 }
