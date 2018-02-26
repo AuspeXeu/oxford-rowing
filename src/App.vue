@@ -937,16 +937,18 @@ export default {
         const number = parseInt(bump.number, 10)
         const day = parseInt(bump.day, 10)
         const move = bump.move
+        let hasChanged = false
         if (this.event.year !== year || this.event.name.toLowerCase() !== name)
           return
-        if (this.chartData[club][gender][number].moves[day-1].status !== move.status)
+        if (this.chartData[club][gender][number].moves.length >= day) {
+          hasChanged = this.chartData[club][gender][number].moves[day-1].status !== move.status
+          Vue.set(this.chartData[club][gender][number].moves, day-1, move)
+        } else
+          this.chartData[club][gender][number].moves.push(move)
+        if (hasChanged)
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} result ${(move.status ? 'confirmed' : 'withdrawn')}`, 'info')
         else
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')
-        if (this.chartData[club][gender][number].moves.length >= day)
-          Vue.set(this.chartData[club][gender][number].moves, day-1, move)
-        else
-          this.chartData[club][gender][number].moves.push(move)
       } else if (message.type === 'users') {
         if (this.reporters < message.reporters)
           this.notify(`A reporter is live`, 'info')
