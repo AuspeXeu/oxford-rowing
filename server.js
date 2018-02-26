@@ -223,7 +223,7 @@ if (cluster.isMaster) {
   app.get('/verify', authReq, (req, res) => res.status(200).send(''))
 
   //Set up HTTP and WebSocket servers
-  const server = http.createServer(app)
+  //const server = http.createServer(app)
 
   //Generate a user report
   const userReport = () => ({type: 'users', viewers: Math.max(0, clients.size - reporters.size), reporters: reporters.size})
@@ -276,5 +276,6 @@ if (cluster.isMaster) {
   })
 
   //Finally start listening
-  server.listen({host: conf.get('bind'),port: conf.get('port')})
+  app.listen(conf.get('port'))
+  //server.listen({host: conf.get('bind'),port: conf.get('port')})
 }
