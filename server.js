@@ -30,7 +30,8 @@ let announcement = {text: 'We are live!', date: new Date().getTime()}
 
 if (cluster.isMaster) {
   //Create a worker for each CPU
-  const cpuCount = require('os').cpus().length * 2
+  //const cpuCount = require('os').cpus().length * 2
+  const cpuCount = 1
   for (let i = 0; i < cpuCount; i += 1) {
     log(`Launching worker ${i}`)
     cluster.fork()
