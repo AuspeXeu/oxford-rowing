@@ -276,6 +276,6 @@ if (cluster.isMaster) {
   })
 
   //Finally start listening
-  app.listen(conf.get('port'))
+  app.listen({port: conf.get('port')})
   //server.listen({host: conf.get('bind'),port: conf.get('port')})
 }
