@@ -23,15 +23,13 @@ if (!conf.get('auth').length) {
   conf.save()
 }
 
-const clients = new Map()
 const reporters = new Set()
 const dataCache = {}
 let announcement = {text: 'We are live!', date: new Date().getTime()}
 
 if (cluster.isMaster) {
   //Create a worker for each CPU
-  //const cpuCount = require('os').cpus().length * 2
-  const cpuCount = 1
+  const cpuCount = require('os').cpus().length
   for (let i = 0; i < cpuCount; i += 1) {
     log(`Launching worker ${i}`)
     cluster.fork()
@@ -64,7 +62,7 @@ if (cluster.isMaster) {
   }
   //Broadcast to all WebSocket clients
   const broadcast = (msg) => {
-    clients.forEach((ws) => {
+    aWss.clients.forEach((ws) => {
       ws.send(JSON.stringify(msg), (err) => {
         if (err)
           log(err)
@@ -226,7 +224,7 @@ if (cluster.isMaster) {
   //const server = http.createServer(app)
 
   //Generate a user report
-  const userReport = () => ({type: 'users', viewers: Math.max(0, clients.size - reporters.size), reporters: reporters.size})
+  const userReport = () => ({type: 'users', viewers: Math.max(0, aWss.clients.length - reporters.size), reporters: reporters.size})
   //Send user report to all WebSocket clients every 30 seconds
   setInterval(() => broadcast(userReport()), 30 * 1000)
   //Accept new WebSocket connections
@@ -234,7 +232,7 @@ if (cluster.isMaster) {
     const id = uuid()
     const ip = req.headers['x-forwarded-for']
     //Add clients to repository
-    clients.set(id, ws)
+    //clients.set(id, ws)
     //Log connect event
     logEvent('c', ip)
     //Send a user report to the newly connected client
@@ -250,7 +248,7 @@ if (cluster.isMaster) {
     //Remove the socket from the client repository
     ws.on('close', () => {
       logEvent('d', ip)
-      clients.delete(id)
+      //clients.delete(id)
       //and from the reporters repository if needed
       if (reporters.has(id))
         reporters.delete(id)
@@ -258,7 +256,7 @@ if (cluster.isMaster) {
     //Close client connections on error
     ws.on('error', (err) => {
       log(err)
-      clients.delete(id)
+      //clients.delete(id)
     })
     //Handler for incoming client messages
     ws.on('message', (msg) => {
@@ -274,6 +272,8 @@ if (cluster.isMaster) {
       }
     })
   })
+
+  const aWss = expressWs.getWss('/a')
 
   //Finally start listening
   app.listen(3020)
