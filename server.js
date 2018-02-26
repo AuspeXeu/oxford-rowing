@@ -36,8 +36,8 @@ if (cluster.isMaster) {
     cluster.fork()
   }
 } else {
-  const expressWs = expressWs(express())
-  const app = expressWs.app
+  const wss = expressWs(express())
+  const app = wss.app
   app.use(compression())
   //Server static data
   app.use('/static', express.static(`${__dirname}/dist/static`))
