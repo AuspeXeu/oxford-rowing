@@ -235,7 +235,7 @@ const wss = expressWs(app, server)
 
 app.ws('/live', (ws, req) => {
   const id = uuid()
-  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+  const ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress || ws._socket.remoteAddress).split(',')[0]
   //Log connect event
   logEvent('c', ip)
   //Send a user report to the newly connected client
