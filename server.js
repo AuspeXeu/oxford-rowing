@@ -59,8 +59,7 @@ const authReq = (req, res, next) => {
 const broadcast = (msg) => {
   aWss.clients.forEach((ws) => {
     ws.send(JSON.stringify(msg), (err) => {
-      if (err)
-        log(err)
+      if (err) log(err)
     })
   })
 }
@@ -219,20 +218,8 @@ app.get('/verify', authReq, (req, res) => res.status(200).send(''))
 const userReport = () => ({type: 'users', viewers: Math.max(0, aWss.clients.length - reporters.size), reporters: reporters.size})
 //Send user report to all WebSocket clients every 30 seconds
 setInterval(() => broadcast(userReport()), 30 * 1000)
+
 //Accept new WebSocket connections
-
-let server
-if (conf.get('key')) { 
-  const options = {
-    key: fs.readFileSync(conf.get('key')),
-    cert: fs.readFileSync(conf.get('cert')),
-    ca: fs.readFileSync(conf.get('ca'))
-  }
-  server = https.createServer(options, app)
-} else
-  server = http.createServer(app)
-const wss = expressWs(app, server)
-
 app.ws('/live', (ws, req) => {
   const id = uuid()
   const ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress || ws._socket.remoteAddress).split(',')[0]
@@ -274,6 +261,20 @@ app.ws('/live', (ws, req) => {
     }
   })
 })
+
+//Web and WebSocket server setup
+let server
+if (conf.get('key')) { 
+  const options = {
+    key: fs.readFileSync(conf.get('key')),
+    cert: fs.readFileSync(conf.get('cert')),
+    ca: fs.readFileSync(conf.get('ca'))
+  }
+  server = https.createServer(options, app)
+} else
+  server = http.createServer(app)
+const wss = expressWs(app, server)
+
 //Get websocket for /live endpoint
 const aWss = wss.getWss('/live')
 
