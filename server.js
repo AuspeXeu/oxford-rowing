@@ -85,7 +85,7 @@ const logEvent = (ev, ip) => {
 }
 //Serve home
 app.get('/', (req, res) => {
-  const ip = req.ip
+  const ip = req.ip || req.header['X-Forwarded-For']
   //Log connect event
   logEvent('c', ip)
   res.sendFile(`${__dirname}/dist/index.html`)
