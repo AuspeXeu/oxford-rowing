@@ -1195,7 +1195,7 @@ export default {
           moves: lastMove.moves,
           status: !lastMove.status
         }, {headers: {'authorization': this.auth}})
-        .then((response) => this.notify(`Bump ${lastMove.status ? 'withdrawn' : 'confirmed'}`, 'success'))
+        .then((response) => this.notify(`Result ${lastMove.status ? 'withdrawn' : 'confirmed'}`, 'success'))
         .catch((error) => {
           console.log(error.response.data)
           this.notify('Failed to change bump status', 'error')
