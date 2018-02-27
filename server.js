@@ -68,7 +68,7 @@ const broadcast = (msg) => {
 let eventBuffer = []
 //Flush event buffer to file
 const flushEventBuffer = () => {
-  fs.appendFile(`${__dirname}/clients.csv`, eventBuffer.join('\n'), (err) => {
+  fs.appendFile(`${__dirname}/clients.csv`, eventBuffer.join('\n')+'\n', (err) => {
     if (err)
       log(err)
     else
@@ -84,12 +84,7 @@ const logEvent = (ev, ip) => {
     flushEventBuffer()
 }
 //Serve home
-app.get('/', (req, res) => {
-  const ip = req.ip || req.header['X-Forwarded-For']
-  //Log connect event
-  logEvent('c', ip)
-  res.sendFile(`${__dirname}/dist/index.html`)
-})
+app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 //Update an entry in the data structure and broadcast changes
 const updateEntry = (data, name, year, club, gender, number, day, move) => {
   //Don't accept results that are more than one day in the future
@@ -240,7 +235,9 @@ const wss = expressWs(app, server)
 
 app.ws('/live', (ws, req) => {
   const id = uuid()
-  const ip = req.ip
+  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+  //Log connect event
+  logEvent('c', ip)
   //Send a user report to the newly connected client
   ws.send(JSON.stringify(userReport()), (err) => {
     if (err)
@@ -253,6 +250,8 @@ app.ws('/live', (ws, req) => {
   })
   //Remove the socket from the client repository
   ws.on('close', () => {
+    //Log discconnect event
+    logEvent('d', ip)
     //Delete from the reporters repository if needed
     if (reporters.has(id))
       reporters.delete(id)
