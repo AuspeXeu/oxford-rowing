@@ -1254,6 +1254,7 @@ export default {
     },
     loadData(event) {
       this.divs = false
+      this.chartData = {}
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}.json`)
         .then((response) => {
           for (let club in response.data) {
