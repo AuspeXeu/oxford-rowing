@@ -17,7 +17,8 @@
     "express-uws": "^3.0.0",
     "nconf": "^0.10.0",
     "uuid": "^3.2.1",
-    "vue": "^2.5.13"
+    "vue": "^2.5.13",
+    "ws": "^4.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
@@ -36,7 +37,7 @@
     "eslint": "^4.18.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^2.0.0",
+    "eslint-loader": "^1.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-node": "^6.0.0",
     "eslint-plugin-promise": "^3.6.0",
@@ -61,9 +62,9 @@
     "vue-loader": "^14.1.1",
     "vue-style-loader": "^4.0.2",
     "vue-template-compiler": "^2.5.13",
-    "webpack": "^4.0.1",
+    "webpack": "^3.11.0",
     "webpack-bundle-analyzer": "^2.10.0",
-    "webpack-dev-server": "^3.0.0",
+    "webpack-dev-server": "^2.11.1",
     "webpack-merge": "^4.1.1"
   },
   "engines": {
