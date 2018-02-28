@@ -50,6 +50,7 @@
                      height="54.185242"
                      width="14.339063"
                      style="opacity:1;fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:1.80002642;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+                  <title>University</title>
                 </g>
                 <g id="BAL" transform="scale(0.5)">
                   <circle
@@ -60,6 +61,7 @@
                   <path
                      style="opacity:1;fill:#c91a17;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      d="m 48.486685,1.1825945 a 47.5,47.053571 0 0 0 -12.5,1.66778 V 93.577474 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.8948645 a 47.5,47.053571 0 0 0 -12.5,-1.71227 z"/>
+                  <title>Balliol</title>
                 </g>
                 <g id="SOM" transform="scale(0.5)">
                   <circle
@@ -70,8 +72,10 @@
                   <path
                      style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.0000062;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      d="M 47.991228,0.97210566 A 47.500595,47.053571 0 0 0 35.491072,2.6398857 V 93.366986 a 47.500595,47.053571 0 0 0 12.500156,1.71226 47.500595,47.053571 0 0 0 12.500157,-1.66776 V 2.6843757 A 47.500595,47.053571 0 0 0 47.991228,0.97210566 Z"/>
+                  <title>Somerville</title>
                 </g>
                 <g id="SJO" transform="scale(0.5)">
+                  <title>St Johns</title>
                   <circle
                      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -85,6 +89,7 @@
                      d="M 48.013333,95.025495 A 47.500595,47.053571 0 0 0 60.51349,93.357715 V 2.6306155 A 47.500595,47.053571 0 0 0 48.013333,0.91835546 47.500595,47.053571 0 0 0 35.513177,2.5861155 V 93.313225 a 47.500595,47.053571 0 0 0 12.500156,1.71227 z"/>
                 </g>
                 <g id="SHI" transform="scale(0.5)">
+                  <title>St Hildas</title>
                   <circle
                      style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -116,6 +121,7 @@
                      style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/>
                 </g>
                 <g id="SHG" transform="scale(0.5)">
+                  <title>St Hughs</title>
                   <circle
                      style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -150,6 +156,7 @@
                      d="m 48.309119,1.0050343 a 47.5,47.053571 0 0 0 -12.5,1.66778 V 93.399915 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.7173043 a 47.5,47.053571 0 0 0 -12.5,-1.71227 z"/>
                 </g>
                 <g id="SCO" transform="scale(0.5)">
+                  <title>CatZ</title>
                   <circle
                      style="opacity:1;fill:#46bada;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -163,6 +170,7 @@
                      ry="24.422476" />
                 </g>
                 <g id="SBH" transform="scale(0.5)">
+                  <title>Benets</title>
                   <circle
                      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -173,6 +181,7 @@
                      d="M 48.486837,0.94584658 A 47.500614,47.053571 0 0 0 35.986686,2.6136266 V 93.340727 a 47.500614,47.053571 0 0 0 12.500151,1.71226 47.500614,47.053571 0 0 0 12.500162,-1.66776 V 2.6581166 A 47.500614,47.053571 0 0 0 48.486837,0.94584658 Z"/>
                 </g>
                 <g id="SAY" transform="scale(0.5)">
+                  <title>St Antonys</title>
                   <circle
                      style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -207,6 +216,7 @@
                      d="M 47.991228,0.88839941 A 47.500594,47.053571 0 0 0 35.491072,2.5561794 V 93.28328 a 47.500594,47.053571 0 0 0 12.500156,1.71226 47.500594,47.053571 0 0 0 12.500157,-1.66776 V 2.6006694 A 47.500594,47.053571 0 0 0 47.991228,0.88839941 Z"/>
                 </g>
                 <g id="RPC" transform="scale(0.5)">
+                  <title>Regents</title>
                   <circle
                      style="opacity:1;fill:#ed1212;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -221,6 +231,7 @@
                      sodipodi:nodetypes="ccccccc" />
                 </g>
                 <g id="QCO" transform="scale(0.5)">
+                  <title>Queens</title>
                   <circle
                      r="47.5"
                      cy="48.000004"
@@ -231,6 +242,7 @@
                      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
                 </g>
                 <g id="PMB" transform="scale(0.5)">
+                  <title>Pembroke</title>
                   <circle
                      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#fff;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -241,6 +253,7 @@
                      d="m 48.158483,0.99303202 a 47.5,47.053571 0 0 0 -12.5,1.66777998 v 90.7271 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.705302 a 47.5,47.053571 0 0 0 -12.5,-1.71226998 z"/>
                 </g>
                 <g id="OSG" transform="scale(0.5)">
+                  <title>Osler</title>
                   <circle
                      style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -254,6 +267,7 @@
                      ry="24.422476" />
                 </g>
                 <g id="ORO" transform="scale(0.5)">
+                  <title>Oriel</title>
                   <circle
                      style="opacity:1;fill:#f0f0f0;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -264,6 +278,7 @@
                      d="M 53.09375,1.0449449 V 24.382835 a 24.422476,24.422476 0 0 1 19.328125,23.87305 24.422476,24.422476 0 0 1 -19.328125,23.85547 v 23.31445 A 47.5,47.5 0 0 0 95.5,48.255885 47.5,47.5 0 0 0 53.09375,1.0449449 Z m -10.333984,0.0586 A 47.5,47.5 0 0 0 0.50000016,48.255885 47.5,47.5 0 0 0 42.759766,95.441435 V 72.091825 A 24.422476,24.422476 0 0 1 23.578125,48.255885 24.422476,24.422476 0 0 1 42.759766,24.433615 Z"/>
                 </g>
                 <g id="NEC" transform="scale(0.5)">
+                  <title>New</title>
                   <circle
                      style="opacity:1;fill:#a54a8d;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -274,6 +289,7 @@
                      d="m 48.074934,1.0139583 a 47.500595,47.053571 0 0 0 -12.500156,1.66778 V 93.408838 a 47.500595,47.053571 0 0 0 12.500156,1.71226 47.500595,47.053571 0 0 0 12.500157,-1.66776 V 2.7262283 a 47.500595,47.053571 0 0 0 -12.500157,-1.71227 z"/>
                 </g>
                 <g id="MER" transform="scale(0.5)">
+                  <title>Merton</title>
                   <circle
                      style="opacity:1;fill:#f0f0f0;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -295,6 +311,7 @@
                      transform="scale(-1)" />
                 </g>
                 <g id="MAN" transform="scale(0.5)">
+                  <title>Mansfield</title>
                   <circle
                      style="opacity:1;fill:#eb0707;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -316,6 +333,7 @@
                      transform="scale(-1)" />
                 </g>
                 <g id="MAG" transform="scale(0.5)">
+                  <title>Magdalen</title>
                   <circle
                      style="opacity:1;fill:#000000;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -329,6 +347,7 @@
                      ry="24.422476" />
                 </g>
                 <g id="LMH" transform="scale(0.5)">
+                  <title>LMH</title>
                   <circle
                      style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -363,6 +382,7 @@
                      d="M 48.06826,0.96040316 A 47.5,47.03125 0 0 0 43.01748,1.2807132 V 94.741652 a 47.5,47.03125 0 0 0 5.05078,0.28125 47.5,47.03125 0 0 0 5.04883,-0.32031 V 1.2709532 a 19.190474,48.513557 0 0 0 -0.0723,-0.041 47.5,47.03125 0 0 0 -4.97656,-0.26953004 z"/>
                 </g>
                 <g id="LIN" transform="scale(0.5)">
+                  <title>Linacre</title>
                   <circle
                      style="opacity:1;fill:#dec416;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -376,6 +396,7 @@
                      d="m 81.271916,81.271923 a 47.053571,47.5 45 0 0 7.65953,-10.01813 L 24.777706,7.1000434 a 47.053571,47.5 45 0 0 -10.04959,7.6280796 47.053571,47.5 45 0 0 -7.6595506,10.01812 l 64.1537606,64.15376 a 47.053571,47.5 45 0 0 10.04959,-7.62808 z"/>
                 </g>
                 <g id="LIC" transform="scale(0.5)">
+                  <title>Lincoln</title>
                   <circle
                      style="opacity:1;fill:#2c6484;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -386,6 +407,7 @@
                      d="M 48.101959,1.0240712 A 47.500595,47.053571 0 0 0 35.601803,2.6918513 V 93.418951 a 47.500595,47.053571 0 0 0 12.500156,1.71226 47.500595,47.053571 0 0 0 12.500157,-1.66776 V 2.7363413 A 47.500595,47.053571 0 0 0 48.101959,1.0240712 Z"/>
                 </g>
                 <g id="GTM" transform="scale(0.5)">
+                  <title>Green Templeton</title>
                   <circle
                      style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -421,6 +443,7 @@
                      sodipodi:nodetypes="cccccccc" />
                 </g>
                 <g id="EXC" transform="scale(0.5)">
+                  <title>Exceter</title>
                   <circle
                      style="opacity:1;fill:#c30b0b;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -428,6 +451,7 @@
                      r="47.5" />
                 </g>
                 <g id="COO" transform="scale(0.5)">
+                  <title>Corpus</title>
                   <circle
                      style="opacity:1;fill:#121078;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -438,6 +462,7 @@
                      d="m 48.172393,1.0077731 a 47.5,47.053571 0 0 0 -12.5,1.66778 V 93.402653 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.7200431 a 47.5,47.053571 0 0 0 -12.5,-1.71227 z"/>
                 </g>
                 <g id="CHB" transform="scale(0.5)">
+                  <title>Christ Church</title>
                   <circle
                      style="opacity:1;fill:#12266e;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -445,6 +470,7 @@
                      r="47.5"/>
                 </g>
                 <g id="BRC" transform="scale(0.5)">
+                  <title>Brasenose</title>
                   <circle
                      style="opacity:1;fill:#000102;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -452,6 +478,7 @@
                      r="47.5"/>
                 </g>
                 <g id="KEB" transform="scale(0.5)">
+                  <title>Keble</title>
                   <circle
                      style="opacity:1;fill:#f0f0f0;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -462,6 +489,7 @@
                      d="m 48.072364,0.94584655 a 47.5,47.053571 0 0 0 -12.5,1.66777995 V 93.340727 a 47.5,47.053571 0 0 0 12.5,1.712258 47.5,47.053571 0 0 0 12.5,-1.667758 V 2.6581165 a 47.5,47.053571 0 0 0 -12.5,-1.71226995 z"/>
                 </g>
                 <g id="JEO" transform="scale(0.5)">
+                  <title>Jesus</title>
                   <circle
                      style="opacity:1;fill:#0e922b;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -469,6 +497,7 @@
                      r="47.5" />
                 </g>
                 <g id="HEC" transform="scale(0.5)">
+                  <title>Hertford</title>
                   <circle
                      style="opacity:1;fill:#9e1616;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -479,6 +508,7 @@
                      d="m 47.823661,0.8884003 a 47.5,47.053571 0 0 0 -12.5,1.66778 V 93.283281 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.6006703 a 47.5,47.053571 0 0 0 -12.5,-1.71227 z"/>
                 </g>
                 <g id="SAC" transform="scale(0.5)">
+                  <title>St Annes</title>
                   <circle
                      style="opacity:1;fill:#ed1212;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -489,6 +519,7 @@
                      d="M 47.776578,0.94584657 A 47.500595,47.053571 0 0 0 35.276422,2.6136266 V 93.340727 a 47.500595,47.053571 0 0 0 12.500156,1.71226 47.500595,47.053571 0 0 0 12.500157,-1.66776 V 2.6581166 A 47.500595,47.053571 0 0 0 47.776578,0.94584657 Z"/>
                 </g>
                 <g id="SEH" transform="scale(0.5)">
+                  <title>Teddy Hall</title>
                   <circle
                      style="opacity:1;fill:#ffea00;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      id="path4304-31-1-8-5"
@@ -511,6 +542,7 @@
                      transform="scale(-1)" />
                 </g>
                 <g id="SPC" transform="scale(0.5)">
+                  <title>Peters</title>
                   <circle
                      style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -545,6 +577,7 @@
                      d="m 48.004303,0.9930311 a 47.500594,47.053571 0 0 0 -12.500156,1.66778 V 93.387911 a 47.500594,47.053571 0 0 0 12.500156,1.71226 47.500594,47.053571 0 0 0 12.500157,-1.66776 V 2.7053011 a 47.500594,47.053571 0 0 0 -12.500157,-1.71227 z"/>
                 </g>
                 <g id="TRO" transform="scale(0.5)">
+                  <title>Trinity</title>
                   <circle
                      style="opacity:1;fill:#00007f;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      cx="48"
@@ -555,6 +588,7 @@
                      d="m 48.249931,0.94584657 a 47.5,47.053571 0 0 0 -12.5,1.66778003 V 93.340727 a 47.5,47.053571 0 0 0 12.5,1.71226 47.5,47.053571 0 0 0 12.5,-1.66776 V 2.6581166 a 47.5,47.053571 0 0 0 -12.5,-1.71227003 z" />
                 </g>
                 <g id="WRO" transform="scale(0.5)">
+                  <title>Worcester</title>
                   <circle
                      style="opacity:1;fill:#000000;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      id="path4304-31-1-8"
@@ -579,6 +613,7 @@
                      transform="scale(-1)" />
                 </g>
                 <g id="WOO" transform="scale(0.5)">
+                  <title>Wolfson</title>
                   <circle
                      style="opacity:1;fill:#e9cb07;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      id="path4304"
@@ -590,6 +625,7 @@
                      d="M 48.023796,0.96935231 A 47.500595,47.053571 0 0 0 35.52364,2.6371323 V 93.364233 a 47.500595,47.053571 0 0 0 12.500156,1.71226 47.500595,47.053571 0 0 0 12.500157,-1.66776 V 2.6816223 A 47.500595,47.053571 0 0 0 48.023796,0.96935231 Z" />
                 </g>
                 <g id="WAD" transform="scale(0.5)">
+                  <title>Wadham</title>
                   <circle
                      style="opacity:1;fill:#79b0e7;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
                      id="path4304-31-1-8-5"
