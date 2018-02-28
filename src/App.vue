@@ -1013,9 +1013,10 @@ export default {
       }
     },
     auth() {
-      axios.get('/verify', {headers: {'authorization': this.auth}})
-        .then(() => this.verified = true)
-        .catch(() => this.verified = false)
+      if (this.auth && this.auth.trim().length)
+        axios.get('/verify', {headers: {'authorization': this.auth}})
+          .then(() => this.verified = true)
+          .catch(() => this.verified = false)
     },
     boatsSelected() {
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
