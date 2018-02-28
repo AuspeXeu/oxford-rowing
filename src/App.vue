@@ -990,13 +990,13 @@ export default {
   },
   watch: {
     bumpDivision() {
-      this.bumpDay = this.divDay
+      this.bumpDay = this.eventDay
     },
     bumpDay() {
-      if (this.bumpDay < this.divDay && !confirm('You are about to change a past division, do you know what you are doing?'))
-        setTimeout(() => this.bumpDay = this.divDay, 1)
-      else if (this.bumpDay > this.divDay && !confirm('You are about to change a future division, do you know what you are doing?'))
-        setTimeout(() => this.bumpDay = this.divDay, 1)
+      if (this.bumpDay < this.eventDay && !confirm('You are about to change a past division, do you know what you are doing?'))
+        setTimeout(() => this.bumpDay = this.eventDay, 1)
+      else if (this.bumpDay > this.eventDay && !confirm('You are about to change a future division, do you know what you are doing?'))
+        setTimeout(() => this.bumpDay = this.eventDay, 1)
     },
     bumpBoat() {
       if (this.bumpBoat)
@@ -1039,8 +1039,9 @@ export default {
       else
         return ''
     },
-    divDay () {
-      return Math.min.apply(null, this.divBoats.map((boat) => boat.moves.length)) + 1
+    eventDay () {
+      const boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
+      return Math.min.apply(null, boats.map((boat) => boat.moves.length)) + 1
     },
     offset() {
       return this.scale * 460
@@ -1271,7 +1272,7 @@ export default {
             Vue.set(this.chartData, club, response.data[club])
           }
           this.bumpBoat = this.boats[0]
-          this.bumpDay = this.divDay
+          this.bumpDay = this.eventDay
           this.event = event
         })
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}_divs.json`)
