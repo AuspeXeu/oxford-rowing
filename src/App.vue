@@ -1077,8 +1077,7 @@ export default {
         return ''
     },
     eventDay() {
-      const boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
-      return Math.min.apply(null, boats.map((boat) => boat.moves.length)) + 1
+      return Math.min.apply(null, this.boats.map((boat) => boat.moves.length)) + 1
     },
     offset() {
       return this.scale * 460
@@ -1164,7 +1163,7 @@ export default {
         this.chartData[key].men.forEach((boat) => Vue.set(boat, 'id', key))
         boats = boats.concat(this.chartData[key].men)
       }
-      return boats.sort((a,b) => a.start-b.start)
+      return boats.sort((a,b) => this.curPos(a, this.bumpDay)-this.curPos(b, this.bumpDay))
     },
     boatsWomen() {
       let boats = []
@@ -1172,7 +1171,7 @@ export default {
         this.chartData[key].women.forEach((boat) => Vue.set(boat, 'id', key))
         boats = boats.concat(this.chartData[key].women)
       }
-      return boats.sort((a,b) => a.start-b.start)
+      return boats.sort((a,b) => this.curPos(a, this.bumpDay)-this.curPos(b, this.bumpDay))
     },
     rowsMen() {
       let rows = 0
