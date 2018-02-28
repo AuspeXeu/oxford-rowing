@@ -1076,7 +1076,7 @@ export default {
       else
         return ''
     },
-    eventDay () {
+    eventDay() {
       const boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
       return Math.min.apply(null, boats.map((boat) => boat.moves.length)) + 1
     },
@@ -1135,17 +1135,11 @@ export default {
         boats = boats.concat(club.men).concat(club.women)
       }
       const compare = (a,b) => {
-        if (a.number < b.number)
+        if (a.short < b.short)
           return -1
-        if (a.number > b.number)
+        if (a.short > b.short)
           return 1
-        if (a.number === b.number) {
-          if (a.short < b.short)
-            return -1
-          if (a.short > b.short)
-            return 1
-          return 0
-        }
+        return 0
       }
       boats.sort(compare)
       return boats
