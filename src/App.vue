@@ -622,7 +622,7 @@
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
@@ -637,7 +637,7 @@
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" @dblclick="bumpDialog = verified" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
