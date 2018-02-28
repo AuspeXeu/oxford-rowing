@@ -189,9 +189,10 @@ app.post('/bump', authReq, (req, res) => {
     else if (!bumpedBoat) {
       const entry = data[bumpBoat.club][bumpBoat.gender][bumpBoat.number].moves[day-1]
       //Change confirmation of entry
-      if (entry && Boolean(entry.status) !== move.status)
-        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'conf', status: move.status})
-      else {
+      if (entry && Boolean(entry.status) !== move.status) {
+        //updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'conf', status: move.status})
+        //disable for now
+      } else {
         bumpBoat.cur = curPos(bumpBoat, day)
         const boats = getBoats(data, bumpBoat.gender, day)
         boats.filter((boat) => {
