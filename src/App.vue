@@ -28,7 +28,7 @@
       <v-container>
         <v-layout row v-resize="onResize">
           <v-flex id="svg-container" xs10 md10 sm10 offset-xs1 offset-sm1 offset-md2 offset-lg3 offset-xl4>
-            <svg width="100%" :height="Math.max(rowsMen, rowsWomen) * 37 * scale / 0.64">
+            <svg width="100%" :height="(Math.max(rowsMen, rowsWomen) + (verified ? boatsPerDiv : 0)) * 38 * scale / 0.64">
               <defs>
                 <g id="UCO" transform="scale(0.5)">
                   <circle
