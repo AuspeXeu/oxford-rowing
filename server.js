@@ -148,6 +148,7 @@ const getBoats = (data, gender, day) => {
 app.post('/announce', authReq, (req, res) => {
   announcement = {text: req.body.text.trim(), date: new Date().getTime()}
   broadcast({type: 'announcement', text: announcement.text, date: announcement.date})
+  res.sendStatus(200)
 })
 //Receive new results and adjust data accordingly
 app.post('/bump', authReq, (req, res) => {
