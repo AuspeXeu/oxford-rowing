@@ -889,6 +889,7 @@
           </v-list-tile>
         </v-list>
       </v-menu>
+      <div><a href="http://oxbump.feathersquare.com/historical20.php">More historic data</a></div>
     </v-navigation-drawer>
     <v-footer app fixed>
       <img class="noselect pl-1" src="./assets/woo_crest.png" alt="Wolfson" style="width:24px;"/>
