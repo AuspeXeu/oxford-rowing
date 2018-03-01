@@ -824,6 +824,7 @@
                       label="Message"
                       :rules="[(v) => Boolean(v.trim().length) || 'An announcement must not be empty']"
                       v-model="announcementDraft"
+                      clearable
                       required
                     ></v-text-field>
                 </v-list-tile-content>
@@ -991,6 +992,7 @@ export default {
         this.reporters = message.reporters
         this.viewers = message.viewers
       } else if (message.type === 'announcement') {
+        this.announcementDraft = message.text
         this.announcement = {text: message.text, date: message.date}
         this.notify(message.text, 'info')
       }
@@ -1201,10 +1203,16 @@ export default {
     makeAnnouncement() {
       const txt = this.announcementDraft.trim()
       if (txt.length) {
-        this.socket.send(JSON.stringify({type: 'announcement', text: txt, auth: this.auth}))
-        this.announceDialog = false
+        axios.post('/announce', {text: txt}, {headers: {'authorization': this.auth}})
+        .then((response) => {
+          this.announceDialog = false
+          this.notify('Announcement made', 'success')
+        })
+        .catch((error) => {
+          this.notify('Failed to make announcement', 'error')
+          console.log(error.response.data)
+        })
       }
-      this.announcementDraft = ''
     },
     onResize () {
       clearTimeout(this.timer)

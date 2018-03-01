@@ -144,6 +144,11 @@ const getBoats = (data, gender, day) => {
   }
   return boats
 }
+//An announcement is made
+app.post('/announce', authReq, (req, res) => {
+  announcement = {text: req.body.text.trim(), date: new Date().getTime()}
+  broadcast({type: 'announcement', text: announcement.text, date: announcement.date})
+})
 //Receive new results and adjust data accordingly
 app.post('/bump', authReq, (req, res) => {
   const name = req.body.name.toLowerCase()
@@ -266,10 +271,6 @@ app.ws('/live', (ws, req) => {
     if (msg.type === 'reporter' && isAuth(msg.auth)) {
       reporters.add(id)
       broadcast(userReport())
-    //An announcement is made
-    } else if (msg.type === 'announcement' && isAuth(msg.auth)) {
-      announcement = {text: msg.text, date: new Date().getTime()}
-      broadcast({type: 'announcement', text: announcement.text, date: announcement.date})
     }
   })
 })
