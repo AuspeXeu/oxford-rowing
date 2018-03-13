@@ -17,8 +17,7 @@
     "express-uws": "^3.0.0",
     "nconf": "^0.10.0",
     "uuid": "^3.2.1",
-    "vue": "^2.5.13",
-    "ws": "^4.0.0"
+    "vue": "^2.5.13"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",

@@ -25,7 +25,10 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
-      <v-container>
+      <v-containerv-touch="{
+        left: () => drawer = false,
+        right: () => drawer = true
+      }">
         <v-layout row v-resize="onResize">
           <v-flex id="svg-container" xs10 md10 sm10 offset-xs1 offset-sm1 offset-md2 offset-lg3 offset-xl4>
             <svg width="100%" :height="(Math.max(rowsMen, rowsWomen) + (verified ? boatsPerDiv : 0)) * 38 * scale / 0.64">
