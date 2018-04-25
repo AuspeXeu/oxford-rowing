@@ -25,7 +25,7 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
-      <v-containerv-touch="{
+      <v-container v-touch="{
         left: () => drawer = false,
         right: () => drawer = true
       }">
