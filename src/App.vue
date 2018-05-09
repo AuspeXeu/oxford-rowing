@@ -887,7 +887,7 @@
       <v-menu offset-y left attach>
         <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator">{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
         <v-list dense>
-          <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)">
+          <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)" style="background-color:white;">
             <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
           </v-list-tile>
         </v-list>
