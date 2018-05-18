@@ -160,10 +160,8 @@ app.post('/bump', authReq, (req, res) => {
   const day = parseInt(req.body.day, 10)
   const move = {moves: req.body.moves, status: Boolean(req.body.status)}
 
-  if (year !== new Date().getFullYear()) {
-    res.sendStatus(400)
-    return
-  }
+  if (year !== new Date().getFullYear())
+    return res.sendStatus(400)
 
   let promise
   if (!dataCache[`${name}_${year}`])
@@ -223,7 +221,7 @@ app.post('/bump', authReq, (req, res) => {
       bumpBoat.cur = curPos(bumpBoat, day)
       bumpedBoat.cur = curPos(bumpedBoat, day)
       updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'set', val: bumpedBoat.cur - bumpBoat.cur})
-      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: Math.abs(bumpedBoat.cur - bumpBoat.cur)})
+      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: Math.abs(bumpedBoat.cur - curPos(bumpBoat, day-1))})
     } else
       log('No idea what to do with the data!', req.body)
     fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data, null, 2), 'utf8', () => res.sendStatus(200))
