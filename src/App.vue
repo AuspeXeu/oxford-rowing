@@ -1107,6 +1107,7 @@ export default {
       return boats
     },
     bumpBoats() {
+      console.log(this.divBoats.map((b) => b.short))
       let boats = this.divBoats.filter((boat) => this.isActive(boat))
       if (!boats.find((boat) => boat.short === this.bumpBoat.short) && boats.length > 1)
         this.bumpBoat = boats[1]
@@ -1195,14 +1196,19 @@ export default {
     }
   },
   methods: {
+    boatDiv(boat) {
+      const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
+      return Math.min(Math.ceil(boat.start / this.boatsPerDiv), divs.length)
+    },
     isActive(boat) {
       const hasBumped = (boat) => {
         return this.divBoats.find((b) => this.curPos(b, this.bumpDay - 1) < this.curPos(boat, this.bumpDay - 1) && this.curPos(b, this.bumpDay) > this.curPos(boat, this.bumpDay))
       }
+      const isSandwich = (boat) => this.boatDiv(boat) > this.bumpDivision
       if (this.event.name.toLowerCase() === 'torpids')
-        return !boat.moves[this.bumpDay-1] || !hasBumped(boat)
+        return !boat.moves[this.bumpDay-1] || !hasBumped(boat) || isSandwich(boat)
       else if (this.event.name.toLowerCase() === 'eights')
-        return !boat.moves[this.bumpDay-1]
+        return !boat.moves[this.bumpDay-1] || isSandwich(boat)
     },
     makeAnnouncement() {
       const txt = this.announcementDraft.trim()
@@ -1324,8 +1330,7 @@ export default {
         .catch(() => this.divs = false)
     },
     selectBoat(boat) {
-      const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
-      this.bumpDivision = Math.min(Math.ceil(boat.start / this.boatsPerDiv), divs.length)
+      this.bumpDivision = this.boatDiv(boat)
       this.bumpBoat = boat
       this.manualBoat = boat
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
