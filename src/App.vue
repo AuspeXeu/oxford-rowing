@@ -1107,7 +1107,6 @@ export default {
       return boats
     },
     bumpBoats() {
-      console.log(this.divBoats.map((b) => b.short))
       let boats = this.divBoats.filter((boat) => this.isActive(boat))
       if (!boats.find((boat) => boat.short === this.bumpBoat.short) && boats.length > 1)
         this.bumpBoat = boats[1]
@@ -1208,7 +1207,7 @@ export default {
       if (this.event.name.toLowerCase() === 'torpids')
         return !boat.moves[this.bumpDay-1] || !hasBumped(boat) || isSandwich(boat)
       else if (this.event.name.toLowerCase() === 'eights')
-        return !boat.moves[this.bumpDay-1] || isSandwich(boat)
+        return !boat.moves[this.bumpDay-1] || (isSandwich(boat) && !boat.moves[this.bumpDay-1])
     },
     makeAnnouncement() {
       const txt = this.announcementDraft.trim()
