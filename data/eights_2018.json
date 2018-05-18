@@ -2,26 +2,33 @@
   "ORO": {
     "men": [
       {
+        "start": 3,
         "moves": []
       },
       {
+        "start": 29,
         "moves": []
       },
       {
+        "start": 71,
         "moves": []
       },
       {
+        "start": 89,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 14,
         "moves": []
       },
       {
+        "start": 45,
         "moves": []
       },
       {
+        "start": 62,
         "moves": []
       }
     ]
@@ -29,20 +36,25 @@
   "CHB": {
     "men": [
       {
+        "start": 1,
         "moves": []
       },
       {
+        "start": 30,
         "moves": []
       },
       {
+        "start": 67,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 3,
         "moves": []
       },
       {
+        "start": 37,
         "moves": []
       }
     ]
@@ -50,26 +62,33 @@
   "KEB": {
     "men": [
       {
+        "start": 2,
         "moves": []
       },
       {
+        "start": 34,
         "moves": []
       },
       {
+        "start": 66,
         "moves": []
       },
       {
+        "start": 82,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 4,
         "moves": []
       },
       {
+        "start": 58,
         "moves": []
       },
       {
+        "start": 78,
         "moves": []
       }
     ]
@@ -77,29 +96,37 @@
   "PMB": {
     "men": [
       {
+        "start": 4,
         "moves": []
       },
       {
+        "start": 25,
         "moves": []
       },
       {
+        "start": 63,
         "moves": []
       },
       {
+        "start": 72,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 2,
         "moves": []
       },
       {
+        "start": 35,
         "moves": []
       },
       {
+        "start": 61,
         "moves": []
       },
       {
+        "start": 72,
         "moves": []
       }
     ]
@@ -107,23 +134,29 @@
   "WOO": {
     "men": [
       {
+        "start": 5,
         "moves": []
       },
       {
+        "start": 46,
         "moves": []
       },
       {
+        "start": 61,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 6,
         "moves": []
       },
       {
+        "start": 25,
         "moves": []
       },
       {
+        "start": 53,
         "moves": []
       }
     ]
@@ -131,20 +164,25 @@
   "UCO": {
     "men": [
       {
+        "start": 7,
         "moves": []
       },
       {
+        "start": 35,
         "moves": []
       },
       {
+        "start": 65,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 5,
         "moves": []
       },
       {
+        "start": 38,
         "moves": []
       }
     ]
@@ -152,23 +190,29 @@
   "MAG": {
     "men": [
       {
+        "start": 9,
         "moves": []
       },
       {
+        "start": 45,
         "moves": []
       },
       {
+        "start": 87,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 8,
         "moves": []
       },
       {
+        "start": 42,
         "moves": []
       },
       {
+        "start": 64,
         "moves": []
       }
     ]
@@ -176,23 +220,29 @@
   "WAD": {
     "men": [
       {
+        "start": 6,
         "moves": []
       },
       {
+        "start": 38,
         "moves": []
       },
       {
+        "start": 70,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 1,
         "moves": []
       },
       {
+        "start": 34,
         "moves": []
       },
       {
+        "start": 69,
         "moves": []
       }
     ]
@@ -200,17 +250,21 @@
   "SEH": {
     "men": [
       {
+        "start": 11,
         "moves": []
       },
       {
+        "start": 41,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 7,
         "moves": []
       },
       {
+        "start": 75,
         "moves": []
       }
     ]
@@ -218,20 +272,25 @@
   "NEC": {
     "men": [
       {
+        "start": 12,
         "moves": []
       },
       {
+        "start": 36,
         "moves": []
       },
       {
+        "start": 81,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 11,
         "moves": []
       },
       {
+        "start": 47,
         "moves": []
       }
     ]
@@ -239,14 +298,17 @@
   "TRO": {
     "men": [
       {
+        "start": 13,
         "moves": []
       },
       {
+        "start": 43,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 18,
         "moves": []
       }
     ]
@@ -254,26 +316,33 @@
   "BAL": {
     "men": [
       {
+        "start": 8,
         "moves": []
       },
       {
+        "start": 40,
         "moves": []
       },
       {
+        "start": 78,
         "moves": []
       },
       {
+        "start": 77,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 13,
         "moves": []
       },
       {
+        "start": 50,
         "moves": []
       },
       {
+        "start": 67,
         "moves": []
       }
     ]
@@ -281,17 +350,21 @@
   "HEC": {
     "men": [
       {
+        "start": 16,
         "moves": []
       },
       {
+        "start": 49,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 9,
         "moves": []
       },
       {
+        "start": 44,
         "moves": []
       }
     ]
@@ -299,20 +372,25 @@
   "SCO": {
     "men": [
       {
+        "start": 10,
         "moves": []
       },
       {
+        "start": 42,
         "moves": []
       },
       {
+        "start": 80,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 21,
         "moves": []
       },
       {
+        "start": 74,
         "moves": []
       }
     ]
@@ -320,20 +398,25 @@
   "LMH": {
     "men": [
       {
+        "start": 14,
         "moves": []
       },
       {
+        "start": 60,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 24,
         "moves": []
       },
       {
+        "start": 59,
         "moves": []
       },
       {
+        "start": 76,
         "moves": []
       }
     ]
@@ -341,17 +424,21 @@
   "MAN": {
     "men": [
       {
+        "start": 17,
         "moves": []
       },
       {
+        "start": 64,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 16,
         "moves": []
       },
       {
+        "start": 55,
         "moves": []
       }
     ]
@@ -359,23 +446,29 @@
   "LIC": {
     "men": [
       {
+        "start": 19,
         "moves": []
       },
       {
+        "start": 50,
         "moves": []
       },
       {
+        "start": 88,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 17,
         "moves": []
       },
       {
+        "start": 40,
         "moves": []
       },
       {
+        "start": 49,
         "moves": []
       }
     ]
@@ -383,20 +476,25 @@
   "WRO": {
     "men": [
       {
+        "start": 21,
         "moves": []
       },
       {
+        "start": 55,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 22,
         "moves": []
       },
       {
+        "start": 39,
         "moves": []
       },
       {
+        "start": 71,
         "moves": []
       }
     ]
@@ -404,26 +502,33 @@
   "JEO": {
     "men": [
       {
+        "start": 15,
         "moves": []
       },
       {
+        "start": 39,
         "moves": []
       },
       {
+        "start": 62,
         "moves": []
       },
       {
+        "start": 73,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 19,
         "moves": []
       },
       {
+        "start": 52,
         "moves": []
       },
       {
+        "start": 73,
         "moves": []
       }
     ]
@@ -431,17 +536,21 @@
   "BRC": {
     "men": [
       {
+        "start": 22,
         "moves": []
       },
       {
+        "start": 52,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 29,
         "moves": []
       },
       {
+        "start": 51,
         "moves": []
       }
     ]
@@ -449,17 +558,21 @@
   "QCO": {
     "men": [
       {
+        "start": 18,
         "moves": []
       },
       {
+        "start": 58,
         "moves": []
       },
       {
+        "start": 91,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 36,
         "moves": []
       }
     ]
@@ -467,17 +580,21 @@
   "SHG": {
     "men": [
       {
+        "start": 23,
         "moves": []
       },
       {
+        "start": 75,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 27,
         "moves": []
       },
       {
+        "start": 57,
         "moves": []
       }
     ]
@@ -485,17 +602,21 @@
   "SJO": {
     "men": [
       {
+        "start": 20,
         "moves": []
       },
       {
+        "start": 57,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 10,
         "moves": []
       },
       {
+        "start": 41,
         "moves": []
       }
     ]
@@ -503,17 +624,21 @@
   "SAC": {
     "men": [
       {
+        "start": 27,
         "moves": []
       },
       {
+        "start": 69,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 15,
         "moves": []
       },
       {
+        "start": 65,
         "moves": []
       }
     ]
@@ -521,17 +646,21 @@
   "EXC": {
     "men": [
       {
+        "start": 26,
         "moves": []
       },
       {
+        "start": 59,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 23,
         "moves": []
       },
       {
+        "start": 66,
         "moves": []
       }
     ]
@@ -539,17 +668,21 @@
   "MER": {
     "men": [
       {
+        "start": 24,
         "moves": []
       },
       {
+        "start": 47,
         "moves": []
       },
       {
+        "start": 83,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 26,
         "moves": []
       }
     ]
@@ -557,17 +690,21 @@
   "SPC": {
     "men": [
       {
+        "start": 33,
         "moves": []
       },
       {
+        "start": 54,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 33,
         "moves": []
       },
       {
+        "start": 60,
         "moves": []
       }
     ]
@@ -575,23 +712,29 @@
   "COO": {
     "men": [
       {
+        "start": 28,
         "moves": []
       },
       {
+        "start": 84,
         "moves": []
       },
       {
+        "start": 85,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 31,
         "moves": []
       },
       {
+        "start": 68,
         "moves": []
       },
       {
+        "start": 70,
         "moves": []
       }
     ]
@@ -599,20 +742,25 @@
   "SAY": {
     "men": [
       {
+        "start": 31,
         "moves": []
       },
       {
+        "start": 74,
         "moves": []
       },
       {
+        "start": 90,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 28,
         "moves": []
       },
       {
+        "start": 63,
         "moves": []
       }
     ]
@@ -620,23 +768,29 @@
   "SOM": {
     "men": [
       {
+        "start": 32,
         "moves": []
       },
       {
+        "start": 68,
         "moves": []
       },
       {
+        "start": 92,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 12,
         "moves": []
       },
       {
+        "start": 56,
         "moves": []
       },
       {
+        "start": 77,
         "moves": []
       }
     ]
@@ -644,17 +798,21 @@
   "LIN": {
     "men": [
       {
+        "start": 37,
         "moves": []
       },
       {
+        "start": 76,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 20,
         "moves": []
       },
       {
+        "start": 43,
         "moves": []
       }
     ]
@@ -662,6 +820,7 @@
   "OSG": {
     "men": [
       {
+        "start": 51,
         "moves": []
       }
     ],
@@ -670,14 +829,17 @@
   "GTM": {
     "men": [
       {
+        "start": 44,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 30,
         "moves": []
       },
       {
+        "start": 46,
         "moves": []
       }
     ]
@@ -685,20 +847,25 @@
   "SHI": {
     "men": [
       {
+        "start": 48,
         "moves": []
       },
       {
+        "start": 79,
         "moves": []
       },
       {
+        "start": 86,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 32,
         "moves": []
       },
       {
+        "start": 54,
         "moves": []
       }
     ]
@@ -706,11 +873,13 @@
   "RPC": {
     "men": [
       {
+        "start": 53,
         "moves": []
       }
     ],
     "women": [
       {
+        "start": 48,
         "moves": []
       }
     ]
@@ -718,6 +887,7 @@
   "SBH": {
     "men": [
       {
+        "start": 56,
         "moves": []
       }
     ],

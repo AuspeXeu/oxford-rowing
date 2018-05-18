@@ -8,7 +8,7 @@ const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc +
 for (let club in data) {
   Object.keys(data[club]).forEach((gender) => {
     data[club][gender] = data[club][gender].map((boat) => {
-      boat.start = boat.cur
+      boat.start = boat.cur || curPos(boat, 4)
       boat.moves = []
       delete boat['club']
       delete boat['cur']
