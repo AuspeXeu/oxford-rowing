@@ -1,0 +1,726 @@
+{
+  "ORO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "CHB": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "KEB": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "PMB": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "WOO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "UCO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "MAG": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "WAD": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SEH": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "NEC": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "TRO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      }
+    ]
+  },
+  "BAL": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "HEC": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SCO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "LMH": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "MAN": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "LIC": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "WRO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "JEO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "BRC": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "QCO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SHG": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SJO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SAC": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "EXC": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "MER": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SPC": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "COO": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SAY": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SOM": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "LIN": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "OSG": {
+    "men": [
+      {
+        "moves": []
+      }
+    ],
+    "women": []
+  },
+  "GTM": {
+    "men": [
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SHI": {
+    "men": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      },
+      {
+        "moves": []
+      }
+    ]
+  },
+  "RPC": {
+    "men": [
+      {
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "moves": []
+      }
+    ]
+  },
+  "SBH": {
+    "men": [
+      {
+        "moves": []
+      }
+    ],
+    "women": []
+  }
+}

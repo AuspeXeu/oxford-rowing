@@ -960,7 +960,7 @@ export default {
       points: {},
       boatsHigh: [],
       divs: false,
-      events: [{year: 2018, name: 'Torpids'},{year: 2017, name: 'Eights'},{year: 2017, name: 'Torpids'}],
+      events: [{year: 2018, name: 'Eights'},{year: 2018, name: 'Torpids'},{year: 2017, name: 'Eights'},{year: 2017, name: 'Torpids'}],
       chartData: {}
     }
   },

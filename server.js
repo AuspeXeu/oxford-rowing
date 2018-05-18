@@ -226,7 +226,7 @@ app.post('/bump', authReq, (req, res) => {
       updateEntry(data, name, year, bumpedBoat.club, bumpBoat.gender, bumpedBoat.number, day, {op: 'set', val: Math.abs(bumpedBoat.cur - bumpBoat.cur)})
     } else
       log('No idea what to do with the data!', req.body)
-    fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data), 'utf8', () => res.sendStatus(200))
+    fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data, null, 2), 'utf8', () => res.sendStatus(200))
   }).catch((err) => res.status(400).json({err: err}))
 })
 //Endpoint to verify authorization code
