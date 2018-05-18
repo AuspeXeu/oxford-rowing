@@ -223,7 +223,7 @@ app.post('/bump', authReq, (req, res) => {
       bumpBoat.cur = curPos(bumpBoat, day)
       bumpedBoat.cur = curPos(bumpedBoat, day)
       updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'set', val: bumpedBoat.cur - bumpBoat.cur})
-      updateEntry(data, name, year, bumpedBoat.club, bumpBoat.gender, bumpedBoat.number, day, {op: 'set', val: Math.abs(bumpedBoat.cur - bumpBoat.cur)})
+      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: Math.abs(bumpedBoat.cur - bumpBoat.cur)})
     } else
       log('No idea what to do with the data!', req.body)
     fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data, null, 2), 'utf8', () => res.sendStatus(200))
