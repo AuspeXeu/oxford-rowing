@@ -1209,7 +1209,7 @@ export default {
       }
     },
     onKeyUp(ev) {
-      this.appendSel = !(ev.ctrlKey || ev.metaKey)
+      this.appendSel = (ev.ctrlKey || ev.metaKey)
     },
     boatDiv(boat) {
       const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
