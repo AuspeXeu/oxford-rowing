@@ -17,6 +17,7 @@
           autocomplete
           append-icon="search"
           clearable
+          ref="searchField"
           dense
           multiple
           single-line
@@ -1069,6 +1070,9 @@ export default {
       })
     }
   },
+  created() {
+    window.addEventListener('keydown', this.onKeyDown)
+  },
   computed: {
     announcementText() {
       if (this.announcement && this.announcement.text)
@@ -1195,6 +1199,12 @@ export default {
     }
   },
   methods: {
+    onKeyDown(ev) {
+      if (ev.keyCode === 70 && (ev.ctrlKey || ev.metaKey)) {
+        ev.preventDefault()
+        this.$refs.searchField.focus()
+      }
+    },
     boatDiv(boat) {
       const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
       return Math.min(Math.ceil(boat.start / this.boatsPerDiv), divs.length)
