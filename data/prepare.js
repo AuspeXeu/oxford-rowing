@@ -40,5 +40,20 @@ const rmBoat = (club, gender, number) => {
   fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-rmBoat('LIN', 'men', 1)
-rmBoat('BAL', 'men', 3)
+// Insert a boat - number is zero indexed
+const mkBoat = (club, gender, number, start) => {
+  const inFile = './eights_2018.json'
+  const data = require(inFile)
+  data[club][gender].splice(number, 0, {start: start, moves: []})
+  for (let club in data) {
+    data[club].men = data[club].men.map((boat) => {
+      if (boat.start >= start)
+        boat.start += 1
+      return boat
+    })
+  }
+  fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
+}
+
+mkBoat('LIC', 'men', 2, 83)
+
