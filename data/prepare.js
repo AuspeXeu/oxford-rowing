@@ -44,7 +44,6 @@ const rmBoat = (club, gender, number) => {
 const mkBoat = (club, gender, number, start) => {
   const inFile = './eights_2018.json'
   const data = require(inFile)
-  data[club][gender].splice(number, 0, {start: start, moves: []})
   for (let club in data) {
     data[club].men = data[club].men.map((boat) => {
       if (boat.start >= start)
@@ -52,8 +51,8 @@ const mkBoat = (club, gender, number, start) => {
       return boat
     })
   }
+  data[club][gender].splice(number, 0, {start: start, moves: []})
   fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-mkBoat('LIC', 'men', 2, 83)
 
