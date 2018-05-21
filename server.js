@@ -16,6 +16,7 @@ conf.defaults({
   port: 3019,
   bind: '127.0.0.1',
   auth: [],
+  announcement: {text: 'We are live!', date: new Date().getTime()},
   key: false,
   cert: false,
   ca: false
@@ -28,7 +29,6 @@ if (!conf.get('auth').length) {
 
 const reporters = new Set()
 const dataCache = {}
-let announcement = {text: 'We are live!', date: new Date().getTime()}
 
 const app = express()
 //Web and WebSocket server setup
@@ -146,7 +146,9 @@ const getBoats = (data, gender, day) => {
 }
 //An announcement is made
 app.post('/announce', authReq, (req, res) => {
-  announcement = {text: req.body.text.trim(), date: new Date().getTime()}
+  const announcement = {text: req.body.text.trim(), date: new Date().getTime()}
+  conf.set('announcement', announcement)
+  conf.save()
   broadcast({type: 'announcement', text: announcement.text, date: announcement.date})
   res.sendStatus(200)
 })
@@ -247,6 +249,7 @@ app.ws('/live', (ws, req) => {
       log(err)
   })
   //Send the current announcement to the newly connected client
+  const announcement = conf.get('announcement')
   ws.send(JSON.stringify({type: 'announcement', text: announcement.text, date: announcement.date}), (err) => {
     if (err)
       log(err)
