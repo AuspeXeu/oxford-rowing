@@ -24,36 +24,38 @@ const genStart = () => {
   fs.writeFileSync(outFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-// Remove a boat
-const rmBoat = (club, gender, number) => {
+const shiftBoats = (gender, start, amount = 1) => {
   const inFile = './eights_2018.json'
   const data = require(inFile)
-  const oldStart = data[club][gender][number-1].start
-  data[club][gender].splice(number-1, 1)
   for (let club in data) {
-    data[club].men = data[club].men.map((boat) => {
-      if (boat.start > oldStart)
-        boat.start -= 1
+    data[club][gender] = data[club][gender].map((boat) => {
+      if (boat.start >= start)
+        boat.start = boat.start + amount
       return boat
     })
   }
+  fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
+  return data
+}
+
+// Remove a boat
+const rmBoat = (club, gender, number) => {
+  const inFile = './eights_2018.json'
+  let data = require(inFile)
+  const oldStart = data[club][gender][number-1].start
+  data[club][gender].splice(number-1, 1)
+  data = shiftBoats(gender, oldStart, -1)
   fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
 // Insert a boat
 const mkBoat = (club, gender, number, start) => {
+  shiftBoats(gender, start, 1)
   const inFile = './eights_2018.json'
   const data = require(inFile)
-  for (let club in data) {
-    data[club].men = data[club].men.map((boat) => {
-      if (boat.start >= start)
-        boat.start += 1
-      return boat
-    })
-  }
   data[club][gender].splice(number-1, 0, {start: start, moves: []})
   fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-rmBoat('WAD', 'women', 2)
+shiftBoats('women', 35, -1)
 
