@@ -941,6 +941,7 @@ export default {
       rowOvers: [],
       bumpBoat: false,
       manualBoat: false,
+      appendSel: false,
       event: false,
       auth: false,
       snack: {
@@ -1072,6 +1073,7 @@ export default {
   },
   created() {
     window.addEventListener('keydown', this.onKeyDown)
+    window.addEventListener('keyup', this.onKeyUp)
   },
   computed: {
     announcementText() {
@@ -1200,10 +1202,14 @@ export default {
   },
   methods: {
     onKeyDown(ev) {
+        this.appendSel = (ev.ctrlKey || ev.metaKey)
       if (ev.keyCode === 70 && (ev.ctrlKey || ev.metaKey)) {
         ev.preventDefault()
         this.$refs.searchField.focus()
       }
+    },
+    onKeyUp(ev) {
+      this.appendSel = !(ev.ctrlKey || ev.metaKey)
     },
     boatDiv(boat) {
       const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
@@ -1343,9 +1349,14 @@ export default {
       this.bumpBoat = boat
       this.manualBoat = boat
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
-      this.boatsHigh = [boat]
-      this.boatsSelected = [boat]
-      this.chartData[boat.club][boat.gender][boat.number].color = 'orange'
+      if (this.appendSel) {
+        this.boatsHigh.push(boat)
+        this.boatsSelected.push(boat)
+      } else {
+        this.boatsHigh = [boat]
+        this.boatsSelected = [boat]
+      }
+      this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'orange')
     },
     curPos(boat, day) {
       return boat.moves.slice(0,day).reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
