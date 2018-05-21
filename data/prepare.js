@@ -24,12 +24,12 @@ const genStart = () => {
   fs.writeFileSync(outFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-// Remove a boat - number is zero indexed
+// Remove a boat
 const rmBoat = (club, gender, number) => {
   const inFile = './eights_2018.json'
   const data = require(inFile)
-  const oldStart = data[club][gender][number].start
-  data[club][gender].splice(number, 1)
+  const oldStart = data[club][gender][number-1].start
+  data[club][gender].splice(number-1, 1)
   for (let club in data) {
     data[club].men = data[club].men.map((boat) => {
       if (boat.start > oldStart)
@@ -40,7 +40,7 @@ const rmBoat = (club, gender, number) => {
   fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-// Insert a boat - number is zero indexed
+// Insert a boat
 const mkBoat = (club, gender, number, start) => {
   const inFile = './eights_2018.json'
   const data = require(inFile)
@@ -51,9 +51,14 @@ const mkBoat = (club, gender, number, start) => {
       return boat
     })
   }
-  data[club][gender].splice(number, 0, {start: start, moves: []})
+  data[club][gender].splice(number-1, 0, {start: start, moves: []})
   fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-rmBoat('MAG', 'men', 2)
+mkBoat('COO', 'men', 4, 87)
+mkBoat('SCO', 'men', 4, 88)
+mkBoat('LMH', 'men', 3, 89)
+mkBoat('BRC', 'men', 3, 90)
+mkBoat('CHB', 'men', 4, 91)
+mkBoat('SEH', 'men', 3, 92)
 
