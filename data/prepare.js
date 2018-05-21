@@ -24,15 +24,21 @@ const genStart = () => {
   fs.writeFileSync(outFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-// Some moving around
-const inFile = './eights_2018.json'
-const data = require(inFile)
-for (let club in data) {
-  data[club].men = data[club].men.map((boat) => {
-    if (boat.start > 68)
-      boat.start -= 1
-    return boat
-  })
+// Remove a boat - number is zero indexed
+const rmBoat = (club, gender, number) => {
+  const inFile = './eights_2018.json'
+  const data = require(inFile)
+  const oldStart = data[club][gender][number].start
+  data[club][gender].splice(number, 1)
+  for (let club in data) {
+    data[club].men = data[club].men.map((boat) => {
+      if (boat.start > oldStart)
+        boat.start -= 1
+      return boat
+    })
+  }
+  fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 }
-fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 
+rmBoat('LIN', 'men', 1)
+rmBoat('BAL', 'men', 3)

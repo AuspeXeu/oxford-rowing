@@ -14,7 +14,7 @@
         "moves": []
       },
       {
-        "start": 87,
+        "start": 85,
         "moves": []
       }
     ],
@@ -74,7 +74,7 @@
         "moves": []
       },
       {
-        "start": 80,
+        "start": 78,
         "moves": []
       }
     ],
@@ -198,7 +198,7 @@
         "moves": []
       },
       {
-        "start": 85,
+        "start": 83,
         "moves": []
       }
     ],
@@ -280,7 +280,7 @@
         "moves": []
       },
       {
-        "start": 79,
+        "start": 77,
         "moves": []
       }
     ],
@@ -324,11 +324,7 @@
         "moves": []
       },
       {
-        "start": 76,
-        "moves": []
-      },
-      {
-        "start": 75,
+        "start": 74,
         "moves": []
       }
     ],
@@ -380,7 +376,7 @@
         "moves": []
       },
       {
-        "start": 78,
+        "start": 76,
         "moves": []
       }
     ],
@@ -454,7 +450,7 @@
         "moves": []
       },
       {
-        "start": 86,
+        "start": 84,
         "moves": []
       }
     ],
@@ -566,7 +562,7 @@
         "moves": []
       },
       {
-        "start": 89,
+        "start": 87,
         "moves": []
       }
     ],
@@ -676,7 +672,7 @@
         "moves": []
       },
       {
-        "start": 81,
+        "start": 79,
         "moves": []
       }
     ],
@@ -716,11 +712,11 @@
         "moves": []
       },
       {
-        "start": 82,
+        "start": 80,
         "moves": []
       },
       {
-        "start": 83,
+        "start": 81,
         "moves": []
       }
     ],
@@ -750,7 +746,7 @@
         "moves": []
       },
       {
-        "start": 88,
+        "start": 86,
         "moves": []
       }
     ],
@@ -776,7 +772,7 @@
         "moves": []
       },
       {
-        "start": 90,
+        "start": 88,
         "moves": []
       }
     ],
@@ -799,10 +795,6 @@
     "men": [
       {
         "start": 37,
-        "moves": []
-      },
-      {
-        "start": 74,
         "moves": []
       }
     ],
@@ -842,11 +834,11 @@
         "moves": []
       },
       {
-        "start": 77,
+        "start": 75,
         "moves": []
       },
       {
-        "start": 84,
+        "start": 82,
         "moves": []
       }
     ],
