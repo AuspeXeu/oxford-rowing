@@ -55,10 +55,5 @@ const mkBoat = (club, gender, number, start) => {
   fs.writeFileSync(inFile, JSON.stringify(data, null, 2), 'utf8')
 }
 
-mkBoat('COO', 'men', 4, 87)
-mkBoat('SCO', 'men', 4, 88)
-mkBoat('LMH', 'men', 3, 89)
-mkBoat('BRC', 'men', 3, 90)
-mkBoat('CHB', 'men', 4, 91)
-mkBoat('SEH', 'men', 3, 92)
+rmBoat('WAD', 'women', 2)
 
