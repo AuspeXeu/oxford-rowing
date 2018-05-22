@@ -922,7 +922,7 @@ Vue.use(Vuetify)
 export default {
   data() {
     return {
-      countDownDate: new Date('Feb 28, 2018 10:00:00').getTime(),
+      countDownDate: new Date('May 23, 2018 10:00:00').getTime(),
       countDownVal: '',
       announcementDraft: '',
       announcement: '',
