@@ -1072,8 +1072,8 @@ export default {
     }
   },
   created() {
+    window.addEventListener('click', this.onClick, {capture: true})
     window.addEventListener('keydown', this.onKeyDown)
-    window.addEventListener('keyup', this.onKeyUp)
   },
   computed: {
     announcementText() {
@@ -1201,15 +1201,14 @@ export default {
     }
   },
   methods: {
+    onClick(ev) {
+      this.appendSel = (ev.ctrlKey || ev.metaKey)
+    },
     onKeyDown(ev) {
-        this.appendSel = (ev.ctrlKey || ev.metaKey)
       if (ev.keyCode === 70 && (ev.ctrlKey || ev.metaKey)) {
         ev.preventDefault()
         this.$refs.searchField.focus()
       }
-    },
-    onKeyUp(ev) {
-      this.appendSel = (ev.ctrlKey || ev.metaKey)
     },
     boatDiv(boat) {
       const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
@@ -1357,8 +1356,14 @@ export default {
       this.manualBoat = boat
       this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
       if (this.appendSel) {
-        this.boatsHigh.push(boat)
-        this.boatsSelected.push(boat)
+        const idx = this.boatsSelected.indexOf(boat)
+        if (idx !== -1) {
+           this.boatsHigh.splice(idx, 1)
+          this.boatsSelected.splice(idx, 1)
+        } else {
+          this.boatsHigh.push(boat)
+          this.boatsSelected.push(boat)
+        }
       } else {
         this.boatsHigh = [boat]
         this.boatsSelected = [boat]
