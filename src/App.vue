@@ -907,6 +907,10 @@
       </v-btn>
       <div class="noselect pr-2">© {{ new Date().getFullYear() }}</div>
     </v-footer>
+    <v-snackbar top v-model="firstVisit" :timeout="0">
+      Race times are displayed in local time :)
+      <v-btn flat color="pink" @click="dismissFirst()">Close</v-btn>
+    </v-snackbar>
     <v-snackbar
       class="noselect"
       :timeout="snack.timeout"
@@ -962,6 +966,7 @@ export default {
       announceDialog: false,
       bumpTab: '0',
       points: {},
+      firstVisit: false,
       boatsHigh: [],
       divs: false,
       events: [{year: 2018, name: 'Eights'},{year: 2018, name: 'Torpids'},{year: 2017, name: 'Eights'},{year: 2017, name: 'Torpids'}],
@@ -1077,6 +1082,7 @@ export default {
     }
   },
   created() {
+    this.firstVisit = !Boolean(localStorage.getItem('wasHere'))
     window.addEventListener('click', this.onClick, {capture: true})
     window.addEventListener('keydown', this.onKeyDown)
   },
@@ -1206,6 +1212,10 @@ export default {
     }
   },
   methods: {
+    dismissFirst() {
+      this.firstVisit = false
+      localStorage.setItem('wasHere', true)
+    },
     onClick(ev) {
       this.appendSel = (ev.ctrlKey || ev.metaKey)
     },
