@@ -652,13 +652,14 @@
                      transform="scale(-1)" />
                 </g>
               </defs>
-              <g id="containerMen" :transform="`translate(0,15),scale(${scale})`">
+              <g id="containerMen" :transform="`translate(40,15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
                 <g v-for="div in divsMen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
                 <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
+                  <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
@@ -667,13 +668,14 @@
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
               </g>
-              <g id="containerWomen" :transform="`translate(${offset},15),scale(${scale})`">
+              <g id="containerWomen" :transform="`translate(${offset+70},15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
                 <g v-for="div in divsWomen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
                 <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
+                  <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
@@ -1242,7 +1244,7 @@ export default {
       clearTimeout(this.timer)
       this.timer = setTimeout(function() {
         const width = document.getElementById('svg-container').offsetWidth
-        this.scale = Math.min(width * 0.63 / 577, 0.63)
+        this.scale = Math.min(width * 0.63 / 780, 0.63)
       }.bind(this), 150)
     },
     clickEnd(boat) {
