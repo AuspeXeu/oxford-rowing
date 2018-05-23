@@ -908,7 +908,7 @@
       <div class="noselect pr-2">© {{ new Date().getFullYear() }}</div>
     </v-footer>
     <v-snackbar top v-model="firstVisit" :timeout="0">
-      Race times are displayed in local time :)
+      Race times are displayed in your local time :)
       <v-btn flat color="pink" @click="dismissFirst()">Close</v-btn>
     </v-snackbar>
     <v-snackbar
