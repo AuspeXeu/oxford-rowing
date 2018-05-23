@@ -10,11 +10,11 @@
         "moves": []
       },
       {
-        "start": 68,
+        "start": 69,
         "moves": []
       },
       {
-        "start": 83,
+        "start": 84,
         "moves": []
       }
     ],
@@ -44,11 +44,11 @@
         "moves": []
       },
       {
-        "start": 65,
+        "start": 66,
         "moves": []
       },
       {
-        "start": 90,
+        "start": 91,
         "moves": []
       }
     ],
@@ -60,7 +60,11 @@
       {
         "start": 36,
         "moves": []
-      },{"start":78,"moves":[]}
+      },
+      {
+        "start": 78,
+        "moves": []
+      }
     ]
   },
   "KEB": {
@@ -74,11 +78,11 @@
         "moves": []
       },
       {
-        "start": 64,
+        "start": 65,
         "moves": []
       },
       {
-        "start": 77,
+        "start": 78,
         "moves": []
       }
     ],
@@ -104,11 +108,11 @@
         "moves": []
       },
       {
-        "start": 61,
+        "start": 62,
         "moves": []
       },
       {
-        "start": 69,
+        "start": 70,
         "moves": []
       }
     ],
@@ -138,11 +142,11 @@
         "moves": []
       },
       {
-        "start": 45,
+        "start": 46,
         "moves": []
       },
       {
-        "start": 59,
+        "start": 60,
         "moves": []
       }
     ],
@@ -158,7 +162,11 @@
       {
         "start": 53,
         "moves": []
-      },{"start": 76, "moves": []}
+      },
+      {
+        "start": 76,
+        "moves": []
+      }
     ]
   },
   "UCO": {
@@ -168,11 +176,15 @@
         "moves": []
       },
       {
+        "start": 35,
+        "moves": []
+      },
+      {
         "start": 34,
         "moves": []
       },
       {
-        "start": 63,
+        "start": 64,
         "moves": []
       }
     ],
@@ -194,7 +206,7 @@
         "moves": []
       },
       {
-        "start": 44,
+        "start": 45,
         "moves": []
       }
     ],
@@ -220,11 +232,11 @@
         "moves": []
       },
       {
-        "start": 37,
+        "start": 38,
         "moves": []
       },
       {
-        "start": 67,
+        "start": 68,
         "moves": []
       }
     ],
@@ -242,11 +254,11 @@
         "moves": []
       },
       {
-        "start": 40,
+        "start": 41,
         "moves": []
       },
       {
-        "start": 91,
+        "start": 92,
         "moves": []
       }
     ],
@@ -268,11 +280,11 @@
         "moves": []
       },
       {
-        "start": 35,
+        "start": 36,
         "moves": []
       },
       {
-        "start": 76,
+        "start": 77,
         "moves": []
       }
     ],
@@ -284,7 +296,8 @@
       {
         "start": 46,
         "moves": []
-      },{
+      },
+      {
         "start": 72,
         "moves": []
       }
@@ -297,7 +310,7 @@
         "moves": []
       },
       {
-        "start": 42,
+        "start": 43,
         "moves": []
       }
     ],
@@ -319,11 +332,11 @@
         "moves": []
       },
       {
-        "start": 39,
+        "start": 40,
         "moves": []
       },
       {
-        "start": 73,
+        "start": 74,
         "moves": []
       }
     ],
@@ -345,7 +358,7 @@
         "moves": []
       },
       {
-        "start": 48,
+        "start": 49,
         "moves": []
       }
     ],
@@ -367,15 +380,15 @@
         "moves": []
       },
       {
-        "start": 41,
+        "start": 42,
         "moves": []
       },
       {
-        "start": 75,
+        "start": 76,
         "moves": []
       },
       {
-        "start": 87,
+        "start": 88,
         "moves": []
       }
     ],
@@ -397,11 +410,11 @@
         "moves": []
       },
       {
-        "start": 58,
+        "start": 59,
         "moves": []
       },
       {
-        "start": 88,
+        "start": 89,
         "moves": []
       }
     ],
@@ -423,7 +436,7 @@
         "moves": []
       },
       {
-        "start": 62,
+        "start": 63,
         "moves": []
       }
     ],
@@ -445,11 +458,11 @@
         "moves": []
       },
       {
-        "start": 49,
+        "start": 50,
         "moves": []
       },
       {
-        "start": 82,
+        "start": 83,
         "moves": []
       }
     ],
@@ -475,7 +488,7 @@
         "moves": []
       },
       {
-        "start": 53,
+        "start": 54,
         "moves": []
       }
     ],
@@ -497,15 +510,15 @@
         "moves": []
       },
       {
-        "start": 38,
+        "start": 39,
         "moves": []
       },
       {
-        "start": 60,
+        "start": 61,
         "moves": []
       },
       {
-        "start": 70,
+        "start": 71,
         "moves": []
       }
     ],
@@ -531,11 +544,11 @@
         "moves": []
       },
       {
-        "start": 50,
+        "start": 51,
         "moves": []
       },
       {
-        "start": 89,
+        "start": 90,
         "moves": []
       }
     ],
@@ -557,11 +570,11 @@
         "moves": []
       },
       {
-        "start": 56,
+        "start": 57,
         "moves": []
       },
       {
-        "start": 85,
+        "start": 86,
         "moves": []
       }
     ],
@@ -569,7 +582,11 @@
       {
         "start": 35,
         "moves": []
-      },{"start": 77, "moves": []}
+      },
+      {
+        "start": 77,
+        "moves": []
+      }
     ]
   },
   "SHG": {
@@ -579,7 +596,7 @@
         "moves": []
       },
       {
-        "start": 72,
+        "start": 73,
         "moves": []
       }
     ],
@@ -591,7 +608,11 @@
       {
         "start": 57,
         "moves": []
-      },{"start": 79, "moves":[]}
+      },
+      {
+        "start": 79,
+        "moves": []
+      }
     ]
   },
   "SJO": {
@@ -601,7 +622,7 @@
         "moves": []
       },
       {
-        "start": 55,
+        "start": 56,
         "moves": []
       }
     ],
@@ -623,7 +644,7 @@
         "moves": []
       },
       {
-        "start": 67,
+        "start": 68,
         "moves": []
       }
     ],
@@ -641,7 +662,7 @@
         "moves": []
       },
       {
-        "start": 57,
+        "start": 58,
         "moves": []
       }
     ],
@@ -663,11 +684,11 @@
         "moves": []
       },
       {
-        "start": 46,
+        "start": 47,
         "moves": []
       },
       {
-        "start": 78,
+        "start": 79,
         "moves": []
       }
     ],
@@ -675,8 +696,10 @@
       {
         "start": 26,
         "moves": []
-      },{
-        "start": 75,"moves" :[]
+      },
+      {
+        "start": 75,
+        "moves": []
       }
     ]
   },
@@ -687,7 +710,7 @@
         "moves": []
       },
       {
-        "start": 52,
+        "start": 53,
         "moves": []
       }
     ],
@@ -705,15 +728,15 @@
         "moves": []
       },
       {
-        "start": 79,
-        "moves": []
-      },
-      {
         "start": 80,
         "moves": []
       },
       {
-        "start": 86,
+        "start": 81,
+        "moves": []
+      },
+      {
+        "start": 87,
         "moves": []
       }
     ],
@@ -739,11 +762,11 @@
         "moves": []
       },
       {
-        "start": 71,
+        "start": 72,
         "moves": []
       },
       {
-        "start": 84,
+        "start": 85,
         "moves": []
       }
     ],
@@ -765,7 +788,7 @@
         "moves": []
       },
       {
-        "start": 66,
+        "start": 67,
         "moves": []
       }
     ],
@@ -787,7 +810,7 @@
   "LIN": {
     "men": [
       {
-        "start": 36,
+        "start": 37,
         "moves": []
       }
     ],
@@ -805,7 +828,7 @@
   "GTM": {
     "men": [
       {
-        "start": 43,
+        "start": 44,
         "moves": []
       }
     ],
@@ -817,7 +840,8 @@
       {
         "start": 45,
         "moves": []
-      },{
+      },
+      {
         "start": 74,
         "moves": []
       }
@@ -826,15 +850,15 @@
   "SHI": {
     "men": [
       {
-        "start": 47,
+        "start": 48,
         "moves": []
       },
       {
-        "start": 74,
+        "start": 75,
         "moves": []
       },
       {
-        "start": 81,
+        "start": 82,
         "moves": []
       }
     ],
@@ -852,7 +876,7 @@
   "RPC": {
     "men": [
       {
-        "start": 51,
+        "start": 52,
         "moves": []
       }
     ],
@@ -866,13 +890,15 @@
   "SBH": {
     "men": [
       {
-        "start": 54,
+        "start": 55,
         "moves": []
       }
     ],
-    "women": [{
-      "start": 73,
-      "moves": []
-    }]
+    "women": [
+      {
+        "start": 73,
+        "moves": []
+      }
+    ]
   }
 }
