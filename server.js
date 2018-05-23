@@ -133,13 +133,7 @@ const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc +
 const getBoats = (data, gender, day) => {
   let boats = []
   for (let club in data) {
-    const ary = data[club][gender].map((boat, idx) => {
-      boat.club = club
-      boat.gender = gender
-      boat.number = idx
-      boat.cur = curPos(boat, day)
-      return boat
-    })
+    const ary = data[club][gender].map((boat, idx) => Object.assign({club: club, gender: gender, number: idx, cur: curPos(boat, day)}, boat))
     boats = boats.concat(ary)
   }
   return boats
