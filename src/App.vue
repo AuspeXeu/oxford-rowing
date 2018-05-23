@@ -1308,7 +1308,14 @@ export default {
       return Array(+digits.join('') + 1).join('M') + roman;
     },
     divName(div) {
-      return `Division ${this.romanize(div.number)}${(div.time ? ` - ${div.time}` : '')}`
+      const formatDivTime = (str) => {
+        const [_, hours, minutes] = div.time.match(/([0-9]+):([0-9]+)/)
+        const mom = moment().tz('Europe/London')
+        mom.minutes(minutes)
+        mom.hours(hours)
+        return mom.local().format('HH:mm')
+      }
+      return `Division ${this.romanize(div.number)}${div.time ? ` - ${formatDivTime(div.time)}` : ''}`
     },
     clubToName(club) {
       const table = {
