@@ -656,7 +656,7 @@
                 <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
                 <g v-for="div in divsMen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" transform="translate(415,-300),rotate(-90)">{{divName(div)}}</text>
+                  <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
                 <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <g transform="translate(50,0)">
@@ -671,7 +671,7 @@
                 <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
                 <g v-for="div in divsWomen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" transform="translate(415,-300),rotate(-90)">{{divName(div)}}</text>
+                  <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
                 <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <g transform="translate(50,0)">
