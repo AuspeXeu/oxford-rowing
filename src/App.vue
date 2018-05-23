@@ -660,9 +660,9 @@
                 </g>
                 <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
-                  <g transform="translate(50,0)">
-                    <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
-                    <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
+                  <g transform="translate(50,0)" :style="`opacity:${boat.opacity}`">
+                    <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
+                    <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
                     <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
@@ -676,9 +676,9 @@
                 </g>
                 <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
-                  <g transform="translate(50,0)">
-                    <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" :style="`stroke:${boat.color};stroke-width:5;`" />
-                    <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" :stroke="boat.color" stroke-width="3" :fill="boat.color" />
+                  <g transform="translate(50,0)" :style="`opacity:${boat.opacity}`">
+                    <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
+                    <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
                     <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
@@ -1065,12 +1065,15 @@ export default {
           .catch(() => this.verified = false)
     },
     boatsSelected() {
-      this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
+      this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
       this.boatsHigh = []
-      this.boatsSelected.forEach((boat) => {
-        this.chartData[boat.club][boat.gender][boat.number].color = 'orange'
-        this.boatsHigh.push(boat)
-      })
+      if (this.boatsSelected.length) {
+        this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 0.5)
+        this.boatsSelected.forEach((boat) => {
+          this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0
+          this.boatsHigh.push(boat)
+        })
+      }
     }
   },
   created() {
@@ -1335,7 +1338,7 @@ export default {
                 boat.club = club
                 boat.gender = gender
                 boat.number = idx
-                boat.color = 'gray'
+                boat.opacity = 1.0
                 boat.short = `${this.clubToName(boat.club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(boat.number + 1)}`
                 return boat
               })
@@ -1356,21 +1359,22 @@ export default {
       this.bumpDivision = this.boatDiv(boat)
       this.bumpBoat = boat
       this.manualBoat = boat
-      this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'gray')
-      if (this.appendSel) {
-        const idx = this.boatsSelected.indexOf(boat)
-        if (idx !== -1) {
-           this.boatsHigh.splice(idx, 1)
-          this.boatsSelected.splice(idx, 1)
-        } else {
-          this.boatsHigh.push(boat)
-          this.boatsSelected.push(boat)
-        }
+      this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
+      const idx = this.boatsSelected.indexOf(boat)
+      if (idx !== -1) {
+        this.boatsHigh.splice(idx, 1)
+        this.boatsSelected.splice(idx, 1)
+      } else if (this.appendSel) {
+        this.boatsHigh.push(boat)
+        this.boatsSelected.push(boat)
       } else {
         this.boatsHigh = [boat]
         this.boatsSelected = [boat]
       }
-      this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].color = 'orange')
+      if (this.boatsHigh.length) {
+        this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 0.5)
+        this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
+      }
     },
     curPos(boat, day) {
       return boat.moves.slice(0,day).reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
