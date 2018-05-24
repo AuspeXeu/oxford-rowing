@@ -3,33 +3,96 @@
     "men": [
       {
         "start": 3,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "ORO",
+        "gender": "men",
+        "number": 0,
+        "cur": 3
       },
       {
         "start": 29,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "ORO",
+        "gender": "men",
+        "number": 1,
+        "cur": 29
       },
       {
         "start": 69,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "ORO",
+        "gender": "men",
+        "number": 2,
+        "cur": 70
       },
       {
         "start": 84,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "ORO",
+        "gender": "men",
+        "number": 3,
+        "cur": 83
       }
     ],
     "women": [
       {
         "start": 14,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "ORO",
+        "gender": "women",
+        "number": 0,
+        "cur": 14
       },
       {
         "start": 44,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 1
+          }
+        ],
+        "club": "ORO",
+        "gender": "women",
+        "number": 1,
+        "cur": 43
       },
       {
         "start": 61,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "ORO",
+        "gender": "women",
+        "number": 2,
+        "cur": 60
       }
     ]
   },
@@ -37,33 +100,96 @@
     "men": [
       {
         "start": 1,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "CHB",
+        "gender": "men",
+        "number": 0,
+        "cur": 2
       },
       {
         "start": 30,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "CHB",
+        "gender": "men",
+        "number": 1,
+        "cur": 30
       },
       {
         "start": 66,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "CHB",
+        "gender": "men",
+        "number": 2,
+        "cur": 67
       },
       {
         "start": 91,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "CHB",
+        "gender": "men",
+        "number": 3,
+        "cur": 93
       }
     ],
     "women": [
       {
         "start": 3,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "CHB",
+        "gender": "women",
+        "number": 0,
+        "cur": 3
       },
       {
         "start": 36,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "CHB",
+        "gender": "women",
+        "number": 1,
+        "cur": 37
       },
       {
         "start": 78,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "CHB",
+        "gender": "women",
+        "number": 2,
+        "cur": 77
       }
     ]
   },
@@ -71,29 +197,83 @@
     "men": [
       {
         "start": 2,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "KEB",
+        "gender": "men",
+        "number": 0,
+        "cur": 1
       },
       {
         "start": 34,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "KEB",
+        "gender": "men",
+        "number": 1,
+        "cur": 33
       },
       {
         "start": 65,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "KEB",
+        "gender": "men",
+        "number": 2,
+        "cur": 65
       },
       {
         "start": 78,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "KEB",
+        "gender": "men",
+        "number": 3,
+        "cur": 79
       }
     ],
     "women": [
       {
         "start": 5,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "KEB",
+        "gender": "women",
+        "number": 0,
+        "cur": 5
       },
       {
         "start": 58,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "KEB",
+        "gender": "women",
+        "number": 1,
+        "cur": 58
       }
     ]
   },
@@ -101,37 +281,109 @@
     "men": [
       {
         "start": 4,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "PMB",
+        "gender": "men",
+        "number": 0,
+        "cur": 4
       },
       {
         "start": 25,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "PMB",
+        "gender": "men",
+        "number": 1,
+        "cur": 26
       },
       {
         "start": 62,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "PMB",
+        "gender": "men",
+        "number": 2,
+        "cur": 61
       },
       {
         "start": 70,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "PMB",
+        "gender": "men",
+        "number": 3,
+        "cur": 69
       }
     ],
     "women": [
       {
         "start": 2,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "PMB",
+        "gender": "women",
+        "number": 0,
+        "cur": 2
       },
       {
         "start": 34,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "PMB",
+        "gender": "women",
+        "number": 1,
+        "cur": 33
       },
       {
         "start": 60,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "PMB",
+        "gender": "women",
+        "number": 2,
+        "cur": 61
       },
       {
         "start": 67,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -3
+          }
+        ],
+        "club": "PMB",
+        "gender": "women",
+        "number": 3,
+        "cur": 70
       }
     ]
   },
@@ -139,33 +391,96 @@
     "men": [
       {
         "start": 5,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "WOO",
+        "gender": "men",
+        "number": 0,
+        "cur": 6
       },
       {
         "start": 46,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "WOO",
+        "gender": "men",
+        "number": 1,
+        "cur": 45
       },
       {
         "start": 60,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "WOO",
+        "gender": "men",
+        "number": 2,
+        "cur": 59
       }
     ],
     "women": [
       {
         "start": 6,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "WOO",
+        "gender": "women",
+        "number": 0,
+        "cur": 6
       },
       {
         "start": 25,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "WOO",
+        "gender": "women",
+        "number": 1,
+        "cur": 25
       },
       {
         "start": 53,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 1
+          }
+        ],
+        "club": "WOO",
+        "gender": "women",
+        "number": 2,
+        "cur": 53
       },
       {
         "start": 76,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 3
+          }
+        ],
+        "club": "WOO",
+        "gender": "women",
+        "number": 3,
+        "cur": 73
       }
     ]
   },
@@ -173,25 +488,70 @@
     "men": [
       {
         "start": 7,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "UCO",
+        "gender": "men",
+        "number": 0,
+        "cur": 8
       },
       {
         "start": 35,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "UCO",
+        "gender": "men",
+        "number": 1,
+        "cur": 36
       },
       {
         "start": 64,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "UCO",
+        "gender": "men",
+        "number": 2,
+        "cur": 63
       }
     ],
     "women": [
       {
         "start": 4,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "UCO",
+        "gender": "women",
+        "number": 0,
+        "cur": 4
       },
       {
         "start": 37,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "UCO",
+        "gender": "women",
+        "number": 1,
+        "cur": 36
       }
     ]
   },
@@ -199,25 +559,70 @@
     "men": [
       {
         "start": 9,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MAG",
+        "gender": "men",
+        "number": 0,
+        "cur": 10
       },
       {
         "start": 45,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MAG",
+        "gender": "men",
+        "number": 1,
+        "cur": 46
       }
     ],
     "women": [
       {
         "start": 8,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "MAG",
+        "gender": "women",
+        "number": 0,
+        "cur": 8
       },
       {
         "start": 41,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 1
+          }
+        ],
+        "club": "MAG",
+        "gender": "women",
+        "number": 1,
+        "cur": 40
       },
       {
         "start": 63,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MAG",
+        "gender": "women",
+        "number": 2,
+        "cur": 64
       }
     ]
   },
@@ -225,21 +630,52 @@
     "men": [
       {
         "start": 6,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "WAD",
+        "gender": "men",
+        "number": 0,
+        "cur": 5
       },
       {
         "start": 38,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "WAD",
+        "gender": "men",
+        "number": 1,
+        "cur": 37
       },
       {
         "start": 68,
-        "moves": []
+        "moves": [],
+        "club": "WAD",
+        "gender": "men",
+        "number": 2,
+        "cur": 68
       }
     ],
     "women": [
       {
         "start": 1,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "WAD",
+        "gender": "women",
+        "number": 0,
+        "cur": 1
       }
     ]
   },
@@ -247,25 +683,70 @@
     "men": [
       {
         "start": 11,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SEH",
+        "gender": "men",
+        "number": 0,
+        "cur": 11
       },
       {
         "start": 41,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SEH",
+        "gender": "men",
+        "number": 1,
+        "cur": 40
       },
       {
         "start": 92,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SEH",
+        "gender": "men",
+        "number": 2,
+        "cur": 90
       }
     ],
     "women": [
       {
         "start": 7,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SEH",
+        "gender": "women",
+        "number": 0,
+        "cur": 7
       },
       {
         "start": 70,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 3
+          }
+        ],
+        "club": "SEH",
+        "gender": "women",
+        "number": 1,
+        "cur": 67
       }
     ]
   },
@@ -273,29 +754,83 @@
     "men": [
       {
         "start": 12,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "NEC",
+        "gender": "men",
+        "number": 0,
+        "cur": 13
       },
       {
         "start": 36,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "NEC",
+        "gender": "men",
+        "number": 1,
+        "cur": 35
       },
       {
         "start": 77,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "NEC",
+        "gender": "men",
+        "number": 2,
+        "cur": 77
       }
     ],
     "women": [
       {
         "start": 11,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "NEC",
+        "gender": "women",
+        "number": 0,
+        "cur": 11
       },
       {
         "start": 46,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 0
+          }
+        ],
+        "club": "NEC",
+        "gender": "women",
+        "number": 1,
+        "cur": 46
       },
       {
         "start": 72,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "NEC",
+        "gender": "women",
+        "number": 2,
+        "cur": 71
       }
     ]
   },
@@ -303,21 +838,57 @@
     "men": [
       {
         "start": 13,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "TRO",
+        "gender": "men",
+        "number": 0,
+        "cur": 12
       },
       {
         "start": 43,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "TRO",
+        "gender": "men",
+        "number": 1,
+        "cur": 42
       }
     ],
     "women": [
       {
         "start": 18,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "TRO",
+        "gender": "women",
+        "number": 0,
+        "cur": 19
       },
       {
         "start": 50,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": -1
+          }
+        ],
+        "club": "TRO",
+        "gender": "women",
+        "number": 1,
+        "cur": 51
       }
     ]
   },
@@ -325,25 +896,70 @@
     "men": [
       {
         "start": 8,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "BAL",
+        "gender": "men",
+        "number": 0,
+        "cur": 7
       },
       {
         "start": 40,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "BAL",
+        "gender": "men",
+        "number": 1,
+        "cur": 41
       },
       {
         "start": 74,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "BAL",
+        "gender": "men",
+        "number": 2,
+        "cur": 73
       }
     ],
     "women": [
       {
         "start": 13,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "BAL",
+        "gender": "women",
+        "number": 0,
+        "cur": 13
       },
       {
         "start": 49,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 1
+          }
+        ],
+        "club": "BAL",
+        "gender": "women",
+        "number": 1,
+        "cur": 48
       }
     ]
   },
@@ -351,21 +967,57 @@
     "men": [
       {
         "start": 16,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "HEC",
+        "gender": "men",
+        "number": 0,
+        "cur": 16
       },
       {
         "start": 49,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "HEC",
+        "gender": "men",
+        "number": 1,
+        "cur": 50
       }
     ],
     "women": [
       {
         "start": 9,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "HEC",
+        "gender": "women",
+        "number": 0,
+        "cur": 9
       },
       {
         "start": 43,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": -1
+          }
+        ],
+        "club": "HEC",
+        "gender": "women",
+        "number": 1,
+        "cur": 44
       }
     ]
   },
@@ -373,29 +1025,83 @@
     "men": [
       {
         "start": 10,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SCO",
+        "gender": "men",
+        "number": 0,
+        "cur": 9
       },
       {
         "start": 42,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SCO",
+        "gender": "men",
+        "number": 1,
+        "cur": 43
       },
       {
         "start": 76,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SCO",
+        "gender": "men",
+        "number": 2,
+        "cur": 75
       },
       {
         "start": 88,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SCO",
+        "gender": "men",
+        "number": 3,
+        "cur": 88
       }
     ],
     "women": [
       {
         "start": 21,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SCO",
+        "gender": "women",
+        "number": 0,
+        "cur": 21
       },
       {
         "start": 69,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SCO",
+        "gender": "women",
+        "number": 1,
+        "cur": 68
       }
     ]
   },
@@ -403,25 +1109,70 @@
     "men": [
       {
         "start": 14,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "LMH",
+        "gender": "men",
+        "number": 0,
+        "cur": 15
       },
       {
         "start": 59,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "LMH",
+        "gender": "men",
+        "number": 1,
+        "cur": 60
       },
       {
         "start": 89,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "LMH",
+        "gender": "men",
+        "number": 2,
+        "cur": 91
       }
     ],
     "women": [
       {
         "start": 24,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "LMH",
+        "gender": "women",
+        "number": 0,
+        "cur": 24
       },
       {
         "start": 59,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "LMH",
+        "gender": "women",
+        "number": 1,
+        "cur": 59
       }
     ]
   },
@@ -429,21 +1180,57 @@
     "men": [
       {
         "start": 17,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MAN",
+        "gender": "men",
+        "number": 0,
+        "cur": 18
       },
       {
         "start": 63,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MAN",
+        "gender": "men",
+        "number": 1,
+        "cur": 64
       }
     ],
     "women": [
       {
         "start": 16,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MAN",
+        "gender": "women",
+        "number": 0,
+        "cur": 17
       },
       {
         "start": 55,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MAN",
+        "gender": "women",
+        "number": 1,
+        "cur": 56
       }
     ]
   },
@@ -451,29 +1238,83 @@
     "men": [
       {
         "start": 19,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "LIC",
+        "gender": "men",
+        "number": 0,
+        "cur": 19
       },
       {
         "start": 50,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "LIC",
+        "gender": "men",
+        "number": 1,
+        "cur": 49
       },
       {
         "start": 83,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "LIC",
+        "gender": "men",
+        "number": 2,
+        "cur": 84
       }
     ],
     "women": [
       {
         "start": 17,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "LIC",
+        "gender": "women",
+        "number": 0,
+        "cur": 16
       },
       {
         "start": 39,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "LIC",
+        "gender": "women",
+        "number": 1,
+        "cur": 38
       },
       {
         "start": 48,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": -1
+          }
+        ],
+        "club": "LIC",
+        "gender": "women",
+        "number": 2,
+        "cur": 49
       }
     ]
   },
@@ -481,21 +1322,57 @@
     "men": [
       {
         "start": 21,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "WRO",
+        "gender": "men",
+        "number": 0,
+        "cur": 20
       },
       {
         "start": 54,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "WRO",
+        "gender": "men",
+        "number": 1,
+        "cur": 54
       }
     ],
     "women": [
       {
         "start": 22,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "WRO",
+        "gender": "women",
+        "number": 0,
+        "cur": 23
       },
       {
         "start": 38,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "WRO",
+        "gender": "women",
+        "number": 1,
+        "cur": 39
       }
     ]
   },
@@ -503,33 +1380,96 @@
     "men": [
       {
         "start": 15,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "JEO",
+        "gender": "men",
+        "number": 0,
+        "cur": 14
       },
       {
         "start": 39,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "JEO",
+        "gender": "men",
+        "number": 1,
+        "cur": 39
       },
       {
         "start": 61,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "JEO",
+        "gender": "men",
+        "number": 2,
+        "cur": 62
       },
       {
         "start": 71,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "JEO",
+        "gender": "men",
+        "number": 3,
+        "cur": 72
       }
     ],
     "women": [
       {
         "start": 19,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "JEO",
+        "gender": "women",
+        "number": 0,
+        "cur": 18
       },
       {
         "start": 52,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": -1
+          }
+        ],
+        "club": "JEO",
+        "gender": "women",
+        "number": 1,
+        "cur": 52
       },
       {
         "start": 68,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "JEO",
+        "gender": "women",
+        "number": 2,
+        "cur": 69
       }
     ]
   },
@@ -537,25 +1477,70 @@
     "men": [
       {
         "start": 22,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "BRC",
+        "gender": "men",
+        "number": 0,
+        "cur": 23
       },
       {
         "start": 51,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "BRC",
+        "gender": "men",
+        "number": 1,
+        "cur": 51
       },
       {
         "start": 90,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "BRC",
+        "gender": "men",
+        "number": 2,
+        "cur": 89
       }
     ],
     "women": [
       {
         "start": 29,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "BRC",
+        "gender": "women",
+        "number": 0,
+        "cur": 30
       },
       {
         "start": 51,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 1
+          }
+        ],
+        "club": "BRC",
+        "gender": "women",
+        "number": 1,
+        "cur": 50
       }
     ]
   },
@@ -563,25 +1548,70 @@
     "men": [
       {
         "start": 18,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "QCO",
+        "gender": "men",
+        "number": 0,
+        "cur": 17
       },
       {
         "start": 57,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "QCO",
+        "gender": "men",
+        "number": 1,
+        "cur": 56
       },
       {
         "start": 86,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "QCO",
+        "gender": "men",
+        "number": 2,
+        "cur": 87
       }
     ],
     "women": [
       {
         "start": 35,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "QCO",
+        "gender": "women",
+        "number": 0,
+        "cur": 35
       },
       {
         "start": 77,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "QCO",
+        "gender": "women",
+        "number": 1,
+        "cur": 78
       }
     ]
   },
@@ -589,25 +1619,70 @@
     "men": [
       {
         "start": 23,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SHG",
+        "gender": "men",
+        "number": 0,
+        "cur": 22
       },
       {
         "start": 73,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SHG",
+        "gender": "men",
+        "number": 1,
+        "cur": 74
       }
     ],
     "women": [
       {
         "start": 27,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SHG",
+        "gender": "women",
+        "number": 0,
+        "cur": 27
       },
       {
         "start": 57,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 3
+          }
+        ],
+        "club": "SHG",
+        "gender": "women",
+        "number": 1,
+        "cur": 54
       },
       {
         "start": 79,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SHG",
+        "gender": "women",
+        "number": 2,
+        "cur": 79
       }
     ]
   },
@@ -615,21 +1690,57 @@
     "men": [
       {
         "start": 20,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SJO",
+        "gender": "men",
+        "number": 0,
+        "cur": 21
       },
       {
         "start": 56,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SJO",
+        "gender": "men",
+        "number": 1,
+        "cur": 57
       }
     ],
     "women": [
       {
         "start": 10,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SJO",
+        "gender": "women",
+        "number": 0,
+        "cur": 10
       },
       {
         "start": 40,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": -1
+          }
+        ],
+        "club": "SJO",
+        "gender": "women",
+        "number": 1,
+        "cur": 41
       }
     ]
   },
@@ -637,17 +1748,44 @@
     "men": [
       {
         "start": 27,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SAC",
+        "gender": "men",
+        "number": 0,
+        "cur": 28
       },
       {
         "start": 68,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SAC",
+        "gender": "men",
+        "number": 1,
+        "cur": 68
       }
     ],
     "women": [
       {
         "start": 15,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SAC",
+        "gender": "women",
+        "number": 0,
+        "cur": 15
       }
     ]
   },
@@ -655,21 +1793,57 @@
     "men": [
       {
         "start": 26,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "EXC",
+        "gender": "men",
+        "number": 0,
+        "cur": 25
       },
       {
         "start": 58,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "EXC",
+        "gender": "men",
+        "number": 1,
+        "cur": 58
       }
     ],
     "women": [
       {
         "start": 23,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "EXC",
+        "gender": "women",
+        "number": 0,
+        "cur": 22
       },
       {
         "start": 64,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "EXC",
+        "gender": "women",
+        "number": 1,
+        "cur": 63
       }
     ]
   },
@@ -677,25 +1851,70 @@
     "men": [
       {
         "start": 24,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "MER",
+        "gender": "men",
+        "number": 0,
+        "cur": 24
       },
       {
         "start": 47,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MER",
+        "gender": "men",
+        "number": 1,
+        "cur": 48
       },
       {
         "start": 79,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MER",
+        "gender": "men",
+        "number": 2,
+        "cur": 80
       }
     ],
     "women": [
       {
         "start": 26,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "MER",
+        "gender": "women",
+        "number": 0,
+        "cur": 26
       },
       {
         "start": 75,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "MER",
+        "gender": "women",
+        "number": 1,
+        "cur": 74
       }
     ]
   },
@@ -703,17 +1922,44 @@
     "men": [
       {
         "start": 33,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SPC",
+        "gender": "men",
+        "number": 0,
+        "cur": 34
       },
       {
         "start": 53,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SPC",
+        "gender": "men",
+        "number": 1,
+        "cur": 53
       }
     ],
     "women": [
       {
         "start": 33,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SPC",
+        "gender": "women",
+        "number": 0,
+        "cur": 34
       }
     ]
   },
@@ -721,33 +1967,96 @@
     "men": [
       {
         "start": 28,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "COO",
+        "gender": "men",
+        "number": 0,
+        "cur": 27
       },
       {
         "start": 80,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 2
+          }
+        ],
+        "club": "COO",
+        "gender": "men",
+        "number": 1,
+        "cur": 78
       },
       {
         "start": 81,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "COO",
+        "gender": "men",
+        "number": 2,
+        "cur": 82
       },
       {
         "start": 87,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "COO",
+        "gender": "men",
+        "number": 3,
+        "cur": 86
       }
     ],
     "women": [
       {
         "start": 31,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "COO",
+        "gender": "women",
+        "number": 0,
+        "cur": 31
       },
       {
         "start": 65,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 3
+          }
+        ],
+        "club": "COO",
+        "gender": "women",
+        "number": 1,
+        "cur": 62
       },
       {
         "start": 66,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "COO",
+        "gender": "women",
+        "number": 2,
+        "cur": 66
       }
     ]
   },
@@ -755,25 +2064,70 @@
     "men": [
       {
         "start": 31,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SAY",
+        "gender": "men",
+        "number": 0,
+        "cur": 31
       },
       {
         "start": 72,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SAY",
+        "gender": "men",
+        "number": 1,
+        "cur": 71
       },
       {
         "start": 85,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SAY",
+        "gender": "men",
+        "number": 2,
+        "cur": 85
       }
     ],
     "women": [
       {
         "start": 28,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SAY",
+        "gender": "women",
+        "number": 0,
+        "cur": 28
       },
       {
         "start": 62,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -3
+          }
+        ],
+        "club": "SAY",
+        "gender": "women",
+        "number": 1,
+        "cur": 65
       }
     ]
   },
@@ -781,25 +2135,70 @@
     "men": [
       {
         "start": 32,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SOM",
+        "gender": "men",
+        "number": 0,
+        "cur": 32
       },
       {
         "start": 67,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SOM",
+        "gender": "men",
+        "number": 1,
+        "cur": 66
       }
     ],
     "women": [
       {
         "start": 12,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SOM",
+        "gender": "women",
+        "number": 0,
+        "cur": 12
       },
       {
         "start": 56,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SOM",
+        "gender": "women",
+        "number": 1,
+        "cur": 55
       },
       {
         "start": 71,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SOM",
+        "gender": "women",
+        "number": 2,
+        "cur": 72
       }
     ]
   },
@@ -807,17 +2206,44 @@
     "men": [
       {
         "start": 37,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "LIN",
+        "gender": "men",
+        "number": 0,
+        "cur": 38
       }
     ],
     "women": [
       {
         "start": 20,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "LIN",
+        "gender": "women",
+        "number": 0,
+        "cur": 20
       },
       {
         "start": 42,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 0
+          }
+        ],
+        "club": "LIN",
+        "gender": "women",
+        "number": 1,
+        "cur": 42
       }
     ]
   },
@@ -825,21 +2251,57 @@
     "men": [
       {
         "start": 44,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "GTM",
+        "gender": "men",
+        "number": 0,
+        "cur": 44
       }
     ],
     "women": [
       {
         "start": 30,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "GTM",
+        "gender": "women",
+        "number": 0,
+        "cur": 29
       },
       {
         "start": 45,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 0
+          }
+        ],
+        "club": "GTM",
+        "gender": "women",
+        "number": 1,
+        "cur": 45
       },
       {
         "start": 74,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "GTM",
+        "gender": "women",
+        "number": 2,
+        "cur": 75
       }
     ]
   },
@@ -847,25 +2309,70 @@
     "men": [
       {
         "start": 48,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SHI",
+        "gender": "men",
+        "number": 0,
+        "cur": 47
       },
       {
         "start": 75,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -1
+          }
+        ],
+        "club": "SHI",
+        "gender": "men",
+        "number": 1,
+        "cur": 76
       },
       {
         "start": 82,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 1
+          }
+        ],
+        "club": "SHI",
+        "gender": "men",
+        "number": 2,
+        "cur": 81
       }
     ],
     "women": [
       {
         "start": 32,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SHI",
+        "gender": "women",
+        "number": 0,
+        "cur": 32
       },
       {
         "start": 54,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -3
+          }
+        ],
+        "club": "SHI",
+        "gender": "women",
+        "number": 1,
+        "cur": 57
       }
     ]
   },
@@ -873,13 +2380,31 @@
     "men": [
       {
         "start": 52,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "RPC",
+        "gender": "men",
+        "number": 0,
+        "cur": 52
       }
     ],
     "women": [
       {
         "start": 47,
-        "moves": []
+        "moves": [
+          {
+            "status": false,
+            "moves": 0
+          }
+        ],
+        "club": "RPC",
+        "gender": "women",
+        "number": 0,
+        "cur": 47
       }
     ]
   },
@@ -887,13 +2412,31 @@
     "men": [
       {
         "start": 55,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],
+        "club": "SBH",
+        "gender": "men",
+        "number": 0,
+        "cur": 55
       }
     ],
     "women": [
       {
         "start": 73,
-        "moves": []
+        "moves": [
+          {
+            "status": true,
+            "moves": -3
+          }
+        ],
+        "club": "SBH",
+        "gender": "women",
+        "number": 0,
+        "cur": 76
       }
     ]
   }
