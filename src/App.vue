@@ -887,15 +887,17 @@
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
-      <v-menu offset-y left attach>
+      <v-menu offset-y attach>
         <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator">{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
         <v-list dense>
           <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)" style="background-color:white;">
             <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
           </v-list-tile>
+          <v-list-tile color="primary" href="http://oxbump.feathersquare.com/historical20.php" target="_blank" style="background-color:white;">
+            <v-list-tile-title>Historic data</v-list-tile-title>
+          </v-list-tile>
         </v-list>
       </v-menu>
-      <div><a href="http://oxbump.feathersquare.com/historical20.php">More historic data</a></div>
     </v-navigation-drawer>
     <v-footer app fixed>
       <img class="noselect pl-1" src="./assets/woo_crest.png" alt="Wolfson" style="width:24px;"/>
