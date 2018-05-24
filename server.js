@@ -69,10 +69,15 @@ const authReq = (req, res, next) => {
 }
 //Broadcast to all WebSocket clients
 const broadcast = (msg) => {
+  const payload = JSON.stringify(msg)
   aWss.clients.forEach((ws) => {
-    ws.send(JSON.stringify(msg), (err) => {
+    ws.send(payload, (err) => {
       if (err) log(err)
     })
+  })
+  fs.appendFile(`${__dirname}/event.log`, `${new Date().getTime()},${payload}\n`, (err) => {
+    if (err)
+      log(err)
   })
 }
 
