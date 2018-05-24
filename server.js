@@ -89,8 +89,8 @@ const flushEventBuffer = () => {
 //Flush events every hour
 setInterval(flushEventBuffer, 60 * 60 * 1000)
 //Log events to buffer
-const logEvent = (ev, ip) => {
-  eventBuffer.push(`${ev},${ip},${new Date().getTime()}`)
+const logEvent = (ev, ip, id) => {
+  eventBuffer.push(`${ev},${ip},${id},${new Date().getTime()}`)
   if (eventBuffer.length > 1000)
     flushEventBuffer()
 }
@@ -236,7 +236,7 @@ app.ws('/live', (ws, req) => {
   const id = uuid()
   const ip = (req.headers['x-forwarded-for'] || req.connection.remoteAddress || ws._socket.remoteAddress).split(',')[0]
   //Log connect event
-  logEvent('c', ip)
+  logEvent('c', ip, id)
   //Send a user report to the newly connected client
   ws.send(JSON.stringify(userReport()), (err) => {
     if (err)
@@ -251,7 +251,7 @@ app.ws('/live', (ws, req) => {
   //Remove the socket from the client repository
   ws.on('close', () => {
     //Log discconnect event
-    logEvent('d', ip)
+    logEvent('d', ip, id)
     //Delete from the reporters repository if needed
     if (reporters.has(id))
       reporters.delete(id)
