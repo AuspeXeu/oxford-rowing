@@ -144,7 +144,7 @@ const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc +
 const getBoats = (data, gender, day) => {
   let boats = []
   for (let club in data) {
-    const ary = data[club][gender].map((boat, idx) => Object.assign({club: club, gender: gender, number: idx, cur: curPos(boat, day)}, boat))
+    const ary = data[club][gender].map((boat, idx) => Object.assign({club: club, gender: gender, number: idx}, boat, {cur: curPos(boat, day)}))
     boats = boats.concat(ary)
   }
   return boats
@@ -212,7 +212,7 @@ app.post('/bump', authReq, (req, res) => {
             return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (move.moves * -1)
           else
             return false
-          }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(move.moves) * -1, status: false}))
+        }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(move.moves) * -1, status: false}))
         updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: move.moves, status: false})
       }
     }
