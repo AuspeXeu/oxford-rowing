@@ -122,10 +122,12 @@ const updateEntry = (data, name, year, club, gender, number, day, move) => {
   data[club][gender][number].moves[day-1] = entry
   //Confirm all previous results of this boat
   data[club][gender][number].moves.slice(0, day-1).forEach((move, idx) => {
-    move.status = true
-    const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: idx+1,move: move}
-    broadcast(payload)
-    data[club][gender][number].moves[idx] = move
+    if (!moves.status) {
+      move.status = true
+      const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: idx+1,move: move}
+      broadcast(payload)
+      data[club][gender][number].moves[idx] = move
+    }
   })
   //Broadcast new results
   const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,move: data[club][gender][number].moves[day-1]}
