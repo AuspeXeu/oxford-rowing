@@ -40,6 +40,10 @@ if (conf.get('key')) {
     ca: fs.readFileSync(conf.get('ca'))
   }
   server = https.createServer(options, app)
+  http.createServer((req, res) => {
+    res.writeHead(301, {'Location': `https://${req.headers['host']}${req.url}`})
+    res.end()
+  }).listen(80)
 } else
   server = http.createServer(app)
 const wss = expressWs(app, server)
