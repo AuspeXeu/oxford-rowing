@@ -1219,6 +1219,8 @@ export default {
       localStorage.setItem('wasHere', true)
     },
     onClick(ev) {
+      if (['use','path'].indexOf(ev.target.tagName) === -1)
+        this.boatsSelected = []
       this.appendSel = (ev.ctrlKey || ev.metaKey)
     },
     onKeyDown(ev) {
