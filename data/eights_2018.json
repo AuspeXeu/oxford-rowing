@@ -46,6 +46,10 @@
           {
             "status": true,
             "moves": 1
+          },
+          {
+            "status": true,
+            "moves": 1
           }
         ],
         "club": "ORO",
@@ -143,6 +147,10 @@
           {
             "status": true,
             "moves": -1
+          },
+          {
+            "status": true,
+            "moves": 0
           }
         ],
         "club": "CHB",
@@ -181,6 +189,10 @@
       {
         "start": 78,
         "moves": [
+          {
+            "status": true,
+            "moves": 1
+          },
           {
             "status": true,
             "moves": 1
@@ -237,6 +249,10 @@
       {
         "start": 78,
         "moves": [
+          {
+            "status": true,
+            "moves": -1
+          },
           {
             "status": true,
             "moves": -1
@@ -378,6 +394,10 @@
           {
             "status": true,
             "moves": -3
+          },
+          {
+            "status": false,
+            "moves": -1
           }
         ],
         "club": "PMB",
@@ -461,7 +481,7 @@
         "moves": [
           {
             "status": true,
-            "moves": 0
+            "moves": 1
           }
         ],
         "club": "WOO",
@@ -475,6 +495,10 @@
           {
             "status": true,
             "moves": 3
+          },
+          {
+            "status": true,
+            "moves": 1
           }
         ],
         "club": "WOO",
@@ -656,7 +680,12 @@
       },
       {
         "start": 68,
-        "moves": [],
+        "moves": [
+          {
+            "status": true,
+            "moves": 0
+          }
+        ],   
         "club": "WAD",
         "gender": "men",
         "number": 2,
@@ -713,6 +742,10 @@
           {
             "status": true,
             "moves": 1
+          },
+          {
+            "status": true,
+            "moves": 1
           }
         ],
         "club": "SEH",
@@ -741,6 +774,10 @@
           {
             "status": true,
             "moves": 3
+          },
+          {
+            "status": true,
+            "moves": 1
           }
         ],
         "club": "SEH",
@@ -824,6 +861,10 @@
         "moves": [
           {
             "status": true,
+            "moves": 1
+          },
+          {
+            "status": false,
             "moves": 1
           }
         ],
@@ -1068,6 +1109,10 @@
           {
             "status": true,
             "moves": 0
+          },
+          {
+            "status": true,
+            "moves": -1
           }
         ],
         "club": "SCO",
@@ -1096,6 +1141,10 @@
           {
             "status": true,
             "moves": 1
+          },
+          {
+            "status": true,
+            "moves": 0
           }
         ],
         "club": "SCO",
@@ -1136,6 +1185,10 @@
       {
         "start": 89,
         "moves": [
+          {
+            "status": true,
+            "moves": -1
+          },
           {
             "status": true,
             "moves": -1
@@ -1265,6 +1318,10 @@
       {
         "start": 83,
         "moves": [
+          {
+            "status": true,
+            "moves": -1
+          },
           {
             "status": true,
             "moves": -1
@@ -1450,7 +1507,7 @@
         "moves": [
           {
             "status": true,
-            "moves": 0
+            "moves": -1
           }
         ],
         "club": "JEO",
@@ -1464,6 +1521,10 @@
           {
             "status": true,
             "moves": -1
+          },
+          {
+            "status": false,
+            "moves": 0
           }
         ],
         "club": "JEO",
@@ -1504,6 +1565,10 @@
       {
         "start": 90,
         "moves": [
+          {
+            "status": true,
+            "moves": 1
+          },
           {
             "status": true,
             "moves": 1
@@ -1578,6 +1643,10 @@
           {
             "status": true,
             "moves": -1
+          },
+          {
+            "status": true,
+            "moves": 0
           }
         ],
         "club": "QCO",
@@ -1603,6 +1672,10 @@
       {
         "start": 77,
         "moves": [
+          {
+            "status": true,
+            "moves": -1
+          },
           {
             "status": true,
             "moves": -1
@@ -1677,6 +1750,10 @@
           {
             "status": true,
             "moves": 0
+          },
+          {
+            "status": true,
+            "moves": 1
           }
         ],
         "club": "SHG",
@@ -1758,19 +1835,6 @@
         "gender": "men",
         "number": 0,
         "cur": 28
-      },
-      {
-        "start": 68,
-        "moves": [
-          {
-            "status": true,
-            "moves": 0
-          }
-        ],
-        "club": "SAC",
-        "gender": "men",
-        "number": 1,
-        "cur": 68
       }
     ],
     "women": [
@@ -1881,6 +1945,10 @@
           {
             "status": true,
             "moves": -1
+          },
+          {
+            "status": true,
+            "moves": 1
           }
         ],
         "club": "MER",
@@ -1909,6 +1977,10 @@
           {
             "status": true,
             "moves": 1
+          },
+          {
+            "status": true,
+            "moves": 0
           }
         ],
         "club": "MER",
@@ -1997,6 +2069,10 @@
           {
             "status": true,
             "moves": -1
+          },
+          {
+            "status": true,
+            "moves": -1
           }
         ],
         "club": "COO",
@@ -2010,6 +2086,10 @@
           {
             "status": true,
             "moves": 1
+          },
+          {
+            "status": true,
+            "moves": 0
           }
         ],
         "club": "COO",
@@ -2051,6 +2131,10 @@
           {
             "status": true,
             "moves": 0
+          },
+          {
+            "status": true,
+            "moves": -1
           }
         ],
         "club": "COO",
@@ -2094,6 +2178,10 @@
           {
             "status": true,
             "moves": 0
+          },
+          {
+            "status": true,
+            "moves": 1
           }
         ],
         "club": "SAY",
@@ -2190,6 +2278,10 @@
       {
         "start": 71,
         "moves": [
+          {
+            "status": true,
+            "moves": -1
+          },
           {
             "status": true,
             "moves": -1
@@ -2296,6 +2388,10 @@
           {
             "status": true,
             "moves": -1
+          },
+          {
+            "status": true,
+            "moves": 0
           }
         ],
         "club": "GTM",
@@ -2339,6 +2435,10 @@
           {
             "status": true,
             "moves": 1
+          },
+          {
+            "status": true,
+            "moves": 0
           }
         ],
         "club": "SHI",
@@ -2431,6 +2531,10 @@
           {
             "status": true,
             "moves": -3
+          },
+          {
+            "status": true,
+            "moves": -1
           }
         ],
         "club": "SBH",
