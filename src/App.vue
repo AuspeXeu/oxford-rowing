@@ -1102,7 +1102,7 @@ export default {
         return ''
     },
     eventDay() {
-      return Math.min.apply(null, this.boats.map((boat) => boat.moves.length)) + 1
+      return Math.max.apply(null, this.boats.map((boat) => boat.moves.length)) + 1
     },
     offset() {
       return this.scale * 460
