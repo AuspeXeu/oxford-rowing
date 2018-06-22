@@ -9,17 +9,18 @@
       <v-spacer></v-spacer>
       <v-toolbar-items style="margin-right:15px;">
         <v-select
-          :items="boats"
+          :items="clubs"
           item-text="short"
           attach
-          v-model="boatsSelected"
-          :label="lblCrewSel"
+          v-model="clubSelected"
+          label="Club"
           autocomplete
+          item-value="short"
+          item-text="name"
           append-icon="search"
           clearable
           ref="searchField"
           dense
-          multiple
           single-line
           class="mt-2 noselect"
         ></v-select>
@@ -1019,6 +1020,7 @@ export default {
       viewers: 0,
       reporters: 0,
       rowOvers: [],
+      clubSelected: false,
       bumpBoat: false,
       manualBoat: false,
       appendSel: false,
@@ -1115,6 +1117,12 @@ export default {
     this.loadData(this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)[0])
   },
   watch: {
+    clubSelected() {
+      if (this.clubSelected)
+        this.boatsSelected = this.boats.filter((boat) => boat.club === this.clubSelected)
+      else
+        this.boatsSelected = []
+    },
     bumpDivision() {
       this.bumpDay = this.eventDay
     },
@@ -1162,6 +1170,11 @@ export default {
     window.addEventListener('keydown', this.onKeyDown)
   },
   computed: {
+    clubs() {
+      const clubs = new Set()
+      this.boats.forEach((boat) => clubs.add(boat.club))
+      return Array.from(clubs.values()).map((short) => ({short: short, name: this.clubToName(short)}))
+    },
     announcementText() {
       if (this.announcement && this.announcement.text)
         return this.announcement.text
@@ -1221,9 +1234,6 @@ export default {
       else
         this.bumpAction = 'bumps'
       return boats[0]
-    },
-    lblCrewSel() {
-      return (this.boatsHigh.length > 1 ? 'Crews' : 'Crew')
     },
     boats() {
       let boats = []
@@ -1461,6 +1471,8 @@ export default {
       this.bumpBoat = boat
       this.manualBoat = boat
       this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
+      if (boat.club !== this.clubSelected)
+        this.clubSelected = false
       const idx = this.boatsSelected.indexOf(boat)
       if (idx !== -1) {
         this.boatsHigh.splice(idx, 1)
