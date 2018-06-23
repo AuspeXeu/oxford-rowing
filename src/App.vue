@@ -10,7 +10,6 @@
       <v-toolbar-items style="margin-right:15px;">
         <v-select
           :items="clubs"
-          item-text="short"
           attach
           v-model="clubSelected"
           label="Club"
