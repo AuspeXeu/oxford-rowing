@@ -1,6 +1,6 @@
 {
   "name": "bumps",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Oxford bumps",
   "author": "christianvaas@auspex.eu",
   "private": true,
@@ -11,13 +11,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "compression": "^1.7.2",
     "express": "^4.16.2",
-    "express-uws": "^3.0.0",
+    "express-uws": "^3.0.1",
     "nconf": "^0.10.0",
-    "uuid": "^3.2.1",
-    "vue": "^2.5.13"
+    "uuid": "^3.3.2",
+    "vue": "^2.5.16"
   },
   "devDependencies": {
     "autoprefixer": "^8.0.0",
