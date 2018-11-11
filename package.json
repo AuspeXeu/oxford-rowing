@@ -5,16 +5,17 @@
   "author": "christianvaas@auspex.eu",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "lint": "eslint --ext .js,.vue src",
+    "api": "node server.js",
+    "frontend": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "concurrently --kill-others \"npm run api\" \"npm run frontend\"",
+    "server": "node server.js",
     "build": "node build/build.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "compression": "^1.7.3",
     "express": "^4.16.4 ",
-    "express-uws": "^3.0.1",
+    "express-uws": "^4.0.2",
     "nconf": "^0.10.0",
     "uuid": "^3.3.2",
     "vue": "^2.5.17"
@@ -22,7 +23,6 @@
   "devDependencies": {
     "autoprefixer": "^8.0.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.2",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.2",
     "babel-plugin-syntax-jsx": "^6.18.0",
@@ -31,17 +31,9 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "chalk": "^2.3.1",
+    "concurrently": "^4.0.1",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^0.28.9",
-    "eslint": "^4.18.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^6.0.0",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^4.7.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.8",
     "friendly-errors-webpack-plugin": "^1.6.1",
@@ -64,7 +56,7 @@
     "webpack": "^3.11.0",
     "webpack-bundle-analyzer": "^2.10.0",
     "webpack-dev-server": "^2.11.1",
-    "webpack-merge": "^4.1.4    "
+    "webpack-merge": "^4.1.4"
   },
   "engines": {
     "node": ">= 6.0.0",
