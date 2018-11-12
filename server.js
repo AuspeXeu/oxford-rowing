@@ -49,7 +49,8 @@ const wss = expressWs(app, server)
 
 app.use(compression())
 //Server static data
-app.use('/static', express.static(`${__dirname}/dist/static`))
+app.use('/css', express.static(`${__dirname}/dist/css`))
+app.use('/js', express.static(`${__dirname}/dist/js`))
 app.use('/data', express.static(`${__dirname}/data`))
 //Parse JSON of incoming requests
 app.use(bodyParser.json())
