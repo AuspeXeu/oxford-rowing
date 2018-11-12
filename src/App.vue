@@ -7,13 +7,12 @@
         <span class="noselect hidden-sm-and-down">Live Bumps</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items style="margin-right:15px;">
-        <v-select
+      <v-flex xs8 md3 sm2>
+        <v-autocomplete
           :items="clubs"
           attach
           v-model="clubSelected"
           label="Club"
-          autocomplete
           item-value="short"
           item-text="name"
           append-icon="search"
@@ -22,8 +21,8 @@
           dense
           single-line
           class="mt-2 noselect"
-        ></v-select>
-      </v-toolbar-items>
+        ></v-autocomplete>
+      </v-flex>
     </v-toolbar>
     <v-content>
       <v-container v-touch="{
