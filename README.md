@@ -1,6 +1,5 @@
-# Oxford Live Bumps
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/AuspeXeu/oxford-rowing.svg)](https://greenkeeper.io/)
+# Oxford Live Bumps
 
 ## Project setup
 ```
@@ -17,8 +16,9 @@ npm run dev
 npm run build
 ```
 
-### Run for production, requires `npm run build` first
+### Run for production
 ```
+npm run build
 npm run server
 ```
 
