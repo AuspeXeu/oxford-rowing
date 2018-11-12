@@ -1,15 +1,27 @@
 {
   "name": "bumps",
-  "version": "1.0.1",
+  "homepage": "https://bumps.live",
   "description": "Oxford bumps",
-  "author": "christianvaas@auspex.eu",
-  "private": true,
+  "version": "1.0.1",
+  "author": {
+    "name": "Christian Vaas",
+    "email": "christianvaas@auspex.eu",
+    "url": "https://auspex.eu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AuspeXeu/oxford-rowing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AuspeXeu/oxford-rowing"
+  },
   "scripts": {
     "api": "node server.js",
-    "frontend": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "frontend": "vue-cli-service serve",
     "dev": "concurrently --kill-others \"npm run api\" \"npm run frontend\"",
-    "server": "node server.js",
-    "build": "node build/build.js"
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "server": "node server.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -21,42 +33,47 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
-    "autoprefixer": "^8.0.0",
-    "babel-core": "^6.26.0",
-    "babel-helper-vue-jsx-merge-props": "^2.0.3",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-plugin-transform-vue-jsx": "^3.5.1",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "chalk": "^2.3.1",
     "concurrently": "^4.0.1",
-    "copy-webpack-plugin": "^4.6.0",
-    "css-loader": "^0.28.9",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.8",
-    "friendly-errors-webpack-plugin": "^1.6.1",
-    "html-webpack-plugin": "^2.30.1",
-    "node-notifier": "^5.3.0",
-    "optimize-css-assets-webpack-plugin": "^3.2.0",
-    "ora": "^2.0.0",
-    "portfinder": "^1.0.19",
-    "postcss-import": "^11.1.0",
-    "postcss-loader": "^2.1.0",
-    "postcss-url": "^7.3.0",
-    "rimraf": "^2.6.2",
-    "semver": "^5.6.0",
-    "shelljs": "^0.8.1",
-    "uglifyjs-webpack-plugin": "^1.2.0",
-    "url-loader": "^0.6.2",
-    "vue-loader": "^14.1.1",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.5.17",
-    "webpack": "^3.11.0",
-    "webpack-bundle-analyzer": "^2.10.0",
-    "webpack-dev-server": "^2.11.1",
-    "webpack-merge": "^4.1.4"
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-plugin-eslint": "^3.1.5",
+    "@vue/cli-service": "^3.1.4",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0-0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "globals": {
+      "axios": true,
+      "ReconnectingWebSocket": true,
+      "Vuetify": true,
+      "Vue": true,
+      "VueRouter": true,
+      "moment": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "vue/require-v-for-key": 1,
+      "no-unused-vars": 1,
+      "vue/no-unused-vars": 1,
+      "vue/no-side-effects-in-computed-properties": 0,
+      "no-console": 0
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   },
   "engines": {
     "node": ">= 6.0.0",
@@ -66,5 +83,11 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "maintainers": [
+    {
+      "name": "Christian Vaas",
+      "email": "chrisvaas@gmail.com"
+    }
   ]
 }

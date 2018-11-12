@@ -8,7 +8,7 @@ const ips = events.filter((evt) => evt.type === 'c')
 
 const uqIps = new Set(ips)
 
-const geoLookUp = (ip) => {
+const geoLookUp = () => {
   return new Promise ((resolve, reject) => {
     request('https://geo.auspex.eu', (error, response, body) => {
     if (!error && response.statusCode === 200) {

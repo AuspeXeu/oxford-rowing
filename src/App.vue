@@ -924,7 +924,7 @@
             <v-tooltip bottom>
               <v-icon slot="activator" v-show="reporters > 0 || viewers > 0" :class="{ live: isLive }">{{(viewers > 1 ? 'people' : 'person')}}</v-icon>
               <span>
-                {{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}</br>
+                {{`${reporters} reporter${(reporters > 1 ? 's are' : ' is')} online`}}<br>
                 {{`${viewers} viewer${(viewers > 1 ? 's are' : ' is')} online`}}
               </span>
             </v-tooltip>
@@ -1164,7 +1164,7 @@ export default {
     }
   },
   created() {
-    this.firstVisit = !Boolean(localStorage.getItem('wasHere'))
+    this.firstVisit = !localStorage.getItem('wasHere')
     window.addEventListener('click', this.onClick, {capture: true})
     window.addEventListener('keydown', this.onKeyDown)
   },
@@ -1340,11 +1340,11 @@ export default {
       const txt = this.announcementDraft.trim()
       if (txt.length) {
         axios.post('/announce', {text: txt}, {headers: {'authorization': this.auth}})
-        .then((response) => {
+        .then(() => {
           this.announceDialog = false
           this.notify('Announcement made', 'success')
         })
-        .catch((error) => {
+        .catch(error => {
           this.notify('Failed to make announcement', 'error')
           console.log(error.response.data)
         })
@@ -1371,8 +1371,8 @@ export default {
           moves: lastMove.moves,
           status: !lastMove.status
         }, {headers: {'authorization': this.auth}})
-        .then((response) => this.notify(`Result ${lastMove.status ? 'withdrawn' : 'confirmed'}`, 'success'))
-        .catch((error) => {
+        .then(() => this.notify(`Result ${lastMove.status ? 'withdrawn' : 'confirmed'}`, 'success'))
+        .catch(error => {
           console.log(error.response.data)
           this.notify('Failed to change bump status', 'error')
         })
@@ -1400,8 +1400,8 @@ export default {
         rowOvers: (this.bumpTab === '0' && this.bumpAction === 'row over' ? this.rowOvers : undefined),
         bumpedBoat: (this.bumpTab === '0' && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
       }, {headers: {'authorization': this.auth}})
-      .then((response) => this.notify('Bump submitted', 'success'))
-      .catch((error) => {
+      .then(() => this.notify('Bump submitted', 'success'))
+      .catch(error => {
         console.log(error.response.data)
         this.notify('Failed to submit bump', 'error')
       })
@@ -1421,7 +1421,7 @@ export default {
     },
     divName(div) {
       const formatDivTime = (str) => {
-        let [_, hours, minutes] = div.time.match(/([0-9]+):([0-9]+)/)
+        let [_, hours, minutes] = str.match(/([0-9]+):([0-9]+)/)
         if (this.eventDay === 4)
           hours -= 1
         const mom = moment().tz('Europe/London')

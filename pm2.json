@@ -1,8 +1,8 @@
 {
-  apps : [{
-    name: 'bumps',
-    script: './server.js',
-    watch: false,
-    max_memory_restart: '1028M'
+  "apps" : [{
+    "name": "bumps",
+    "script": "./server.js",
+    "watch": false,
+    "max_memory_restart": "1028M"
   }]
 }
