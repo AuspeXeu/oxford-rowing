@@ -1,4 +1,4 @@
-# tmp
+# Oxford Live Bumps
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/AuspeXeu/oxford-rowing.svg)](https://greenkeeper.io/)
 
@@ -9,7 +9,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
@@ -17,9 +17,9 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
+### Run for production, requires `npm run build` first
 ```
-npm run test
+npm run server
 ```
 
 ### Lints and fixes files
