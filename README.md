@@ -1,5 +1,7 @@
 # tmp
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AuspeXeu/oxford-rowing.svg)](https://greenkeeper.io/)
+
 ## Project setup
 ```
 npm install
