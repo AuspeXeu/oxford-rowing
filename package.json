@@ -30,7 +30,7 @@
     "express-uws": "^4.0.2",
     "nconf": "^0.10.0",
     "uuid": "^3.3.2",
-    "vue": "^2.5.17"
+    "vue": "^2.5.21"
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
@@ -38,9 +38,9 @@
     "@vue/cli-plugin-eslint": "^3.2.1",
     "@vue/cli-service": "^3.2.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
     "root": true,
