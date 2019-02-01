@@ -15,32 +15,41 @@
   "bugs": {
     "url": "https://github.com/AuspeXeu/oxford-rowing"
   },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run deps && npm run ncu && npm run lint"
+    }
+  },
   "scripts": {
     "api": "node server.js",
     "frontend": "vue-cli-service serve",
     "dev": "concurrently --kill-others \"npm run api\" \"npm run frontend\"",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "server": "node server.js"
+    "server": "node server.js",
+    "deps": "depcheck . --ignores=\"husky,sqlite3,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,concurrently,vue,babel-eslint,eslint,eslint-plugin-vue,vue-template-compiler\"",
+    "ncu": "ncu"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "compression": "^1.7.3",
-    "express": "^4.16.4 ",
-    "express-uws": "^4.0.2",
-    "nconf": "^0.10.0",
-    "uuid": "^3.3.2",
-    "vue": "^2.5.22"
+    "body-parser": "1.18.3",
+    "compression": "1.7.3",
+    "express": "4.16.4 ",
+    "express-uws": "4.0.2",
+    "nconf": "0.10.0",
+    "request": "2.88.0",
+    "uuid": "3.3.2",
+    "vue": "2.5.22"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "@vue/cli-plugin-babel": "^3.3.0",
-    "@vue/cli-plugin-eslint": "^3.3.0",
-    "@vue/cli-service": "^3.3.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.12.0",
-    "eslint-plugin-vue": "^5.1.0",
-    "vue-template-compiler": "^2.5.22"
+    "@vue/cli-plugin-babel": "3.3.0",
+    "@vue/cli-plugin-eslint": "3.3.0",
+    "@vue/cli-service": "3.3.0",
+    "babel-eslint": "10.0.1",
+    "concurrently": "4.1.0",
+    "eslint": "5.12.0",
+    "eslint-plugin-vue": "5.1.0",
+    "husky": "1.3.1",
+    "vue-template-compiler": "2.5.22"
   },
   "eslintConfig": {
     "root": true,
