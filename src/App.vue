@@ -657,7 +657,7 @@
                   <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
-                <g v-for="(boat, idx) in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
+                <g v-for="boat in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
                   <g transform="translate(50,0)" :style="`opacity:${boat.opacity}`">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
@@ -673,7 +673,7 @@
                   <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
-                <g v-for="(boat,idx) in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
+                <g v-for="boat in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
                   <g transform="translate(50,0)" :style="`opacity:${boat.opacity}`">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
@@ -1420,7 +1420,7 @@ export default {
     },
     divName(div) {
       const formatDivTime = (str) => {
-        let [_, hours, minutes] = str.match(/([0-9]+):([0-9]+)/)
+        let [, hours, minutes] = str.match(/([0-9]+):([0-9]+)/)
         if (this.eventDay === 4)
           hours -= 1
         const mom = moment().tz('Europe/London')
