@@ -657,9 +657,9 @@
                   <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
-                <g v-for="boat in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
+                <g v-for="boat in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
-                  <g transform="translate(50,0)" :style="`opacity:${boat.opacity}`">
+                  <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
                     <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
@@ -673,9 +673,9 @@
                   <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
-                <g v-for="boat in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`">
+                <g v-for="boat in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
-                  <g transform="translate(50,0)" :style="`opacity:${boat.opacity}`">
+                  <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
                     <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
@@ -1159,7 +1159,7 @@ export default {
       this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
       this.boatsHigh = []
       if (this.boatsSelected.length) {
-        this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 0.5)
+        this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 0.1)
         this.boatsSelected.forEach((boat) => {
           this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0
           this.boatsHigh.push(boat)
@@ -1474,8 +1474,7 @@ export default {
       this.bumpBoat = boat
       this.manualBoat = boat
       this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
-      if (boat.club !== this.clubSelected)
-        this.clubSelected = false
+      this.clubSelected = boat.club
       const idx = this.boatsSelected.indexOf(boat)
       if (idx !== -1) {
         this.boatsHigh.splice(idx, 1)
@@ -1488,7 +1487,7 @@ export default {
         this.boatsSelected = [boat]
       }
       if (this.boatsHigh.length) {
-        this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 0.5)
+        this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 0.1)
         this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
       }
     },
