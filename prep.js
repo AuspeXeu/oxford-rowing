@@ -81,7 +81,7 @@ axios.get(startingOrder)
   .then((response) => {
     const starting = {}
     const timetable = {men: [], women: []}
-    const divs = response.data.match(/<TABLE cellpadding=0>.*?<\/TABLE>/sg).map((div, divIdx) => {
+    const divs = response.data.match(/<TABLE cellpadding=0>.*?<\/TABLE>/sg).map((div) => {
       const label = div.match(/<TH COLSPAN=2>\s?\*?(.*?)\s?\(([0-9.]+)\)\n/)
       if (label) {
         const [, gender] = label[1].match(/(Women|Men)/)

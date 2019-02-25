@@ -10,9 +10,9 @@ const uqIps = new Set(ips)
 
 const geoLookUp = () => {
   return new Promise ((resolve, reject) => {
-    request('https://geo.auspex.eu', (error, response, body) => {
+    request('https://geo.auspex.eu', (error, response, data) => {
     if (!error && response.statusCode === 200) {
-      body = JSON.parse(body)
+      const body = JSON.parse(data)
       console.log(body)
       resolve({ip: body.ip, country: body.country.names.en, country_code: body.country.iso_code})
     } else {

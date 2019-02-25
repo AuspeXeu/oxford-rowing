@@ -112,7 +112,7 @@
       "max-len": [
         "error",
         {
-          "code": 350,
+          "code": 3500,
           "tabWidth": 2
         }
       ],

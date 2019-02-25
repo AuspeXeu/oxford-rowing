@@ -1768,15 +1768,15 @@
               </defs>
               <g id="containerMen" :transform="`translate(40,15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
-                <g v-for="div in divsMen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
+                <g v-for="div in divsMen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
-                <g v-for="boat in boatsMen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
+                <g v-for="boat in boatsMen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
                   <g transform="translate(50,0)">
-                    <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
-                    <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
+                    <path v-for="line in makeLines(boat)" :d="line.path" :key="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
+                    <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :key="`${point.x}|${point.y}`" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
                     <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
@@ -1784,15 +1784,15 @@
               </g>
               <g id="containerWomen" :transform="`translate(${offset+70},15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
-                <g v-for="div in divsWomen" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
+                <g v-for="div in divsWomen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
                 </g>
-                <g v-for="boat in boatsWomen" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
+                <g v-for="boat in boatsWomen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
                   <g transform="translate(50,0)">
-                    <path v-for="line in makeLines(boat)" :d="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
-                    <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
+                    <path v-for="line in makeLines(boat)" :d="line.path" :key="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
+                    <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :key="`${point.x}|${point.y}`" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
                     <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
@@ -1978,18 +1978,6 @@
           </v-card-actions>
         </v-card>
       </v-bottom-sheet>
-      <v-dialog v-model="countDownDlg" max-width="500px">
-        <v-card>
-          <v-card-title>
-            <span class="headline">Time to Bumps</span>
-            <v-spacer></v-spacer>
-            <v-btn icon slot="activator" @click.stop="countDownDlg = false">
-              <v-icon>close</v-icon>
-            </v-btn>
-          </v-card-title>
-          <v-card-text class="text-xs-center headline">{{countDownVal}}</v-card-text>
-        </v-card>
-      </v-dialog>
       <v-dialog v-model="announceDialog" max-width="500px">
         <v-card>
           <v-card-title>
@@ -2116,11 +2104,9 @@ export default {
       startOrderDialog: false,
       startOrderHeight: 200,
       countDownDate: new Date('February 27, 2019 10:00:00').getTime(),
-      countDownVal: '',
       announcementDraft: '',
       announcement: '',
       socket: false,
-      countDownDlg: false,
       boatsSelected: [],
       name: 'live',
       drawer: false,
@@ -2142,7 +2128,7 @@ export default {
       snack: {
         multi: false,
         visible: false,
-        timeout: 3000,
+        timeout: 5000,
         color: 'success',
         text: ''
       },
@@ -2209,19 +2195,18 @@ export default {
   mounted() {
     let now = new Date().getTime()
     if (this.countDownDate - now > 0) {
-      this.countDownDlg = !this.auth
       const countDown = () => {
+        this.snack.timeout = 0
         now = new Date().getTime()
         const distance = this.countDownDate - now
         if (distance < 0) {
-          this.countDownVal = '0d 0h 0m 0s'
-          this.countDownDlg = false
+          this.notify('Start in 0d 0h 0m 0s', 'info')
         } else {
           const days = Math.floor(distance / (1000 * 60 * 60 * 24))
           const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
           const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
           const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-          this.countDownVal = `${days}d ${hours}h ${minutes}m ${seconds}s`
+          this.notify(`Start in ${days}d ${hours}h ${minutes}m ${seconds}s`, 'info')
         }
       }
       countDown()
@@ -2347,7 +2332,7 @@ export default {
       return boats
     },
     bumpBoats() {
-      let boats = this.divBoats.filter((boat) => this.isActive(boat))
+      const boats = this.divBoats.filter((boat) => this.isActive(boat))
       if (!boats.find((boat) => boat.short === this.bumpBoat.short) && boats.length > 1)
         this.bumpBoat = boats[1]
       else if (boats.length === 1)
@@ -2372,7 +2357,7 @@ export default {
     },
     boats() {
       let boats = []
-      for (let key in this.chartData) {
+      for (const key in this.chartData) {
         const club = this.chartData[key]
         boats = boats.concat(club.men).concat(club.women)
       }
@@ -2402,7 +2387,7 @@ export default {
     },
     boatsMen() {
       let boats = []
-      for (let key in this.chartData) {
+      for (const key in this.chartData) {
         this.chartData[key].men.forEach((boat) => Vue.set(boat, 'id', key))
         boats = boats.concat(this.chartData[key].men)
       }
@@ -2410,7 +2395,7 @@ export default {
     },
     boatsWomen() {
       let boats = []
-      for (let key in this.chartData) {
+      for (const key in this.chartData) {
         this.chartData[key].women.forEach((boat) => Vue.set(boat, 'id', key))
         boats = boats.concat(this.chartData[key].women)
       }
@@ -2418,14 +2403,14 @@ export default {
     },
     rowsMen() {
       let rows = 0
-      for (let key in this.chartData) {
+      for (const key in this.chartData) {
         rows += this.chartData[key].men.length
       }
       return rows
     },
     rowsWomen() {
       let rows = 0
-      for (let key in this.chartData) {
+      for (const key in this.chartData) {
         rows += this.chartData[key].women.length
       }
       return rows
@@ -2463,10 +2448,10 @@ export default {
       return Math.min(Math.ceil(boat.start / this.boatsPerDiv), divs.length)
     },
     isActive(boat) {
-      const hasBumped = (boat) => {
-        return this.divBoats.find((b) => this.curPos(b, this.bumpDay - 1) < this.curPos(boat, this.bumpDay - 1) && this.curPos(b, this.bumpDay) > this.curPos(boat, this.bumpDay))
+      const hasBumped = (bt) => {
+        return this.divBoats.find((b) => this.curPos(b, this.bumpDay - 1) < this.curPos(bt, this.bumpDay - 1) && this.curPos(b, this.bumpDay) > this.curPos(bt, this.bumpDay))
       }
-      const isSandwich = (boat) => this.boatDiv(boat) > this.bumpDivision
+      const isSandwich = bt => this.boatDiv(bt) > this.bumpDivision
       if (this.event.name.toLowerCase() === 'torpids')
         return !boat.moves[this.bumpDay-1] || !hasBumped(boat) || isSandwich(boat)
       else if (this.event.name.toLowerCase() === 'eights')
@@ -2578,8 +2563,8 @@ export default {
       this.chartData = {}
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}.json`)
         .then((response) => {
-          for (let club in response.data) {
-            for (let gender in response.data[club]) {
+          for (const club in response.data) {
+            for (const gender in response.data[club]) {
               response.data[club][gender] = response.data[club][gender].map((boat, idx) => {
                 boat.club = club
                 boat.gender = gender
@@ -2605,7 +2590,7 @@ export default {
       this.bumpDivision = this.boatDiv(boat)
       this.bumpBoat = boat
       this.manualBoat = boat
-      this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
+      this.boats.forEach((bt) => this.chartData[bt.club][bt.gender][bt.number].opacity = 1.0)
       this.clubSelected = boat.club
       const idx = this.boatsSelected.indexOf(boat)
       if (idx !== -1) {
@@ -2619,8 +2604,8 @@ export default {
         this.boatsSelected = [boat]
       }
       if (this.boatsHigh.length) {
-        this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 0.1)
-        this.boatsHigh.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0)
+        this.boats.forEach((bt) => this.chartData[bt.club][bt.gender][bt.number].opacity = 0.1)
+        this.boatsHigh.forEach((bt) => this.chartData[bt.club][bt.gender][bt.number].opacity = 1.0)
       }
     },
     curPos(boat, day) {
