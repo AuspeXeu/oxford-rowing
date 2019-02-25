@@ -78,7 +78,9 @@ const broadcast = (msg) => {
   const payload = JSON.stringify(msg)
   aWss.clients.forEach((ws) => {
     ws.send(payload, (err) => {
-      if (err) log(err)
+      if (err) {
+        log(err)
+      }
     })
   })
   fs.appendFile(`${__dirname}/event.log`, `${new Date().getTime()},${payload}\n`, (err) => {
@@ -105,6 +107,15 @@ const logEvent = (ev, ip, id) => {
   if (eventBuffer.length > 1000)
     flushEventBuffer()
 }
+app.get('/events', (req, res) => {
+  fs.readdir(`${__dirname}/data`, (err, files) => {
+    const events = files.filter(fname => fname.match(/.*?[0-9]{4}.json/)).map((fname) => {
+      const [, name, year] = fname.match(/(.*?)_(.*?).json/)
+      return {year, name: name.charAt(0).toUpperCase() + name.substr(1)}
+    })
+    res.json(events)
+  })
+})
 //Serve home
 app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 //Update an entry in the data structure and broadcast changes
@@ -145,7 +156,7 @@ const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc +
 //Get all boats of gender
 const getBoats = (data, gender, day) => {
   let boats = []
-  for (let club in data) {
+  for (const club in data) {
     const ary = data[club][gender].map((boat, idx) => Object.assign({club: club, gender: gender, number: idx}, boat, {cur: curPos(boat, day)}))
     boats = boats.concat(ary)
   }
@@ -163,7 +174,7 @@ app.post('/announce', authReq, (req, res) => {
 app.post('/bump', authReq, (req, res) => {
   const name = req.body.name.toLowerCase()
   const year = parseInt(req.body.year, 10)
-  let bumpBoat = req.body.bumpBoat
+  const bumpBoat = req.body.bumpBoat
   const bumpedBoat = req.body.bumpedBoat
   const rowOvers = req.body.rowOvers
   const day = parseInt(req.body.day, 10)
@@ -274,8 +285,8 @@ app.ws('/live', (ws, req) => {
     log(err)
   })
   //Handler for incoming client messages
-  ws.on('message', (msg) => {
-    msg = JSON.parse(msg)
+  ws.on('message', (data) => {
+    const msg = JSON.parse(data)
     //A reporter comes online
     if (msg.type === 'reporter' && isAuth(msg.auth)) {
       reporters.add(id)

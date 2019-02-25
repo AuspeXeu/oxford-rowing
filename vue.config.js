@@ -13,6 +13,10 @@ module.exports = {
         target: 'http://127.0.0.1:3019',
         changeOrigin: true
       },
+      '/events': {
+        target: 'http://127.0.0.1:3019',
+        changeOrigin: true
+      },
       '/live': {
         target: 'ws://127.0.0.1:3019',
         changeOrigin: true,

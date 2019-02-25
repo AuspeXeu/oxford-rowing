@@ -1044,7 +1044,7 @@ export default {
       firstVisit: false,
       boatsHigh: [],
       divs: false,
-      events: [{year: 2019, name: 'Torpids'},{year: 2018, name: 'Eights'},{year: 2018, name: 'Torpids'},{year: 2017, name: 'Eights'},{year: 2017, name: 'Torpids'}],
+      events: [],
       chartData: {}
     }
   },
@@ -1112,7 +1112,12 @@ export default {
       countDown()
       setInterval(countDown, 1000)
     }
-    this.loadData(this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)[0])
+    axios.get('/events')
+      .then((response) => {
+        this.events = response.data
+        this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)
+        this.loadData(this.events[0])
+      })
   },
   watch: {
     clubSelected() {
