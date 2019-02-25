@@ -17,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run deps && npm run ncu && npm run lint"
+      "pre-push": "npm run lint && npm run deps && npm run ncu"
     }
   },
   "scripts": {
@@ -31,10 +31,12 @@
     "ncu": "ncu"
   },
   "dependencies": {
+    "axios": "0.18.0",
     "body-parser": "1.18.3",
     "compression": "1.7.3",
     "express": "4.16.4 ",
     "express-uws": "4.0.2",
+    "moment": "2.24.0",
     "nconf": "0.10.0",
     "request": "2.88.0",
     "uuid": "3.3.2",
@@ -70,10 +72,74 @@
     ],
     "rules": {
       "vue/require-v-for-key": 1,
-      "no-unused-vars": 1,
       "vue/no-unused-vars": 1,
       "vue/no-side-effects-in-computed-properties": 0,
-      "no-console": 0
+      "newline-per-chained-call": 0,
+      "object-curly-newline": 0,
+      "class-methods-use-this": 0,
+      "no-underscore-dangle": 0,
+      "import/no-unresolved": 0,
+      "import/no-dynamic-require": 0,
+      "no-plusplus": 0,
+      "func-names": 0,
+      "prefer-const": [
+        "error",
+        {
+          "destructuring": "all"
+        }
+      ],
+      "no-shadow": [
+        "error",
+        {
+          "allow": [
+            "_",
+            "err",
+            "resolve"
+          ]
+        }
+      ],
+      "no-eval": 0,
+      "global-require": 0,
+      "no-return-assign": 0,
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "nonblock-statement-body-position": [
+        "error",
+        "below"
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 350,
+          "tabWidth": 2
+        }
+      ],
+      "semi": 0,
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "log",
+            "error"
+          ]
+        }
+      ],
+      "object-curly-spacing": 0,
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "_|job|Job|log"
+        }
+      ],
+      "no-param-reassign": [
+        "error",
+        {
+          "props": false
+        }
+      ],
+      "consistent-return": 0
     },
     "parserOptions": {
       "parser": "babel-eslint"

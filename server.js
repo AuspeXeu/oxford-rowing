@@ -7,7 +7,9 @@ const expressWs = require('express-uws')
 const conf = require('nconf')
 const bodyParser = require('body-parser')
 const uuid = require('uuid/v1')
-const log = console.log
+const moment = require('moment')
+
+const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ...args])
 
 //Load configuration
 conf.file({file: 'cfg.json'})
