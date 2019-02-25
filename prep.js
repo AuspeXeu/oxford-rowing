@@ -86,7 +86,8 @@ axios.get(startingOrder)
       if (label) {
         const [, gender] = label[1].match(/(Women|Men)/)
         const [, hrs, mins] = label[2].match(/([0-9]*).([0-9]*)/)
-        const [, number] = label[1].match(/.*?Div\s?(.*)/)
+        let [, number] = label[1].match(/.*?Div\s?(.*)/)
+        number = romanValue(number)
         const entries = div.match(/<A .*?>.*?<\/A>/g).map(entry => entry.match(/<A .*?>(.*?)<\/A>/)[1])
           .map((entry, idx) => {
             const [, clubRaw, boat] = entry.match(/(.*?)\s?([IV]*)$/)
@@ -94,9 +95,9 @@ axios.get(startingOrder)
             if (!club) {
               log(clubRaw)
             }
-            return {club, boat: romanValue(boat.length ? boat : 'I') - 1, start: (idx + divIdx * boatsPerDiv)}
+            return {club, boat: romanValue(boat.length ? boat : 'I') - 1, start: (idx + (number - 1) * boatsPerDiv + 1)}
           })
-        return {gender: gender.toLowerCase(), entries, number: romanValue(number), time: `${(hrs === '12' ? hrs : parseInt(hrs, 10) + 12)}:${mins}`}
+        return {gender: gender.toLowerCase(), entries, number, time: `${(hrs === '12' ? hrs : parseInt(hrs, 10) + 12)}:${mins}`}
       } else {
         return false
       }

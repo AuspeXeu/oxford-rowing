@@ -1000,7 +1000,7 @@ export default {
     return {
       startOrderDialog: false,
       startOrderHeight: 200,
-      countDownDate: new Date('May 23, 2018 10:00:00').getTime(),
+      countDownDate: new Date('February 27, 2019 10:00:00').getTime(),
       countDownVal: '',
       announcementDraft: '',
       announcement: '',
@@ -1044,7 +1044,7 @@ export default {
       firstVisit: false,
       boatsHigh: [],
       divs: false,
-      events: [{year: 2018, name: 'Eights'},{year: 2018, name: 'Torpids'},{year: 2017, name: 'Eights'},{year: 2017, name: 'Torpids'}],
+      events: [{year: 2019, name: 'Torpids'},{year: 2018, name: 'Eights'},{year: 2018, name: 'Torpids'},{year: 2017, name: 'Eights'},{year: 2017, name: 'Torpids'}],
       chartData: {}
     }
   },
