@@ -2229,8 +2229,25 @@ export default {
     }
     axios.get('/events')
       .then((response) => {
-        this.events = response.data
-        this.events.sort((a,b) => `${b.year}${(b.name == 'Torpids' ? '0' : '1')}` > `${a.year}${(a.name == 'Torpids' ? '0' : '1')}`)
+        this.events = response.data.sort((a, b) => {
+          if (a.year === b.year) {
+            if (a.name === 'Torpids' && b.name === 'Eights') {
+              return -1
+            } else if (a.name === 'Eights' && b.name === 'Torpids') {
+              return 1
+            } else {
+              return 0
+            }
+          } else {
+            if (a.year > b.year) {
+              return 1
+            } else if (a.year < b.year) {
+              return -1
+            } else {
+              return 0
+            }
+          }
+        }).reverse()
         this.loadData(this.events[0])
       })
   },
