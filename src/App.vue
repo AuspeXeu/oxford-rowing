@@ -2,7 +2,7 @@
 <div id="app">
   <v-app>
     <v-toolbar fixed app dense>
-      <v-toolbar-title style="margin-left:15px;">
+      <v-toolbar-title>
         <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
         <span class="noselect hidden-sm-and-down">Live Bumps</span>
       </v-toolbar-title>
