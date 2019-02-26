@@ -2103,7 +2103,7 @@ export default {
     return {
       startOrderDialog: false,
       startOrderHeight: 200,
-      countDownDate: new Date('February 27, 2019 10:00:00').getTime(),
+      countDownDate: new Date('February 27, 2019 12:00:00').getTime(),
       announcementDraft: '',
       announcement: '',
       socket: false,
