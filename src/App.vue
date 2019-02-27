@@ -1821,7 +1821,7 @@
                     :items="[1,2,3,4]"
                   ></v-select>
                 </v-flex>
-                <v-flex xs2 sm3 md3>
+                <v-flex xs2 sm2 md2>
                   <v-select
                     label="Division"
                     required
@@ -1840,18 +1840,19 @@
                     :items="['men','women']"
                   ></v-select>
                 </v-flex>
-                <v-flex xs5 sm4 md4>
+                <v-flex xs5 sm5 md5>
                   <v-tabs right v-model="bumpTab">
                     <v-tab v-for="n in ['Bump','Manual']" :key="n" value="a">{{ n }}</v-tab>
                   </v-tabs>
                 </v-flex>
               </v-layout>
-              <v-layout wrap v-show="bumpTab === '0'">
+              <v-layout wrap v-show="bumpTab === 0">
                 <v-flex xs5 sm5 md5 :md8="bumpAction ==='row over'" :sm8="bumpAction ==='row over'" :xs8="bumpAction ==='row over'">
                   <v-select
                     v-show="bumpAction === 'row over'"
                     label="Boats"
                     item-text="short"
+                    return-object
                     v-model="rowOvers"
                     required
                     clearable
@@ -1862,6 +1863,7 @@
                     v-show="bumpAction === 'bumps'"
                     label="Boat"
                     item-text="short"
+                    return-object
                     v-model="bumpBoat"
                     required
                     :items="bumpBoats"
@@ -1882,12 +1884,13 @@
                   </span>
                 </v-flex>
               </v-layout>
-              <v-layout wrap v-show="bumpTab === '1'">
+              <v-layout wrap v-show="bumpTab === 1">
                 <v-flex xs9 sm9 md9>
                   <v-select
                     label="Boat"
                     item-text="short"
                     v-model="manualBoat"
+                    return-object
                     required
                     :items="divBoats"
                   ></v-select>
@@ -2136,8 +2139,8 @@ export default {
       bumpDivision: 1,
       bumpDialog: false,
       announceDialog: false,
-      startEvent: '0',
-      bumpTab: '0',
+      startEvent: 0,
+      bumpTab: 0,
       points: {},
       firstVisit: false,
       boatsHigh: [],
@@ -2503,7 +2506,7 @@ export default {
       this.snack.visible = true
     },
     submitBump() {
-      if (this.bumpTab === '1' && this.manualBoat 
+      if (this.bumpTab === 1 && this.manualBoat
         && this.manualBoat.moves[this.bumpDay-1]
         && this.manualBoat.moves[this.bumpDay-1].status
         && !confirm('You are about to edit a confirmed result, do you know what you are doing?'))
@@ -2514,9 +2517,9 @@ export default {
         day: this.bumpDay,
         moves: parseInt(this.bumpMoves, 10),
         status: (this.manualBoat && this.manualBoat.moves[this.bumpDay-1] ? this.manualBoat.moves[this.bumpDay-1].status : undefined),
-        bumpBoat: (this.bumpTab === '0' ? this.bumpBoat : this.manualBoat),
-        rowOvers: (this.bumpTab === '0' && this.bumpAction === 'row over' ? this.rowOvers : undefined),
-        bumpedBoat: (this.bumpTab === '0' && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
+        bumpBoat: (this.bumpTab === 0 ? this.bumpBoat : this.manualBoat),
+        rowOvers: (this.bumpTab === 0 && this.bumpAction === 'row over' ? this.rowOvers : undefined),
+        bumpedBoat: (this.bumpTab === 0 && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
       }, {headers: {'authorization': this.auth}})
       .then(() => this.notify('Bump submitted', 'success'))
       .catch(error => {

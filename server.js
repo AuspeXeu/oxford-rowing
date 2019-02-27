@@ -111,7 +111,7 @@ app.get('/events', (req, res) => {
   fs.readdir(`${__dirname}/data`, (err, files) => {
     const events = files.filter(fname => fname.match(/.*?[0-9]{4}.json/)).map((fname) => {
       const [, name, year] = fname.match(/(.*?)_(.*?).json/)
-      return {year, name: name.charAt(0).toUpperCase() + name.substr(1)}
+      return {year: parseInt(year, 10), name: name.charAt(0).toUpperCase() + name.substr(1)}
     })
     res.json(events)
   })
