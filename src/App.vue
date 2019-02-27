@@ -1914,70 +1914,6 @@
           </v-card-actions>
         </v-card>
       </v-bottom-sheet>
-      <v-bottom-sheet v-model="startOrderDialog" max-width="500" hide-overlay inset persistent lazy>
-        <v-card>
-          <v-card-title>
-            <span class="headline noselect">Starting order</span>
-            <v-spacer></v-spacer>
-            <v-tooltip bottom>
-              <v-icon slot="activator">{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
-              <span>{{(!verified ? 'Not authenticated' : 'Authenticated')}}</span>
-            </v-tooltip>
-          </v-card-title>
-          <v-card-text class="custom-card">
-            <v-container grid-list-xs>
-              <v-layout row>
-                <v-flex xs7 sm8 md8>
-                  <v-text-field return-masked-value mask="####" v-model="startYear" label="Year" :rules="[validateYear]"></v-text-field>
-                </v-flex>
-                <v-flex xs5 sm4 md4>
-                  <v-tabs right v-model="startEvent">
-                    <v-tab v-for="n in ['Torpids','Eights']" :key="n" value="n">{{ n }}</v-tab>
-                  </v-tabs>
-                </v-flex>
-              </v-layout>
-              <v-layout row>
-                <v-flex xs6>
-                  <v-toolbar color="purple" dark dense>
-                    <v-toolbar-title>Men</v-toolbar-title>
-                  </v-toolbar>
-                  <v-list :style="`max-height:${startOrderHeight}px;overflow: scroll;`">
-                    <v-list-tile v-for="n in Array(15).fill('1')" :key="n">
-                      <v-list-tile-content>
-                        Test
-                      </v-list-tile-content>
-                    </v-list-tile>
-                  </v-list>
-                </v-flex>
-                <v-flex xs6>
-                  <v-toolbar color="deep-purple" dark dense>
-                    <v-toolbar-title>Women</v-toolbar-title>
-                  </v-toolbar>
-                  <v-list :style="`max-height:${startOrderHeight}px;overflow:scroll;`">
-                    <v-list-tile v-for="n in Array(15).fill('1')" :key="n">
-                      <v-list-tile-content>
-                        Test {{n}}
-                      </v-list-tile-content>
-                    </v-list-tile>
-                  </v-list>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card-text>
-          <v-card-actions>
-            <small class="pl-3 noselect">*indicates required field</small>
-            <v-spacer></v-spacer>
-            <v-tooltip top>
-              <v-btn color="blue darken-1" flat @click.native="startOrderDialog = false" slot="activator">
-                <v-icon>fa-cloud-download</v-icon>
-              </v-btn>
-              <span>Load from previous year</span>
-            </v-tooltip>
-            <v-btn color="blue darken-1" flat @click.native="startOrderDialog = false">Close</v-btn>
-            <v-btn color="blue darken-1" flat :disabled="!verified" @click.native="submitStartOrder()">Submit</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-bottom-sheet>
       <v-dialog v-model="announceDialog" max-width="500px">
         <v-card>
           <v-card-title>
@@ -2065,9 +2001,6 @@
             </v-list-tile>
           </v-list>
         </v-menu>
-        <v-btn color="primary"  @click.native.stop="startOrderDialog = !startOrderDialog;" v-if="false">
-          <v-icon>add</v-icon>
-        </v-btn>
       </v-flex>
     </v-navigation-drawer>
     <v-footer app fixed>
@@ -2101,8 +2034,6 @@ Vue.use(Vuetify)
 export default {
   data() {
     return {
-      startOrderDialog: false,
-      startOrderHeight: 200,
       countDownDate: new Date('February 27, 2019 12:00:00').getTime(),
       announcementDraft: '',
       announcement: '',
@@ -2476,7 +2407,6 @@ export default {
       this.timer = setTimeout(function() {
         const width = document.getElementById('svg-container').offsetWidth
         this.scale = Math.min(width * 0.63 / 780, 0.63)
-        this.startOrderHeight = window ? window.innerHeight - 400 : 300
       }.bind(this), 150)
     },
     clickEnd(boat) {
