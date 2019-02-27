@@ -1774,7 +1774,7 @@
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :key="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :key="`${point.x}|${point.y}`" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
@@ -1790,9 +1790,9 @@
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :key="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :key="`${point.x}|${point.y}`" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
-                  <use v-bind:xlink:href="`#${boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
+                  <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
               </g>
             </svg>
