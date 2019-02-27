@@ -1924,25 +1924,23 @@
             </v-btn>
           </v-card-title>
           <v-card-text>
-            <v-list>
-              <v-list-tile avatar>
-                <v-list-tile-content>
-                    <v-text-field
-                      autofocus
-                      label="Message"
-                      :rules="[(v) => Boolean(v.trim().length) || 'An announcement must not be empty']"
-                      v-model="announcementDraft"
-                      clearable
-                      required
-                    ></v-text-field>
-                </v-list-tile-content>
-                <v-list-tile-avatar>
-                  <v-btn icon slot="activator" @click.stop="makeAnnouncement()">
-                    <v-icon>send</v-icon>
-                  </v-btn>
-                </v-list-tile-avatar>
-              </v-list-tile>
-            </v-list>
+            <v-layout row>
+              <v-flex xs11>
+                <v-text-field
+                  autofocus
+                  label="Message"
+                  :rules="[(v) => v && Boolean(v.trim().length) || 'An announcement must not be empty']"
+                  v-model="announcementDraft"
+                  clearable
+                  required
+                ></v-text-field>
+              </v-flex>
+              <v-flex xs1>
+                <v-btn flat icon @click.stop="makeAnnouncement()">
+                  <v-icon>send</v-icon>
+                </v-btn>
+              </v-flex>
+            </v-layout>
           </v-card-text>
         </v-card>
       </v-dialog>
