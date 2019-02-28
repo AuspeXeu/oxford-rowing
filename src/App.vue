@@ -1907,10 +1907,12 @@
             </v-container>
           </v-card-text>
           <v-card-actions>
-            <small class="pl-3 noselect">*indicates required field</small>
+            <small class="pl-3 noselect">*required field</small>
             <v-spacer></v-spacer>
             <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Close</v-btn>
-            <v-btn color="blue darken-1" flat :disabled="!verified" @click.native="submitBump()">Submit</v-btn>
+            <v-btn color="blue darken-1" flat :disabled="!verified || loading" @click.native="submitBump()">
+              Submit
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-bottom-sheet>
@@ -2034,6 +2036,7 @@ export default {
     return {
       countDownDate: new Date('February 27, 2019 12:00:00').getTime(),
       announcementDraft: '',
+      loading: false,
       announcement: '',
       socket: false,
       boatsSelected: [],
@@ -2435,6 +2438,7 @@ export default {
         && this.manualBoat.moves[this.bumpDay-1].status
         && !confirm('You are about to edit a confirmed result, do you know what you are doing?'))
         return
+      this.loading = true
       axios.post('/bump', {
         year: this.event.year,
         name: this.event.name,
@@ -2449,7 +2453,7 @@ export default {
       .catch(error => {
         console.log(error.response.data)
         this.notify('Failed to submit bump', 'error')
-      })
+      }).then(() => this.loading = false)
     },
     romanize(num) {
       if (!+num)
