@@ -1774,7 +1774,7 @@
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :key="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :key="`${point.x}|${point.y}`" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="confirmBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
@@ -1790,7 +1790,7 @@
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :key="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :key="`${point.x}|${point.y}`" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="clickEnd(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="confirmBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
                   </g>
                   <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
@@ -2051,7 +2051,6 @@ export default {
       clubSelected: false,
       bumpBoat: false,
       manualBoat: false,
-      appendSel: false,
       event: false,
       auth: false,
       snack: {
@@ -2364,7 +2363,6 @@ export default {
     onClick(ev) {
       if (['use','path'].indexOf(ev.target.tagName) === -1)
         this.clubSelected = false
-      this.appendSel = (ev.ctrlKey || ev.metaKey)
     },
     onKeyDown(ev) {
       if (ev.keyCode === 70 && (ev.ctrlKey || ev.metaKey)) {
@@ -2407,10 +2405,8 @@ export default {
         this.scale = Math.min(width * 0.63 / 780, 0.63)
       }.bind(this), 150)
     },
-    clickEnd(boat) {
-      if (!this.verified)
-        this.selectBoat(boat)
-      else {
+    confirmBoat(boat) {
+      if (this.verified) {
         const lastMove = boat.moves[boat.moves.length-1]
         axios.post('/bump', {
           year: this.event.year,
@@ -2522,11 +2518,8 @@ export default {
       this.clubSelected = boat.club
       const idx = this.boatsSelected.indexOf(boat)
       if (idx !== -1) {
-        this.boatsHigh.splice(idx, 1)
-        this.boatsSelected.splice(idx, 1)
-      } else if (this.appendSel) {
-        this.boatsHigh.push(boat)
-        this.boatsSelected.push(boat)
+        this.boatsHigh = []
+        this.boatsSelected = []
       } else {
         this.boatsHigh = [boat]
         this.boatsSelected = [boat]
