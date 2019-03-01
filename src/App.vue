@@ -7,6 +7,15 @@
         <span class="noselect hidden-sm-and-down">Live Bumps</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+      <v-tooltip bottom>
+        <v-btn slot="activator" flat icon @click.native="bladesOnly = !bladesOnly">
+          <v-img
+            src="/blades.png"
+            :max-width="30"
+          ></v-img>
+        </v-btn>
+        <span>Up for blades?</span>
+      </v-tooltip>
       <v-flex xs8 md3 sm2>
         <v-autocomplete
           :items="clubs"
@@ -2036,6 +2045,7 @@ export default {
     return {
       countDownDate: new Date('February 27, 2019 12:00:00').getTime(),
       announcementDraft: '',
+      bladesOnly: false,
       loading: false,
       announcement: '',
       socket: false,
@@ -2168,6 +2178,13 @@ export default {
       })
   },
   watch: {
+    bladesOnly() {
+      if (this.bladesOnly) {
+        this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && move.moves > 0, true))
+      } else {
+        this.boatsSelected = []
+      }
+    },
     clubSelected() {
       if (this.clubSelected)
         this.boatsSelected = this.boats.filter((boat) => boat.club === this.clubSelected)
