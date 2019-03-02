@@ -2488,7 +2488,7 @@ export default {
     divName(div) {
       const formatDivTime = (str) => {
         let [, hours, minutes] = str.match(/([0-9]+):([0-9]+)/)
-        if (this.eventDay === 4)
+        if (this.eventDay === 4 && this.event && this.event.name.toLowerCase() === 'eights')
           hours -= 1
         const mom = moment().tz('Europe/London')
         mom.minutes(minutes)
