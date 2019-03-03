@@ -14,7 +14,7 @@
             :max-width="30"
           ></v-img>
         </v-btn>
-        <span>Up for blades?</span>
+        <span>Blades?</span>
       </v-tooltip>
       <v-flex xs8 md3 sm2>
         <v-autocomplete
@@ -2002,7 +2002,7 @@
         <v-menu offset-y attach>
           <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator">{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
           <v-list dense>
-            <v-list-tile v-for="event in events" :key="event.year+event.name" @click="loadData(event)" style="background-color:white;">
+            <v-list-tile v-for="event in events" :key="event.year+event.name" :to="`/${event.name.toLowerCase()}/${event.year}`" style="background-color:white;">
               <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
             </v-list-tile>
             <v-list-tile color="primary" href="http://oxbump.feathersquare.com/historical20.php" target="_blank" style="background-color:white;">
@@ -2174,22 +2174,26 @@ export default {
             }
           }
         }).reverse()
-        this.loadData(this.events[0])
+        this.selectEvent()
       })
   },
   watch: {
+    $route() {
+      this.selectEvent()
+    },
     bladesOnly() {
       if (this.bladesOnly) {
-        this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && move.moves > 0, true))
+        this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && (move.moves > 0 || (boat.start === 1 && move.moves === 0)), true))
       } else {
         this.boatsSelected = []
       }
     },
     clubSelected() {
-      if (this.clubSelected)
+      if (this.clubSelected) {
         this.boatsSelected = this.boats.filter((boat) => boat.club === this.clubSelected)
-      else
+      } else {
         this.boatsSelected = []
+      }
     },
     bumpDivision() {
       this.bumpDay = this.eventDay
@@ -2365,6 +2369,14 @@ export default {
     }
   },
   methods: {
+    selectEvent() {
+      if (this.$route.params.event) {
+        const candidates = this.events.filter(evt => evt.name.toLowerCase() === this.$route.params.event && (!this.$route.params.year || evt.year === parseInt(this.$route.params.year, 10)))
+        this.loadData(candidates.length ? candidates[0] : false)
+      } else {
+        this.loadData(this.events.length ? this.events[0] : false)
+      }
+    },
     validateYear(val) {
       let year
       try {
@@ -2381,8 +2393,11 @@ export default {
       localStorage.setItem('wasHere', true)
     },
     onClick(ev) {
-      if (['use','path'].indexOf(ev.target.tagName) === -1)
+      if (['use','path','button'].indexOf(ev.target.tagName.toLowerCase()) === -1) {
+        this.boatsSelected = []
         this.clubSelected = false
+        this.bladesOnly = false
+      }
     },
     onKeyDown(ev) {
       if (ev.keyCode === 70 && (ev.ctrlKey || ev.metaKey)) {
@@ -2504,6 +2519,9 @@ export default {
       return table[club]
     },
     loadData(event) {
+      if (!event) {
+        return
+      }
       this.divs = false
       this.chartData = {}
       axios.get(`./data/${event.name.toLowerCase()}_${event.year}.json`)
