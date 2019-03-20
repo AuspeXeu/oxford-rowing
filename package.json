@@ -40,7 +40,7 @@
     "nconf": "0.10.0",
     "request": "2.88.0",
     "uuid": "3.3.2",
-    "vue": "2.6.9"
+    "vue": "2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "3.5.0",
