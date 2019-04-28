@@ -43,14 +43,14 @@
     "vue": "2.6.10"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "3.6.0",
-    "@vue/cli-plugin-eslint": "3.6.0",
-    "@vue/cli-service": "3.6.0",
+    "@vue/cli-plugin-babel": "3.7.0",
+    "@vue/cli-plugin-eslint": "3.7.0",
+    "@vue/cli-service": "3.7.0",
     "babel-eslint": "10.0.1",
     "concurrently": "4.1.0",
     "eslint": "5.16.0",
     "eslint-plugin-vue": "5.2.2",
-    "husky": "2.0.0",
+    "husky": "2.1.0",
     "vue-template-compiler": "2.6.10"
   },
   "eslintConfig": {
