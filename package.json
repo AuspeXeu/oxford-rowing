@@ -28,7 +28,9 @@
     "lint": "vue-cli-service lint",
     "server": "node server.js",
     "deps": "depcheck . --ignores=\"husky,sqlite3,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,concurrently,vue,babel-eslint,eslint,eslint-plugin-vue,vue-template-compiler\"",
-    "ncu": "ncu"
+    "ncu": "ncu",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "axios": "0.18.0",
@@ -40,7 +42,8 @@
     "nconf": "0.10.0",
     "request": "2.88.0",
     "uuid": "3.3.2",
-    "vue": "2.6.10"
+    "vue": "2.6.10",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "3.7.0",
@@ -164,5 +167,6 @@
       "name": "Christian Vaas",
       "email": "chrisvaas@gmail.com"
     }
-  ]
+  ],
+  "snyk": true
 }
