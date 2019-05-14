@@ -84,10 +84,6 @@ const broadcast = (msg) => {
       }
     })
   })
-  fs.appendFile(`${__dirname}/event.log`, `${new Date().getTime()},${payload}\n`, (err) => {
-    if (err)
-      log(err)
-  })
 }
 
 let eventBuffer = []
