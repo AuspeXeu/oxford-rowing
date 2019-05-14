@@ -2393,7 +2393,11 @@ export default {
       localStorage.setItem('wasHere', true)
     },
     onClick(ev) {
-      if (['use','path','button'].indexOf(ev.target.tagName.toLowerCase()) === -1) {
+      let parent = ev.target
+      while (parent && ['use','path','button'].indexOf(parent.tagName.toLowerCase()) === -1) {
+        parent = parent.parentElement
+      }
+      if (!parent) {
         this.boatsSelected = []
         this.clubSelected = false
         this.bladesOnly = false
