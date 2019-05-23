@@ -2427,14 +2427,14 @@ export default {
       const txt = this.announcementDraft.trim()
       if (txt.length) {
         axios.post('/announce', {text: txt}, {headers: {'authorization': this.auth}})
-        .then(() => {
-          this.announceDialog = false
-          this.notify('Announcement made', 'success')
-        })
-        .catch(error => {
-          this.notify('Failed to make announcement', 'error')
-          console.log(error.response.data)
-        })
+          .then(() => {
+            this.announceDialog = false
+            this.notify('Announcement made', 'success')
+          })
+          .catch(error => {
+            this.notify('Failed to make announcement', 'error')
+            console.log(error.response.data)
+          })
       }
     },
     onResize () {
