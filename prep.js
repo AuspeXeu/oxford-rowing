@@ -5,7 +5,8 @@ const moment = require('moment')
 const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ...args])
 
 // Only the following two parameters need to be adjusted each year
-const startingOrder = 'http://eodg.atm.ox.ac.uk/user/dudhia/rowing/torpids/t19sta.html'
+//const startingOrder = 'http://eodg.atm.ox.ac.uk/user/dudhia/rowing/torpids/t19sta.html'
+const startingOrder = 'http://eodg.atm.ox.ac.uk/user/dudhia/rowing/eights/e19sta.html'
 const year = 2019
 
 const isTorpids = () => startingOrder.indexOf('torpids') > -1
