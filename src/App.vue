@@ -2589,9 +2589,11 @@ export default {
         .catch(() => this.crews = false)
     },
     selectBoat(boat) {
-      this.crewSelected = this.crews[boat.club][boat.gender][boat.number+1]
+      if (this.crews) {
+        this.crewSelected = this.crews[boat.club][boat.gender][boat.number+1]
+        this.crewDialog = true
+      }
       this.boatSelected = boat
-      this.crewDialog = true
       this.bumpDivision = this.boatDiv(boat)
       this.bumpBoat = boat
       this.manualBoat = boat
