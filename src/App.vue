@@ -1955,6 +1955,32 @@
           </v-card-text>
         </v-card>
       </v-dialog>
+      <div class="text-xs-center">
+        <v-dialog
+          v-model="crewDialog"
+          width="500">
+          <v-card>
+            <v-card-title><h4>{{ boatSelected.short }}</h4></v-card-title>
+            <v-divider></v-divider>
+            <v-list dense>
+              <v-list-tile v-for="entry in crewSelected" :key="entry.pos">
+                <v-list-tile-content><b>{{ entry.pos }}</b></v-list-tile-content>
+                <v-list-tile-content class="align-end">{{ entry.name }}</v-list-tile-content>
+              </v-list-tile>
+            </v-list>
+            <v-divider></v-divider>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn
+                color="primary"
+                flat
+                @click="crewDialog = false">
+                Close
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </div>
     </v-content>
     <v-navigation-drawer temporary hide-overlay fixed v-model="drawer" class="text-xs-center" app>
       <v-list class="pa-1">
@@ -2073,6 +2099,8 @@ export default {
         color: 'success',
         text: ''
       },
+      crewSelected: [],
+      boatSelected: {},
       verified: false,
       bumpGender: 'men',
       bumpMoves: 0,
@@ -2086,6 +2114,8 @@ export default {
       firstVisit: false,
       boatsHigh: [],
       divs: false,
+      crewDialog: false,
+      crews: false,
       events: [],
       chartData: {}
     }
@@ -2552,8 +2582,16 @@ export default {
           this.divs = response.data
         })
         .catch(() => this.divs = false)
+      axios.get(`./data/${event.name.toLowerCase()}_${event.year}_crews.json`)
+        .then((response) => {
+          this.crews = response.data
+        })
+        .catch(() => this.crews = false)
     },
     selectBoat(boat) {
+      this.crewSelected = this.crews[boat.club][boat.gender][boat.number+1]
+      this.boatSelected = boat
+      this.crewDialog = true
       this.bumpDivision = this.boatDiv(boat)
       this.bumpBoat = boat
       this.manualBoat = boat
