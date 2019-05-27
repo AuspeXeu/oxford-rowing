@@ -5352,7 +5352,7 @@
         },
         {
           "pos": "Cox",
-          "name": "Catriona Campbell"
+          "name": "Frederik Soerensen"
         },
         {
           "pos": "Coach",
@@ -5394,7 +5394,49 @@
         },
         {
           "pos": "Cox",
-          "name": "Frederik Soerensen"
+          "name": "Benjamin Evans"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tom Hole"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Michael Goode"
+        },
+        {
+          "pos": "2",
+          "name": "Alexander Moss"
+        },
+        {
+          "pos": "3",
+          "name": "Jeanne Marie Ryan"
+        },
+        {
+          "pos": "4",
+          "name": "Mark Baker"
+        },
+        {
+          "pos": "5",
+          "name": "George Heywood"
+        },
+        {
+          "pos": "6",
+          "name": "Paolo  Spingardi"
+        },
+        {
+          "pos": "7",
+          "name": "Thomas Hole"
+        },
+        {
+          "pos": "Str",
+          "name": "Graham Baird"
+        },
+        {
+          "pos": "Cox",
+          "name": "Agastya Pisharody"
         },
         {
           "pos": "Coach",
@@ -5480,7 +5522,7 @@
         },
         {
           "pos": "Cox",
-          "name": "Agastya Pisharody"
+          "name": "Bethany Grace Charlton"
         },
         {
           "pos": "Coach",
@@ -5884,27 +5926,27 @@
       "2": [
         {
           "pos": "Bow",
-          "name": "Lucy Field"
-        },
-        {
-          "pos": "2",
-          "name": "Daniel Bundred"
-        },
-        {
-          "pos": "3",
-          "name": "Michal Kreft"
-        },
-        {
-          "pos": "4",
-          "name": "David Graham"
-        },
-        {
-          "pos": "5",
           "name": "Dhruva Bhat"
         },
         {
-          "pos": "6",
+          "pos": "2",
+          "name": "Harrison Steel"
+        },
+        {
+          "pos": "3",
+          "name": "Matthew Jordan"
+        },
+        {
+          "pos": "4",
           "name": "Maksim Richards"
+        },
+        {
+          "pos": "5",
+          "name": "Rebecca Redding"
+        },
+        {
+          "pos": "6",
+          "name": "Solomon White"
         },
         {
           "pos": "7",
