@@ -2048,9 +2048,9 @@
       </v-btn>
       <div class="noselect pr-2">© {{ new Date().getFullYear() }}</div>
     </v-footer>
-    <v-snackbar top v-model="firstVisit" :timeout="0">
-      Race times are displayed in your local time :)
-      <v-btn flat color="pink" @click="dismissFirst()">Close</v-btn>
+    <v-snackbar top v-model="feature" :timeout="0">
+      {{ feature ? feature.text : '' }}
+      <v-btn flat color="pink" @click="dismissFeature(feature)">Close</v-btn>
     </v-snackbar>
     <v-snackbar
       class="noselect"
@@ -2085,6 +2085,11 @@ export default {
       liveTimer: false,
       bumpAction: 'bumps',
       viewers: 0,
+      features: [
+        {key: 'localtime', text: 'Race times are displayed in your local time :)'},
+        {key: 'crewlist', text: `Click on a boat's crest to see its crew list!`}
+      ],
+      feature: null,
       reporters: 0,
       rowOvers: [],
       clubSelected: false,
@@ -2111,7 +2116,6 @@ export default {
       startEvent: 0,
       bumpTab: 0,
       points: {},
-      firstVisit: false,
       boatsHigh: [],
       divs: false,
       crewDialog: false,
@@ -2267,7 +2271,8 @@ export default {
     }
   },
   created() {
-    this.firstVisit = !localStorage.getItem('wasHere')
+    this.features = this.features.filter(itm => (this.loadStorage('features') || []).indexOf(itm.key) === -1)
+    this.nextFeature()
     window.addEventListener('click', this.onClick, {capture: true})
     window.addEventListener('keydown', this.onKeyDown)
   },
@@ -2399,6 +2404,12 @@ export default {
     }
   },
   methods: {
+    loadStorage(key) {
+      return JSON.parse(localStorage.getItem(key))
+    },
+    saveStorage(key, val) {
+      localStorage.setItem(key, JSON.stringify(val))
+    },
     selectEvent() {
       if (this.$route.params.event) {
         const candidates = this.events.filter(evt => evt.name.toLowerCase() === this.$route.params.event && (!this.$route.params.year || evt.year === parseInt(this.$route.params.year, 10)))
@@ -2418,9 +2429,17 @@ export default {
         return 'You cannot create starting order for the past'
       return true
     },
-    dismissFirst() {
-      this.firstVisit = false
-      localStorage.setItem('wasHere', true)
+    dismissFeature(feature) {
+      this.saveStorage('features', (this.loadStorage('features') || []).concat([feature.key]))
+      this.features = this.features.filter(itm => this.loadStorage('features').map(f => f.key).indexOf(itm.key) === -1)
+      this.nextFeature()
+    },
+    nextFeature() {
+      if (this.features.length) {
+        this.feature = this.features.pop()
+      } else {
+        this.feature = false
+      }
     },
     onClick(ev) {
       let parent = ev.target
