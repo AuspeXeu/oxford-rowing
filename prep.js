@@ -118,7 +118,6 @@ axios.get(startingOrder)
     const divs = response.data.match(/<TABLE cellpadding=0>.*?<\/TABLE>/sg).map((div) => {
       const label = div.match(/<TH COLSPAN=2>\s?\*?(.*?)\s?\(([0-9.]+)\)\*?\n/)
       if (label) {
-        log(label[1])
         const [, gender] = label[1].match(/(Women|Men)/)
         const [, hrs, mins] = label[2].match(/([0-9]*).([0-9]*)/)
         let [, number] = label[1].match(/.*?Div\s?(.*)/)
@@ -132,7 +131,7 @@ axios.get(startingOrder)
             }
             return {club, boat: romanValue(boat.length ? boat : 'I') - 1, start: (idx + (number - 1) * boatsPerDiv + 1)}
           })
-        return {gender: gender.toLowerCase(), entries, number, time: `${(hrs === '12' ? hrs : parseInt(hrs, 10) + 12)}:${mins}`}
+        return {gender: gender.toLowerCase(), entries, number, time: `${(hrs === '12' || hrs === '11' ? hrs : parseInt(hrs, 10) + 12)}:${mins}`}
       } else {
         return false
       }
