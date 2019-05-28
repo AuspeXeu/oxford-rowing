@@ -1961,9 +1961,11 @@
           width="500">
           <v-card>
             <v-card-title>
-              <v-flex shrink style="height: 25px;">
-              <svg style="width:48px;height:48px;background-color:transparent;">
-                <g transform="scale(0.5)"><use v-bind:xlink:href="`#${boatSelected.custom || boatSelected.club}`"></use></g>
+              <v-flex shrink style="height:25px;width: 35px;">
+              <svg style="width:49px;height:49px;background-color:transparent;">
+                <g transform="scale(0.5),translate(2,1)">
+                  <use v-bind:xlink:href="`#${boatSelected.custom || boatSelected.club}`"></use>
+                </g>
               </svg>
               </v-flex>
               <h4>{{ boatSelected.short }}</h4>
