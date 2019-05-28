@@ -1960,7 +1960,14 @@
           v-model="crewDialog"
           width="500">
           <v-card>
-            <v-card-title><h4>{{ boatSelected.short }}</h4></v-card-title>
+            <v-card-title>
+              <v-flex shrink style="height: 25px;">
+              <svg style="width:48px;height:48px;background-color:transparent;">
+                <g transform="scale(0.5)"><use v-bind:xlink:href="`#${boatSelected.custom || boatSelected.club}`"></use></g>
+              </svg>
+              </v-flex>
+              <h4>{{ boatSelected.short }}</h4>
+            </v-card-title>
             <v-divider></v-divider>
             <v-list dense>
               <v-list-tile v-for="entry in crewSelected" :key="entry.pos">
@@ -2586,7 +2593,7 @@ export default {
                 boat.gender = gender
                 boat.number = idx
                 boat.opacity = 1.0
-                boat.short = `${this.clubToName(boat.club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(boat.number + 1)}`
+                boat.short = `${this.clubToName(boat.club)} ${(gender === 'men' ? 'M' : 'W')}${boat.number + 1}`
                 return boat
               })
             }
