@@ -2617,7 +2617,7 @@ export default {
         .catch(() => this.crews = false)
     },
     selectBoat(boat) {
-      if (this.crews) {
+      if (this.crews && !this.verified) {
         this.crewSelected = this.crews[boat.club][boat.gender][boat.number+1]
         this.crewDialog = true
       }
