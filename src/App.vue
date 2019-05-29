@@ -16,6 +16,15 @@
         </v-btn>
         <span>Blades?</span>
       </v-tooltip>
+      <v-tooltip bottom>
+        <v-btn slot="activator" flat icon @click.native="spoonsOnly = !spoonsOnly">
+          <v-img
+            src="/spoons.png"
+            :max-width="30"
+          ></v-img>
+        </v-btn>
+        <span>Spoons?</span>
+      </v-tooltip>
       <v-flex xs8 md3 sm2>
         <v-autocomplete
           :items="clubs"
@@ -2081,6 +2090,7 @@ export default {
       countDownDate: new Date('February 27, 2019 12:00:00').getTime(),
       announcementDraft: '',
       bladesOnly: false,
+      spoonsOnly: false,
       loading: false,
       announcement: '',
       socket: false,
@@ -2227,6 +2237,13 @@ export default {
     bladesOnly() {
       if (this.bladesOnly) {
         this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && (move.moves > 0 || (boat.start === 1 && move.moves === 0)), true))
+      } else {
+        this.boatsSelected = []
+      }
+    },
+    spoonsOnly() {
+      if (this.spoonsOnly) {
+        this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && move.moves < 0, true))
       } else {
         this.boatsSelected = []
       }
@@ -2459,6 +2476,7 @@ export default {
         this.boatsSelected = []
         this.clubSelected = false
         this.bladesOnly = false
+        this.spoonsOnly = false
       }
     },
     onKeyDown(ev) {
