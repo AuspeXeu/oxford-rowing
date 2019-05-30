@@ -54,6 +54,7 @@ app.use(compression())
 app.use('/css', express.static(`${__dirname}/dist/css`))
 app.use('/js', express.static(`${__dirname}/dist/js`))
 app.use('/blades.png', express.static(`${__dirname}/dist/blades.png`))
+app.use('/spoons.png', express.static(`${__dirname}/dist/spoons.png`))
 app.use('/data', express.static(`${__dirname}/data`))
 //Parse JSON of incoming requests
 app.use(bodyParser.json())
