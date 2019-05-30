@@ -20,6 +20,7 @@
         <v-btn slot="activator" flat icon @click.native="spoonsOnly = !spoonsOnly">
           <v-img
             src="/spoons.png"
+            :max-width="30"
           ></v-img>
         </v-btn>
         <span>Spoons?</span>
