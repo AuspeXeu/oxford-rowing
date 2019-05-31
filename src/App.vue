@@ -2237,14 +2237,14 @@ export default {
     },
     bladesOnly() {
       if (this.bladesOnly) {
-        this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && (move.moves > 0 || (boat.start === 1 && move.moves === 0)), true))
+        this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && move.moves > 0, true) || this.curPos(boat) === 1)
       } else {
         this.boatsSelected = []
       }
     },
     spoonsOnly() {
       if (this.spoonsOnly) {
-        this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && move.moves < 0, true))
+        this.boatsSelected = this.boats.filter((boat) => boat.moves.reduce((acc, move) => acc && move.moves < 0, true) || this.curPos(boat) === (boat.gender === 'men' ? this.boatsMen.length : this.boatsWomen.length))
       } else {
         this.boatsSelected = []
       }
@@ -2660,7 +2660,11 @@ export default {
       }
     },
     curPos(boat, day) {
-      return boat.moves.slice(0,day).reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
+      let moves = boat.moves
+      if (day) {
+        moves = boat.moves.slice(0, day)
+      }
+      return moves.reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
     },
     curPoint(boat) {
       return {
