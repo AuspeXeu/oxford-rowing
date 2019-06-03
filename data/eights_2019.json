@@ -1139,10 +1139,6 @@
           {
             "status": true,
             "moves": 0
-          },
-          {
-            "status": false,
-            "moves": -1
           }
         ]
       },
