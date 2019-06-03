@@ -2107,6 +2107,7 @@ export default {
       features: [
         {key: 'localtime', text: 'Race times are displayed in your local time :)'},
         {key: 'crewlist', text: `Click on a boat's crest to see its crew list!`},
+        {key: 'crewlisthist', text: 'We now added crew lists for all events back until 2017'},
         {key: 'spoons', text: `Thanks to Harry Mellor (Hugh's) we now also have a spoons filter!`}
       ],
       feature: null,
