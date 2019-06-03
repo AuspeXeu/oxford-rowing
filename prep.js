@@ -1,3 +1,10 @@
+/*** Only the following parameters need to be adjusted each event ***/
+// This can either be 'torpids' or 'eights'
+const event = 'eights'
+const year = 2019
+const crewlist = 'https://ourcs.co.uk/racing/entries/events/event/1/crew_lists/'
+
+// DO NOT CHANGE ANYTHING BELOW THIS LINE
 const fs = require('fs')
 const axios = require('axios')
 const moment = require('moment')
@@ -5,14 +12,9 @@ const decode = require('decode-html')
 const cheerio = require('cheerio')
 
 const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ...args])
+const isTorpids = () => event.indexOf('torpids') > -1
 
-// Only the following two parameters need to be adjusted each year
-//const startingOrder = 'http://eodg.atm.ox.ac.uk/user/dudhia/rowing/torpids/t19sta.html'
-const startingOrder = 'http://eodg.atm.ox.ac.uk/user/dudhia/rowing/eights/e19sta.html'
-const crewlist = 'https://ourcs.co.uk/racing/entries/events/event/198/crew_lists/'
-const year = 2019
-
-const isTorpids = () => startingOrder.indexOf('torpids') > -1
+const startingOrder = `http://eodg.atm.ox.ac.uk/user/dudhia/rowing/${event}/${event.substring(0,1)}${year.toString().substring(2,4)}sta.html`
 const boatsPerDiv = isTorpids() ? 12 : 13
 const fbase = `${__dirname}/data/${isTorpids() ? 'torpids' : 'eights'}_${year}`
 const table = {
@@ -82,34 +84,38 @@ const dctTrans = {
 
 const glyphs = Object.keys(dctTrans)
 
-axios.get(crewlist)
-  .then((response) => {
-    const crews = {}
-    const $ = cheerio.load(response.data)
-    const crewsRaw = {}
-    $('div.panel.panel-default').each((idx, eleme) => {
-      const crew = decode($('a', eleme).html())
-      crewsRaw[crew] = []
-      $('tr', eleme).each((i, elem) => {
-        crewsRaw[crew].push({pos: $('.text-right', elem).html(), name: decode($('.text-left', elem).html())})
+const downloadCrewlist = (url, dst) => {
+  axios.get(url)
+    .then((response) => {
+      const crews = {}
+      const $ = cheerio.load(response.data)
+      const crewsRaw = {}
+      $('div.panel.panel-default').each((idx, eleme) => {
+        const crew = decode($('a', eleme).html())
+        crewsRaw[crew] = []
+        $('tr', eleme).each((i, elem) => {
+          crewsRaw[crew].push({pos: $('.text-right', elem).html(), name: decode($('.text-left', elem).html())})
+        })
+        if (crewsRaw[crew].length !== 10) {
+          delete crewsRaw[crew]
+        }
       })
-      if (crewsRaw[crew].length !== 10) {
-        delete crewsRaw[crew]
-      }
+      Object.keys(crewsRaw).forEach((clubRaw) => {
+        const [_, needle, gender, number] = clubRaw.match(/(.*?)\s*([M|W])([0-9]*)$/)
+        const club = Object.keys(table).find((key) => table[key].call.indexOf(needle) !== -1)
+        if (!club) {
+          log(clubRaw)
+        }
+        if (!crews[club]) {
+          crews[club] = {men: {}, women: {}}
+        }
+        crews[club][gender === 'M' ? 'men' : 'women'][number] = crewsRaw[clubRaw]
+      })
+      fs.writeFileSync(dst, JSON.stringify(crews, null, 2))
     })
-    Object.keys(crewsRaw).forEach((clubRaw) => {
-      const [_, needle, gender, number] = clubRaw.match(/(.*?)\s*([M|W])([0-9]*)$/)
-      const club = Object.keys(table).find((key) => table[key].call.indexOf(needle) !== -1)
-      if (!club) {
-        log(clubRaw)
-      }
-      if (!crews[club]) {
-        crews[club] = {men: {}, women: {}}
-      }
-      crews[club][gender === 'M' ? 'men' : 'women'][number] = crewsRaw[clubRaw]
-    })
-    fs.writeFileSync(`${fbase}_crews.json`, JSON.stringify(crews, null, 2))
-  })
+}
+
+downloadCrewlist(crewlist, `${fbase}_crews.json`)
 
 axios.get(startingOrder)
   .then((response) => {
