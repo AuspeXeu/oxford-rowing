@@ -1,0 +1,7608 @@
+{
+  "BAL": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Paul Gerstmayr"
+        },
+        {
+          "pos": "2",
+          "name": "James Ormiston"
+        },
+        {
+          "pos": "3",
+          "name": "Patrick Michelberger"
+        },
+        {
+          "pos": "4",
+          "name": "Dan Rosmarin"
+        },
+        {
+          "pos": "5",
+          "name": "Anthony Butler"
+        },
+        {
+          "pos": "6",
+          "name": "Leonid Ganin"
+        },
+        {
+          "pos": "7",
+          "name": "Oscar Schonfeld"
+        },
+        {
+          "pos": "Str",
+          "name": "Edward Jacobs"
+        },
+        {
+          "pos": "Cox",
+          "name": "Nicholas Parkinson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Peter Haining"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Richard Dumbill"
+        },
+        {
+          "pos": "2",
+          "name": "Lubomir Atanassov"
+        },
+        {
+          "pos": "3",
+          "name": "Rob Stabler"
+        },
+        {
+          "pos": "4",
+          "name": "Rasmus Rothe"
+        },
+        {
+          "pos": "5",
+          "name": "Calum Johnstone"
+        },
+        {
+          "pos": "6",
+          "name": "Alan Chappell"
+        },
+        {
+          "pos": "7",
+          "name": "Thomas Harty"
+        },
+        {
+          "pos": "Str",
+          "name": "Martin Felle"
+        },
+        {
+          "pos": "Cox",
+          "name": "John Lees"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Wright"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Samuel Stoll"
+        },
+        {
+          "pos": "2",
+          "name": "Chan-young Song"
+        },
+        {
+          "pos": "3",
+          "name": "Gergely Szucs"
+        },
+        {
+          "pos": "4",
+          "name": "Slav Ovtcharov"
+        },
+        {
+          "pos": "5",
+          "name": "Oliver Mcgregor"
+        },
+        {
+          "pos": "6",
+          "name": "Robert Wadsworth"
+        },
+        {
+          "pos": "7",
+          "name": "Jai Juneja"
+        },
+        {
+          "pos": "Str",
+          "name": "Thomas Simpkins"
+        },
+        {
+          "pos": "Cox",
+          "name": "Matthew Kennedy"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tobias Witting"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Nathan Hinton"
+        },
+        {
+          "pos": "2",
+          "name": "Hannah Smith-willis"
+        },
+        {
+          "pos": "3",
+          "name": "Aaron Cantrell"
+        },
+        {
+          "pos": "4",
+          "name": "Christopher Cooper"
+        },
+        {
+          "pos": "5",
+          "name": "Tewfiq Al-sharaiyra"
+        },
+        {
+          "pos": "6",
+          "name": "Nicholas Thomas-peter"
+        },
+        {
+          "pos": "7",
+          "name": "Jack Devlin"
+        },
+        {
+          "pos": "Str",
+          "name": "Christopher Wright"
+        },
+        {
+          "pos": "Cox",
+          "name": "Alice Lighton"
+        },
+        {
+          "pos": "Coach",
+          "name": "Count Orlando Gordouli"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Sophie Avery"
+        },
+        {
+          "pos": "2",
+          "name": "Ramya Ravishankar"
+        },
+        {
+          "pos": "3",
+          "name": "Katherine Mcleod"
+        },
+        {
+          "pos": "4",
+          "name": "Azita Chellappoo"
+        },
+        {
+          "pos": "5",
+          "name": "Barbara Lauriat"
+        },
+        {
+          "pos": "6",
+          "name": "Sophie Wragg"
+        },
+        {
+          "pos": "7",
+          "name": "Aelwen Wetherby"
+        },
+        {
+          "pos": "Str",
+          "name": "Clarissa Belloni"
+        },
+        {
+          "pos": "Cox",
+          "name": "Simon Wan"
+        },
+        {
+          "pos": "Coach",
+          "name": "Gabrielle Harrison"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Alice Buchan"
+        },
+        {
+          "pos": "2",
+          "name": "Juliette Kelly"
+        },
+        {
+          "pos": "3",
+          "name": "Amelia Bradley"
+        },
+        {
+          "pos": "4",
+          "name": "Elisabetta Tollardo"
+        },
+        {
+          "pos": "5",
+          "name": "Sarah Edwards"
+        },
+        {
+          "pos": "6",
+          "name": "Lucy Munson"
+        },
+        {
+          "pos": "7",
+          "name": "Molly Dickinson"
+        },
+        {
+          "pos": "Str",
+          "name": "Rebecca Mitchell"
+        },
+        {
+          "pos": "Cox",
+          "name": "Hannah Robertson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Jim Ormiston"
+        }
+      ]
+    }
+  },
+  "BRC": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Jack Rendle"
+        },
+        {
+          "pos": "2",
+          "name": "Joshua Critchlow"
+        },
+        {
+          "pos": "3",
+          "name": "Michael Bonner"
+        },
+        {
+          "pos": "4",
+          "name": "Galen Sher"
+        },
+        {
+          "pos": "5",
+          "name": "Oliver Bubb-humfryes"
+        },
+        {
+          "pos": "6",
+          "name": "Thomas Gunter"
+        },
+        {
+          "pos": "7",
+          "name": "Tom Rogers"
+        },
+        {
+          "pos": "Str",
+          "name": "Matthew Cooke"
+        },
+        {
+          "pos": "Cox",
+          "name": "Katherine Lee"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ben Duggan"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Pawel Czerniawski"
+        },
+        {
+          "pos": "2",
+          "name": "Jun Chao Tai"
+        },
+        {
+          "pos": "3",
+          "name": "Michael Hinge"
+        },
+        {
+          "pos": "4",
+          "name": "Arne Dahl"
+        },
+        {
+          "pos": "5",
+          "name": "Charles Girault"
+        },
+        {
+          "pos": "6",
+          "name": "Oliver Brady"
+        },
+        {
+          "pos": "7",
+          "name": "Steffan Glaze"
+        },
+        {
+          "pos": "Str",
+          "name": "Russell Smith"
+        },
+        {
+          "pos": "Cox",
+          "name": "Rebecca Dawes"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ben Duggan"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Mark Bates"
+        },
+        {
+          "pos": "2",
+          "name": "Ronan Burrows-O\\'Donoghue"
+        },
+        {
+          "pos": "3",
+          "name": "John Forster"
+        },
+        {
+          "pos": "4",
+          "name": "Thomas Purdy"
+        },
+        {
+          "pos": "5",
+          "name": "Jakob Breinholt"
+        },
+        {
+          "pos": "6",
+          "name": "Nikolas Kirby"
+        },
+        {
+          "pos": "7",
+          "name": "Benjamin Ralph"
+        },
+        {
+          "pos": "Str",
+          "name": "Ben Morton"
+        },
+        {
+          "pos": "Cox",
+          "name": "Tommy Peto"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ben Duggan"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Ally Smith"
+        },
+        {
+          "pos": "2",
+          "name": "Amrit Gosal"
+        },
+        {
+          "pos": "3",
+          "name": "Alexandra Thorne"
+        },
+        {
+          "pos": "4",
+          "name": "Helena Lysaght"
+        },
+        {
+          "pos": "5",
+          "name": "Melody Munro"
+        },
+        {
+          "pos": "6",
+          "name": "Eilidh Brown"
+        },
+        {
+          "pos": "7",
+          "name": "Sarah-jane Littleford"
+        },
+        {
+          "pos": "Str",
+          "name": "Nathalie Larsen"
+        },
+        {
+          "pos": "Cox",
+          "name": "Alyssa Grossbard"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ben McSweeney"
+        }
+      ]
+    }
+  },
+  "CHB": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "James Hopkins"
+        },
+        {
+          "pos": "2",
+          "name": "Jeremy Turner"
+        },
+        {
+          "pos": "3",
+          "name": "Sam Wareham"
+        },
+        {
+          "pos": "4",
+          "name": "James Plunkett"
+        },
+        {
+          "pos": "5",
+          "name": "Peter Gornall"
+        },
+        {
+          "pos": "6",
+          "name": "Ian Maconnachie"
+        },
+        {
+          "pos": "7",
+          "name": "David Border"
+        },
+        {
+          "pos": "Str",
+          "name": "Thomas Cassidy"
+        },
+        {
+          "pos": "Cox",
+          "name": "Joseph Angliss"
+        },
+        {
+          "pos": "Coach",
+          "name": "Laurence Birdsey"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Giles Prentice"
+        },
+        {
+          "pos": "2",
+          "name": "Oliver Saloway"
+        },
+        {
+          "pos": "3",
+          "name": "Samuel Folkard"
+        },
+        {
+          "pos": "4",
+          "name": "Angus De Wilton"
+        },
+        {
+          "pos": "5",
+          "name": "Nichols Silbersack"
+        },
+        {
+          "pos": "6",
+          "name": "Nick Miller"
+        },
+        {
+          "pos": "7",
+          "name": "Nathan Lamb"
+        },
+        {
+          "pos": "Str",
+          "name": "Joshua Sexton"
+        },
+        {
+          "pos": "Cox",
+          "name": "Richard Dean"
+        },
+        {
+          "pos": "Coach",
+          "name": "Jon Carley"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Kevin Tan"
+        },
+        {
+          "pos": "2",
+          "name": "Rowan Callinan"
+        },
+        {
+          "pos": "3",
+          "name": "Vadim Toader"
+        },
+        {
+          "pos": "4",
+          "name": "Thomas Chambers"
+        },
+        {
+          "pos": "5",
+          "name": "Luke Seamone"
+        },
+        {
+          "pos": "6",
+          "name": "Charles Fox"
+        },
+        {
+          "pos": "7",
+          "name": "Ashley Clift"
+        },
+        {
+          "pos": "Str",
+          "name": "Alexander Chajecki"
+        },
+        {
+          "pos": "Cox",
+          "name": "Ian Maconnachie"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ian Maconnachie"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "John Murphy"
+        },
+        {
+          "pos": "2",
+          "name": "William Wells"
+        },
+        {
+          "pos": "3",
+          "name": "George Huntley"
+        },
+        {
+          "pos": "4",
+          "name": "Laurence Birdsey"
+        },
+        {
+          "pos": "5",
+          "name": "Leo Bradshaw"
+        },
+        {
+          "pos": "6",
+          "name": "Thomas Hine"
+        },
+        {
+          "pos": "7",
+          "name": "Thomas Montgomery"
+        },
+        {
+          "pos": "Str",
+          "name": "Gregory Suter"
+        },
+        {
+          "pos": "Cox",
+          "name": "Andrew Pearson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Will King"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Jenny Bradley"
+        },
+        {
+          "pos": "2",
+          "name": "Laura Shepherd"
+        },
+        {
+          "pos": "3",
+          "name": "Amanda Shriwise"
+        },
+        {
+          "pos": "4",
+          "name": "Ellie Darlington"
+        },
+        {
+          "pos": "5",
+          "name": "Harriet Partridge"
+        },
+        {
+          "pos": "6",
+          "name": "Elizabeth Jamie"
+        },
+        {
+          "pos": "7",
+          "name": "Caitlyn Guthrie"
+        },
+        {
+          "pos": "Str",
+          "name": "Lena Frey"
+        },
+        {
+          "pos": "Cox",
+          "name": "Caroline Ames"
+        },
+        {
+          "pos": "Coach",
+          "name": "Laurence Birdsey"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Annette Boehmer"
+        },
+        {
+          "pos": "2",
+          "name": "Elizabeth Raine"
+        },
+        {
+          "pos": "3",
+          "name": "Tharshi Singam"
+        },
+        {
+          "pos": "4",
+          "name": "Emily Mccartney"
+        },
+        {
+          "pos": "5",
+          "name": "Elena Holtkotte"
+        },
+        {
+          "pos": "6",
+          "name": "Jessica Hadley"
+        },
+        {
+          "pos": "7",
+          "name": "Emma Roker"
+        },
+        {
+          "pos": "Str",
+          "name": "Amber Schild"
+        },
+        {
+          "pos": "Cox",
+          "name": "Melanie Beer"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tom Montgomery"
+        }
+      ]
+    }
+  },
+  "COO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Carl Morris"
+        },
+        {
+          "pos": "2",
+          "name": "Ryan Wood"
+        },
+        {
+          "pos": "3",
+          "name": "James Marsden"
+        },
+        {
+          "pos": "4",
+          "name": "David Fidgett"
+        },
+        {
+          "pos": "5",
+          "name": "Jerome Condry"
+        },
+        {
+          "pos": "6",
+          "name": "Jeremy Dodd"
+        },
+        {
+          "pos": "7",
+          "name": "Jeffrey Rawson"
+        },
+        {
+          "pos": "Str",
+          "name": "Joseph Dawson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Stephanie Clark"
+        },
+        {
+          "pos": "Coach",
+          "name": "Thomas Chapman"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Daniel Stubbins"
+        },
+        {
+          "pos": "2",
+          "name": "Alexander Law"
+        },
+        {
+          "pos": "3",
+          "name": "Jan Scholten"
+        },
+        {
+          "pos": "4",
+          "name": "Jonathan Sanderson"
+        },
+        {
+          "pos": "5",
+          "name": "Adam Levine"
+        },
+        {
+          "pos": "6",
+          "name": "Stuart Thomson"
+        },
+        {
+          "pos": "7",
+          "name": "James Leigh"
+        },
+        {
+          "pos": "Str",
+          "name": "Stephen Ambrose"
+        },
+        {
+          "pos": "Cox",
+          "name": "Eleanor Grieveson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Jeffrey Rawson"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Caroline Ellard"
+        },
+        {
+          "pos": "2",
+          "name": "Sophie  Godard Desmarest"
+        },
+        {
+          "pos": "3",
+          "name": "Hannah Dawson"
+        },
+        {
+          "pos": "4",
+          "name": "Clare Franklin"
+        },
+        {
+          "pos": "5",
+          "name": "Katherine Smith"
+        },
+        {
+          "pos": "6",
+          "name": "Alice Penfold"
+        },
+        {
+          "pos": "7",
+          "name": "Emma Pinchbeck"
+        },
+        {
+          "pos": "Str",
+          "name": "Olivia Elder"
+        },
+        {
+          "pos": "Cox",
+          "name": "Felix Neate"
+        },
+        {
+          "pos": "Coach",
+          "name": "Thomas Chapman"
+        }
+      ]
+    }
+  },
+  "EXC": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Michael Turner"
+        },
+        {
+          "pos": "2",
+          "name": "Harry Willis"
+        },
+        {
+          "pos": "3",
+          "name": "Christopher Lilyblad"
+        },
+        {
+          "pos": "4",
+          "name": "Samuel Barrow"
+        },
+        {
+          "pos": "5",
+          "name": "Joseph Jones"
+        },
+        {
+          "pos": "6",
+          "name": "George Bainbridge"
+        },
+        {
+          "pos": "7",
+          "name": "Michael Wilson"
+        },
+        {
+          "pos": "Str",
+          "name": "Thomas Bloomfield"
+        },
+        {
+          "pos": "Cox",
+          "name": "Charles Howell"
+        },
+        {
+          "pos": "Coach",
+          "name": "Toby Reneike"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "James Craven"
+        },
+        {
+          "pos": "2",
+          "name": "Max Mulvany"
+        },
+        {
+          "pos": "3",
+          "name": "Cesar Tron-lozai"
+        },
+        {
+          "pos": "4",
+          "name": "Davide Bonapersona"
+        },
+        {
+          "pos": "5",
+          "name": "Jakob Rostoel"
+        },
+        {
+          "pos": "6",
+          "name": "Adam Sharpe"
+        },
+        {
+          "pos": "7",
+          "name": "Julien Truffaut"
+        },
+        {
+          "pos": "Str",
+          "name": "Martin Mattsson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Sami Husain"
+        },
+        {
+          "pos": "Coach",
+          "name": "Sami Husain"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Ka Li"
+        },
+        {
+          "pos": "2",
+          "name": "Mark Fliegauf"
+        },
+        {
+          "pos": "3",
+          "name": "Vincent Larochelle"
+        },
+        {
+          "pos": "4",
+          "name": "Samuel Cox"
+        },
+        {
+          "pos": "5",
+          "name": "Michael Pontikos"
+        },
+        {
+          "pos": "6",
+          "name": "Joseph O'Shea"
+        },
+        {
+          "pos": "7",
+          "name": "John Ryan"
+        },
+        {
+          "pos": "Str",
+          "name": "David Donaghy"
+        },
+        {
+          "pos": "Cox",
+          "name": "Natasha Fagelman"
+        },
+        {
+          "pos": "Coach",
+          "name": "Dan Scott"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Suzannah Morris"
+        },
+        {
+          "pos": "2",
+          "name": "Natasha Fagelman"
+        },
+        {
+          "pos": "3",
+          "name": "Hannah Dickens"
+        },
+        {
+          "pos": "4",
+          "name": "Leila Rohd-thomsen"
+        },
+        {
+          "pos": "5",
+          "name": "Hilary Wynne"
+        },
+        {
+          "pos": "6",
+          "name": "Laura Gregory"
+        },
+        {
+          "pos": "7",
+          "name": "Alexandra Baker"
+        },
+        {
+          "pos": "Str",
+          "name": "Gabriella Davis"
+        },
+        {
+          "pos": "Cox",
+          "name": "Selena Wang-thomas"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Arnold"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Therese Feiler"
+        },
+        {
+          "pos": "2",
+          "name": "Katherine Ryland"
+        },
+        {
+          "pos": "3",
+          "name": "Giulia Macaro"
+        },
+        {
+          "pos": "4",
+          "name": "Leonie Amarasekara"
+        },
+        {
+          "pos": "5",
+          "name": "Natasha Jackson"
+        },
+        {
+          "pos": "6",
+          "name": "Elizabeth Crabtree"
+        },
+        {
+          "pos": "7",
+          "name": "Katherine Egan"
+        },
+        {
+          "pos": "Str",
+          "name": "Paola Ferrari"
+        },
+        {
+          "pos": "Cox",
+          "name": "Christopher Arnold"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Arnold"
+        }
+      ]
+    }
+  },
+  "GTM": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Eduardo Lopez"
+        },
+        {
+          "pos": "2",
+          "name": "Timothy Cheng"
+        },
+        {
+          "pos": "3",
+          "name": "Robert Hastings"
+        },
+        {
+          "pos": "4",
+          "name": "Tyler Lane"
+        },
+        {
+          "pos": "5",
+          "name": "Andrew Symington"
+        },
+        {
+          "pos": "6",
+          "name": "Nathanael Buckley"
+        },
+        {
+          "pos": "7",
+          "name": "Joseph Feyertag"
+        },
+        {
+          "pos": "Str",
+          "name": "Henno Martin"
+        },
+        {
+          "pos": "Cox",
+          "name": "Sean Grant"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alex Rhodes"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Steven Renwick"
+        },
+        {
+          "pos": "2",
+          "name": "Maksim Ryabukhin"
+        },
+        {
+          "pos": "3",
+          "name": "Abrar Chaudhury"
+        },
+        {
+          "pos": "4",
+          "name": "Abdel Hamra-badaoui"
+        },
+        {
+          "pos": "5",
+          "name": "Gregor Makosch"
+        },
+        {
+          "pos": "6",
+          "name": "Eugene Oteng"
+        },
+        {
+          "pos": "7",
+          "name": "Nikolay Nikolskiy"
+        },
+        {
+          "pos": "Str",
+          "name": "Michael Dudley"
+        },
+        {
+          "pos": "Cox",
+          "name": "Alexander Rhodes"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alex Rhodes"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Robyn Cox"
+        },
+        {
+          "pos": "2",
+          "name": "Kate O'brien"
+        },
+        {
+          "pos": "3",
+          "name": "Claire Waddington"
+        },
+        {
+          "pos": "4",
+          "name": "Erica Mackey"
+        },
+        {
+          "pos": "5",
+          "name": "Michelle Toleman"
+        },
+        {
+          "pos": "6",
+          "name": "Rebecca Waller"
+        },
+        {
+          "pos": "7",
+          "name": "Yulia Stange"
+        },
+        {
+          "pos": "Str",
+          "name": "Sheila Lumley"
+        },
+        {
+          "pos": "Cox",
+          "name": "Anna Francis"
+        },
+        {
+          "pos": "Coach",
+          "name": "Allan French"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Shuaishuai He"
+        },
+        {
+          "pos": "2",
+          "name": "Katherine Gaynor"
+        },
+        {
+          "pos": "3",
+          "name": "Anna Seeley"
+        },
+        {
+          "pos": "4",
+          "name": "Susan Portalupi"
+        },
+        {
+          "pos": "5",
+          "name": "Anne Mcewen"
+        },
+        {
+          "pos": "6",
+          "name": "Melanie Bunce"
+        },
+        {
+          "pos": "7",
+          "name": "Alison Buckley"
+        },
+        {
+          "pos": "Str",
+          "name": "Allison Stewart"
+        },
+        {
+          "pos": "Cox",
+          "name": "Eduardo Lopez"
+        },
+        {
+          "pos": "Coach",
+          "name": "Allan French"
+        }
+      ]
+    }
+  },
+  "HEC": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Mark Longhurst"
+        },
+        {
+          "pos": "2",
+          "name": "Patrick Burke"
+        },
+        {
+          "pos": "3",
+          "name": "Thomas Mcgregor"
+        },
+        {
+          "pos": "4",
+          "name": "Kristian Klausen"
+        },
+        {
+          "pos": "5",
+          "name": "Harry Biddle"
+        },
+        {
+          "pos": "6",
+          "name": "Peter Morten"
+        },
+        {
+          "pos": "7",
+          "name": "Jonas Schwan"
+        },
+        {
+          "pos": "Str",
+          "name": "Ben Girling"
+        },
+        {
+          "pos": "Cox",
+          "name": "Henry Fisher"
+        },
+        {
+          "pos": "Coach",
+          "name": "Graham Topping"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Seaver Milnor"
+        },
+        {
+          "pos": "2",
+          "name": "Timothy Hogwood"
+        },
+        {
+          "pos": "3",
+          "name": "Ivo Gruev"
+        },
+        {
+          "pos": "4",
+          "name": "Robert Carpenter"
+        },
+        {
+          "pos": "5",
+          "name": "Sam Hawkins"
+        },
+        {
+          "pos": "6",
+          "name": "Douglas Reed"
+        },
+        {
+          "pos": "7",
+          "name": "James Hutton"
+        },
+        {
+          "pos": "Str",
+          "name": "James Holley"
+        },
+        {
+          "pos": "Cox",
+          "name": "Daniel Hultgren"
+        },
+        {
+          "pos": "Coach",
+          "name": "Graham Topping"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Alice Sykes"
+        },
+        {
+          "pos": "2",
+          "name": "Louise Ellis"
+        },
+        {
+          "pos": "3",
+          "name": "Rebecca Stevens"
+        },
+        {
+          "pos": "4",
+          "name": "Alexandra Huk"
+        },
+        {
+          "pos": "5",
+          "name": "Vanessa Lehner"
+        },
+        {
+          "pos": "6",
+          "name": "Natalie McDaid"
+        },
+        {
+          "pos": "7",
+          "name": "Ellen Royrvik"
+        },
+        {
+          "pos": "Str",
+          "name": "Sarah Kelly"
+        },
+        {
+          "pos": "Cox",
+          "name": "Joe Phillips"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ed Whiteley"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Camilla Walker"
+        },
+        {
+          "pos": "2",
+          "name": "Aidan Kestigian"
+        },
+        {
+          "pos": "3",
+          "name": "Rachael Kauss"
+        },
+        {
+          "pos": "4",
+          "name": "Lucy Phillips"
+        },
+        {
+          "pos": "5",
+          "name": "Clemence Boland"
+        },
+        {
+          "pos": "6",
+          "name": "Shivaangee Agrawal"
+        },
+        {
+          "pos": "7",
+          "name": "Aisling Scott"
+        },
+        {
+          "pos": "Str",
+          "name": "Louise Bartelt"
+        },
+        {
+          "pos": "Cox",
+          "name": "Elizabeth Fitzgerald"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ed Whiteley"
+        }
+      ]
+    }
+  },
+  "JEO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "William Coulton"
+        },
+        {
+          "pos": "2",
+          "name": "Alasdair Reed"
+        },
+        {
+          "pos": "3",
+          "name": "James Yapp"
+        },
+        {
+          "pos": "4",
+          "name": "Jonathan McCrostie"
+        },
+        {
+          "pos": "5",
+          "name": "Michael Haynes"
+        },
+        {
+          "pos": "6",
+          "name": "Joshua Peckham"
+        },
+        {
+          "pos": "7",
+          "name": "Erlend Reiten"
+        },
+        {
+          "pos": "Str",
+          "name": "Benjamin Dymott"
+        },
+        {
+          "pos": "Cox",
+          "name": "Grace Hansen"
+        },
+        {
+          "pos": "Coach",
+          "name": "Peter Nordberg"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Benjamin Ruddle"
+        },
+        {
+          "pos": "2",
+          "name": "Guy Pearson"
+        },
+        {
+          "pos": "3",
+          "name": "Luke Eaton"
+        },
+        {
+          "pos": "4",
+          "name": "Matthew Jones"
+        },
+        {
+          "pos": "5",
+          "name": "Michael Murphy"
+        },
+        {
+          "pos": "6",
+          "name": "Alastair Nuttall"
+        },
+        {
+          "pos": "7",
+          "name": "Oren Margolis"
+        },
+        {
+          "pos": "Str",
+          "name": "Alex Hannington"
+        },
+        {
+          "pos": "Cox",
+          "name": "Declan Clowry"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tom Springbett"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Michael Parry"
+        },
+        {
+          "pos": "2",
+          "name": "Alexander Waters"
+        },
+        {
+          "pos": "3",
+          "name": "Jonathon Woodward"
+        },
+        {
+          "pos": "4",
+          "name": "Oliver Bentley"
+        },
+        {
+          "pos": "5",
+          "name": "Alexander Russman"
+        },
+        {
+          "pos": "6",
+          "name": "Joseph Friesenhahn"
+        },
+        {
+          "pos": "7",
+          "name": "Christian Shepherd"
+        },
+        {
+          "pos": "Str",
+          "name": "Aaron Freeman-powell"
+        },
+        {
+          "pos": "Cox",
+          "name": "Thomas Rutland"
+        },
+        {
+          "pos": "Coach",
+          "name": "Jonathan McCrostie"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Alexander Browne"
+        },
+        {
+          "pos": "2",
+          "name": "Christopher Pluck"
+        },
+        {
+          "pos": "3",
+          "name": "Maxwell Harris"
+        },
+        {
+          "pos": "4",
+          "name": "Thomas Bruccoleri"
+        },
+        {
+          "pos": "5",
+          "name": "Zhikuan Zhao"
+        },
+        {
+          "pos": "6",
+          "name": "Alexander Humphreys"
+        },
+        {
+          "pos": "7",
+          "name": "Patrick Cavanagh"
+        },
+        {
+          "pos": "Str",
+          "name": "David Foxwell"
+        },
+        {
+          "pos": "Cox",
+          "name": "Andrew Pollitt"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ben Dymott"
+        }
+      ],
+      "5": [
+        {
+          "pos": "Bow",
+          "name": "Thomas Wickersham"
+        },
+        {
+          "pos": "2",
+          "name": "David Timmins"
+        },
+        {
+          "pos": "3",
+          "name": "Henry Hoskins"
+        },
+        {
+          "pos": "4",
+          "name": "Edward Owen"
+        },
+        {
+          "pos": "5",
+          "name": "Robert Sharp"
+        },
+        {
+          "pos": "6",
+          "name": "Samuel Mortimer"
+        },
+        {
+          "pos": "7",
+          "name": "Jonathan Williams"
+        },
+        {
+          "pos": "Str",
+          "name": "Haydn Thomas"
+        },
+        {
+          "pos": "Cox",
+          "name": "Clarissa Mcmaster"
+        },
+        {
+          "pos": "Coach",
+          "name": "Haydn Thomas"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Meghan Jobson"
+        },
+        {
+          "pos": "2",
+          "name": "Bella Dwan"
+        },
+        {
+          "pos": "3",
+          "name": "Charlotte Rowbotham"
+        },
+        {
+          "pos": "4",
+          "name": "Rhianna Jones"
+        },
+        {
+          "pos": "5",
+          "name": "Bronwyn Stippa"
+        },
+        {
+          "pos": "6",
+          "name": "Louise Privett"
+        },
+        {
+          "pos": "7",
+          "name": "Alina Blain"
+        },
+        {
+          "pos": "Str",
+          "name": "Laura Gallimore"
+        },
+        {
+          "pos": "Cox",
+          "name": "David McMullan"
+        },
+        {
+          "pos": "Coach",
+          "name": "James Marsden"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Lowri Ifor"
+        },
+        {
+          "pos": "2",
+          "name": "Philippa Winstanley"
+        },
+        {
+          "pos": "3",
+          "name": "Elizabeth Harnett"
+        },
+        {
+          "pos": "4",
+          "name": "Ruth Jenkins"
+        },
+        {
+          "pos": "5",
+          "name": "Helen Kaminski"
+        },
+        {
+          "pos": "6",
+          "name": "Emma Worrall"
+        },
+        {
+          "pos": "7",
+          "name": "Sarah Morrow"
+        },
+        {
+          "pos": "Str",
+          "name": "Hannah Arnold"
+        },
+        {
+          "pos": "Cox",
+          "name": "Suzanne Power"
+        },
+        {
+          "pos": "Coach",
+          "name": "Haydn Thomas"
+        }
+      ]
+    }
+  },
+  "KEB": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Callum Rogers"
+        },
+        {
+          "pos": "2",
+          "name": "David Owen"
+        },
+        {
+          "pos": "3",
+          "name": "Paul Anastasiades"
+        },
+        {
+          "pos": "4",
+          "name": "Edward Bailhache"
+        },
+        {
+          "pos": "5",
+          "name": "Maxwell Jaderberg"
+        },
+        {
+          "pos": "6",
+          "name": "John Menzies"
+        },
+        {
+          "pos": "7",
+          "name": "Joshua Holland"
+        },
+        {
+          "pos": "Str",
+          "name": "Philipp Schmidt"
+        },
+        {
+          "pos": "Cox",
+          "name": "Amy Barker"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ryan Demaine"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Emil Culic"
+        },
+        {
+          "pos": "2",
+          "name": "Joe Jordan"
+        },
+        {
+          "pos": "3",
+          "name": "Peter Barkat"
+        },
+        {
+          "pos": "4",
+          "name": "Benjamin Rickett"
+        },
+        {
+          "pos": "5",
+          "name": "Max Dillon"
+        },
+        {
+          "pos": "6",
+          "name": "Christopher Smith"
+        },
+        {
+          "pos": "7",
+          "name": "Edward Coe"
+        },
+        {
+          "pos": "Str",
+          "name": "James May"
+        },
+        {
+          "pos": "Cox",
+          "name": "Abbie Cooper"
+        },
+        {
+          "pos": "Coach",
+          "name": "Oliver Jack"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Charles Metcalfe"
+        },
+        {
+          "pos": "2",
+          "name": "Basil Vincent"
+        },
+        {
+          "pos": "3",
+          "name": "Christopher Toumazis"
+        },
+        {
+          "pos": "4",
+          "name": "Sebastian Leape"
+        },
+        {
+          "pos": "5",
+          "name": "Jake Lancaster"
+        },
+        {
+          "pos": "6",
+          "name": "Samuel Bunce"
+        },
+        {
+          "pos": "7",
+          "name": "Christian Butcher"
+        },
+        {
+          "pos": "Str",
+          "name": "Michael Mitchell"
+        },
+        {
+          "pos": "Cox",
+          "name": "Henry Stapley"
+        },
+        {
+          "pos": "Coach",
+          "name": "Oliver Jack"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Elizabeth Murphy"
+        },
+        {
+          "pos": "2",
+          "name": "Christabel Kelly"
+        },
+        {
+          "pos": "3",
+          "name": "Amy Neale"
+        },
+        {
+          "pos": "4",
+          "name": "Kirsty Dixon"
+        },
+        {
+          "pos": "5",
+          "name": "Meagan  Skillas"
+        },
+        {
+          "pos": "6",
+          "name": "Natasha Green"
+        },
+        {
+          "pos": "7",
+          "name": "Lynn Edwards"
+        },
+        {
+          "pos": "Str",
+          "name": "Flora Devlin"
+        },
+        {
+          "pos": "Cox",
+          "name": "James Hawkes"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ryan Demaine"
+        }
+      ]
+    }
+  },
+  "LMH": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Paul Taylor"
+        },
+        {
+          "pos": "2",
+          "name": "Joshua Hobson"
+        },
+        {
+          "pos": "3",
+          "name": "Geoffrey Ellis"
+        },
+        {
+          "pos": "4",
+          "name": "Max Esteves"
+        },
+        {
+          "pos": "5",
+          "name": "Justus Goettemann"
+        },
+        {
+          "pos": "6",
+          "name": "Lloyd Chapman"
+        },
+        {
+          "pos": "7",
+          "name": "Ross Stevenson"
+        },
+        {
+          "pos": "Str",
+          "name": "Gordon Stevenson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Karen Clarke"
+        },
+        {
+          "pos": "Coach",
+          "name": "Peter Haining"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Oliver Cohen"
+        },
+        {
+          "pos": "2",
+          "name": "Matthew Durey"
+        },
+        {
+          "pos": "3",
+          "name": "Cheng Zhou"
+        },
+        {
+          "pos": "4",
+          "name": "Martin Cullen"
+        },
+        {
+          "pos": "5",
+          "name": "Michael Jones"
+        },
+        {
+          "pos": "6",
+          "name": "William Hoole"
+        },
+        {
+          "pos": "7",
+          "name": "John Williams"
+        },
+        {
+          "pos": "Str",
+          "name": "Ian Ashcroft"
+        },
+        {
+          "pos": "Cox",
+          "name": "Hannah Mays"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ross Stevenson"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "James Black"
+        },
+        {
+          "pos": "2",
+          "name": "Ed Batrouney"
+        },
+        {
+          "pos": "3",
+          "name": "Oliver Beeley"
+        },
+        {
+          "pos": "4",
+          "name": "Ryan Norris"
+        },
+        {
+          "pos": "5",
+          "name": "Matthew Cornford"
+        },
+        {
+          "pos": "6",
+          "name": "Sam Lysons"
+        },
+        {
+          "pos": "7",
+          "name": "Andrew Wilton"
+        },
+        {
+          "pos": "Str",
+          "name": "David Pares"
+        },
+        {
+          "pos": "Cox",
+          "name": "Emily Roberts"
+        },
+        {
+          "pos": "Coach",
+          "name": "Joanna Carrick"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Emily Roberts"
+        },
+        {
+          "pos": "2",
+          "name": "Harriet Jordan"
+        },
+        {
+          "pos": "3",
+          "name": "Elizabeth Collison"
+        },
+        {
+          "pos": "4",
+          "name": "Hayley Jones"
+        },
+        {
+          "pos": "5",
+          "name": "Joanna Carrick"
+        },
+        {
+          "pos": "6",
+          "name": "Sanna Parikka"
+        },
+        {
+          "pos": "7",
+          "name": "Helen Saunders"
+        },
+        {
+          "pos": "Str",
+          "name": "Darja Kremel"
+        },
+        {
+          "pos": "Cox",
+          "name": "Robyn Gougelet"
+        },
+        {
+          "pos": "Coach",
+          "name": "Dan Whalen"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Alice Wingfield"
+        },
+        {
+          "pos": "2",
+          "name": "Lydia Buchanan"
+        },
+        {
+          "pos": "3",
+          "name": "Anna Thompson"
+        },
+        {
+          "pos": "4",
+          "name": "Eve O'brien"
+        },
+        {
+          "pos": "5",
+          "name": "Helen Batchelor"
+        },
+        {
+          "pos": "6",
+          "name": "Kate Clennett"
+        },
+        {
+          "pos": "7",
+          "name": "Rosalind Bray"
+        },
+        {
+          "pos": "Str",
+          "name": "Rosalind Axbey"
+        },
+        {
+          "pos": "Cox",
+          "name": "Elliott Keren"
+        },
+        {
+          "pos": "Coach",
+          "name": "Josh Hobson"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Charlotte Ward"
+        },
+        {
+          "pos": "2",
+          "name": "Nina Poerner"
+        },
+        {
+          "pos": "3",
+          "name": "Samantha Andrews"
+        },
+        {
+          "pos": "4",
+          "name": "Melissa Raybould"
+        },
+        {
+          "pos": "5",
+          "name": "Rachel Sutcliffe"
+        },
+        {
+          "pos": "6",
+          "name": "Natalie Hudson"
+        },
+        {
+          "pos": "7",
+          "name": "Marjolein Poortvliet"
+        },
+        {
+          "pos": "Str",
+          "name": "Sarah Dove"
+        },
+        {
+          "pos": "Cox",
+          "name": "John Williams"
+        },
+        {
+          "pos": "Coach",
+          "name": "Max Esteves"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Artemis Binks"
+        },
+        {
+          "pos": "2",
+          "name": "Sarah Gillis"
+        },
+        {
+          "pos": "3",
+          "name": "Meg Uapipatanakul"
+        },
+        {
+          "pos": "4",
+          "name": "Frances Clifford"
+        },
+        {
+          "pos": "5",
+          "name": "Emma Pope"
+        },
+        {
+          "pos": "6",
+          "name": "Amanda Gilbert"
+        },
+        {
+          "pos": "7",
+          "name": "Sarah Brinkmann"
+        },
+        {
+          "pos": "Str",
+          "name": "Maria  Le Brun"
+        },
+        {
+          "pos": "Cox",
+          "name": "Joshua Hobson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Max Esteves"
+        }
+      ]
+    }
+  },
+  "LIN": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Ken Au"
+        },
+        {
+          "pos": "2",
+          "name": "Kish Minhas"
+        },
+        {
+          "pos": "3",
+          "name": "Gregoire Chatain"
+        },
+        {
+          "pos": "4",
+          "name": "Lukas Thibaut"
+        },
+        {
+          "pos": "5",
+          "name": "Nicholas Groves-kirkby"
+        },
+        {
+          "pos": "6",
+          "name": "Miguel Bernabeu"
+        },
+        {
+          "pos": "7",
+          "name": "Kiril Kossev"
+        },
+        {
+          "pos": "Str",
+          "name": "Nicholas Chesterley"
+        },
+        {
+          "pos": "Cox",
+          "name": "Hande Inanc"
+        },
+        {
+          "pos": "Coach",
+          "name": "Stuart Grice"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Javier Izu"
+        },
+        {
+          "pos": "2",
+          "name": "Remi Louf"
+        },
+        {
+          "pos": "3",
+          "name": "Dominic Hofstetter"
+        },
+        {
+          "pos": "4",
+          "name": "Dingeman Wiertz "
+        },
+        {
+          "pos": "5",
+          "name": "Mathew Reynolds"
+        },
+        {
+          "pos": "6",
+          "name": "Gabriel Kreindler"
+        },
+        {
+          "pos": "7",
+          "name": "Thees Spreckelsen"
+        },
+        {
+          "pos": "Str",
+          "name": "Daniel Marszalec"
+        },
+        {
+          "pos": "Cox",
+          "name": "Gwendolin Blossfeld"
+        },
+        {
+          "pos": "Coach",
+          "name": "Stuart Grice"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Inka Schomer"
+        },
+        {
+          "pos": "2",
+          "name": "Andrea Macneill"
+        },
+        {
+          "pos": "3",
+          "name": "Elizabeth Ashley"
+        },
+        {
+          "pos": "4",
+          "name": "Alashiya Gordes"
+        },
+        {
+          "pos": "5",
+          "name": "Mariajose Gutierrez"
+        },
+        {
+          "pos": "6",
+          "name": "Meghan Bailey"
+        },
+        {
+          "pos": "7",
+          "name": "Laura Droessler"
+        },
+        {
+          "pos": "Str",
+          "name": "Bonnie Murphy"
+        },
+        {
+          "pos": "Cox",
+          "name": "Daniel Marszalec"
+        },
+        {
+          "pos": "Coach",
+          "name": "David Rhodes"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Kristen Biehl"
+        },
+        {
+          "pos": "2",
+          "name": "Nina Perkowski"
+        },
+        {
+          "pos": "3",
+          "name": "Florencia  Goren"
+        },
+        {
+          "pos": "4",
+          "name": "Danielle Fleming"
+        },
+        {
+          "pos": "5",
+          "name": "Claire Nolan"
+        },
+        {
+          "pos": "6",
+          "name": "Gwendolin Blossfeld"
+        },
+        {
+          "pos": "7",
+          "name": "Hande Inanc"
+        },
+        {
+          "pos": "Str",
+          "name": "Anne Bredin"
+        },
+        {
+          "pos": "Cox",
+          "name": "Gabriel Kreindler"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Higham"
+        }
+      ]
+    }
+  },
+  "LIC": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Charles Podschies"
+        },
+        {
+          "pos": "2",
+          "name": "Christopher Wallis"
+        },
+        {
+          "pos": "3",
+          "name": "Max Lack"
+        },
+        {
+          "pos": "4",
+          "name": "Asgeir Birkisson"
+        },
+        {
+          "pos": "5",
+          "name": "Visar Beqiri"
+        },
+        {
+          "pos": "6",
+          "name": "Toby Virno"
+        },
+        {
+          "pos": "7",
+          "name": "John Dudding"
+        },
+        {
+          "pos": "Str",
+          "name": "Alex Bostrom"
+        },
+        {
+          "pos": "Cox",
+          "name": "Ruth Geen"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Williams"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Alexander Thomas"
+        },
+        {
+          "pos": "2",
+          "name": "Howard Mcdonald"
+        },
+        {
+          "pos": "3",
+          "name": "Patrick Ray"
+        },
+        {
+          "pos": "4",
+          "name": "Thomas Lord"
+        },
+        {
+          "pos": "5",
+          "name": "Barnaby Roberts"
+        },
+        {
+          "pos": "6",
+          "name": "Thomas Skinner"
+        },
+        {
+          "pos": "7",
+          "name": "Paul Cruickshank"
+        },
+        {
+          "pos": "Str",
+          "name": "Scott Holmes"
+        },
+        {
+          "pos": "Cox",
+          "name": "Sophie Shawdon"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alex Bostrom"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Hugh Lindsey"
+        },
+        {
+          "pos": "2",
+          "name": "Haruki Kawano"
+        },
+        {
+          "pos": "3",
+          "name": "Nicholas Ng"
+        },
+        {
+          "pos": "4",
+          "name": "Ole Andreassen"
+        },
+        {
+          "pos": "5",
+          "name": "Benjamin Partridge"
+        },
+        {
+          "pos": "6",
+          "name": "James Flewellen"
+        },
+        {
+          "pos": "7",
+          "name": "John Salmons"
+        },
+        {
+          "pos": "Str",
+          "name": "Dennis Egger"
+        },
+        {
+          "pos": "Cox",
+          "name": "John Dudding"
+        },
+        {
+          "pos": "Coach",
+          "name": "John Dudding"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Nicole Urban"
+        },
+        {
+          "pos": "2",
+          "name": "Kristin Griffiths"
+        },
+        {
+          "pos": "3",
+          "name": "Jessica Nangle"
+        },
+        {
+          "pos": "4",
+          "name": "Annika Bruger"
+        },
+        {
+          "pos": "5",
+          "name": "Anne Grijzenhout"
+        },
+        {
+          "pos": "6",
+          "name": "Danielle Costa"
+        },
+        {
+          "pos": "7",
+          "name": "Zsofia Novak"
+        },
+        {
+          "pos": "Str",
+          "name": "Sophie Roberts"
+        },
+        {
+          "pos": "Cox",
+          "name": "Charlotte Fannin"
+        },
+        {
+          "pos": "Coach",
+          "name": "Bodo Schulenburg"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Annekathrin Meiburg"
+        },
+        {
+          "pos": "2",
+          "name": "Emily Mccabe"
+        },
+        {
+          "pos": "3",
+          "name": "Kirstin Bilham"
+        },
+        {
+          "pos": "4",
+          "name": "Henrieke Prins"
+        },
+        {
+          "pos": "5",
+          "name": "Janina Baumbach"
+        },
+        {
+          "pos": "6",
+          "name": "Aisling Leow"
+        },
+        {
+          "pos": "7",
+          "name": "Lauriane Angue"
+        },
+        {
+          "pos": "Str",
+          "name": "Florence Driscoll"
+        },
+        {
+          "pos": "Cox",
+          "name": "Haden Spence"
+        },
+        {
+          "pos": "Coach",
+          "name": "Nicole Scheumann"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Miranda Kent"
+        },
+        {
+          "pos": "2",
+          "name": "Monica Freely"
+        },
+        {
+          "pos": "3",
+          "name": "Katrin Hood"
+        },
+        {
+          "pos": "4",
+          "name": "Rosemary Donnelly"
+        },
+        {
+          "pos": "5",
+          "name": "Natasha Fewkes"
+        },
+        {
+          "pos": "6",
+          "name": "Geraldine O'hara"
+        },
+        {
+          "pos": "7",
+          "name": "Rhea Newman"
+        },
+        {
+          "pos": "Str",
+          "name": "Marlena  Whiting"
+        },
+        {
+          "pos": "Cox",
+          "name": "Alexander Macfaden"
+        },
+        {
+          "pos": "Coach",
+          "name": "Eugenia Gossen"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Rachel Savage"
+        },
+        {
+          "pos": "2",
+          "name": "Emily Howe"
+        },
+        {
+          "pos": "3",
+          "name": "Alice Kallaugher"
+        },
+        {
+          "pos": "4",
+          "name": "Camilla Draycott"
+        },
+        {
+          "pos": "5",
+          "name": "Louise Mullen"
+        },
+        {
+          "pos": "6",
+          "name": "Ruth Burrow"
+        },
+        {
+          "pos": "7",
+          "name": "Sophie Small"
+        },
+        {
+          "pos": "Str",
+          "name": "Hanna Nanda"
+        },
+        {
+          "pos": "Cox",
+          "name": "Thomas Lord"
+        },
+        {
+          "pos": "Coach",
+          "name": "Florence Driscoll"
+        }
+      ]
+    }
+  },
+  "MAG": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "John Batley"
+        },
+        {
+          "pos": "2",
+          "name": "Craig Slater"
+        },
+        {
+          "pos": "3",
+          "name": "James Thom"
+        },
+        {
+          "pos": "4",
+          "name": "James Golding"
+        },
+        {
+          "pos": "5",
+          "name": "James Bradford"
+        },
+        {
+          "pos": "6",
+          "name": "Arend Janssen"
+        },
+        {
+          "pos": "7",
+          "name": "Charles Schroder"
+        },
+        {
+          "pos": "Str",
+          "name": "Joseph Abdalla"
+        },
+        {
+          "pos": "Cox",
+          "name": "Leila Gaafar"
+        },
+        {
+          "pos": "Coach",
+          "name": "Mike Genchi & Donald Legget"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Eli Ball"
+        },
+        {
+          "pos": "2",
+          "name": "Benedict Hutchings"
+        },
+        {
+          "pos": "3",
+          "name": "Michael Worth"
+        },
+        {
+          "pos": "4",
+          "name": "Mark McLeod"
+        },
+        {
+          "pos": "5",
+          "name": "Richard Yarwood"
+        },
+        {
+          "pos": "6",
+          "name": "Samuel Wall"
+        },
+        {
+          "pos": "7",
+          "name": "David Pigott"
+        },
+        {
+          "pos": "Str",
+          "name": "Matthew Mcghee"
+        },
+        {
+          "pos": "Cox",
+          "name": "Coleen Hillicks"
+        },
+        {
+          "pos": "Coach",
+          "name": "Andy Thomas"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Christopher Savory"
+        },
+        {
+          "pos": "2",
+          "name": "Robert Thompson"
+        },
+        {
+          "pos": "3",
+          "name": "Matthew Tatton"
+        },
+        {
+          "pos": "4",
+          "name": "Samuel Lowe"
+        },
+        {
+          "pos": "5",
+          "name": "Tristan Honeyborne"
+        },
+        {
+          "pos": "6",
+          "name": "Robin Culshaw"
+        },
+        {
+          "pos": "7",
+          "name": "Toby Call"
+        },
+        {
+          "pos": "Str",
+          "name": "Surawee Chuaiphichai"
+        },
+        {
+          "pos": "Cox",
+          "name": "Erin Pontell"
+        },
+        {
+          "pos": "Coach",
+          "name": "Kerry Wardell"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Megan Langham"
+        },
+        {
+          "pos": "2",
+          "name": "Sophie Jones"
+        },
+        {
+          "pos": "3",
+          "name": "Katarina Smolarova"
+        },
+        {
+          "pos": "4",
+          "name": "Mary Montgomery"
+        },
+        {
+          "pos": "5",
+          "name": "Judith Scheele"
+        },
+        {
+          "pos": "6",
+          "name": "Lucinda Treasure"
+        },
+        {
+          "pos": "7",
+          "name": "Sarah Roe"
+        },
+        {
+          "pos": "Str",
+          "name": "Rosemary Wilson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Claire Baillie"
+        },
+        {
+          "pos": "Coach",
+          "name": "Nic Thomas"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Elena Harty"
+        },
+        {
+          "pos": "2",
+          "name": "Emily Bailes"
+        },
+        {
+          "pos": "3",
+          "name": "Ariane Fisher"
+        },
+        {
+          "pos": "4",
+          "name": "Emma Bagshaw"
+        },
+        {
+          "pos": "5",
+          "name": "Amy Varney"
+        },
+        {
+          "pos": "6",
+          "name": "Marcheta Marshall"
+        },
+        {
+          "pos": "7",
+          "name": "Eleanor Bramall"
+        },
+        {
+          "pos": "Str",
+          "name": "Kimberley Whittaker"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jennifer Unwin"
+        },
+        {
+          "pos": "Coach",
+          "name": "Kerry Wardell"
+        }
+      ]
+    }
+  },
+  "MAN": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Ashley-james Turner"
+        },
+        {
+          "pos": "2",
+          "name": "Amir Sokolowski"
+        },
+        {
+          "pos": "3",
+          "name": "Oliver Cohen"
+        },
+        {
+          "pos": "4",
+          "name": "Matthew Dodd"
+        },
+        {
+          "pos": "5",
+          "name": "Frederick Overton"
+        },
+        {
+          "pos": "6",
+          "name": "William Rigg"
+        },
+        {
+          "pos": "7",
+          "name": "Christopher Fairweather"
+        },
+        {
+          "pos": "Str",
+          "name": "Michael Enright"
+        },
+        {
+          "pos": "Cox",
+          "name": "Ryutaro Hiratsuka"
+        },
+        {
+          "pos": "Coach",
+          "name": "Sonia Bracegirdle"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "David Lukic"
+        },
+        {
+          "pos": "2",
+          "name": "Julien Labonne"
+        },
+        {
+          "pos": "3",
+          "name": "John Morrison"
+        },
+        {
+          "pos": "4",
+          "name": "Ian Pethick"
+        },
+        {
+          "pos": "5",
+          "name": "Samuel Knight"
+        },
+        {
+          "pos": "6",
+          "name": "Dimitrios Katsikis"
+        },
+        {
+          "pos": "7",
+          "name": "Oliver Petragallo"
+        },
+        {
+          "pos": "Str",
+          "name": "Robert Licalzi"
+        },
+        {
+          "pos": "Cox",
+          "name": "Camilla Gardner"
+        },
+        {
+          "pos": "Coach",
+          "name": "Freddie Overton"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Radoslaw Nowak"
+        },
+        {
+          "pos": "2",
+          "name": "Simon Williamson"
+        },
+        {
+          "pos": "3",
+          "name": "John Kerr"
+        },
+        {
+          "pos": "4",
+          "name": "Chris Mertlitz"
+        },
+        {
+          "pos": "5",
+          "name": "Matthew Silfee"
+        },
+        {
+          "pos": "6",
+          "name": "James Smith"
+        },
+        {
+          "pos": "7",
+          "name": "Matthew Irani"
+        },
+        {
+          "pos": "Str",
+          "name": "David Terry"
+        },
+        {
+          "pos": "Cox",
+          "name": "Claire  Ward"
+        },
+        {
+          "pos": "Coach",
+          "name": "Freddie Overton"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Adina Wass"
+        },
+        {
+          "pos": "2",
+          "name": "Lauren Mcfadyen"
+        },
+        {
+          "pos": "3",
+          "name": "Sophie Willson"
+        },
+        {
+          "pos": "4",
+          "name": "Emma Moberly"
+        },
+        {
+          "pos": "5",
+          "name": "Raquel Velasco"
+        },
+        {
+          "pos": "6",
+          "name": "Kaitlyn Randol"
+        },
+        {
+          "pos": "7",
+          "name": "Ainhoa Iniguez"
+        },
+        {
+          "pos": "Str",
+          "name": "Lucy Mase-robinson"
+        },
+        {
+          "pos": "Cox",
+          "name": "James Nettleton"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alex Thomas"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Anisa Kassamali"
+        },
+        {
+          "pos": "2",
+          "name": "Sarah Connolly"
+        },
+        {
+          "pos": "3",
+          "name": "Ashley Fry"
+        },
+        {
+          "pos": "4",
+          "name": "Holly Haines"
+        },
+        {
+          "pos": "5",
+          "name": "Leah Grint"
+        },
+        {
+          "pos": "6",
+          "name": "Katie Gingell"
+        },
+        {
+          "pos": "7",
+          "name": "Charlotte Turner"
+        },
+        {
+          "pos": "Str",
+          "name": "Katherine Hazelton"
+        },
+        {
+          "pos": "Cox",
+          "name": "Emma Sullivan"
+        },
+        {
+          "pos": "Coach",
+          "name": "Raquel Velasco"
+        }
+      ]
+    }
+  },
+  "MER": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Joshua Monahan"
+        },
+        {
+          "pos": "2",
+          "name": "Thomas Foster"
+        },
+        {
+          "pos": "3",
+          "name": "Max Pitz"
+        },
+        {
+          "pos": "4",
+          "name": "Richard Millar"
+        },
+        {
+          "pos": "5",
+          "name": "William Brandler"
+        },
+        {
+          "pos": "6",
+          "name": "Kyle Martin"
+        },
+        {
+          "pos": "7",
+          "name": "Benjamin Walpole"
+        },
+        {
+          "pos": "Str",
+          "name": "James Mcmillan"
+        },
+        {
+          "pos": "Cox",
+          "name": "Fabienne Cheung"
+        },
+        {
+          "pos": "Coach",
+          "name": "Piers Barnett"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Christopher Gray"
+        },
+        {
+          "pos": "2",
+          "name": "Michael Geeson"
+        },
+        {
+          "pos": "3",
+          "name": "Thomas Bucknall"
+        },
+        {
+          "pos": "4",
+          "name": "Owen Mason"
+        },
+        {
+          "pos": "5",
+          "name": "Paul Fineran"
+        },
+        {
+          "pos": "6",
+          "name": "Felix Chow"
+        },
+        {
+          "pos": "7",
+          "name": "Oscar Hayward"
+        },
+        {
+          "pos": "Str",
+          "name": "Karl Gerth"
+        },
+        {
+          "pos": "Cox",
+          "name": "James Athawes"
+        },
+        {
+          "pos": "Coach",
+          "name": "Piers Barnett"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Robert Machinek"
+        },
+        {
+          "pos": "2",
+          "name": "Anthony Chappel"
+        },
+        {
+          "pos": "3",
+          "name": "Dustin Stuart"
+        },
+        {
+          "pos": "4",
+          "name": "Patrik Flammer"
+        },
+        {
+          "pos": "5",
+          "name": "Giulio Disanto"
+        },
+        {
+          "pos": "6",
+          "name": "Kristof Csefalvay-bartal"
+        },
+        {
+          "pos": "7",
+          "name": "Alec Maynard"
+        },
+        {
+          "pos": "Str",
+          "name": "Lee Collins"
+        },
+        {
+          "pos": "Cox",
+          "name": "Sarah Wilson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Mitchell Powers"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "William Bennett"
+        },
+        {
+          "pos": "2",
+          "name": "Luke Hughes"
+        },
+        {
+          "pos": "3",
+          "name": "Jeffrey Burgin"
+        },
+        {
+          "pos": "4",
+          "name": "Daniel Lavenda"
+        },
+        {
+          "pos": "5",
+          "name": "Matthew Adcock"
+        },
+        {
+          "pos": "6",
+          "name": "Thomas Marsh"
+        },
+        {
+          "pos": "7",
+          "name": "Paul Kaufman"
+        },
+        {
+          "pos": "Str",
+          "name": "Alex Woolley"
+        },
+        {
+          "pos": "Cox",
+          "name": "Stephanie Wood"
+        },
+        {
+          "pos": "Coach",
+          "name": "Mitchell Powers"
+        }
+      ],
+      "5": [
+        {
+          "pos": "Bow",
+          "name": "Philip Entwistle"
+        },
+        {
+          "pos": "2",
+          "name": "Ramon Gonsalves"
+        },
+        {
+          "pos": "3",
+          "name": "Jan Engelhardt"
+        },
+        {
+          "pos": "4",
+          "name": "Ben Sampson"
+        },
+        {
+          "pos": "5",
+          "name": "Richard Fern"
+        },
+        {
+          "pos": "6",
+          "name": "Alexander Oulsnam"
+        },
+        {
+          "pos": "7",
+          "name": "John Wilson"
+        },
+        {
+          "pos": "Str",
+          "name": "Jonathan Burr"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jonathan Leeuwenburgh"
+        },
+        {
+          "pos": "Coach",
+          "name": "Mitchell Powers"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Tanya Goodchild"
+        },
+        {
+          "pos": "2",
+          "name": "Stephanie Jones"
+        },
+        {
+          "pos": "3",
+          "name": "Eloise Hindes"
+        },
+        {
+          "pos": "4",
+          "name": "Caitlin Goss"
+        },
+        {
+          "pos": "5",
+          "name": "Emma Graham"
+        },
+        {
+          "pos": "6",
+          "name": "Mary Foord-weston"
+        },
+        {
+          "pos": "7",
+          "name": "Natasha Tyrwhitt-drake"
+        },
+        {
+          "pos": "Str",
+          "name": "Kayli Johnson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Katharine Pates"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tom Broadway"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Emma Carter"
+        },
+        {
+          "pos": "2",
+          "name": "Danielle King"
+        },
+        {
+          "pos": "3",
+          "name": "Genevieve Clutton"
+        },
+        {
+          "pos": "4",
+          "name": "Olivia Kirkbride"
+        },
+        {
+          "pos": "5",
+          "name": "Zuzanna Brzosko"
+        },
+        {
+          "pos": "6",
+          "name": "Jessica Odone"
+        },
+        {
+          "pos": "7",
+          "name": "Myriam Burr"
+        },
+        {
+          "pos": "Str",
+          "name": "Laura Fraser"
+        },
+        {
+          "pos": "Cox",
+          "name": "Christophe Snoeck"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tom Broadway"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Sarah-jane Legge"
+        },
+        {
+          "pos": "2",
+          "name": "Catriona Hull"
+        },
+        {
+          "pos": "3",
+          "name": "Petra Koulia"
+        },
+        {
+          "pos": "4",
+          "name": "Emma Goodwin"
+        },
+        {
+          "pos": "5",
+          "name": "Catriona Dann"
+        },
+        {
+          "pos": "6",
+          "name": "Elizabeth Mowforth"
+        },
+        {
+          "pos": "7",
+          "name": "Anne Miles"
+        },
+        {
+          "pos": "Str",
+          "name": "Allison Brandt"
+        },
+        {
+          "pos": "Cox",
+          "name": "Mary Foord-weston"
+        },
+        {
+          "pos": "Coach",
+          "name": "Kate Summers"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Jessica Furness"
+        },
+        {
+          "pos": "2",
+          "name": "Kristina Gedgaudaite"
+        },
+        {
+          "pos": "3",
+          "name": "Claire Higgins"
+        },
+        {
+          "pos": "4",
+          "name": "Pip Schuijt"
+        },
+        {
+          "pos": "5",
+          "name": "Yuan Shen"
+        },
+        {
+          "pos": "6",
+          "name": "Danielle Sheen"
+        },
+        {
+          "pos": "7",
+          "name": "Sofia Abasolo"
+        },
+        {
+          "pos": "Str",
+          "name": "Marie Sall"
+        },
+        {
+          "pos": "Cox",
+          "name": "Eloise Hindes"
+        },
+        {
+          "pos": "Coach",
+          "name": "Mary Foord-Weston"
+        }
+      ]
+    }
+  },
+  "NEC": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "James Parry-crooke"
+        },
+        {
+          "pos": "2",
+          "name": "James Kennedy"
+        },
+        {
+          "pos": "3",
+          "name": "Florian Mockel"
+        },
+        {
+          "pos": "4",
+          "name": "Jon Strang"
+        },
+        {
+          "pos": "5",
+          "name": "Ivan Jevremovic"
+        },
+        {
+          "pos": "6",
+          "name": "Andrew Boggs"
+        },
+        {
+          "pos": "7",
+          "name": "Joseph Chittenden-veal"
+        },
+        {
+          "pos": "Str",
+          "name": "Gareth Jones"
+        },
+        {
+          "pos": "Cox",
+          "name": "Adam Sriskandan"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ian Bousfield"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Mark Burnett"
+        },
+        {
+          "pos": "2",
+          "name": "Ross Thomson"
+        },
+        {
+          "pos": "3",
+          "name": "Alexander Anthony"
+        },
+        {
+          "pos": "4",
+          "name": "Jonathan Storey"
+        },
+        {
+          "pos": "5",
+          "name": "William Mycroft"
+        },
+        {
+          "pos": "6",
+          "name": "Per Godvik"
+        },
+        {
+          "pos": "7",
+          "name": "Patrick Thill"
+        },
+        {
+          "pos": "Str",
+          "name": "Oscar Lee"
+        },
+        {
+          "pos": "Cox",
+          "name": "Rachel Loughlin"
+        },
+        {
+          "pos": "Coach",
+          "name": "Andrew Boggs"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Rian Dineen"
+        },
+        {
+          "pos": "2",
+          "name": "Dipesh Mahtani"
+        },
+        {
+          "pos": "3",
+          "name": "Tom Hofland"
+        },
+        {
+          "pos": "4",
+          "name": "Edward Bartrum"
+        },
+        {
+          "pos": "5",
+          "name": "Josiah Halstead"
+        },
+        {
+          "pos": "6",
+          "name": "Joseph Cherny"
+        },
+        {
+          "pos": "7",
+          "name": "Brendan Woods"
+        },
+        {
+          "pos": "Str",
+          "name": "Freddie Fulton"
+        },
+        {
+          "pos": "Cox",
+          "name": "Joseph Hitchen"
+        },
+        {
+          "pos": "Coach",
+          "name": "John Ash"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Rachel Shepherd"
+        },
+        {
+          "pos": "2",
+          "name": "Katie Holder"
+        },
+        {
+          "pos": "3",
+          "name": "Alice Mccallum"
+        },
+        {
+          "pos": "4",
+          "name": "Annabelle Bonham"
+        },
+        {
+          "pos": "5",
+          "name": "Stephanie Elstrop"
+        },
+        {
+          "pos": "6",
+          "name": "Alexandra May"
+        },
+        {
+          "pos": "7",
+          "name": "Hannah Titley"
+        },
+        {
+          "pos": "Str",
+          "name": "Eleanor Law"
+        },
+        {
+          "pos": "Cox",
+          "name": "Henry Clarke"
+        },
+        {
+          "pos": "Coach",
+          "name": "Philip Meikle"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Annabel Gilbert"
+        },
+        {
+          "pos": "2",
+          "name": "Sophie Dannreuther"
+        },
+        {
+          "pos": "3",
+          "name": "Pernille Hanehoj"
+        },
+        {
+          "pos": "4",
+          "name": "Alejandra Albuerne"
+        },
+        {
+          "pos": "5",
+          "name": "Jennifer Firman"
+        },
+        {
+          "pos": "6",
+          "name": "Rebecca Appleyard"
+        },
+        {
+          "pos": "7",
+          "name": "Claire Dannatt"
+        },
+        {
+          "pos": "Str",
+          "name": "Simone Girardeau"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jessamy Lowe"
+        },
+        {
+          "pos": "Coach",
+          "name": "Joe Veal"
+        }
+      ]
+    }
+  },
+  "ORO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Max Lau"
+        },
+        {
+          "pos": "2",
+          "name": "Matthew Price"
+        },
+        {
+          "pos": "3",
+          "name": "Michael Senior"
+        },
+        {
+          "pos": "4",
+          "name": "William Sheldon"
+        },
+        {
+          "pos": "5",
+          "name": "Douglas Bruce"
+        },
+        {
+          "pos": "6",
+          "name": "Benjamin Mansfield"
+        },
+        {
+          "pos": "7",
+          "name": "Simon Peet"
+        },
+        {
+          "pos": "Str",
+          "name": "James Wadsworth"
+        },
+        {
+          "pos": "Cox",
+          "name": "James Luccarelli"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alan Sherman"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "David Gleeson"
+        },
+        {
+          "pos": "2",
+          "name": "James Etheridge"
+        },
+        {
+          "pos": "3",
+          "name": "Geoffrey Allott"
+        },
+        {
+          "pos": "4",
+          "name": "Calum Pontin"
+        },
+        {
+          "pos": "5",
+          "name": "Simon Dungate"
+        },
+        {
+          "pos": "6",
+          "name": "Dominic Ballard"
+        },
+        {
+          "pos": "7",
+          "name": "Clement O\\'Rourke"
+        },
+        {
+          "pos": "Str",
+          "name": "Nicholas Aveyard"
+        },
+        {
+          "pos": "Cox",
+          "name": "Tanjeet Arora"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tom Hounsell"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "James Shepherd"
+        },
+        {
+          "pos": "2",
+          "name": "James Thompson"
+        },
+        {
+          "pos": "3",
+          "name": "Jeffrey Beyer"
+        },
+        {
+          "pos": "4",
+          "name": "William Gibson"
+        },
+        {
+          "pos": "5",
+          "name": "Alexander Howgego"
+        },
+        {
+          "pos": "6",
+          "name": "Mark Czeller"
+        },
+        {
+          "pos": "7",
+          "name": "George Chapman"
+        },
+        {
+          "pos": "Str",
+          "name": "Ventsislav Chonev"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jiong Tan"
+        },
+        {
+          "pos": "Coach",
+          "name": "Oliver Bent"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Samuel Collins"
+        },
+        {
+          "pos": "2",
+          "name": "Joe Brennan"
+        },
+        {
+          "pos": "3",
+          "name": "Felix Keating"
+        },
+        {
+          "pos": "4",
+          "name": "Jonathan Davies"
+        },
+        {
+          "pos": "5",
+          "name": "Samuel Beer"
+        },
+        {
+          "pos": "6",
+          "name": "Alex Khosla"
+        },
+        {
+          "pos": "7",
+          "name": "Rory Ferguson"
+        },
+        {
+          "pos": "Str",
+          "name": "Patrick Holden"
+        },
+        {
+          "pos": "Cox",
+          "name": "Simon Peet"
+        },
+        {
+          "pos": "Coach",
+          "name": "Simon Peet"
+        }
+      ],
+      "5": [
+        {
+          "pos": "Bow",
+          "name": "Jiong Tan"
+        },
+        {
+          "pos": "2",
+          "name": "Kamil Chmurzynski"
+        },
+        {
+          "pos": "3",
+          "name": "Edward Watson"
+        },
+        {
+          "pos": "4",
+          "name": "Harry Scholes"
+        },
+        {
+          "pos": "5",
+          "name": "Mitchell Dawson"
+        },
+        {
+          "pos": "6",
+          "name": "Jamie Gilchrist"
+        },
+        {
+          "pos": "7",
+          "name": "Luke Tullo"
+        },
+        {
+          "pos": "Str",
+          "name": "Jonathon Cockfield"
+        },
+        {
+          "pos": "Cox",
+          "name": "Emily Jarratt"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tom Hounsell"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Susanna Quirke"
+        },
+        {
+          "pos": "2",
+          "name": "Lucy Auton"
+        },
+        {
+          "pos": "3",
+          "name": "Helena Cantwell"
+        },
+        {
+          "pos": "4",
+          "name": "Clare Buffery"
+        },
+        {
+          "pos": "5",
+          "name": "Anna Oestmann"
+        },
+        {
+          "pos": "6",
+          "name": "Bridget Fryer"
+        },
+        {
+          "pos": "7",
+          "name": "Charlotte Cutler"
+        },
+        {
+          "pos": "Str",
+          "name": "Jennifer  Hauschild"
+        },
+        {
+          "pos": "Cox",
+          "name": "Harriet Lane-serff"
+        },
+        {
+          "pos": "Coach",
+          "name": "Charlie Jenkins"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Lindsay Munroe"
+        },
+        {
+          "pos": "2",
+          "name": "Vibha Selvaratnam"
+        },
+        {
+          "pos": "3",
+          "name": "Rachel Hulatt"
+        },
+        {
+          "pos": "4",
+          "name": "Rachael Barton"
+        },
+        {
+          "pos": "5",
+          "name": "Eva Lang"
+        },
+        {
+          "pos": "6",
+          "name": "Emily Taylor"
+        },
+        {
+          "pos": "7",
+          "name": "Emily Jarratt"
+        },
+        {
+          "pos": "Str",
+          "name": "Michelle Graham"
+        },
+        {
+          "pos": "Cox",
+          "name": "Siobhan Abraham"
+        },
+        {
+          "pos": "Coach",
+          "name": "Max Lau"
+        }
+      ]
+    }
+  },
+  "OSG": {
+    "men": {},
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Abigail Nye"
+        },
+        {
+          "pos": "2",
+          "name": "Charlotte  Snead"
+        },
+        {
+          "pos": "3",
+          "name": "Juliet Raine"
+        },
+        {
+          "pos": "4",
+          "name": "Sarah Morrow"
+        },
+        {
+          "pos": "5",
+          "name": "Virginia Head"
+        },
+        {
+          "pos": "6",
+          "name": "Sarah Linthwaite"
+        },
+        {
+          "pos": "7",
+          "name": "Joanna Cooke"
+        },
+        {
+          "pos": "Str",
+          "name": "Sophie James"
+        },
+        {
+          "pos": "Cox",
+          "name": "Anna Kaleva"
+        },
+        {
+          "pos": "Coach",
+          "name": "Thomas Wood"
+        }
+      ]
+    }
+  },
+  "PMB": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Austin Elwood"
+        },
+        {
+          "pos": "2",
+          "name": "Matthew Winters"
+        },
+        {
+          "pos": "3",
+          "name": "Daniel Auton"
+        },
+        {
+          "pos": "4",
+          "name": "Sam Thompson"
+        },
+        {
+          "pos": "5",
+          "name": "Maurus Wuethrich"
+        },
+        {
+          "pos": "6",
+          "name": "Ben Davis"
+        },
+        {
+          "pos": "7",
+          "name": "James Gillies"
+        },
+        {
+          "pos": "Str",
+          "name": "Hugo Seymour"
+        },
+        {
+          "pos": "Cox",
+          "name": "Cheryl Gerhardt"
+        },
+        {
+          "pos": "Coach",
+          "name": "John Gearing"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Ryan Morrie"
+        },
+        {
+          "pos": "2",
+          "name": "Andrew Sayce"
+        },
+        {
+          "pos": "3",
+          "name": "Robert Mullins"
+        },
+        {
+          "pos": "4",
+          "name": "Robert Figueiredo"
+        },
+        {
+          "pos": "5",
+          "name": "Richard Watson"
+        },
+        {
+          "pos": "6",
+          "name": "Caspar Donnison"
+        },
+        {
+          "pos": "7",
+          "name": "Andrew Pazdon"
+        },
+        {
+          "pos": "Str",
+          "name": "Matthew Tunna"
+        },
+        {
+          "pos": "Cox",
+          "name": "Minsoo Kim"
+        },
+        {
+          "pos": "Coach",
+          "name": "Barrie-Jon Mulder"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Daniel Rosenblum"
+        },
+        {
+          "pos": "2",
+          "name": "Evan Preminger"
+        },
+        {
+          "pos": "3",
+          "name": "Piotr Galeziak"
+        },
+        {
+          "pos": "4",
+          "name": "Richard Ammerman"
+        },
+        {
+          "pos": "5",
+          "name": "Andrew Scott"
+        },
+        {
+          "pos": "6",
+          "name": "Thomas Healy"
+        },
+        {
+          "pos": "7",
+          "name": "Samuel Whitehead"
+        },
+        {
+          "pos": "Str",
+          "name": "Allister Chang"
+        },
+        {
+          "pos": "Cox",
+          "name": "Richard Watson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Barrie-Jon Mulder"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Alexis King"
+        },
+        {
+          "pos": "2",
+          "name": "Jennifer Ellis"
+        },
+        {
+          "pos": "3",
+          "name": "Hannah Johnston"
+        },
+        {
+          "pos": "4",
+          "name": "Camilla Elvis"
+        },
+        {
+          "pos": "5",
+          "name": "Elsbeth Nye"
+        },
+        {
+          "pos": "6",
+          "name": "Lydia Levy"
+        },
+        {
+          "pos": "7",
+          "name": "Ruby Carrington"
+        },
+        {
+          "pos": "Str",
+          "name": "Sylvie-anne Stenton"
+        },
+        {
+          "pos": "Cox",
+          "name": "Muxin Yu"
+        },
+        {
+          "pos": "Coach",
+          "name": "Barrie Jon Mulder"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Jennifer Ceisel"
+        },
+        {
+          "pos": "2",
+          "name": "Beverley Penny"
+        },
+        {
+          "pos": "3",
+          "name": "Claire Cocks"
+        },
+        {
+          "pos": "4",
+          "name": "Muxin Yu"
+        },
+        {
+          "pos": "5",
+          "name": "Polly Cocker"
+        },
+        {
+          "pos": "6",
+          "name": "Elizabeth Ross"
+        },
+        {
+          "pos": "7",
+          "name": "Catriona Sibthorp"
+        },
+        {
+          "pos": "Str",
+          "name": "Eleanor Mcclelland"
+        },
+        {
+          "pos": "Cox",
+          "name": "Haesun Seok"
+        },
+        {
+          "pos": "Coach",
+          "name": "Barrie Jon Mulder"
+        }
+      ]
+    }
+  },
+  "QCO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Oliver Baker"
+        },
+        {
+          "pos": "2",
+          "name": "Robert Smith"
+        },
+        {
+          "pos": "3",
+          "name": "Mark Tomlinson"
+        },
+        {
+          "pos": "4",
+          "name": "David Williams"
+        },
+        {
+          "pos": "5",
+          "name": "Miklos Perenyei"
+        },
+        {
+          "pos": "6",
+          "name": "Callum Young"
+        },
+        {
+          "pos": "7",
+          "name": "Lucian Purvis"
+        },
+        {
+          "pos": "Str",
+          "name": "Benjamin Willis"
+        },
+        {
+          "pos": "Cox",
+          "name": "Nathan Roberts"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ben Sam Harvey"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "James Gwyn-thomas"
+        },
+        {
+          "pos": "2",
+          "name": "Chris Lippard"
+        },
+        {
+          "pos": "3",
+          "name": "Thomas Watts"
+        },
+        {
+          "pos": "4",
+          "name": "Thomas Rushton"
+        },
+        {
+          "pos": "5",
+          "name": "Justin Drennan"
+        },
+        {
+          "pos": "6",
+          "name": "Jeremy Brown"
+        },
+        {
+          "pos": "7",
+          "name": "Thomas Mead"
+        },
+        {
+          "pos": "Str",
+          "name": "Parav Pandya"
+        },
+        {
+          "pos": "Cox",
+          "name": "Tobias Beusnard-bee"
+        },
+        {
+          "pos": "Coach",
+          "name": "Robert Smith"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Venkat Rao"
+        },
+        {
+          "pos": "2",
+          "name": "Andrew Mcardle"
+        },
+        {
+          "pos": "3",
+          "name": "Jonathan Liu"
+        },
+        {
+          "pos": "4",
+          "name": "James Berry"
+        },
+        {
+          "pos": "5",
+          "name": "Timothy Luetchford"
+        },
+        {
+          "pos": "6",
+          "name": "Denis Kent"
+        },
+        {
+          "pos": "7",
+          "name": "Ryan Riley"
+        },
+        {
+          "pos": "Str",
+          "name": "Fred Woodcock"
+        },
+        {
+          "pos": "Cox",
+          "name": "Thomas Watts"
+        },
+        {
+          "pos": "Coach",
+          "name": "Robert Smith"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Bernhard Langwallner"
+        },
+        {
+          "pos": "2",
+          "name": "Michael Mueller"
+        },
+        {
+          "pos": "3",
+          "name": "Rama Broekman"
+        },
+        {
+          "pos": "4",
+          "name": "Bartu Ahiska"
+        },
+        {
+          "pos": "5",
+          "name": "Luigi Prada"
+        },
+        {
+          "pos": "6",
+          "name": "Zi-su Kim"
+        },
+        {
+          "pos": "7",
+          "name": "Matthew Hart"
+        },
+        {
+          "pos": "Str",
+          "name": "Gregory  Petros"
+        },
+        {
+          "pos": "Cox",
+          "name": "Benjamin Willis"
+        },
+        {
+          "pos": "Coach",
+          "name": "Gregory Petros"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Anna Lytwyniw"
+        },
+        {
+          "pos": "2",
+          "name": "Grace Forbes"
+        },
+        {
+          "pos": "3",
+          "name": "Isabella Peplinski"
+        },
+        {
+          "pos": "4",
+          "name": "Ingvild Gudim"
+        },
+        {
+          "pos": "5",
+          "name": "Charlotte Ward"
+        },
+        {
+          "pos": "6",
+          "name": "Michelle Faure"
+        },
+        {
+          "pos": "7",
+          "name": "Charlotte Pallett"
+        },
+        {
+          "pos": "Str",
+          "name": "Sarah Mullin"
+        },
+        {
+          "pos": "Cox",
+          "name": "Lucinda Poulton"
+        },
+        {
+          "pos": "Coach",
+          "name": "Oscar Schonfeld"
+        }
+      ]
+    }
+  },
+  "RPC": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "David Cornish"
+        },
+        {
+          "pos": "2",
+          "name": "David Lappano"
+        },
+        {
+          "pos": "3",
+          "name": "Ben Hudson"
+        },
+        {
+          "pos": "4",
+          "name": "Christopher Shaw"
+        },
+        {
+          "pos": "5",
+          "name": "Ross Jones-morris"
+        },
+        {
+          "pos": "6",
+          "name": "Mark Hermansen"
+        },
+        {
+          "pos": "7",
+          "name": "Michael Burns"
+        },
+        {
+          "pos": "Str",
+          "name": "Sam Morrey"
+        },
+        {
+          "pos": "Cox",
+          "name": "Eleanor Mason"
+        },
+        {
+          "pos": "Coach",
+          "name": "James Crumpton"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Hannah Smith"
+        },
+        {
+          "pos": "2",
+          "name": "Karith Magnuson"
+        },
+        {
+          "pos": "3",
+          "name": "Ruth Kellar"
+        },
+        {
+          "pos": "4",
+          "name": "Hannah Robertson"
+        },
+        {
+          "pos": "5",
+          "name": "Claire Glover"
+        },
+        {
+          "pos": "6",
+          "name": "Kirsty Borthwick"
+        },
+        {
+          "pos": "7",
+          "name": "Frances Girling"
+        },
+        {
+          "pos": "Str",
+          "name": "Rowena Tasker"
+        },
+        {
+          "pos": "Cox",
+          "name": "Marchella Ward"
+        },
+        {
+          "pos": "Coach",
+          "name": "Laura Stables"
+        }
+      ]
+    }
+  },
+  "SOM": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Dave Henckert"
+        },
+        {
+          "pos": "2",
+          "name": "David Blagbrough"
+        },
+        {
+          "pos": "3",
+          "name": "Joseph Page"
+        },
+        {
+          "pos": "4",
+          "name": "Jack Kennedy"
+        },
+        {
+          "pos": "5",
+          "name": "Hugh Wolgamot"
+        },
+        {
+          "pos": "6",
+          "name": "Steven Ferrara"
+        },
+        {
+          "pos": "7",
+          "name": "Matthew Kerr"
+        },
+        {
+          "pos": "Str",
+          "name": "Philip Gemmell"
+        },
+        {
+          "pos": "Cox",
+          "name": "Philippa Smithson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Hermes"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Peter Cole"
+        },
+        {
+          "pos": "2",
+          "name": "Matthew James"
+        },
+        {
+          "pos": "3",
+          "name": "Owen Jones"
+        },
+        {
+          "pos": "4",
+          "name": "Matthias Meier"
+        },
+        {
+          "pos": "5",
+          "name": "William Travis"
+        },
+        {
+          "pos": "6",
+          "name": "James Burke"
+        },
+        {
+          "pos": "7",
+          "name": "Harry Spencer"
+        },
+        {
+          "pos": "Str",
+          "name": "Nicholas Shinder"
+        },
+        {
+          "pos": "Cox",
+          "name": "May Kho"
+        },
+        {
+          "pos": "Coach",
+          "name": "Hugh Wolgamot"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Grace Dowling"
+        },
+        {
+          "pos": "2",
+          "name": "Helen Britton"
+        },
+        {
+          "pos": "3",
+          "name": "Annie Demosthenous"
+        },
+        {
+          "pos": "4",
+          "name": "Clare Phipps"
+        },
+        {
+          "pos": "5",
+          "name": "Stephanie Peate"
+        },
+        {
+          "pos": "6",
+          "name": "Sarah Billingsley"
+        },
+        {
+          "pos": "7",
+          "name": "Ann Snaith"
+        },
+        {
+          "pos": "Str",
+          "name": "Amelia Bell"
+        },
+        {
+          "pos": "Cox",
+          "name": "Josephine Messa"
+        },
+        {
+          "pos": "Coach",
+          "name": "Mark Valentine"
+        }
+      ]
+    }
+  },
+  "SAC": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Edward Inns"
+        },
+        {
+          "pos": "2",
+          "name": "George Martins"
+        },
+        {
+          "pos": "3",
+          "name": "Edward Rolls"
+        },
+        {
+          "pos": "4",
+          "name": "Sheldon Edwards"
+        },
+        {
+          "pos": "5",
+          "name": "Ivan Soto-wright"
+        },
+        {
+          "pos": "6",
+          "name": "Andrew Donohoe"
+        },
+        {
+          "pos": "7",
+          "name": "Jonathan Williams"
+        },
+        {
+          "pos": "Str",
+          "name": "Christopher Cox"
+        },
+        {
+          "pos": "Cox",
+          "name": "Brielle Stark"
+        },
+        {
+          "pos": "Coach",
+          "name": "Lewis Knollman"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Charles Rooke"
+        },
+        {
+          "pos": "2",
+          "name": "Fred Richards"
+        },
+        {
+          "pos": "3",
+          "name": "Julian Nowag"
+        },
+        {
+          "pos": "4",
+          "name": "Stephen Hussey"
+        },
+        {
+          "pos": "5",
+          "name": "Robert Winter"
+        },
+        {
+          "pos": "6",
+          "name": "Keir Macdonald"
+        },
+        {
+          "pos": "7",
+          "name": "Oscar Benjamin"
+        },
+        {
+          "pos": "Str",
+          "name": "Jack Kirkby"
+        },
+        {
+          "pos": "Cox",
+          "name": "Rachael Fowler"
+        },
+        {
+          "pos": "Coach",
+          "name": "Lewis Knollman"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "George Theodossiou"
+        },
+        {
+          "pos": "2",
+          "name": "Joseph Fisher"
+        },
+        {
+          "pos": "3",
+          "name": "Bradley Wilson"
+        },
+        {
+          "pos": "4",
+          "name": "Matthew Nicol"
+        },
+        {
+          "pos": "5",
+          "name": "Rowan Jackson"
+        },
+        {
+          "pos": "6",
+          "name": "Taylor Ahlgren"
+        },
+        {
+          "pos": "7",
+          "name": "Andrew Taub"
+        },
+        {
+          "pos": "Str",
+          "name": "Henry Sykes"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jessica Panico"
+        },
+        {
+          "pos": "Coach",
+          "name": "Lewis Knollman"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Lilian  Taylor"
+        },
+        {
+          "pos": "2",
+          "name": "Freya George"
+        },
+        {
+          "pos": "3",
+          "name": "Sara Houghton"
+        },
+        {
+          "pos": "4",
+          "name": "Angharad  Scott"
+        },
+        {
+          "pos": "5",
+          "name": "Rebecca Evans"
+        },
+        {
+          "pos": "6",
+          "name": "Sarah Bailey"
+        },
+        {
+          "pos": "7",
+          "name": "Maria Nelson"
+        },
+        {
+          "pos": "Str",
+          "name": "Sophie Hibbin"
+        },
+        {
+          "pos": "Cox",
+          "name": "Bernard Tao"
+        },
+        {
+          "pos": "Coach",
+          "name": "Hannah Grainger"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Sabrina Papazian"
+        },
+        {
+          "pos": "2",
+          "name": "Charlotte Cuthbertson"
+        },
+        {
+          "pos": "3",
+          "name": "Sarah Wall"
+        },
+        {
+          "pos": "4",
+          "name": "Elizabeth Walton"
+        },
+        {
+          "pos": "5",
+          "name": "Nicolina Van Der Merwe"
+        },
+        {
+          "pos": "6",
+          "name": "Hannah Morris"
+        },
+        {
+          "pos": "7",
+          "name": "Faye Ashworth"
+        },
+        {
+          "pos": "Str",
+          "name": "Bethan Mckernan"
+        },
+        {
+          "pos": "Cox",
+          "name": "Emma Jude"
+        },
+        {
+          "pos": "Coach",
+          "name": "Hannah Grainger"
+        }
+      ]
+    }
+  },
+  "SAY": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Andrew Reddie"
+        },
+        {
+          "pos": "2",
+          "name": "David Stuckey"
+        },
+        {
+          "pos": "3",
+          "name": "Jeremy Wilmshurst"
+        },
+        {
+          "pos": "4",
+          "name": "Tomislav Marsic"
+        },
+        {
+          "pos": "5",
+          "name": "Stefan Szwed"
+        },
+        {
+          "pos": "6",
+          "name": "Rolf Fredheim"
+        },
+        {
+          "pos": "7",
+          "name": "Florian Bersier"
+        },
+        {
+          "pos": "Str",
+          "name": "Christopher Kutarna"
+        },
+        {
+          "pos": "Cox",
+          "name": "Alexandra Martins"
+        },
+        {
+          "pos": "Coach",
+          "name": "Stephen Allen"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Sebastian Konigs"
+        },
+        {
+          "pos": "2",
+          "name": "Gergely Lodinsky"
+        },
+        {
+          "pos": "3",
+          "name": "Pablo Sanz-pena"
+        },
+        {
+          "pos": "4",
+          "name": "Alexander Georgieff"
+        },
+        {
+          "pos": "5",
+          "name": "Christos Galanos"
+        },
+        {
+          "pos": "6",
+          "name": "Andrew Cunningham"
+        },
+        {
+          "pos": "7",
+          "name": "Rulof Burger"
+        },
+        {
+          "pos": "Str",
+          "name": "Jip Italianer"
+        },
+        {
+          "pos": "Cox",
+          "name": "Natasha Graham"
+        },
+        {
+          "pos": "Coach",
+          "name": "David Talbot"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Brittany Morreale"
+        },
+        {
+          "pos": "2",
+          "name": "Natasha Graham"
+        },
+        {
+          "pos": "3",
+          "name": "Paulina Banasiak"
+        },
+        {
+          "pos": "4",
+          "name": "Lucy Bradlow"
+        },
+        {
+          "pos": "5",
+          "name": "Natasha Azad"
+        },
+        {
+          "pos": "6",
+          "name": "Stephanie Pfeiffer"
+        },
+        {
+          "pos": "7",
+          "name": "Linda van der Horst"
+        },
+        {
+          "pos": "Str",
+          "name": "Laura Vittet-adamson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Ben Eacott"
+        },
+        {
+          "pos": "Coach",
+          "name": "Neil Brown"
+        }
+      ]
+    }
+  },
+  "SBH": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Edward Elliott"
+        },
+        {
+          "pos": "2",
+          "name": "Maximilian Mckechnie"
+        },
+        {
+          "pos": "3",
+          "name": "James Ferns"
+        },
+        {
+          "pos": "4",
+          "name": "Samuel Collingwood"
+        },
+        {
+          "pos": "5",
+          "name": "Oliver Elliott"
+        },
+        {
+          "pos": "6",
+          "name": "Paul Lucadamo"
+        },
+        {
+          "pos": "7",
+          "name": "Alexander Green"
+        },
+        {
+          "pos": "Str",
+          "name": "Daniel Ho"
+        },
+        {
+          "pos": "Cox",
+          "name": "Megan Christy"
+        },
+        {
+          "pos": "Coach",
+          "name": "Pete Selwood"
+        }
+      ]
+    },
+    "women": {}
+  },
+  "SCO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Martin Ramsdale"
+        },
+        {
+          "pos": "2",
+          "name": "Antoine Robin"
+        },
+        {
+          "pos": "3",
+          "name": "Ben Trigg"
+        },
+        {
+          "pos": "4",
+          "name": "David Zimmer"
+        },
+        {
+          "pos": "5",
+          "name": "Jeffrey Douglass"
+        },
+        {
+          "pos": "6",
+          "name": "Gareth Morgan"
+        },
+        {
+          "pos": "7",
+          "name": "Malcolm Spencer"
+        },
+        {
+          "pos": "Str",
+          "name": "Alexander Sanders"
+        },
+        {
+          "pos": "Cox",
+          "name": "Theresa Kevorkian"
+        },
+        {
+          "pos": "Coach",
+          "name": "Theresa Kevorkian"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Joshua Morgan"
+        },
+        {
+          "pos": "2",
+          "name": "James Boxall"
+        },
+        {
+          "pos": "3",
+          "name": "Tyler Roberts"
+        },
+        {
+          "pos": "4",
+          "name": "Dmitry Sokolov"
+        },
+        {
+          "pos": "5",
+          "name": "Joshua Landreneau"
+        },
+        {
+          "pos": "6",
+          "name": "Christoph Haase"
+        },
+        {
+          "pos": "7",
+          "name": "Toby Smyth"
+        },
+        {
+          "pos": "Str",
+          "name": "David Ashmore"
+        },
+        {
+          "pos": "Cox",
+          "name": "Phillip Mccullough"
+        },
+        {
+          "pos": "Coach",
+          "name": "Lizzie Cottrell"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Joachim Steinberg"
+        },
+        {
+          "pos": "2",
+          "name": "Edward Nutt"
+        },
+        {
+          "pos": "3",
+          "name": "Victor Yang"
+        },
+        {
+          "pos": "4",
+          "name": "Daniel Rebnord"
+        },
+        {
+          "pos": "5",
+          "name": "Samuel Harris"
+        },
+        {
+          "pos": "6",
+          "name": "Henry Renninson"
+        },
+        {
+          "pos": "7",
+          "name": "Anton Hinel"
+        },
+        {
+          "pos": "Str",
+          "name": "Manuel Garrow"
+        },
+        {
+          "pos": "Cox",
+          "name": "Christina Hookham"
+        },
+        {
+          "pos": "Coach",
+          "name": "Martin Ramsdale"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Emily Risness"
+        },
+        {
+          "pos": "2",
+          "name": "Sara Lukic"
+        },
+        {
+          "pos": "3",
+          "name": "Brie Dance"
+        },
+        {
+          "pos": "4",
+          "name": "Rosemary Lang"
+        },
+        {
+          "pos": "5",
+          "name": "Octavia Seymour"
+        },
+        {
+          "pos": "6",
+          "name": "Inge Hertzog"
+        },
+        {
+          "pos": "7",
+          "name": "Ilsa Haeusler"
+        },
+        {
+          "pos": "Str",
+          "name": "Joanna Harrall"
+        },
+        {
+          "pos": "Cox",
+          "name": "Clio Seraphim"
+        },
+        {
+          "pos": "Coach",
+          "name": "Elizabeth Cottrell"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Leah Carden"
+        },
+        {
+          "pos": "2",
+          "name": "Frances Webber"
+        },
+        {
+          "pos": "3",
+          "name": "Natalie Haley"
+        },
+        {
+          "pos": "4",
+          "name": "Irina Finkel"
+        },
+        {
+          "pos": "5",
+          "name": "Katrina Spensley"
+        },
+        {
+          "pos": "6",
+          "name": "Emily Stuart"
+        },
+        {
+          "pos": "7",
+          "name": "Naomi Scott-mearns"
+        },
+        {
+          "pos": "Str",
+          "name": "Abigail Wesson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Rosemary Lang"
+        },
+        {
+          "pos": "Coach",
+          "name": "Leah Carden"
+        }
+      ]
+    }
+  },
+  "SEH": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Adam King"
+        },
+        {
+          "pos": "2",
+          "name": "Joseph Elliott"
+        },
+        {
+          "pos": "3",
+          "name": "Jason Bell"
+        },
+        {
+          "pos": "4",
+          "name": "Stanley Pinsent"
+        },
+        {
+          "pos": "5",
+          "name": "Matthew Donora"
+        },
+        {
+          "pos": "6",
+          "name": "Thomas Hole"
+        },
+        {
+          "pos": "7",
+          "name": "James Duffell"
+        },
+        {
+          "pos": "Str",
+          "name": "James Leech"
+        },
+        {
+          "pos": "Cox",
+          "name": "Camilla Scott"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ed Porteus"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Jeremy Ang"
+        },
+        {
+          "pos": "2",
+          "name": "Kevin Minors"
+        },
+        {
+          "pos": "3",
+          "name": "Jan-karl Conermann"
+        },
+        {
+          "pos": "4",
+          "name": "Harry Hodges"
+        },
+        {
+          "pos": "5",
+          "name": "Gabriel May"
+        },
+        {
+          "pos": "6",
+          "name": "Simon Ward-jones"
+        },
+        {
+          "pos": "7",
+          "name": "Alvaro Martin Alhambra"
+        },
+        {
+          "pos": "Str",
+          "name": "Gergely Hamvas"
+        },
+        {
+          "pos": "Cox",
+          "name": "Adam Wozniak"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ed Porteus"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Justin Alsing"
+        },
+        {
+          "pos": "2",
+          "name": "Mark Carolan"
+        },
+        {
+          "pos": "3",
+          "name": "Till Hoffmann"
+        },
+        {
+          "pos": "4",
+          "name": "Oliver Wright"
+        },
+        {
+          "pos": "5",
+          "name": "Mayank Soni"
+        },
+        {
+          "pos": "6",
+          "name": "Michael Graham"
+        },
+        {
+          "pos": "7",
+          "name": "Thomas Pope"
+        },
+        {
+          "pos": "Str",
+          "name": "Charles Wilson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Samuel Pearce"
+        },
+        {
+          "pos": "Coach",
+          "name": "Till Hoffmann"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Emily Barlow"
+        },
+        {
+          "pos": "2",
+          "name": "Emily Nesbitt"
+        },
+        {
+          "pos": "3",
+          "name": "Suzanne Cole"
+        },
+        {
+          "pos": "4",
+          "name": "Amy McLennan"
+        },
+        {
+          "pos": "5",
+          "name": "Sophie Horton"
+        },
+        {
+          "pos": "6",
+          "name": "Lucy Crane"
+        },
+        {
+          "pos": "7",
+          "name": "Maria Higson"
+        },
+        {
+          "pos": "Str",
+          "name": "Elizabeth Green"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jacqueline Thomas"
+        },
+        {
+          "pos": "Coach",
+          "name": "Al Stuart"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Katelyn Merritt"
+        },
+        {
+          "pos": "2",
+          "name": "Mahlaqa Shaukat"
+        },
+        {
+          "pos": "3",
+          "name": "Sarah Brooks"
+        },
+        {
+          "pos": "4",
+          "name": "Caitlin Crandell"
+        },
+        {
+          "pos": "5",
+          "name": "Keely Bielat"
+        },
+        {
+          "pos": "6",
+          "name": "Klaudyna Rajchel"
+        },
+        {
+          "pos": "7",
+          "name": "Shari Levine"
+        },
+        {
+          "pos": "Str",
+          "name": "Anastasia Miller"
+        },
+        {
+          "pos": "Cox",
+          "name": "Victoria Sanders"
+        },
+        {
+          "pos": "Coach",
+          "name": "Maria Gerelle"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Jessica Teal"
+        },
+        {
+          "pos": "2",
+          "name": "Victoria Griffin"
+        },
+        {
+          "pos": "3",
+          "name": "Hazel Needham"
+        },
+        {
+          "pos": "4",
+          "name": "Amy Whetstone"
+        },
+        {
+          "pos": "5",
+          "name": "Emilia Boehm"
+        },
+        {
+          "pos": "6",
+          "name": "Lucy Erickson"
+        },
+        {
+          "pos": "7",
+          "name": "Tamara Etmannski"
+        },
+        {
+          "pos": "Str",
+          "name": "Lucy Budden"
+        },
+        {
+          "pos": "Cox",
+          "name": "Maria Higson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Maria Higson"
+        }
+      ]
+    }
+  },
+  "SHI": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Alex Metcalfe"
+        },
+        {
+          "pos": "2",
+          "name": "James Phillips"
+        },
+        {
+          "pos": "3",
+          "name": "Jacob Ellis"
+        },
+        {
+          "pos": "4",
+          "name": "Djordje Kiene-maksimovic"
+        },
+        {
+          "pos": "5",
+          "name": "Phill Putter"
+        },
+        {
+          "pos": "6",
+          "name": "Thomas Clark"
+        },
+        {
+          "pos": "7",
+          "name": "Michael Ferguson"
+        },
+        {
+          "pos": "Str",
+          "name": "William Hepburn"
+        },
+        {
+          "pos": "Cox",
+          "name": "Nicola Ingram"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alex Chetwynd"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Helen Elmer"
+        },
+        {
+          "pos": "2",
+          "name": "Marie-france Johns"
+        },
+        {
+          "pos": "3",
+          "name": "Jennifer Booth"
+        },
+        {
+          "pos": "4",
+          "name": "Laura Pereira"
+        },
+        {
+          "pos": "5",
+          "name": "Sarah Finch"
+        },
+        {
+          "pos": "6",
+          "name": "Rosalyn Falconer"
+        },
+        {
+          "pos": "7",
+          "name": "Jessica Lee"
+        },
+        {
+          "pos": "Str",
+          "name": "Sarah Hewett"
+        },
+        {
+          "pos": "Cox",
+          "name": "Thomas Fowler"
+        },
+        {
+          "pos": "Coach",
+          "name": "Vikki Garland"
+        }
+      ]
+    }
+  },
+  "SHG": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Thomas Griffiths"
+        },
+        {
+          "pos": "2",
+          "name": "John Mansell"
+        },
+        {
+          "pos": "3",
+          "name": "Charles Bennie"
+        },
+        {
+          "pos": "4",
+          "name": "Oskari Virtanen"
+        },
+        {
+          "pos": "5",
+          "name": "Christian Emmerich"
+        },
+        {
+          "pos": "6",
+          "name": "Lawrence Perrett"
+        },
+        {
+          "pos": "7",
+          "name": "Sebastien Ferriere"
+        },
+        {
+          "pos": "Str",
+          "name": "Jonathan Harrison"
+        },
+        {
+          "pos": "Cox",
+          "name": "Sofia Hauck"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alan Sinclair"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Andrea Graziadei"
+        },
+        {
+          "pos": "2",
+          "name": "Timothy Creedon"
+        },
+        {
+          "pos": "3",
+          "name": "Martin Ince"
+        },
+        {
+          "pos": "4",
+          "name": "David Milner"
+        },
+        {
+          "pos": "5",
+          "name": "Vladimir Bondarenko"
+        },
+        {
+          "pos": "6",
+          "name": "Daniel Honnor"
+        },
+        {
+          "pos": "7",
+          "name": "Raluca-elena Popescu"
+        },
+        {
+          "pos": "Str",
+          "name": "George Chapman"
+        },
+        {
+          "pos": "Cox",
+          "name": "John Mansell"
+        },
+        {
+          "pos": "Coach",
+          "name": "Laura Gordon"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Jack Fuller"
+        },
+        {
+          "pos": "2",
+          "name": "Luis Glaeser"
+        },
+        {
+          "pos": "3",
+          "name": "William Railton"
+        },
+        {
+          "pos": "4",
+          "name": "Civaram Sivakumaran"
+        },
+        {
+          "pos": "5",
+          "name": "Dominic Callaghan"
+        },
+        {
+          "pos": "6",
+          "name": "Benedict Harrington"
+        },
+        {
+          "pos": "7",
+          "name": "Michael Smith"
+        },
+        {
+          "pos": "Str",
+          "name": "Andrew Wilson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Michael Flagg"
+        },
+        {
+          "pos": "Coach",
+          "name": "John Mansell"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Robert Hickman"
+        },
+        {
+          "pos": "2",
+          "name": "Rachel Wiltshire"
+        },
+        {
+          "pos": "3",
+          "name": "Kaiwei Wang"
+        },
+        {
+          "pos": "4",
+          "name": "Rebecca Peredo"
+        },
+        {
+          "pos": "5",
+          "name": "Alexander Pritchard-jones"
+        },
+        {
+          "pos": "6",
+          "name": "Nikhilesh Mohanty"
+        },
+        {
+          "pos": "7",
+          "name": "Sidney Lim"
+        },
+        {
+          "pos": "Str",
+          "name": "Thomas Whitehead"
+        },
+        {
+          "pos": "Cox",
+          "name": "Daniel Honnor"
+        },
+        {
+          "pos": "Coach",
+          "name": "Andrea Graziadei"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Rebecca Smith"
+        },
+        {
+          "pos": "2",
+          "name": "Kholoud Hussein"
+        },
+        {
+          "pos": "3",
+          "name": "Laura Wilkinson"
+        },
+        {
+          "pos": "4",
+          "name": "Georgia Trapp"
+        },
+        {
+          "pos": "5",
+          "name": "Bryony Langdon"
+        },
+        {
+          "pos": "6",
+          "name": "Katie Draper"
+        },
+        {
+          "pos": "7",
+          "name": "Bethany Aitman"
+        },
+        {
+          "pos": "Str",
+          "name": "Molly Went"
+        },
+        {
+          "pos": "Cox",
+          "name": "Rebecca Holttum"
+        },
+        {
+          "pos": "Coach",
+          "name": "Helen Popescu"
+        }
+      ]
+    }
+  },
+  "SJO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Robert Crawford"
+        },
+        {
+          "pos": "2",
+          "name": "David Llewellyn"
+        },
+        {
+          "pos": "3",
+          "name": "Joseph Larvin"
+        },
+        {
+          "pos": "4",
+          "name": "Duncan Edwards"
+        },
+        {
+          "pos": "5",
+          "name": "Winston  Churchill"
+        },
+        {
+          "pos": "6",
+          "name": "Benedict Connery"
+        },
+        {
+          "pos": "7",
+          "name": "Ben Oestringer"
+        },
+        {
+          "pos": "Str",
+          "name": "Alexander Dungate"
+        },
+        {
+          "pos": "Cox",
+          "name": "Ben Pilgrim"
+        },
+        {
+          "pos": "Coach",
+          "name": "Barrie-John Mulder"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Joseph Mason"
+        },
+        {
+          "pos": "2",
+          "name": "Edward Love"
+        },
+        {
+          "pos": "3",
+          "name": "Thomas Jee"
+        },
+        {
+          "pos": "4",
+          "name": "Aidan Cooper"
+        },
+        {
+          "pos": "5",
+          "name": "Alex Kuhl"
+        },
+        {
+          "pos": "6",
+          "name": "Matthew Thain"
+        },
+        {
+          "pos": "7",
+          "name": "Adrastos Omissi"
+        },
+        {
+          "pos": "Str",
+          "name": "David Wray"
+        },
+        {
+          "pos": "Cox",
+          "name": "Will Todman"
+        },
+        {
+          "pos": "Coach",
+          "name": "Barrie-John Mulder"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "None"
+        },
+        {
+          "pos": "2",
+          "name": "None"
+        },
+        {
+          "pos": "3",
+          "name": "None"
+        },
+        {
+          "pos": "4",
+          "name": "None"
+        },
+        {
+          "pos": "5",
+          "name": "None"
+        },
+        {
+          "pos": "6",
+          "name": "None"
+        },
+        {
+          "pos": "7",
+          "name": "None"
+        },
+        {
+          "pos": "Str",
+          "name": "None"
+        },
+        {
+          "pos": "Cox",
+          "name": "Thomas Gammage"
+        },
+        {
+          "pos": "Coach",
+          "name": "Winston Churchill"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Ellen Greenhalgh"
+        },
+        {
+          "pos": "2",
+          "name": "Katherine Slee"
+        },
+        {
+          "pos": "3",
+          "name": "Justine Schluntz"
+        },
+        {
+          "pos": "4",
+          "name": "Jennifer Lowe"
+        },
+        {
+          "pos": "5",
+          "name": "Hazel Shepherd"
+        },
+        {
+          "pos": "6",
+          "name": "Jessica Cummings"
+        },
+        {
+          "pos": "7",
+          "name": "Rebecca Hewstone"
+        },
+        {
+          "pos": "Str",
+          "name": "Sarah Turner"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jonathan Daly"
+        },
+        {
+          "pos": "Coach",
+          "name": "Allan French"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Ruth Pilcher"
+        },
+        {
+          "pos": "2",
+          "name": "Camille Francois"
+        },
+        {
+          "pos": "3",
+          "name": "Laura Richards"
+        },
+        {
+          "pos": "4",
+          "name": "Charlotte Diffey"
+        },
+        {
+          "pos": "5",
+          "name": "Sarah Cousins"
+        },
+        {
+          "pos": "6",
+          "name": "Hannah Evans"
+        },
+        {
+          "pos": "7",
+          "name": "Ruth Hobbs"
+        },
+        {
+          "pos": "Str",
+          "name": "Kei Hamada"
+        },
+        {
+          "pos": "Cox",
+          "name": "Fleur Mason"
+        },
+        {
+          "pos": "Coach",
+          "name": "Allan French"
+        }
+      ]
+    }
+  },
+  "SPC": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Thomas Lewis"
+        },
+        {
+          "pos": "2",
+          "name": "Erik Fredner"
+        },
+        {
+          "pos": "3",
+          "name": "Andreas Kranke"
+        },
+        {
+          "pos": "4",
+          "name": "Kai Horstmannshoff "
+        },
+        {
+          "pos": "5",
+          "name": "Jonathan Neve"
+        },
+        {
+          "pos": "6",
+          "name": "Oliver Bristowe"
+        },
+        {
+          "pos": "7",
+          "name": "Edward Lewis"
+        },
+        {
+          "pos": "Str",
+          "name": "Nicholas Fulton"
+        },
+        {
+          "pos": "Cox",
+          "name": "Una Kim"
+        },
+        {
+          "pos": "Coach",
+          "name": "William Downey"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Peter Worsley"
+        },
+        {
+          "pos": "2",
+          "name": "Ben Conroy"
+        },
+        {
+          "pos": "3",
+          "name": "Charles Miller"
+        },
+        {
+          "pos": "4",
+          "name": "Gerald Clancy"
+        },
+        {
+          "pos": "5",
+          "name": "James Tunnacliffe"
+        },
+        {
+          "pos": "6",
+          "name": "Andrew Lloyd-harris"
+        },
+        {
+          "pos": "7",
+          "name": "David Champion"
+        },
+        {
+          "pos": "Str",
+          "name": "Douglas Crockett"
+        },
+        {
+          "pos": "Cox",
+          "name": "Antonio Borrelli"
+        },
+        {
+          "pos": "Coach",
+          "name": "William Downey"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Rosa Pritchard"
+        },
+        {
+          "pos": "2",
+          "name": "Zoe Apostolides"
+        },
+        {
+          "pos": "3",
+          "name": "Daria Huang"
+        },
+        {
+          "pos": "4",
+          "name": "Emily Clarke"
+        },
+        {
+          "pos": "5",
+          "name": "Senta Knuth"
+        },
+        {
+          "pos": "6",
+          "name": "Hannah Ledbury"
+        },
+        {
+          "pos": "7",
+          "name": "Emily Currie"
+        },
+        {
+          "pos": "Str",
+          "name": "Eve Ryle-hodges"
+        },
+        {
+          "pos": "Cox",
+          "name": "Zahava Lever"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Cooper"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Sinead Lane"
+        },
+        {
+          "pos": "2",
+          "name": "Erin Simmons"
+        },
+        {
+          "pos": "3",
+          "name": "Annie Barker"
+        },
+        {
+          "pos": "4",
+          "name": "Camilla Warner"
+        },
+        {
+          "pos": "5",
+          "name": "Natalia Chetina"
+        },
+        {
+          "pos": "6",
+          "name": "Helen Miller"
+        },
+        {
+          "pos": "7",
+          "name": "Catherine Brinkworth"
+        },
+        {
+          "pos": "Str",
+          "name": "Melissa Varney"
+        },
+        {
+          "pos": "Cox",
+          "name": "Edward Grant"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Cooper"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Helene Caldeman"
+        },
+        {
+          "pos": "2",
+          "name": "Jessica Davies"
+        },
+        {
+          "pos": "3",
+          "name": "Catherine Hirst"
+        },
+        {
+          "pos": "4",
+          "name": "Maya Pratt"
+        },
+        {
+          "pos": "5",
+          "name": "Joanna Wilkin"
+        },
+        {
+          "pos": "6",
+          "name": "Isla Leslie"
+        },
+        {
+          "pos": "7",
+          "name": "Scarlett Du Tillieul Mcnicol"
+        },
+        {
+          "pos": "Str",
+          "name": "Cheryl Pilbeam"
+        },
+        {
+          "pos": "Cox",
+          "name": "Eleanor Rogers"
+        },
+        {
+          "pos": "Coach",
+          "name": "Cheryl Pilbeam"
+        }
+      ]
+    }
+  },
+  "TRO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Charles Mcmillan"
+        },
+        {
+          "pos": "2",
+          "name": "Rory Baggott"
+        },
+        {
+          "pos": "3",
+          "name": "Jonathan Middleton"
+        },
+        {
+          "pos": "4",
+          "name": "Antiochus Omissi"
+        },
+        {
+          "pos": "5",
+          "name": "Matthew Mair"
+        },
+        {
+          "pos": "6",
+          "name": "Andrew Down"
+        },
+        {
+          "pos": "7",
+          "name": "Alexander Lett"
+        },
+        {
+          "pos": "Str",
+          "name": "Ben Thurston"
+        },
+        {
+          "pos": "Cox",
+          "name": "Caitlin Duschenes"
+        },
+        {
+          "pos": "Coach",
+          "name": "Charlie Jenkins"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Seth Johnston"
+        },
+        {
+          "pos": "2",
+          "name": "Thomas Bosley"
+        },
+        {
+          "pos": "3",
+          "name": "Alex Eastwood"
+        },
+        {
+          "pos": "4",
+          "name": "Edward Alveyn"
+        },
+        {
+          "pos": "5",
+          "name": "Antonin Besse"
+        },
+        {
+          "pos": "6",
+          "name": "Andrew Mellor"
+        },
+        {
+          "pos": "7",
+          "name": "Jonathan Ranstrand"
+        },
+        {
+          "pos": "Str",
+          "name": "Alexander Stevenson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Nicola Courtier"
+        },
+        {
+          "pos": "Coach",
+          "name": "Andrew Down"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Joo Lee"
+        },
+        {
+          "pos": "2",
+          "name": "Ryan Sarsfield"
+        },
+        {
+          "pos": "3",
+          "name": "Balam Budwal"
+        },
+        {
+          "pos": "4",
+          "name": "Edward Hiorns"
+        },
+        {
+          "pos": "5",
+          "name": "Andrew Smith"
+        },
+        {
+          "pos": "6",
+          "name": "Brandon Hunter"
+        },
+        {
+          "pos": "7",
+          "name": "Mark Rendell"
+        },
+        {
+          "pos": "Str",
+          "name": "Rory Platt"
+        },
+        {
+          "pos": "Cox",
+          "name": "Chris Hutton"
+        },
+        {
+          "pos": "Coach",
+          "name": "Andrew Down"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "James Baggott"
+        },
+        {
+          "pos": "2",
+          "name": "Christopher Archer"
+        },
+        {
+          "pos": "3",
+          "name": "Callum Mcguinn"
+        },
+        {
+          "pos": "4",
+          "name": "Christopher Holcroft"
+        },
+        {
+          "pos": "5",
+          "name": "Adrian Kendal"
+        },
+        {
+          "pos": "6",
+          "name": "Alex Corkett"
+        },
+        {
+          "pos": "7",
+          "name": "Greg Dunning"
+        },
+        {
+          "pos": "Str",
+          "name": "Julian Few"
+        },
+        {
+          "pos": "Cox",
+          "name": "Hannah Cox"
+        },
+        {
+          "pos": "Coach",
+          "name": "Andrew Down"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Maude Morrison"
+        },
+        {
+          "pos": "2",
+          "name": "Katie Connan"
+        },
+        {
+          "pos": "3",
+          "name": "Rosie Smith"
+        },
+        {
+          "pos": "4",
+          "name": "Stella Pedrazzini"
+        },
+        {
+          "pos": "5",
+          "name": "Hannah Grey"
+        },
+        {
+          "pos": "6",
+          "name": "Mette Bundvad"
+        },
+        {
+          "pos": "7",
+          "name": "Charlotte Trigle"
+        },
+        {
+          "pos": "Str",
+          "name": "Rachel Purkess"
+        },
+        {
+          "pos": "Cox",
+          "name": "James Keiller"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Hermes"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Jemima Peppel"
+        },
+        {
+          "pos": "2",
+          "name": "Eleanor Corbett"
+        },
+        {
+          "pos": "3",
+          "name": "Hannah Palacci"
+        },
+        {
+          "pos": "4",
+          "name": "Lucy Dean"
+        },
+        {
+          "pos": "5",
+          "name": "Alicia Ejsmond-frey"
+        },
+        {
+          "pos": "6",
+          "name": "Amanda Parsons"
+        },
+        {
+          "pos": "7",
+          "name": "Beatrice Graham"
+        },
+        {
+          "pos": "Str",
+          "name": "Phoebe Bragg"
+        },
+        {
+          "pos": "Cox",
+          "name": "Thomas Robertson"
+        },
+        {
+          "pos": "Coach",
+          "name": "Lotti Trigle"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Anna Bennett"
+        },
+        {
+          "pos": "2",
+          "name": "Rose Kyte"
+        },
+        {
+          "pos": "3",
+          "name": "Rosie Batty"
+        },
+        {
+          "pos": "4",
+          "name": "Susannah Leppard"
+        },
+        {
+          "pos": "5",
+          "name": "Lydia Yarlott"
+        },
+        {
+          "pos": "6",
+          "name": "Joanne Leonard"
+        },
+        {
+          "pos": "7",
+          "name": "Rosemary Lobley"
+        },
+        {
+          "pos": "Str",
+          "name": "Simone Dogherty"
+        },
+        {
+          "pos": "Cox",
+          "name": "Rachel Bull"
+        },
+        {
+          "pos": "Coach",
+          "name": "Lotti Trigle"
+        }
+      ]
+    }
+  },
+  "UCO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "James Hedgeland"
+        },
+        {
+          "pos": "2",
+          "name": "Rodrigo Garcia-velasco"
+        },
+        {
+          "pos": "3",
+          "name": "Henry Smith"
+        },
+        {
+          "pos": "4",
+          "name": "Oliver Watts"
+        },
+        {
+          "pos": "5",
+          "name": "James Coote"
+        },
+        {
+          "pos": "6",
+          "name": "James Grice"
+        },
+        {
+          "pos": "7",
+          "name": "Oliver Dammone"
+        },
+        {
+          "pos": "Str",
+          "name": "Andrea Schiavi"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jen Thum"
+        },
+        {
+          "pos": "Coach",
+          "name": "Jonny Singfield"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Jakob Reckhenrich"
+        },
+        {
+          "pos": "2",
+          "name": "Jon-paul Spencer"
+        },
+        {
+          "pos": "3",
+          "name": "Patrick Tomison"
+        },
+        {
+          "pos": "4",
+          "name": "Jaxom Champion"
+        },
+        {
+          "pos": "5",
+          "name": "Christopher Pruijsen"
+        },
+        {
+          "pos": "6",
+          "name": "Steven Wagner"
+        },
+        {
+          "pos": "7",
+          "name": "Rasmus Wissmann"
+        },
+        {
+          "pos": "Str",
+          "name": "Crispin Smith"
+        },
+        {
+          "pos": "Cox",
+          "name": "Victoria Treasure"
+        },
+        {
+          "pos": "Coach",
+          "name": "Richard Sansom"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Alexander Lynchehaun"
+        },
+        {
+          "pos": "2",
+          "name": "Ziang Chen"
+        },
+        {
+          "pos": "3",
+          "name": "Kevin Lindsay"
+        },
+        {
+          "pos": "4",
+          "name": "George King"
+        },
+        {
+          "pos": "5",
+          "name": "Bruno Balthazar"
+        },
+        {
+          "pos": "6",
+          "name": "Petr Sulc"
+        },
+        {
+          "pos": "7",
+          "name": "Mathew Coates"
+        },
+        {
+          "pos": "Str",
+          "name": "Edward Twigger"
+        },
+        {
+          "pos": "Cox",
+          "name": "Oliver Cox"
+        },
+        {
+          "pos": "Coach",
+          "name": "Oliver Dammone"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Georgina Morrison"
+        },
+        {
+          "pos": "2",
+          "name": "Bethany Sillitto"
+        },
+        {
+          "pos": "3",
+          "name": "Ruth Hattersley"
+        },
+        {
+          "pos": "4",
+          "name": "Elinor Costigan"
+        },
+        {
+          "pos": "5",
+          "name": "Susan Humphrey"
+        },
+        {
+          "pos": "6",
+          "name": "Hannah Clarke"
+        },
+        {
+          "pos": "7",
+          "name": "Isabella Lewis"
+        },
+        {
+          "pos": "Str",
+          "name": "Louise Lane"
+        },
+        {
+          "pos": "Cox",
+          "name": "Elizabeth Creek"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alex Thomas"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Clothilde Humbert"
+        },
+        {
+          "pos": "2",
+          "name": "Esme Hicks"
+        },
+        {
+          "pos": "3",
+          "name": "Jacqueline Heybrock"
+        },
+        {
+          "pos": "4",
+          "name": "Jances Pang"
+        },
+        {
+          "pos": "5",
+          "name": "Rachel Patel"
+        },
+        {
+          "pos": "6",
+          "name": "Elizabeth German"
+        },
+        {
+          "pos": "7",
+          "name": "Lucy Ambrose"
+        },
+        {
+          "pos": "Str",
+          "name": "Janine Jones"
+        },
+        {
+          "pos": "Cox",
+          "name": "Catherine Parr"
+        },
+        {
+          "pos": "Coach",
+          "name": "Michael Haynes"
+        }
+      ]
+    }
+  },
+  "WAD": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Tom De Wilton"
+        },
+        {
+          "pos": "2",
+          "name": "Harry Miller"
+        },
+        {
+          "pos": "3",
+          "name": "James Allen"
+        },
+        {
+          "pos": "4",
+          "name": "Paul Wikramaratna"
+        },
+        {
+          "pos": "5",
+          "name": "John Owen"
+        },
+        {
+          "pos": "6",
+          "name": "Andrew Brown"
+        },
+        {
+          "pos": "7",
+          "name": "Eliot Clark"
+        },
+        {
+          "pos": "Str",
+          "name": "Charles Atkinson"
+        },
+        {
+          "pos": "Cox",
+          "name": "Lyndall Schreiner"
+        },
+        {
+          "pos": "Coach",
+          "name": "Buzz Nixon"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Michael Teckman"
+        },
+        {
+          "pos": "2",
+          "name": "Edward Taylor"
+        },
+        {
+          "pos": "3",
+          "name": "Peter Keeling"
+        },
+        {
+          "pos": "4",
+          "name": "James Fotherby"
+        },
+        {
+          "pos": "5",
+          "name": "Alexander Mcgregor"
+        },
+        {
+          "pos": "6",
+          "name": "Howard Brooks"
+        },
+        {
+          "pos": "7",
+          "name": "Russell Tucker"
+        },
+        {
+          "pos": "Str",
+          "name": "Lewis Hart"
+        },
+        {
+          "pos": "Cox",
+          "name": "Alexander Fox"
+        },
+        {
+          "pos": "Coach",
+          "name": "Buzz Nixon"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Thomas Rowlands"
+        },
+        {
+          "pos": "2",
+          "name": "Dominik Wild"
+        },
+        {
+          "pos": "3",
+          "name": "George Lunn"
+        },
+        {
+          "pos": "4",
+          "name": "David Primmer"
+        },
+        {
+          "pos": "5",
+          "name": "Vinay Anicatt"
+        },
+        {
+          "pos": "6",
+          "name": "Joseph Blackmore"
+        },
+        {
+          "pos": "7",
+          "name": "James Kenna"
+        },
+        {
+          "pos": "Str",
+          "name": "Mark Shand"
+        },
+        {
+          "pos": "Cox",
+          "name": "Helena Prokhorenko"
+        },
+        {
+          "pos": "Coach",
+          "name": "Buzz Nixon"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Graham Healy-day"
+        },
+        {
+          "pos": "2",
+          "name": "Tom Hickish"
+        },
+        {
+          "pos": "3",
+          "name": "Keelan Jerram"
+        },
+        {
+          "pos": "4",
+          "name": "Benjamin Ives"
+        },
+        {
+          "pos": "5",
+          "name": "Christopher Higham"
+        },
+        {
+          "pos": "6",
+          "name": "Hamish Macdonald"
+        },
+        {
+          "pos": "7",
+          "name": "Matthew Williams"
+        },
+        {
+          "pos": "Str",
+          "name": "Ben Reid"
+        },
+        {
+          "pos": "Cox",
+          "name": "Jonathan Holmes"
+        },
+        {
+          "pos": "Coach",
+          "name": "Buzz Nixon"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Jennifer Boyd"
+        },
+        {
+          "pos": "2",
+          "name": "Fernanda Langran-goldsmith"
+        },
+        {
+          "pos": "3",
+          "name": "Cetta Mainwaring"
+        },
+        {
+          "pos": "4",
+          "name": "Adrienne Joy"
+        },
+        {
+          "pos": "5",
+          "name": "Rebekah Pawley"
+        },
+        {
+          "pos": "6",
+          "name": "Esmerelda Jelbart Wallbridge"
+        },
+        {
+          "pos": "7",
+          "name": "Lucy Ventress"
+        },
+        {
+          "pos": "Str",
+          "name": "Sarah Hunt"
+        },
+        {
+          "pos": "Cox",
+          "name": "Gabriel Lambert"
+        },
+        {
+          "pos": "Coach",
+          "name": "Rodney Andrews"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Hannah Tickle"
+        },
+        {
+          "pos": "2",
+          "name": "Hannah Brown"
+        },
+        {
+          "pos": "3",
+          "name": "Katherine Copperthwaite"
+        },
+        {
+          "pos": "4",
+          "name": "Philippa Davies"
+        },
+        {
+          "pos": "5",
+          "name": "Hannah Nugent"
+        },
+        {
+          "pos": "6",
+          "name": "Eloise Page"
+        },
+        {
+          "pos": "7",
+          "name": "Lauren Pringle"
+        },
+        {
+          "pos": "Str",
+          "name": "Emma Phillips"
+        },
+        {
+          "pos": "Cox",
+          "name": "Megan Duffy"
+        },
+        {
+          "pos": "Coach",
+          "name": "Rodney Andrews"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Yon-hee Kim"
+        },
+        {
+          "pos": "2",
+          "name": "Jessye Lennie"
+        },
+        {
+          "pos": "3",
+          "name": "Jocelyn Packman"
+        },
+        {
+          "pos": "4",
+          "name": "Alisa Selimovic"
+        },
+        {
+          "pos": "5",
+          "name": "Emilie Lambert"
+        },
+        {
+          "pos": "6",
+          "name": "Clara Breakwell"
+        },
+        {
+          "pos": "7",
+          "name": "Anna Rickman"
+        },
+        {
+          "pos": "Str",
+          "name": "Elena Lynch"
+        },
+        {
+          "pos": "Cox",
+          "name": "Thomas Letts"
+        },
+        {
+          "pos": "Coach",
+          "name": "Rodney Andrews"
+        }
+      ]
+    }
+  },
+  "WOO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Christian Bell"
+        },
+        {
+          "pos": "2",
+          "name": "Mario Recker"
+        },
+        {
+          "pos": "3",
+          "name": "Philipp Becker"
+        },
+        {
+          "pos": "4",
+          "name": "Christopher Prosser"
+        },
+        {
+          "pos": "5",
+          "name": "Clifford Sofield"
+        },
+        {
+          "pos": "6",
+          "name": "Cory Kampf"
+        },
+        {
+          "pos": "7",
+          "name": "Tyler Spencer"
+        },
+        {
+          "pos": "Str",
+          "name": "Duncan England"
+        },
+        {
+          "pos": "Cox",
+          "name": "Fernanda Pirie"
+        },
+        {
+          "pos": "Coach",
+          "name": "Paul Kelly"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Sebastiaan Van Schaik"
+        },
+        {
+          "pos": "2",
+          "name": "John McManigle"
+        },
+        {
+          "pos": "3",
+          "name": "David Matyas"
+        },
+        {
+          "pos": "4",
+          "name": "Rasmus Asbjornsen"
+        },
+        {
+          "pos": "5",
+          "name": "James Kirkbride "
+        },
+        {
+          "pos": "6",
+          "name": "Morgan Dirodi"
+        },
+        {
+          "pos": "7",
+          "name": "Benjamin Frot"
+        },
+        {
+          "pos": "Str",
+          "name": "Casper Gregers Bangert"
+        },
+        {
+          "pos": "Cox",
+          "name": "William Allen"
+        },
+        {
+          "pos": "Coach",
+          "name": "Chris Prosser"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Gillian Langor"
+        },
+        {
+          "pos": "2",
+          "name": "Maria Alva"
+        },
+        {
+          "pos": "3",
+          "name": "Cynthia Eccles"
+        },
+        {
+          "pos": "4",
+          "name": "Dieuwertje Kooij"
+        },
+        {
+          "pos": "5",
+          "name": "Iana Alexeeva"
+        },
+        {
+          "pos": "6",
+          "name": "Megan Robb"
+        },
+        {
+          "pos": "7",
+          "name": "Victoria Reuter"
+        },
+        {
+          "pos": "Str",
+          "name": "Aurelie Cuenod"
+        },
+        {
+          "pos": "Cox",
+          "name": "Rebecca Schneider"
+        },
+        {
+          "pos": "Coach",
+          "name": "Zoe Lundy"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Valerie Gorman"
+        },
+        {
+          "pos": "2",
+          "name": "Susan Graham"
+        },
+        {
+          "pos": "3",
+          "name": "Katherine Henson"
+        },
+        {
+          "pos": "4",
+          "name": "Raffaella Facchini"
+        },
+        {
+          "pos": "5",
+          "name": "Miriam Driessen"
+        },
+        {
+          "pos": "6",
+          "name": "Kathleen Buckingham"
+        },
+        {
+          "pos": "7",
+          "name": "Blandine Boeuf"
+        },
+        {
+          "pos": "Str",
+          "name": "Esther Horowitz"
+        },
+        {
+          "pos": "Cox",
+          "name": "Belinda Platt"
+        },
+        {
+          "pos": "Coach",
+          "name": "Stephanie Solwyka"
+        }
+      ]
+    }
+  },
+  "WRO": {
+    "men": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Evan Whittal-williams"
+        },
+        {
+          "pos": "2",
+          "name": "Robert Pearce"
+        },
+        {
+          "pos": "3",
+          "name": "Laith Tapper"
+        },
+        {
+          "pos": "4",
+          "name": "Andrew Cuthbert"
+        },
+        {
+          "pos": "5",
+          "name": "Michael Brown"
+        },
+        {
+          "pos": "6",
+          "name": "Thomas Levick"
+        },
+        {
+          "pos": "7",
+          "name": "Thomas Calder-Smith"
+        },
+        {
+          "pos": "Str",
+          "name": "Alexander Barnard"
+        },
+        {
+          "pos": "Cox",
+          "name": "Samuel Barker"
+        },
+        {
+          "pos": "Coach",
+          "name": "Tom Calder-Smith"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Louis Graham"
+        },
+        {
+          "pos": "2",
+          "name": "Pablo Docampo"
+        },
+        {
+          "pos": "3",
+          "name": "Harry Dienes"
+        },
+        {
+          "pos": "4",
+          "name": "Matt Wright"
+        },
+        {
+          "pos": "5",
+          "name": "Martin Evans"
+        },
+        {
+          "pos": "6",
+          "name": "Daniel Grabarczyk"
+        },
+        {
+          "pos": "7",
+          "name": "William Mendelowitz"
+        },
+        {
+          "pos": "Str",
+          "name": "James Alexander"
+        },
+        {
+          "pos": "Cox",
+          "name": "Samuel Evington"
+        },
+        {
+          "pos": "Coach",
+          "name": "Oscar Howie"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Corey Johnson"
+        },
+        {
+          "pos": "2",
+          "name": "Benjamin Below"
+        },
+        {
+          "pos": "3",
+          "name": "Jonathan Metzer"
+        },
+        {
+          "pos": "4",
+          "name": "Benedikt Wurm"
+        },
+        {
+          "pos": "5",
+          "name": "Noam Zamir"
+        },
+        {
+          "pos": "6",
+          "name": "Owen Webb"
+        },
+        {
+          "pos": "7",
+          "name": "Jason Lee"
+        },
+        {
+          "pos": "Str",
+          "name": "George Harding"
+        },
+        {
+          "pos": "Cox",
+          "name": "Charlie Hill"
+        },
+        {
+          "pos": "Coach",
+          "name": "Michael Brown"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Joshua Hrycaiczuk"
+        },
+        {
+          "pos": "2",
+          "name": "Max Knipe"
+        },
+        {
+          "pos": "3",
+          "name": "Peter Hicks"
+        },
+        {
+          "pos": "4",
+          "name": "Oscar Howie"
+        },
+        {
+          "pos": "5",
+          "name": "Alexander Lawrence"
+        },
+        {
+          "pos": "6",
+          "name": "Richard Bowles"
+        },
+        {
+          "pos": "7",
+          "name": "William Clarke"
+        },
+        {
+          "pos": "Str",
+          "name": "Jerome Mayaud"
+        },
+        {
+          "pos": "Cox",
+          "name": "Katherine Ellis"
+        },
+        {
+          "pos": "Coach",
+          "name": "Richard Bowles"
+        }
+      ]
+    },
+    "women": {
+      "1": [
+        {
+          "pos": "Bow",
+          "name": "Emily Warren"
+        },
+        {
+          "pos": "2",
+          "name": "Harriet Miller"
+        },
+        {
+          "pos": "3",
+          "name": "Elspeth Cumber"
+        },
+        {
+          "pos": "4",
+          "name": "Emily Chittock"
+        },
+        {
+          "pos": "5",
+          "name": "Alexandra Kyrke-smith"
+        },
+        {
+          "pos": "6",
+          "name": "Florence Morton"
+        },
+        {
+          "pos": "7",
+          "name": "Sophie Gilkes"
+        },
+        {
+          "pos": "Str",
+          "name": "Katherine  Beard"
+        },
+        {
+          "pos": "Cox",
+          "name": "Chloe Holmes"
+        },
+        {
+          "pos": "Coach",
+          "name": "Flo Morton"
+        }
+      ],
+      "2": [
+        {
+          "pos": "Bow",
+          "name": "Catherine Dale"
+        },
+        {
+          "pos": "2",
+          "name": "India Maddison"
+        },
+        {
+          "pos": "3",
+          "name": "Kate Headington"
+        },
+        {
+          "pos": "4",
+          "name": "Noor Shaukat"
+        },
+        {
+          "pos": "5",
+          "name": "Jessica Hadley"
+        },
+        {
+          "pos": "6",
+          "name": "Lucy Darling"
+        },
+        {
+          "pos": "7",
+          "name": "Helena Longair"
+        },
+        {
+          "pos": "Str",
+          "name": "Naomi Dinnes"
+        },
+        {
+          "pos": "Cox",
+          "name": "Lucinda Gregory"
+        },
+        {
+          "pos": "Coach",
+          "name": "Ali Kryke-Smith"
+        }
+      ],
+      "3": [
+        {
+          "pos": "Bow",
+          "name": "Jennifer Stevens"
+        },
+        {
+          "pos": "2",
+          "name": "Emma Dixon"
+        },
+        {
+          "pos": "3",
+          "name": "Elizabeth Bell"
+        },
+        {
+          "pos": "4",
+          "name": "Rebecca Price"
+        },
+        {
+          "pos": "5",
+          "name": "Jess Ruben"
+        },
+        {
+          "pos": "6",
+          "name": "Lindsey Caldwell"
+        },
+        {
+          "pos": "7",
+          "name": "Jasmine Jimenez"
+        },
+        {
+          "pos": "Str",
+          "name": "Katherine Ambrose"
+        },
+        {
+          "pos": "Cox",
+          "name": "Michael Brennan"
+        },
+        {
+          "pos": "Coach",
+          "name": "Alex Lawrence"
+        }
+      ],
+      "4": [
+        {
+          "pos": "Bow",
+          "name": "Liselotte Snijders"
+        },
+        {
+          "pos": "2",
+          "name": "Rachel Donallon"
+        },
+        {
+          "pos": "3",
+          "name": "Lucy Payne"
+        },
+        {
+          "pos": "4",
+          "name": "Debbie Morgan"
+        },
+        {
+          "pos": "5",
+          "name": "Hollie Higgins"
+        },
+        {
+          "pos": "6",
+          "name": "Alice Mackereth"
+        },
+        {
+          "pos": "7",
+          "name": "Amy Slingo"
+        },
+        {
+          "pos": "Str",
+          "name": "Charlotte Bushnell"
+        },
+        {
+          "pos": "Cox",
+          "name": "Saskia Matthews"
+        },
+        {
+          "pos": "Coach",
+          "name": "Judith Frodyma"
+        }
+      ]
+    }
+  }
+}
