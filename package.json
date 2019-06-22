@@ -50,7 +50,7 @@
     "@vue/cli-service": "3.8.4",
     "babel-eslint": "10.0.2",
     "concurrently": "4.1.0",
-    "eslint": "5.16.0",
+    "eslint": "6.0.0",
     "eslint-plugin-vue": "5.2.2",
     "husky": "2.4.1",
     "vue-template-compiler": "2.6.10"
