@@ -47,7 +47,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "3.10.0",
     "@vue/cli-plugin-eslint": "3.9.1",
-    "@vue/cli-service": "3.10.0",
+    "@vue/cli-service": "3.11.0",
     "babel-eslint": "10.0.2",
     "concurrently": "4.1.2",
     "eslint": "6.2.1",
