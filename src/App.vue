@@ -39,7 +39,7 @@
           dense
           single-line
           class="mt-2 noselect"
-        ></v-autocomplete>
+        />
       </v-flex>
     </v-toolbar>
     <v-content>
@@ -2043,17 +2043,12 @@
         </v-list-tile>
       </v-list>
       <v-flex>
-        <v-menu offset-y attach>
-          <v-btn class="mt-1 ml-1" color="primary" style="height: 39px;" slot="activator">{{(event ? `${event.name} ${event.year}` : '')}}</v-btn>
-          <v-list dense>
-            <v-list-tile v-for="event in events" :key="event.year+event.name" :to="`/${event.name.toLowerCase()}/${event.year}`" style="background-color:white;">
-              <v-list-tile-title>{{`${event.name} ${event.year}`}}</v-list-tile-title>
-            </v-list-tile>
-            <v-list-tile color="primary" href="http://oxbump.feathersquare.com/historical20.php" target="_blank" style="background-color:white;">
-              <v-list-tile-title>Historic data</v-list-tile-title>
-            </v-list-tile>
-          </v-list>
-        </v-menu>
+          <v-select
+            class="px-4"
+            :item-text="({name, year}) => `${name} ${year}`"
+            return-object
+            v-model="event"
+            :items="events"/>
       </v-flex>
     </v-navigation-drawer>
     <v-footer app fixed>
@@ -2145,7 +2140,7 @@ export default {
       chartData: {}
     }
   },
-  beforeMount () {
+  beforeMount() {
     this.auth = this.$route.query.auth
     const socket = new ReconnectingWebSocket(`${window.location.origin.replace('http','ws')}/live`)
     socket.onmessage = (event) => {
@@ -2233,6 +2228,11 @@ export default {
       })
   },
   watch: {
+    event(nVal) {
+      if (nVal) {
+        this.$router.replace(`/${nVal.name.toLowerCase()}/${nVal.year}`)
+      }
+    },
     $route() {
       this.selectEvent()
     },
@@ -2607,7 +2607,7 @@ export default {
       }
       this.divs = false
       this.chartData = {}
-      axios.get(`./data/${event.name.toLowerCase()}_${event.year}.json`)
+      axios.get(`/data/${event.name.toLowerCase()}_${event.year}.json`)
         .then((response) => {
           for (const club in response.data) {
             for (const gender in response.data[club]) {
@@ -2626,12 +2626,12 @@ export default {
           this.bumpDay = this.eventDay
           this.event = event
         })
-      axios.get(`./data/${event.name.toLowerCase()}_${event.year}_divs.json`)
+      axios.get(`/data/${event.name.toLowerCase()}_${event.year}_divs.json`)
         .then((response) => {
           this.divs = response.data
         })
         .catch(() => this.divs = false)
-      axios.get(`./data/${event.name.toLowerCase()}_${event.year}_crews.json`)
+      axios.get(`/data/${event.name.toLowerCase()}_${event.year}_crews.json`)
         .then((response) => {
           this.crews = response.data
         })
