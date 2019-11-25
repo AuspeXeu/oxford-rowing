@@ -135,8 +135,9 @@ if __name__ == "__main__":
                     college, moves = ret
                     if not college in d:
                         d[college] = {}
-                    if gender not in d[college]:
-                        d[college][gender]=[]
+                    for g in ["men","women"]:
+                        if g not in d[college]:
+                            d[college][g] = []
                     d[college][gender].append({})
                     d[college][gender][-1]["moves"]=moves
                     d[college][gender][-1]["start"]=c
