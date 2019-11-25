@@ -533,6 +533,9 @@ export default {
       this.bumpDay = this.eventDay
     },
     bumpDay() {
+      if (!this.verified) {
+        return
+      }
       if (this.bumpDay < this.eventDay && !confirm('You are about to change a past division, do you know what you are doing?'))
         setTimeout(() => this.bumpDay = this.eventDay, 1)
       else if (this.bumpDay > this.eventDay && !confirm('You are about to change a future division, do you know what you are doing?'))
