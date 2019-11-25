@@ -1,658 +1,602 @@
 {
-    "COMPOSITE": {
-        "men": [
-            {
-                "start": 1, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 2, 
-                "moves": [
-                    [
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 3, 
-                "moves": [
-                    [
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 4, 
-                "moves": [
-                    [
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 5, 
-                "moves": [
-                    [
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 6, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 7, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 8, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 9, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 10, 
-                "moves": [
-                    [
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 11, 
-                "moves": [
-                    [
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 13, 
-                "moves": [
-                    [
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 14, 
-                "moves": [
-                    [
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 15, 
-                "moves": [
-                    [
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 17, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 18, 
-                "moves": [
-                    [
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 19, 
-                "moves": [
-                    [
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 20, 
-                "moves": [
-                    [
-                        {
-                            "moves": "2", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 22, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 23, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 25, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 26, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 27, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 28, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }
+  "COMPOSITE": {
+    "men": [
+      {
+        "start": 1, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
         ]
-    }, 
-    "SCO": {
-        "men": [
-            {
-                "start": 16, 
-                "moves": [
-                    [
-                        {
-                            "moves": "1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 24, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "-1", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }
+      }, 
+      {
+        "start": 2, 
+        "moves": [
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
         ]
-    }, 
-    "JEO": {
-        "men": [
-            {
-                "start": 12, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }, 
-            {
-                "start": 21, 
-                "moves": [
-                    [
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }, 
-                        {
-                            "moves": "0", 
-                            "status:": "True"
-                        }
-                    ]
-                ]
-            }
+      }, 
+      {
+        "start": 3, 
+        "moves": [
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
         ]
-    }
+      }, 
+      {
+        "start": 4, 
+        "moves": [
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 5, 
+        "moves": [
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 6, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 7, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 8, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 9, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 10, 
+        "moves": [
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 11, 
+        "moves": [
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 13, 
+        "moves": [
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 14, 
+        "moves": [
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 15, 
+        "moves": [
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 17, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 18, 
+        "moves": [
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 19, 
+        "moves": [
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 20, 
+        "moves": [
+          {
+            "moves": "2", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 22, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 23, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 25, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 26, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 27, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 28, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }
+    ]
+  }, 
+  "SCO": {
+    "men": [
+      {
+        "start": 16, 
+        "moves": [
+          {
+            "moves": "1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 24, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "-1", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }
+    ]
+  }, 
+  "JEO": {
+    "men": [
+      {
+        "start": 12, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }, 
+      {
+        "start": 21, 
+        "moves": [
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }, 
+          {
+            "moves": "0", 
+            "status:": "True"
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -115,8 +115,8 @@ def parse_line(url,line):
 
 
 if __name__ == "__main__":
-    if not os.path.exists("starting_order"):
-        os.mkdir("starting_order")
+    if not os.path.exists("data"):
+        os.mkdir("data")
     for race in ["eights","torpids"]:
         for year in range(1820,2019):
             d = {}
@@ -132,14 +132,13 @@ if __name__ == "__main__":
                     if ret is None:
                         continue
                     c += 1
-                    college,moves = ret
+                    college, moves = ret
                     if not college in d:
                         d[college] = {}
                     if gender not in d[college]:
                         d[college][gender]=[]
                     d[college][gender].append({})
-                    d[college][gender][-1]["moves"]=[]
-                    d[college][gender][-1]["moves"].append(moves)
+                    d[college][gender][-1]["moves"]=moves
                     d[college][gender][-1]["start"]=c
-            with open('starting_order/%s_%s.json' % (race,year), 'w') as outfile:
-                json.dump(d, outfile,indent=4)
+            with open(os.path.join('data', '%s_%s.json') % (race,year), 'w') as outfile:
+                json.dump(d, outfile,indent=2)
