@@ -1,0 +1,142 @@
+{
+    "UCO": {
+        "men": [
+            {
+                "start": 4, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "CHB": {
+        "men": [
+            {
+                "start": 1, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "BRC": {
+        "men": [
+            {
+                "start": 2, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "BAL": {
+        "men": [
+            {
+                "start": 3, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }
+}

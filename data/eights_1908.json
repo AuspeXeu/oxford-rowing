@@ -1,0 +1,927 @@
+{
+    "EXC": {
+        "men": [
+            {
+                "start": 16, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "LIC": {
+        "men": [
+            {
+                "start": 13, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "NEC": {
+        "men": [
+            {
+                "start": 3, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }, 
+            {
+                "start": 23, 
+                "moves": [
+                    [
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "BAL": {
+        "men": [
+            {
+                "start": 7, 
+                "moves": [
+                    [
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "QCO": {
+        "men": [
+            {
+                "start": 18, 
+                "moves": [
+                    [
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "COO": {
+        "men": [
+            {
+                "start": 10, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "SCO": {
+        "men": [
+            {
+                "start": 21, 
+                "moves": [
+                    [
+                        {
+                            "moves": "-3", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "PMB": {
+        "men": [
+            {
+                "start": 11, 
+                "moves": [
+                    [
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "UCO": {
+        "men": [
+            {
+                "start": 5, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "SEH": {
+        "men": [
+            {
+                "start": 22, 
+                "moves": [
+                    [
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-3", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "CHB": {
+        "men": [
+            {
+                "start": 1, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }, 
+            {
+                "start": 24, 
+                "moves": [
+                    [
+                        {
+                            "moves": "3", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "2", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "TRO": {
+        "men": [
+            {
+                "start": 4, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }, 
+            {
+                "start": 26, 
+                "moves": [
+                    [
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "WRO": {
+        "men": [
+            {
+                "start": 15, 
+                "moves": [
+                    [
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "WAD": {
+        "men": [
+            {
+                "start": 19, 
+                "moves": [
+                    [
+                        {
+                            "moves": "2", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "SJO": {
+        "men": [
+            {
+                "start": 6, 
+                "moves": [
+                    [
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }, 
+            {
+                "start": 27, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "HEC": {
+        "men": [
+            {
+                "start": 20, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "JEO": {
+        "men": [
+            {
+                "start": 17, 
+                "moves": [
+                    [
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "KEB": {
+        "men": [
+            {
+                "start": 14, 
+                "moves": [
+                    [
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "ORO": {
+        "men": [
+            {
+                "start": 12, 
+                "moves": [
+                    [
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "MAG": {
+        "men": [
+            {
+                "start": 2, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }, 
+            {
+                "start": 25, 
+                "moves": [
+                    [
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "3", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "-1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "MER": {
+        "men": [
+            {
+                "start": 8, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "1", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }, 
+    "BRC": {
+        "men": [
+            {
+                "start": 9, 
+                "moves": [
+                    [
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }, 
+                        {
+                            "moves": "0", 
+                            "status:": "True"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }
+}
