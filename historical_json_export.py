@@ -141,5 +141,6 @@ if __name__ == "__main__":
                     d[college][gender].append({})
                     d[college][gender][-1]["moves"]=moves
                     d[college][gender][-1]["start"]=c
-            with open(os.path.join('data', '%s_%s.json') % (race,year), 'w') as outfile:
-                json.dump(d, outfile,indent=2)
+            if (len(d.keys()) > 0):
+                with open(os.path.join('data', '%s_%s.json') % (race,year), 'w') as outfile:
+                    json.dump(d, outfile,indent=2)
