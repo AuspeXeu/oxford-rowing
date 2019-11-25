@@ -2293,8 +2293,8 @@ export default {
         this.boats.forEach((boat) => this.chartData[boat.club][boat.gender][boat.number].opacity = 0.1)
         this.boatsSelected.forEach((boat) => {
           this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0
-          this.boatsHigh.push(boat)
         })
+        this.boatsHigh = [this.boatsHigh, ...this.boatsSelected]
       }
     }
   },
