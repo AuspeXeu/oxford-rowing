@@ -114,8 +114,6 @@ app.get('/events', (req, res) => {
     res.json(events)
   })
 })
-//Serve home
-app.get('/', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 //Update an entry in the data structure and broadcast changes
 const updateEntry = (data, name, year, club, gender, number, day, move) => {
   //Don't accept results that are more than one day in the future
@@ -295,6 +293,9 @@ app.ws('/live', (ws, req) => {
 
 //Get websocket for /live endpoint
 const aWss = wss.getWss('/live')
+
+//Serve home
+app.get('*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 
 //Finally start listening
 server.listen({host: conf.get('bind'),port: conf.get('port')})
