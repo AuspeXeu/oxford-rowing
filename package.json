@@ -21,7 +21,7 @@
     }
   },
   "scripts": {
-    "api": "node server.js",
+    "api": "nodemon server.js",
     "frontend": "vue-cli-service serve",
     "dev": "concurrently --kill-others \"npm run api\" \"npm run frontend\"",
     "build": "vue-cli-service build",
@@ -53,6 +53,7 @@
     "eslint": "6.7.0",
     "eslint-plugin-vue": "6.0.1",
     "husky": "3.1.0",
+    "nodemon": "2.0.1",
     "vue-template-compiler": "2.6.10"
   },
   "eslintConfig": {
