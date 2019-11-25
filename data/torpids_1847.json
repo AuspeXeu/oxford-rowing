@@ -5,32 +5,32 @@
         "start": 4, 
         "moves": [
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": 2, 
-            "status:": true
+            "status": true, 
+            "moves": 2
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }
         ]
       }
@@ -43,32 +43,32 @@
         "start": 1, 
         "moves": [
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }
         ]
       }
@@ -81,32 +81,32 @@
         "start": 7, 
         "moves": [
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }
         ]
       }
@@ -119,32 +119,32 @@
         "start": 5, 
         "moves": [
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }
         ]
       }
@@ -157,32 +157,32 @@
         "start": 2, 
         "moves": [
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }, 
           {
-            "moves": -99, 
-            "status:": true
+            "status": true, 
+            "moves": -99
           }
         ]
       }
@@ -195,32 +195,32 @@
         "start": 6, 
         "moves": [
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }
         ]
       }
@@ -233,32 +233,32 @@
         "start": 3, 
         "moves": [
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": -1, 
-            "status:": true
+            "status": true, 
+            "moves": -1
           }, 
           {
-            "moves": 0, 
-            "status:": true
+            "status": true, 
+            "moves": 0
           }, 
           {
-            "moves": 1, 
-            "status:": true
+            "status": true, 
+            "moves": 1
           }
         ]
       }

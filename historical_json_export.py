@@ -108,7 +108,7 @@ def parse_line(url,line):
             print(url, college, line)
     ret_moves = []
     for m in moves:
-        ret_moves.append({"status:": True,
+        ret_moves.append({"status": True,
                           "moves": int(m)}
                          )
     return map_college(college), ret_moves
