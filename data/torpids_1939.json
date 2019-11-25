@@ -5,28 +5,28 @@
         "start": 10, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -34,28 +34,28 @@
         "start": 30, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -67,28 +67,28 @@
         "start": 24, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -100,28 +100,28 @@
         "start": 1, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -129,28 +129,28 @@
         "start": 26, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -162,28 +162,28 @@
         "start": 6, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -191,28 +191,28 @@
         "start": 21, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -224,28 +224,28 @@
         "start": 17, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -253,28 +253,28 @@
         "start": 32, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -286,28 +286,28 @@
         "start": 12, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -319,28 +319,28 @@
         "start": 27, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -352,28 +352,28 @@
         "start": 4, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -381,28 +381,28 @@
         "start": 38, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -414,28 +414,28 @@
         "start": 5, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -443,28 +443,28 @@
         "start": 35, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -476,28 +476,28 @@
         "start": 23, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -505,28 +505,28 @@
         "start": 31, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -538,28 +538,28 @@
         "start": 2, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -567,28 +567,28 @@
         "start": 28, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -600,28 +600,28 @@
         "start": 8, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -629,28 +629,28 @@
         "start": 25, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -662,28 +662,28 @@
         "start": 9, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -695,28 +695,28 @@
         "start": 18, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "2", 
-            "status:": "True"
+            "moves": 2, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -724,28 +724,28 @@
         "start": 40, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -757,28 +757,28 @@
         "start": 22, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -786,28 +786,28 @@
         "start": 41, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -819,28 +819,28 @@
         "start": 7, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -848,28 +848,28 @@
         "start": 19, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -881,28 +881,28 @@
         "start": 16, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -910,28 +910,28 @@
         "start": 37, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -943,28 +943,28 @@
         "start": 20, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -976,28 +976,28 @@
         "start": 14, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1005,28 +1005,28 @@
         "start": 33, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -1038,28 +1038,28 @@
         "start": 11, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1067,28 +1067,28 @@
         "start": 36, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -1100,28 +1100,28 @@
         "start": 3, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1129,28 +1129,28 @@
         "start": 29, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -1162,28 +1162,28 @@
         "start": 13, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1191,28 +1191,28 @@
         "start": 39, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -1224,28 +1224,28 @@
         "start": 15, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1253,28 +1253,28 @@
         "start": 34, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1282,28 +1282,28 @@
         "start": 42, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }

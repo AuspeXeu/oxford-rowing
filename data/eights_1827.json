@@ -5,28 +5,28 @@
         "start": 4, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -38,28 +38,28 @@
         "start": 1, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -71,28 +71,28 @@
         "start": 2, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -104,28 +104,28 @@
         "start": 3, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }

@@ -5,20 +5,20 @@
         "start": 13, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -26,20 +26,20 @@
         "start": 33, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -47,20 +47,20 @@
         "start": 54, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -68,20 +68,20 @@
         "start": 85, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -89,20 +89,20 @@
         "start": 95, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -110,20 +110,20 @@
         "start": 108, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -135,20 +135,20 @@
         "start": 9, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -156,20 +156,20 @@
         "start": 35, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -177,20 +177,20 @@
         "start": 63, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -198,20 +198,20 @@
         "start": 117, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -223,20 +223,20 @@
         "start": 83, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -244,20 +244,20 @@
         "start": 105, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -265,20 +265,20 @@
         "start": 116, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -288,20 +288,20 @@
         "start": 11, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -309,20 +309,20 @@
         "start": 23, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -334,20 +334,20 @@
         "start": 4, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -355,20 +355,20 @@
         "start": 22, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -380,20 +380,20 @@
         "start": 7, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -401,20 +401,20 @@
         "start": 31, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -422,20 +422,20 @@
         "start": 72, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -447,20 +447,20 @@
         "start": 4, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -468,20 +468,20 @@
         "start": 26, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -489,20 +489,20 @@
         "start": 46, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -510,20 +510,20 @@
         "start": 79, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -535,20 +535,20 @@
         "start": 19, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -556,20 +556,20 @@
         "start": 34, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -577,20 +577,20 @@
         "start": 67, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -598,20 +598,20 @@
         "start": 89, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -619,20 +619,20 @@
         "start": 94, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -640,20 +640,20 @@
         "start": 97, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "2", 
-            "status:": "True"
+            "moves": 2, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -661,20 +661,20 @@
         "start": 110, 
         "moves": [
           {
-            "moves": "2", 
-            "status:": "True"
+            "moves": 2, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -682,20 +682,20 @@
         "start": 118, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -707,20 +707,20 @@
         "start": 15, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -728,20 +728,20 @@
         "start": 55, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -749,20 +749,20 @@
         "start": 91, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -770,20 +770,20 @@
         "start": 96, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -793,20 +793,20 @@
         "start": 14, 
         "moves": [
           {
-            "moves": "2", 
-            "status:": "True"
+            "moves": 2, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -818,20 +818,20 @@
         "start": 20, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -839,20 +839,20 @@
         "start": 51, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -860,20 +860,20 @@
         "start": 69, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -881,20 +881,20 @@
         "start": 90, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -904,20 +904,20 @@
         "start": 3, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -925,20 +925,20 @@
         "start": 17, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -950,20 +950,20 @@
         "start": 10, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -971,20 +971,20 @@
         "start": 19, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -996,20 +996,20 @@
         "start": 6, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1017,20 +1017,20 @@
         "start": 16, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1038,20 +1038,20 @@
         "start": 25, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -1063,20 +1063,20 @@
         "start": 75, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "2", 
-            "status:": "True"
+            "moves": 2, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -1088,20 +1088,20 @@
         "start": 24, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1109,20 +1109,20 @@
         "start": 78, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1130,20 +1130,20 @@
         "start": 93, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1151,20 +1151,20 @@
         "start": 102, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -1176,20 +1176,20 @@
         "start": 18, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1197,20 +1197,20 @@
         "start": 30, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1218,20 +1218,20 @@
         "start": 57, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1239,20 +1239,20 @@
         "start": 103, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1260,20 +1260,20 @@
         "start": 109, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1281,20 +1281,20 @@
         "start": 121, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -1306,20 +1306,20 @@
         "start": 6, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1327,20 +1327,20 @@
         "start": 27, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1348,20 +1348,20 @@
         "start": 49, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1369,20 +1369,20 @@
         "start": 70, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1390,20 +1390,20 @@
         "start": 114, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -1415,20 +1415,20 @@
         "start": 23, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1436,20 +1436,20 @@
         "start": 39, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1457,20 +1457,20 @@
         "start": 61, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -1482,20 +1482,20 @@
         "start": 5, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1503,20 +1503,20 @@
         "start": 29, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1524,20 +1524,20 @@
         "start": 42, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1545,20 +1545,20 @@
         "start": 59, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1566,20 +1566,20 @@
         "start": 71, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1587,20 +1587,20 @@
         "start": 84, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -1612,20 +1612,20 @@
         "start": 3, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1633,20 +1633,20 @@
         "start": 17, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1654,20 +1654,20 @@
         "start": 45, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "3", 
-            "status:": "True"
+            "moves": 3, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1675,20 +1675,20 @@
         "start": 64, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -1696,20 +1696,20 @@
         "start": 92, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1717,20 +1717,20 @@
         "start": 112, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1738,20 +1738,20 @@
         "start": 119, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -1763,20 +1763,20 @@
         "start": 16, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1784,20 +1784,20 @@
         "start": 62, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1805,20 +1805,20 @@
         "start": 81, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -1830,20 +1830,20 @@
         "start": 14, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1851,20 +1851,20 @@
         "start": 44, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1872,20 +1872,20 @@
         "start": 77, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1893,20 +1893,20 @@
         "start": 98, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1914,20 +1914,20 @@
         "start": 107, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -1935,20 +1935,20 @@
         "start": 120, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -1960,20 +1960,20 @@
         "start": 8, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -1981,20 +1981,20 @@
         "start": 38, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -2002,20 +2002,20 @@
         "start": 65, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -2025,20 +2025,20 @@
         "start": 2, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2046,20 +2046,20 @@
         "start": 13, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2067,20 +2067,20 @@
         "start": 21, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -2092,20 +2092,20 @@
         "start": 37, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2113,20 +2113,20 @@
         "start": 86, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -2134,20 +2134,20 @@
         "start": 100, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -2157,20 +2157,20 @@
         "start": 5, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -2182,20 +2182,20 @@
         "start": 12, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -2203,20 +2203,20 @@
         "start": 41, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -2224,20 +2224,20 @@
         "start": 68, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -2245,20 +2245,20 @@
         "start": 115, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -2270,20 +2270,20 @@
         "start": 32, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -2291,20 +2291,20 @@
         "start": 52, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2312,20 +2312,20 @@
         "start": 73, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -2333,20 +2333,20 @@
         "start": 106, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -2356,20 +2356,20 @@
         "start": 8, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -2381,20 +2381,20 @@
         "start": 7, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -2402,20 +2402,20 @@
         "start": 18, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -2427,20 +2427,20 @@
         "start": 21, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2448,20 +2448,20 @@
         "start": 50, 
         "moves": [
           {
-            "moves": "-3", 
-            "status:": "True"
+            "moves": -3, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -2469,20 +2469,20 @@
         "start": 66, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -2492,20 +2492,20 @@
         "start": 9, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -2517,20 +2517,20 @@
         "start": 1, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2538,20 +2538,20 @@
         "start": 28, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2559,20 +2559,20 @@
         "start": 53, 
         "moves": [
           {
-            "moves": "3", 
-            "status:": "True"
+            "moves": 3, 
+            "status:": true
           }, 
           {
-            "moves": "2", 
-            "status:": "True"
+            "moves": 2, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -2580,20 +2580,20 @@
         "start": 56, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2601,20 +2601,20 @@
         "start": 82, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -2622,20 +2622,20 @@
         "start": 99, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "2", 
-            "status:": "True"
+            "moves": 2, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -2647,20 +2647,20 @@
         "start": 1, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2668,20 +2668,20 @@
         "start": 15, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2689,20 +2689,20 @@
         "start": 20, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -2710,20 +2710,20 @@
         "start": 24, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -2735,20 +2735,20 @@
         "start": 2, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2756,20 +2756,20 @@
         "start": 25, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2777,20 +2777,20 @@
         "start": 48, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2798,20 +2798,20 @@
         "start": 58, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -2819,20 +2819,20 @@
         "start": 74, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2840,20 +2840,20 @@
         "start": 87, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -2861,20 +2861,20 @@
         "start": 101, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -2886,20 +2886,20 @@
         "start": 104, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -2911,20 +2911,20 @@
         "start": 10, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -2932,20 +2932,20 @@
         "start": 47, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -2953,20 +2953,20 @@
         "start": 80, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -2974,20 +2974,20 @@
         "start": 113, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -2999,20 +2999,20 @@
         "start": 11, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -3020,20 +3020,20 @@
         "start": 36, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }, 
@@ -3041,20 +3041,20 @@
         "start": 60, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -3066,20 +3066,20 @@
         "start": 88, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -3091,20 +3091,20 @@
         "start": 22, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -3112,20 +3112,20 @@
         "start": 40, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "-3", 
-            "status:": "True"
+            "moves": -3, 
+            "status:": true
           }, 
           {
-            "moves": "-3", 
-            "status:": "True"
+            "moves": -3, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -3133,20 +3133,20 @@
         "start": 76, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -3156,20 +3156,20 @@
         "start": 12, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -3181,20 +3181,20 @@
         "start": 43, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "3", 
-            "status:": "True"
+            "moves": 3, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }, 
@@ -3202,20 +3202,20 @@
         "start": 111, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }

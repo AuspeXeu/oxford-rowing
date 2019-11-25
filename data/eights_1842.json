@@ -5,32 +5,32 @@
         "start": 10, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }, 
@@ -38,32 +38,32 @@
         "start": 13, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -75,32 +75,32 @@
         "start": 4, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -112,32 +112,32 @@
         "start": 2, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -149,32 +149,32 @@
         "start": 11, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-99", 
-            "status:": "True"
+            "moves": -99, 
+            "status:": true
           }, 
           {
-            "moves": "-99", 
-            "status:": "True"
+            "moves": -99, 
+            "status:": true
           }, 
           {
-            "moves": "-99", 
-            "status:": "True"
+            "moves": -99, 
+            "status:": true
           }, 
           {
-            "moves": "-99", 
-            "status:": "True"
+            "moves": -99, 
+            "status:": true
           }
         ]
       }
@@ -186,32 +186,32 @@
         "start": 8, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -223,32 +223,32 @@
         "start": 14, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "2", 
-            "status:": "True"
+            "moves": 2, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -260,32 +260,32 @@
         "start": 5, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -297,32 +297,32 @@
         "start": 7, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -334,32 +334,32 @@
         "start": 12, 
         "moves": [
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -371,32 +371,32 @@
         "start": 1, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
@@ -408,32 +408,32 @@
         "start": 9, 
         "moves": [
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }
         ]
       }
@@ -445,32 +445,32 @@
         "start": 6, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }
         ]
       }
@@ -482,32 +482,32 @@
         "start": 3, 
         "moves": [
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "-1", 
-            "status:": "True"
+            "moves": -1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }, 
           {
-            "moves": "1", 
-            "status:": "True"
+            "moves": 1, 
+            "status:": true
           }, 
           {
-            "moves": "0", 
-            "status:": "True"
+            "moves": 0, 
+            "status:": true
           }
         ]
       }
