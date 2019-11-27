@@ -607,7 +607,7 @@ export default {
       return this.scale * 460
     },
     boatsPerDiv() {
-      return (this.event && this.event.name.toLowerCase() === 'torpids' ? 12 : 13)
+      return (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011) ? 12 : 13)
     },
     divBoats() {
       const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
