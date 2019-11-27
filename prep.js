@@ -118,8 +118,9 @@ const dctTrans = {
 
 const glyphs = Object.keys(dctTrans)
 
-const downloadCrewlist = (url, dst) => {
-  axios.get(url)
+const downloadCrewlist = async (url, dst) => {
+  log(`Downloading ${url} to ${dst}`)
+  return axios.get(url)
     .then((response) => {
       const crews = {}
       const $ = cheerio.load(response.data)
@@ -149,13 +150,16 @@ const downloadCrewlist = (url, dst) => {
     })
 }
 
-crews.forEach(({id, year, event}) => {
-  const url = `https://ourcs.co.uk/racing/entries/events/event/${id}/crew_lists/`
-  const fname = `${__dirname}/data/${event}_${year}_crews.json`
-  if (!fs.existsSync(fname)) {
-    downloadCrewlist(url, fname)
+const crewLists = async () => {
+  for (const {id, year, event} of crews) {
+    const url = `https://ourcs.co.uk/racing/entries/events/event/${id}/crew_lists/`
+    const fname = `${__dirname}/data/${event}_${year}_crews.json`
+    if (!fs.existsSync(fname)) {
+      await downloadCrewlist(url, fname)
+    }
   }
-})
+}
+crewLists()
 
 axios.get(startingOrder)
   .then((response) => {
