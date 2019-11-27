@@ -1301,6 +1301,32 @@
       }
     ]
   }, 
+  "OSG": {
+    "men": [
+      {
+        "start": 37, 
+        "moves": [
+          {
+            "status": true, 
+            "moves": -1
+          }, 
+          {
+            "status": true, 
+            "moves": -6
+          }, 
+          {
+            "status": true, 
+            "moves": -5
+          }, 
+          {
+            "status": true, 
+            "moves": 0
+          }
+        ]
+      }
+    ], 
+    "women": []
+  }, 
   "SEH": {
     "men": [
       {
@@ -2283,32 +2309,6 @@
         ]
       }
     ]
-  }, 
-  "OSLG": {
-    "men": [
-      {
-        "start": 37, 
-        "moves": [
-          {
-            "status": true, 
-            "moves": -1
-          }, 
-          {
-            "status": true, 
-            "moves": -6
-          }, 
-          {
-            "status": true, 
-            "moves": -5
-          }, 
-          {
-            "status": true, 
-            "moves": 0
-          }
-        ]
-      }
-    ], 
-    "women": []
   }, 
   "KEB": {
     "men": [

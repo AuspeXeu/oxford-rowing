@@ -57,7 +57,7 @@ def map_college(name):
         "StAntony's": "SAY",
         "Templeton": "TMP",
         "OslerHouse": "OSG",
-        "Osler-Green": "OSLG",
+        "Osler-Green": "OSG",
         "Westminster": "WES",
         "Manchester": "MAC",
         "MagdalenHall": "MAH",
