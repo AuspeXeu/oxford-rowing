@@ -2,13 +2,47 @@
 // This can either be 'torpids' or 'eights'
 const event = 'eights'
 const year = 2019
-const crewlist = 'https://ourcs.co.uk/racing/entries/events/event/1/crew_lists/'
+
+// These ids can be obtained from https://ourcs.co.uk/racing/entries/events/
+// Example: 'https://ourcs.co.uk/racing/entries/events/event/198/crew_lists/' -> is 198 for the year 2019
+const eightsCrews = [
+  {id: 198, year: 2019},
+  {id: 186, year: 2018},
+  {id: 174, year: 2017},
+  {id: 162, year: 2016},
+  {id: 146, year: 2015},
+  {id: 121, year: 2014},
+  {id: 108, year: 2013},
+  {id: 92, year: 2012},
+  {id: 68, year: 2011},
+  {id: 57, year: 2010},
+  {id: 44, year: 2009},
+  {id: 27, year: 2008},
+  {id: 5, year: 2007}
+].map((data) => ({...data, event: 'eights'}))
+
+const torpidsCrews = [
+  {id: 195, year: 2019},
+  {id: 184, year: 2018},
+  {id: 173, year: 2017},
+  {id: 159, year: 2016},
+  {id: 133, year: 2015},
+  {id: 119, year: 2014},
+  {id: 103, year: 2013},
+  {id: 89, year: 2012},
+  {id: 67, year: 2011},
+  {id: 55, year: 2010},
+  {id: 40, year: 2009},
+  {id: 22, year: 2008},
+  {id: 1, year: 2007}
+].map((data) => ({...data, event: 'torpids'}))
+
+const crews = eightsCrews.concat(torpidsCrews)
 
 // DO NOT CHANGE ANYTHING BELOW THIS LINE
 const fs = require('fs')
 const axios = require('axios')
 const moment = require('moment')
-const decode = require('decode-html')
 const cheerio = require('cheerio')
 
 const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ...args])
@@ -91,10 +125,10 @@ const downloadCrewlist = (url, dst) => {
       const $ = cheerio.load(response.data)
       const crewsRaw = {}
       $('div.panel.panel-default').each((idx, eleme) => {
-        const crew = decode($('a', eleme).html())
+        const crew = $('a', eleme).text()
         crewsRaw[crew] = []
         $('tr', eleme).each((i, elem) => {
-          crewsRaw[crew].push({pos: $('.text-right', elem).html(), name: decode($('.text-left', elem).html())})
+          crewsRaw[crew].push({pos: $('.text-right', elem).html(), name: $('.text-left', elem).text()})
         })
         if (crewsRaw[crew].length !== 10) {
           delete crewsRaw[crew]
@@ -115,7 +149,13 @@ const downloadCrewlist = (url, dst) => {
     })
 }
 
-downloadCrewlist(crewlist, `${fbase}_crews.json`)
+crews.forEach(({id, year, event}) => {
+  const url = `https://ourcs.co.uk/racing/entries/events/event/${id}/crew_lists/`
+  const fname = `${__dirname}/data/${event}_${year}_crews.json`
+  if (!fs.existsSync(fname)) {
+    downloadCrewlist(url, fname)
+  }
+})
 
 axios.get(startingOrder)
   .then((response) => {
