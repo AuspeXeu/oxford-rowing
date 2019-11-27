@@ -51,8 +51,8 @@
               <g id="containerMen" :transform="`translate(40,15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
                 <g v-for="div in divsMen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
-                  <path d="M 0 0 L 405 0" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
+                  <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
+                  <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-260),rotate(-90)`">{{ divName(div) }}</text>
                 </g>
                 <g v-for="boat in boatsMen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
@@ -64,11 +64,11 @@
                   <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
                 </g>
               </g>
-              <g id="containerWomen" :transform="`translate(${offset+70},15),scale(${scale})`">
+              <g v-if="divsWomen.length > 0" id="containerWomen" :transform="`translate(${offset+70},15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
                 <g v-for="div in divsWomen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
-                  <path d="M 0 0 L 405 0" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" transform="translate(415,-260),rotate(-90)">{{divName(div)}}</text>
+                  <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
+                  <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-260),rotate(-90)`">{{ divName(div) }}</text>
                 </g>
                 <g v-for="boat in boatsWomen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
@@ -580,6 +580,9 @@ export default {
     window.addEventListener('keydown', this.onKeyDown)
   },
   computed: {
+    days() {
+      return Math.max(4, ...this.boats.map(({moves}) => moves.length))
+    },
     clubs() {
       const clubs = new Set()
       this.boats.forEach((boat) => clubs.add(boat.club))
@@ -662,15 +665,17 @@ export default {
       return boats
     },
     divsMen() {
-      if (this.divs)
+      if (this.divs) {
         return this.divs.men.map((time, idx) => ({time: time, number: idx + 1}))
+      }
       const ary = Array.from({length: Math.ceil(this.rowsMen / this.boatsPerDiv)}, (x,i) => i)
       ary.shift()
       return ary.map((itm, idx) => ({number: idx+1}))
     },
     divsWomen() {
-      if (this.divs)
+      if (this.divs) {
         return this.divs.women.map((time, idx) => ({time: time, number: idx + 1}))
+      }
       const ary = Array.from({length: Math.ceil(this.rowsWomen / this.boatsPerDiv)}, (x,i) => i)
       ary.shift()
       return ary.map((itm, idx) => ({number: idx+1}))
