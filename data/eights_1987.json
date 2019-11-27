@@ -1250,75 +1250,6 @@
       }
     ]
   }, 
-  "OSL": {
-    "men": [
-      {
-        "start": 19, 
-        "moves": [
-          {
-            "status": true, 
-            "moves": -1
-          }, 
-          {
-            "status": true, 
-            "moves": -1
-          }, 
-          {
-            "status": true, 
-            "moves": -1
-          }, 
-          {
-            "status": true, 
-            "moves": 0
-          }
-        ]
-      }, 
-      {
-        "start": 57, 
-        "moves": [
-          {
-            "status": true, 
-            "moves": 1
-          }, 
-          {
-            "status": true, 
-            "moves": 1
-          }, 
-          {
-            "status": true, 
-            "moves": 1
-          }, 
-          {
-            "status": true, 
-            "moves": 1
-          }
-        ]
-      }
-    ], 
-    "women": [
-      {
-        "start": 2, 
-        "moves": [
-          {
-            "status": true, 
-            "moves": 0
-          }, 
-          {
-            "status": true, 
-            "moves": 0
-          }, 
-          {
-            "status": true, 
-            "moves": -1
-          }, 
-          {
-            "status": true, 
-            "moves": 0
-          }
-        ]
-      }
-    ]
-  }, 
   "PMB": {
     "men": [
       {
@@ -1643,6 +1574,75 @@
           {
             "status": true, 
             "moves": 1
+          }, 
+          {
+            "status": true, 
+            "moves": 0
+          }
+        ]
+      }
+    ]
+  }, 
+  "OSG": {
+    "men": [
+      {
+        "start": 19, 
+        "moves": [
+          {
+            "status": true, 
+            "moves": -1
+          }, 
+          {
+            "status": true, 
+            "moves": -1
+          }, 
+          {
+            "status": true, 
+            "moves": -1
+          }, 
+          {
+            "status": true, 
+            "moves": 0
+          }
+        ]
+      }, 
+      {
+        "start": 57, 
+        "moves": [
+          {
+            "status": true, 
+            "moves": 1
+          }, 
+          {
+            "status": true, 
+            "moves": 1
+          }, 
+          {
+            "status": true, 
+            "moves": 1
+          }, 
+          {
+            "status": true, 
+            "moves": 1
+          }
+        ]
+      }
+    ], 
+    "women": [
+      {
+        "start": 2, 
+        "moves": [
+          {
+            "status": true, 
+            "moves": 0
+          }, 
+          {
+            "status": true, 
+            "moves": 0
+          }, 
+          {
+            "status": true, 
+            "moves": -1
           }, 
           {
             "status": true, 

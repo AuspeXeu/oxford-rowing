@@ -328,32 +328,6 @@
     ], 
     "women": []
   }, 
-  "OSL": {
-    "men": [
-      {
-        "start": 22, 
-        "moves": [
-          {
-            "status": true, 
-            "moves": 0
-          }, 
-          {
-            "status": true, 
-            "moves": 1
-          }, 
-          {
-            "status": true, 
-            "moves": 0
-          }, 
-          {
-            "status": true, 
-            "moves": 0
-          }
-        ]
-      }
-    ], 
-    "women": []
-  }, 
   "PMB": {
     "men": [
       {
@@ -527,6 +501,32 @@
           {
             "status": true, 
             "moves": -1
+          }, 
+          {
+            "status": true, 
+            "moves": 0
+          }
+        ]
+      }
+    ], 
+    "women": []
+  }, 
+  "OSG": {
+    "men": [
+      {
+        "start": 22, 
+        "moves": [
+          {
+            "status": true, 
+            "moves": 0
+          }, 
+          {
+            "status": true, 
+            "moves": 1
+          }, 
+          {
+            "status": true, 
+            "moves": 0
           }, 
           {
             "status": true, 

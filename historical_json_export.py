@@ -55,10 +55,8 @@ def map_college(name):
         "Regent'sPark": "RPC",
         "StBenet'sHall": "SBH",
         "StAntony's": "SAY",
-
-
         "Templeton": "TMP",
-        "OslerHouse": "OSL",
+        "OslerHouse": "OSG",
         "Osler-Green": "OSLG",
         "Westminster": "WES",
         "Manchester": "MAC",
