@@ -320,12 +320,12 @@
     <g id="TMP" transform="scale(0.5)">
       <title>Templeton</title>
       <circle
-          style="opacity:1;fill:#000000;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+          style="opacity:1;fill:#1919c2;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
           cx="48"
           cy="48.000004"
           r="47.5" />
       <ellipse
-          style="opacity:1;fill:#1919c2;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+          style="opacity:1;fill:#fff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
           cx="48.59795"
           cy="47.638832"
           rx="24.422501"
