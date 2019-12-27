@@ -122,7 +122,7 @@ const downloadCrewlist = async (url, dst) => {
   log(`Downloading ${url} to ${dst}`)
   return axios.get(url)
     .then((response) => {
-      const crews = {}
+      const crewlist = {}
       const $ = cheerio.load(response.data)
       const crewsRaw = {}
       $('div.panel.panel-default').each((idx, eleme) => {
@@ -141,19 +141,19 @@ const downloadCrewlist = async (url, dst) => {
         if (!club) {
           log(clubRaw)
         }
-        if (!crews[club]) {
-          crews[club] = {men: {}, women: {}}
+        if (!crewlist[club]) {
+          crewlist[club] = {men: {}, women: {}}
         }
-        crews[club][gender === 'M' ? 'men' : 'women'][number] = crewsRaw[clubRaw]
+        crewlist[club][gender === 'M' ? 'men' : 'women'][number] = crewsRaw[clubRaw]
       })
-      fs.writeFileSync(dst, JSON.stringify(crews, null, 2))
+      fs.writeFileSync(dst, JSON.stringify(crewlist, null, 2))
     })
 }
 
 const crewLists = async () => {
-  for (const {id, year, event} of crews) {
+  for (const {id, yr, evt} of crews) {
     const url = `https://ourcs.co.uk/racing/entries/events/event/${id}/crew_lists/`
-    const fname = `${__dirname}/data/${event}_${year}_crews.json`
+    const fname = `${__dirname}/data/${evt}_${yr}_crews.json`
     if (!fs.existsSync(fname)) {
       await downloadCrewlist(url, fname)
     }
