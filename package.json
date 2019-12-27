@@ -51,7 +51,7 @@
     "concurrently": "5.0.2",
     "depcheck": "^0.9.1",
     "eslint": "6.8.0",
-    "eslint-plugin-vue": "6.1.0",
+    "eslint-plugin-vue": "6.1.1",
     "husky": "3.1.0",
     "nodemon": "2.0.2",
     "vue-template-compiler": "2.6.11"
