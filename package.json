@@ -31,7 +31,7 @@
     "ncu": "ncu"
   },
   "dependencies": {
-    "axios": "0.19.1",
+    "axios": "0.19.2",
     "body-parser": "1.19.0",
     "cheerio": "1.0.0-rc.3",
     "compression": "1.7.4",
@@ -48,11 +48,11 @@
     "@vue/cli-plugin-eslint": "4.1.2",
     "@vue/cli-service": "4.1.2",
     "babel-eslint": "10.0.3",
-    "concurrently": "5.0.2",
+    "concurrently": "5.1.0",
     "depcheck": "^0.9.1",
     "eslint": "6.8.0",
     "eslint-plugin-vue": "6.1.2",
-    "husky": "4.0.10",
+    "husky": "4.2.1",
     "nodemon": "2.0.2",
     "vue-template-compiler": "2.6.11"
   },
