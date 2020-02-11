@@ -303,6 +303,14 @@
           y="-74.692101"
           transform="scale(-1)" />
     </g>
+    <g id="empty" transform="scale(0.5)">
+      <title>Available</title>
+      <circle
+          style="opacity:1;fill:#fff;fill-opacity:1;stroke:#000;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+          cx="48"
+          cy="48.000004"
+          r="47.5" />
+    </g>
     <g id="MAG" transform="scale(0.5)">
       <title>Magdalen</title>
       <circle

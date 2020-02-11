@@ -54,14 +54,15 @@
                   <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-260),rotate(-90)`">{{ divName(div) }}</text>
                 </g>
-                <g v-for="boat in boatsMen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
+                <g v-for="boat in boatsMen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${verified ? 1.0 : boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :key="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :key="`${point.x}|${point.y}`" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="confirmBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="retractBoat(boat)" :transform="`translate(${curPoint(boat.moves.map(({moves}) => moves)).x},${curPoint(boat.moves.map(({moves}) => moves)).y})`"></use>
+                    <use v-if="boatSelected && verified && boatSelected.gender === 'men' && boatSelected.moves.length < 4 && (!lanesToBoats.men.has(boat.start) || lanesToBoats.men.get(boat.start).moves.length <= boatSelected.moves.length)" @dblclick="moveBoat(boat.start)" xlink:href="#empty" :transform="`translate(${curPoint([0,0,0,0].slice(0, (boatSelected.moves.length + 1))).x},${curPoint([0,0,0,0].slice(0, (boatSelected.moves.length + 1))).y})`"></use>
                   </g>
-                  <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
+                  <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="confirmBoat(boat)"></use>
                 </g>
               </g>
               <g v-if="divsWomen.length > 0" id="containerWomen" :transform="`translate(${offset+70},15),scale(${scale})`">
@@ -70,137 +71,21 @@
                   <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-260),rotate(-90)`">{{ divName(div) }}</text>
                 </g>
-                <g v-for="boat in boatsWomen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${boat.opacity}`">
+                <g v-for="boat in boatsWomen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${verified ? 1.0 : boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
                   <g transform="translate(50,0)">
                     <path v-for="line in makeLines(boat)" :d="line.path" :key="line.path" :stroke-dasharray="(line.status ? '' : '3, 5')" @click="selectBoat(boat)" fill="transparent" style="stroke:gray;stroke-width:5;" />
                     <circle v-for="point in makePoints(boat)" @click="selectBoat(boat)" :key="`${point.x}|${point.y}`" :cx="point.x" :cy="point.y" r="5" stroke="gray" stroke-width="3" fill="gray" />
-                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="confirmBoat(boat)" :transform="`translate(${curPoint(boat).x},${curPoint(boat).y})`"></use>
+                    <use v-if="boat.moves.length" v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="retractBoat(boat)" :transform="`translate(${curPoint(boat.moves.map(({moves}) => moves)).x},${curPoint(boat.moves.map(({moves}) => moves)).y})`"></use>
+                    <use v-if="boatSelected && verified && boatSelected.gender === 'women' && boatSelected.moves.length < 4 && (!lanesToBoats.women.has(boat.start) || lanesToBoats.women.get(boat.start).moves.length <= boatSelected.moves.length)" @dblclick="moveBoat(boat.start)" xlink:href="#empty" :transform="`translate(${curPoint([0,0,0,0].slice(0, (boatSelected.moves.length + 1))).x},${curPoint([0,0,0,0].slice(0, (boatSelected.moves.length + 1))).y})`"></use>
                   </g>
-                  <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="bumpDialog = verified"></use>
+                  <use v-bind:xlink:href="`#${boat.custom || boat.club}`" @click="selectBoat(boat)" @dblclick="confirmBoat(boat)"></use>
                 </g>
               </g>
             </svg>
           </v-flex>
         </v-layout>
       </v-container>
-      <v-bottom-sheet v-model="bumpDialog" max-width="500" hide-overlay inset persistent lazy>
-        <v-card>
-          <v-card-title>
-            <span class="headline noselect">Update Bump</span>
-            <v-spacer></v-spacer>
-            <v-tooltip bottom>
-              <v-icon slot="activator">{{(!verified ? 'fa-unlock-alt' : 'fa-lock')}}</v-icon>
-              <span>{{(!verified ? 'Not authenticated' : 'Authenticated')}}</span>
-            </v-tooltip>
-          </v-card-title>
-          <v-card-text class="custom-card">
-            <v-container grid-list-xs>
-              <v-layout wrap>
-                <v-flex xs2 sm2 md2>
-                  <v-select
-                    attach
-                    label="Day"
-                    required
-                    v-model="bumpDay"
-                    :items="[1,2,3,4]"
-                  ></v-select>
-                </v-flex>
-                <v-flex xs2 sm2 md2>
-                  <v-select
-                    label="Division"
-                    required
-                    item-value="number"
-                    item-text="number"
-                    v-model="bumpDivision"
-                    :items="(bumpGender === 'men' ? divsMen.concat({number: 'all'}) : divsWomen.concat({number: 'all'}))"
-                  ></v-select>
-                </v-flex>
-                <v-flex xs3 sm3 md3>
-                  <v-select
-                    label="Gender"
-                    required
-                    attach
-                    v-model="bumpGender"
-                    :items="['men','women']"
-                  ></v-select>
-                </v-flex>
-                <v-flex xs5 sm5 md5>
-                  <v-tabs right v-model="bumpTab">
-                    <v-tab v-for="n in ['Bump','Manual']" :key="n" value="a">{{ n }}</v-tab>
-                  </v-tabs>
-                </v-flex>
-              </v-layout>
-              <v-layout wrap v-show="bumpTab === 0">
-                <v-flex xs5 sm5 md5 :md8="bumpAction ==='row over'" :sm8="bumpAction ==='row over'" :xs8="bumpAction ==='row over'">
-                  <v-select
-                    v-show="bumpAction === 'row over'"
-                    label="Boats"
-                    item-text="short"
-                    return-object
-                    v-model="rowOvers"
-                    required
-                    clearable
-                    multiple
-                    :items="rowOverBoats"
-                  ></v-select>
-                  <v-select
-                    v-show="bumpAction === 'bumps'"
-                    label="Boat"
-                    item-text="short"
-                    return-object
-                    v-model="bumpBoat"
-                    required
-                    :items="bumpBoats"
-                  ></v-select>
-                </v-flex>
-                <v-flex xs3 sm3 md3 :md4="bumpAction ==='row over'" :sm4="bumpAction ==='row over'" :xs4="bumpAction ==='row over'">
-                  <v-select
-                    label="Action"
-                    required
-                    attach
-                    v-model="bumpAction"
-                    :items="['bumps','row over']"
-                  ></v-select>
-                </v-flex>
-                <v-flex xs4 sm4 md4 style="padding-top:22px;">
-                  <span v-show="bumpAction === 'bumps'" class="subheading">
-                    {{(bumpedBoat ? bumpedBoat.short : '')}}
-                  </span>
-                </v-flex>
-              </v-layout>
-              <v-layout wrap v-show="bumpTab === 1">
-                <v-flex xs9 sm9 md9>
-                  <v-select
-                    label="Boat"
-                    item-text="short"
-                    v-model="manualBoat"
-                    return-object
-                    required
-                    :items="divBoats"
-                  ></v-select>
-                </v-flex>
-                <v-flex xs3 sm3 md3>
-                  <v-text-field
-                    label="Move by"
-                    v-model="bumpMoves"
-                    :rules="[(v) => !isNaN(v) || 'Has to be a number']"
-                    required
-                  ></v-text-field>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card-text>
-          <v-card-actions>
-            <small class="pl-3 noselect">*required field</small>
-            <v-spacer></v-spacer>
-            <v-btn color="blue darken-1" flat @click.native="bumpDialog = false">Close</v-btn>
-            <v-btn color="blue darken-1" flat :disabled="!verified || loading" @click.native="submitBump()">
-              Submit
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-bottom-sheet>
       <v-dialog v-model="announceDialog" max-width="500px">
         <v-card>
           <v-card-title>
@@ -234,6 +119,7 @@
       <div class="text-xs-center">
         <v-dialog
           v-model="crewDialog"
+          v-if="boatSelected"
           width="500">
           <v-card>
             <v-card-title>
@@ -270,9 +156,6 @@
     <v-navigation-drawer temporary hide-overlay fixed v-model="drawer" class="text-xs-center" app>
       <v-list class="pa-1">
         <v-flex>
-          <v-btn color="primary"  @click.native.stop="bumpDialog = !bumpDialog" v-if="verified">
-            <v-icon>timeline</v-icon> Data
-          </v-btn>
           <v-btn color="primary"  @click.native.stop="announceDialog = !announceDialog" v-if="verified">
             <v-icon>hearing</v-icon> Announce
           </v-btn>
@@ -340,6 +223,14 @@
       v-model="snack.visible">
       {{snack.text}}
     </v-snackbar>
+    <v-snackbar
+      bottom
+      class="noselect"
+      :timeout="0"
+      color="info"
+      :value="verified">
+      {{ boatSelected ? `Selection: ${boatSelected.short}` : 'Select a boat' }}
+    </v-snackbar>
   </v-app>
 </div>
 </template>
@@ -354,7 +245,7 @@ export default {
   },
   data() {
     return {
-      countDownDate: new Date('February 27, 2019 12:00:00').getTime(),
+      countDownDate: new Date('February 26, 2020 12:00:00').getTime(),
       announcementDraft: '',
       bladesOnly: false,
       spoonsOnly: false,
@@ -362,14 +253,12 @@ export default {
       announcement: '',
       socket: false,
       boatsSelected: [],
-      name: 'live',
       drawer: false,
       scale: 0.35,
       timer: 0,
       startYear: new Date().getFullYear(),
       isLive: false,
       liveTimer: false,
-      bumpAction: 'bumps',
       viewers: 0,
       features: [
         {key: 'localtime', text: 'Race times are displayed in your local time :)'},
@@ -379,10 +268,7 @@ export default {
       ],
       feature: null,
       reporters: 0,
-      rowOvers: [],
       clubSelected: false,
-      bumpBoat: false,
-      manualBoat: false,
       event: false,
       auth: false,
       snack: {
@@ -393,17 +279,9 @@ export default {
         text: ''
       },
       crewSelected: [],
-      boatSelected: {},
+      boatSelected: null,
       verified: false,
-      bumpGender: 'men',
-      bumpMoves: 0,
-      bumpDay: 1,
-      bumpDivision: 1,
-      bumpDialog: false,
       announceDialog: false,
-      startEvent: 0,
-      bumpTab: 0,
-      points: {},
       boatsHigh: [],
       divs: false,
       crewDialog: false,
@@ -414,30 +292,19 @@ export default {
   },
   beforeMount() {
     this.auth = this.$route.query.auth
-    const socket = new ReconnectingWebSocket(`${window.location.origin.replace('http','ws')}/live`)
+    /*const socket = new ReconnectingWebSocket(`${window.location.origin.replace('http','ws')}/live`)
     socket.onmessage = (event) => {
       const message = JSON.parse(event.data)
       if (message.type === 'update') {
-        const bump = message
-        const club = bump.club
-        const gender = bump.gender
-        const name = bump.name
-        const year = parseInt(bump.year, 10)
-        const number = parseInt(bump.number, 10)
-        const day = parseInt(bump.day, 10)
-        const move = bump.move
+        const {club, gender, number, moves, name, year} = record
         let hasChanged = false
         if (this.event.year !== year || this.event.name.toLowerCase() !== name)
           return
-        if (this.chartData[club][gender][number].moves.length >= day) {
-          hasChanged = this.chartData[club][gender][number].moves[day-1].status !== move.status
-          Vue.set(this.chartData[club][gender][number].moves, day-1, move)
-        } else
-          this.chartData[club][gender][number].moves.push(move)
-        if (hasChanged)
+        if (this.chartData[club][gender][number].moves[day-1].status !== move.status)
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} result ${(move.status ? 'confirmed' : 'withdrawn')}`, 'info')
         else
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')
+        this.chartData[club][gender][number].moves = moves
       } else if (message.type === 'users') {
         if (this.reporters < message.reporters)
           this.notify(`A reporter is live`, 'info')
@@ -453,7 +320,7 @@ export default {
       if (this.auth)
         socket.send(JSON.stringify({type: 'reporter', auth: this.auth}))
       this.socket = socket
-    }
+    }*/
   },
   mounted() {
     let now = new Date().getTime()
@@ -529,23 +396,6 @@ export default {
         this.boatsSelected = []
       }
     },
-    bumpDivision() {
-      this.bumpDay = this.eventDay
-    },
-    bumpDay() {
-      if (!this.verified) {
-        return
-      }
-      if (this.bumpDay < this.eventDay && !confirm('You are about to change a past division, do you know what you are doing?'))
-        setTimeout(() => this.bumpDay = this.eventDay, 1)
-      else if (this.bumpDay > this.eventDay && !confirm('You are about to change a future division, do you know what you are doing?'))
-        setTimeout(() => this.bumpDay = this.eventDay, 1)
-    },
-    bumpBoat() {
-      if (this.bumpBoat)
-        this.bumpGender = this.bumpBoat.gender
-      this.rowOvers = [this.bumpBoat]
-    },
     reporters() {
       if (this.reporters > 0 && !this.liveTimer)
         this.liveTimer = setInterval(() => this.isLive = !this.isLive, 1000)
@@ -570,6 +420,8 @@ export default {
           this.chartData[boat.club][boat.gender][boat.number].opacity = 1.0
         })
         this.boatsHigh = [this.boatsHigh, ...this.boatsSelected]
+      } else {
+        this.boatSelected = null
       }
     }
   },
@@ -580,6 +432,23 @@ export default {
     window.addEventListener('keydown', this.onKeyDown)
   },
   computed: {
+    lanesToBoats() {
+      const res = {men: new Map(), women: new Map()}
+      this.boatsWomen.forEach((boat) => {
+        const pos = this.curPos(boat)
+        if (!res.women.has(pos) || res.women.get(pos).moves.length < boat.moves.length) {
+          res.women.set(pos, boat)
+        }
+      })
+      this.boatsMen.forEach((boat) => {
+        const pos = this.curPos(boat)
+        if (!res.men.has(pos) || res.men.get(pos).moves.length < boat.moves.length) {
+          res.men.set(pos, boat)
+        }
+      })
+      console.log(res.women.get())
+      return res
+    },
     days() {
       return Math.max(4, ...this.boats.map(({moves}) => moves.length))
     },
@@ -608,45 +477,6 @@ export default {
     },
     boatsPerDiv() {
       return (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011) ? 12 : 13)
-    },
-    divBoats() {
-      const rows = (this.bumpGender === 'men' ? this.rowsMen : this.rowsWomen)
-      const divs = (this.bumpGender === 'men' ? this.divsMen : this.divsWomen)
-      let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
-      if (this.bumpDivision !== 'all') {
-        const start = Math.max(0, ((this.bumpDivision - 1) * this.boatsPerDiv)-1)
-        let end = Math.min(rows, (this.bumpDivision * this.boatsPerDiv)+1)
-        if (this.bumpDivision === divs.length)
-          end = rows+1
-        boats = boats.slice(start, end)
-      }
-      if (!this.bumpBoat || !boats.find((boat) => boat.short === this.bumpBoat.short))
-        this.bumpBoat = boats[0]
-      return boats
-    },
-    bumpBoats() {
-      const boats = this.divBoats.filter((boat) => this.isActive(boat))
-      if (!boats.find((boat) => boat.short === this.bumpBoat.short) && boats.length > 1)
-        this.bumpBoat = boats[1]
-      else if (boats.length === 1)
-        this.bumpBoat = boats[0]
-      return boats
-    },
-    rowOverBoats() {
-      return this.bumpBoats.filter((boat) => !boat.moves[this.bumpDay-1])
-    },
-    bumpedBoat() {
-      if (!this.bumpBoat)
-        return []
-      let boats = (this.bumpGender === 'men' ? this.boatsMen : this.boatsWomen)
-      boats = boats.filter((boat) => this.curPos(boat, this.bumpDay) < this.curPos(this.bumpBoat, this.bumpDay))
-      boats = boats.filter((boat) => this.isActive(boat))
-      boats.sort((a, b) => this.curPos(b, this.bumpDay) - this.curPos(a, this.bumpDay))
-      if (!boats.length)
-        this.bumpAction = 'row over'
-      else
-        this.bumpAction = 'bumps'
-      return boats[0]
     },
     boats() {
       let boats = []
@@ -686,7 +516,7 @@ export default {
         this.chartData[key].men.forEach((boat) => Vue.set(boat, 'id', key))
         boats = boats.concat(this.chartData[key].men)
       }
-      return boats.sort((a,b) => this.curPos(a, this.bumpDay)-this.curPos(b, this.bumpDay))
+      return boats.sort((a,b) => this.curPos(a, this.eventDay)-this.curPos(b, this.eventDay))
     },
     boatsWomen() {
       let boats = []
@@ -694,7 +524,7 @@ export default {
         this.chartData[key].women.forEach((boat) => Vue.set(boat, 'id', key))
         boats = boats.concat(this.chartData[key].women)
       }
-      return boats.sort((a,b) => this.curPos(a, this.bumpDay)-this.curPos(b, this.bumpDay))
+      return boats.sort((a,b) => this.curPos(a, this.eventDay)-this.curPos(b, this.eventDay))
     },
     rowsMen() {
       let rows = 0
@@ -712,6 +542,23 @@ export default {
     }
   },
   methods: {
+    moveBoat(lane) {
+      if (this.verified && this.boatSelected) {
+        const delta = this.curPos(this.boatSelected) - lane
+        this.boatSelected.moves.push({moves: delta, status: false})
+      }
+    },
+    retractBoat(boat) {
+      if (this.verified) {
+        boat.moves = boat.moves.slice(0, boat.moves.length-1)
+        const {club, gender, number, moves} = boat
+        axios.post(`/bump/${this.event.name.toLowerCase()}/${this.event.year}`, {club, gender, number, moves}, {headers: {'authorization': this.auth}})
+          .then(() => this.notify('Result retracted', 'success'))
+          .catch(() => {
+            this.notify('Failed to retract result status', 'error')
+          })
+      }
+    },
     loadStorage(key) {
       return JSON.parse(localStorage.getItem(key))
     },
@@ -725,17 +572,6 @@ export default {
       } else {
         this.loadData(this.events.length ? this.events[0] : false)
       }
-    },
-    validateYear(val) {
-      let year
-      try {
-        year = parseInt(val, 10)
-      } catch (e) {
-        return 'Please provide a valid year'
-      }
-      if (year < new Date().getFullYear())
-        return 'You cannot create starting order for the past'
-      return true
     },
     dismissFeature(feature) {
       this.saveStorage('features', (this.loadStorage('features') || []).concat([feature.key]))
@@ -767,20 +603,6 @@ export default {
         this.$refs.searchField.focus()
       }
     },
-    boatDiv(boat) {
-      const divs = (boat.gender === 'men' ? this.divsMen : this.divsWomen)
-      return Math.min(Math.ceil(boat.start / this.boatsPerDiv), divs.length)
-    },
-    isActive(boat) {
-      const hasBumped = (bt) => {
-        return this.divBoats.find((b) => this.curPos(b, this.bumpDay - 1) < this.curPos(bt, this.bumpDay - 1) && this.curPos(b, this.bumpDay) > this.curPos(bt, this.bumpDay))
-      }
-      const isSandwich = bt => this.boatDiv(bt) > this.bumpDivision
-      if (this.event.name.toLowerCase() === 'torpids')
-        return !boat.moves[this.bumpDay-1] || !hasBumped(boat) || isSandwich(boat)
-      else if (this.event.name.toLowerCase() === 'eights')
-        return !boat.moves[this.bumpDay-1] || (isSandwich(boat) && !boat.moves[this.bumpDay-1])
-    },
     makeAnnouncement() {
       const txt = this.announcementDraft.trim()
       if (txt.length) {
@@ -789,13 +611,12 @@ export default {
             this.announceDialog = false
             this.notify('Announcement made', 'success')
           })
-          .catch(error => {
+          .catch(() => {
             this.notify('Failed to make announcement', 'error')
-            console.log(error.response.data)
           })
       }
     },
-    onResize () {
+    onResize() {
       clearTimeout(this.timer)
       this.timer = setTimeout(function() {
         const width = document.getElementById('svg-container').offsetWidth
@@ -804,20 +625,17 @@ export default {
     },
     confirmBoat(boat) {
       if (this.verified) {
-        const lastMove = boat.moves[boat.moves.length-1]
-        axios.post('/bump', {
-          year: this.event.year,
-          name: this.event.name,
-          day: boat.moves.length,
-          bumpBoat: boat,
-          moves: lastMove.moves,
-          status: !lastMove.status
-        }, {headers: {'authorization': this.auth}})
-        .then(() => this.notify(`Result ${lastMove.status ? 'withdrawn' : 'confirmed'}`, 'success'))
-        .catch(error => {
-          console.log(error.response.data)
-          this.notify('Failed to change bump status', 'error')
-        })
+        if (!boat.moves[boat.moves.length-1].status) {
+          boat.moves.forEach((itm) => itm.status = true)
+        } else {
+          boat.moves[boat.moves.length-1].status = !boat.moves[boat.moves.length-1].status
+        }
+        const {club, gender, number, moves} = boat
+        axios.post(`/bump/${this.event.name.toLowerCase()}/${this.event.year}`, {club, gender, number, moves}, {headers: {'authorization': this.auth}})
+          .then(() => this.notify(`Result ${!boat.moves[boat.moves.length-1].status ? 'withdrawn' : 'confirmed'}`, 'success'))
+          .catch(() => {
+            this.notify('Failed to change bump status', 'error')
+          })
       }
     },
     notify(text, type) {
@@ -825,29 +643,6 @@ export default {
       this.snack.color = type
       this.snack.multi = type === 'error'
       this.snack.visible = true
-    },
-    submitBump() {
-      if (this.bumpTab === 1 && this.manualBoat
-        && this.manualBoat.moves[this.bumpDay-1]
-        && this.manualBoat.moves[this.bumpDay-1].status
-        && !confirm('You are about to edit a confirmed result, do you know what you are doing?'))
-        return
-      this.loading = true
-      axios.post('/bump', {
-        year: this.event.year,
-        name: this.event.name,
-        day: this.bumpDay,
-        moves: parseInt(this.bumpMoves, 10),
-        status: (this.manualBoat && this.manualBoat.moves[this.bumpDay-1] ? this.manualBoat.moves[this.bumpDay-1].status : undefined),
-        bumpBoat: (this.bumpTab === 0 ? this.bumpBoat : this.manualBoat),
-        rowOvers: (this.bumpTab === 0 && this.bumpAction === 'row over' ? this.rowOvers : undefined),
-        bumpedBoat: (this.bumpTab === 0 && this.bumpAction === 'bumps' ? this.bumpedBoat : undefined)
-      }, {headers: {'authorization': this.auth}})
-      .then(() => this.notify('Bump submitted', 'success'))
-      .catch(error => {
-        console.log(error.response.data)
-        this.notify('Failed to submit bump', 'error')
-      }).then(() => this.loading = false)
     },
     romanize(num) {
       if (!+num)
@@ -902,8 +697,6 @@ export default {
             }
             Vue.set(this.chartData, club, response.data[club])
           }
-          this.bumpBoat = this.boats[0]
-          this.bumpDay = this.eventDay
           this.event = event
         })
       axios.get(`/data/${event.name.toLowerCase()}_${event.year}_divs.json`)
@@ -923,9 +716,6 @@ export default {
         this.crewDialog = true
       }
       this.boatSelected = boat
-      this.bumpDivision = this.boatDiv(boat)
-      this.bumpBoat = boat
-      this.manualBoat = boat
       this.boats.forEach((bt) => this.chartData[bt.club][bt.gender][bt.number].opacity = 1.0)
       this.clubSelected = boat.club
       const idx = this.boatsSelected.indexOf(boat)
@@ -948,10 +738,10 @@ export default {
       }
       return moves.reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
     },
-    curPoint(boat) {
+    curPoint(moves) {
       return {
-        x: -5 + 80 * boat.moves.length,
-        y: boat.moves.reduce((acc, itm) => acc + itm.moves, 0) * (47.5 + 10) * -1
+        x: -5 + 80 * moves.length,
+        y: moves.reduce((acc, amount) => acc + amount, 0) * (47.5 + 10) * -1
       }
     },
     makePoints(boat) {

@@ -114,39 +114,6 @@ app.get('/events', (req, res) => {
     res.json(events)
   })
 })
-//Update an entry in the data structure and broadcast changes
-const updateEntry = (data, name, year, club, gender, number, day, move) => {
-  //Don't accept results that are more than one day in the future
-  if (day > data[club][gender][number].moves.length+1)
-    return false
-  //Make sure the status is interpreted as boolean
-  move.status = Boolean(move.status)
-  //Find entry to modify
-  let entry = data[club][gender][number].moves[day-1]
-  if (!entry || move.op === 'set')
-    entry = {status: move.status, moves: move.val}
-  else
-    if (move.op === 'conf')
-      entry.status = move.status
-    else {
-      entry.moves += move.val
-      entry.status = move.status
-    }
-  data[club][gender][number].moves[day-1] = entry
-  //Confirm all previous results of this boat
-  data[club][gender][number].moves.slice(0, day-1).forEach((mv, idx) => {
-    if (!mv.status) {
-      mv.status = true
-      const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: idx+1,move: mv}
-      broadcast(payload)
-      data[club][gender][number].moves[idx] = mv
-    }
-  })
-  //Broadcast new results
-  const payload = {type: 'update', name: name,year: year,club: club,gender: gender,number: number,day: day,move: data[club][gender][number].moves[day-1]}
-  broadcast(payload)
-  return true
-}
 //Whats the position of a boat on a given day?
 const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
 //Get all boats of gender
@@ -167,17 +134,12 @@ app.post('/announce', authReq, (req, res) => {
   res.sendStatus(200)
 })
 //Receive new results and adjust data accordingly
-app.post('/bump', authReq, (req, res) => {
-  const name = req.body.name.toLowerCase()
-  const year = parseInt(req.body.year, 10)
-  const bumpBoat = req.body.bumpBoat
-  const bumpedBoat = req.body.bumpedBoat
-  const rowOvers = req.body.rowOvers
-  const day = parseInt(req.body.day, 10)
-  const move = {moves: req.body.moves, status: Boolean(req.body.status)}
+app.post('/bump/:name/:year', authReq, (req, res) => {
+  const {name, year} = req.params
+  const record = req.body
 
-  if (year !== new Date().getFullYear())
-    return res.sendStatus(400)
+  //if (year !== new Date().getFullYear())
+    //return res.sendStatus(400)
 
   let promise
   if (!dataCache[`${name}_${year}`])
@@ -196,50 +158,10 @@ app.post('/bump', authReq, (req, res) => {
   else
     promise = Promise.resolve(dataCache[`${name}_${year}`])
   promise.then((data) => {
-    //Get ground truth from data
-    Object.assign(bumpBoat, data[bumpBoat.club][bumpBoat.gender][bumpBoat.number])
-    if (!bumpBoat)
-      return res.status(400).json({err: 'Boat not found'})
-    if (day > bumpBoat.moves.length + 1 && !rowOvers)
-      return res.status(400).json({err: 'Day out of bounds'})
-    //All bumpBoat(s) rowed over
-    if (rowOvers)
-      rowOvers.forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, parseInt(boat.number,10), day, {op: 'set', val: 0}))
-    //Manual entry
-    else if (!bumpedBoat) {
-      const entry = data[bumpBoat.club][bumpBoat.gender][bumpBoat.number].moves[day-1]
-      //Change confirmation of entry
-      if (entry && Boolean(entry.status) !== move.status)
-        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'conf', status: move.status})
-      else {
-        bumpBoat.cur = curPos(bumpBoat, day)
-        const boats = getBoats(data, bumpBoat.gender, day)
-        boats.filter((boat) => {
-          if (move.moves < 0 && boat.moves.length >= day)
-            return boat.cur > bumpBoat.cur && boat.cur <= bumpBoat.cur + (move.moves * -1)
-          else if (move.moves > 0 && boat.moves.length >= day)
-            return boat.cur < bumpBoat.cur && boat.cur >= bumpBoat.cur + (move.moves * -1)
-          else
-            return false
-        }).forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: Math.sign(move.moves) * -1, status: false}))
-        updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'mod', val: move.moves, status: false})
-      }
-    }
-    //bumpBoat bumps bumpedBoat
-    else if (bumpedBoat && name === 'torpids') {
-      bumpBoat.cur = curPos(bumpBoat, day)
-      bumpedBoat.cur = curPos(bumpedBoat, day)
-      const boats = getBoats(data, bumpBoat.gender, day)
-      boats.filter((boat) => boat.cur > bumpedBoat.cur && boat.cur <= bumpBoat.cur)
-        .forEach((boat) => updateEntry(data, name, year, boat.club, boat.gender, boat.number, day, {op: 'mod', val: 1}))
-      updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'mod', val: bumpedBoat.cur - bumpBoat.cur})
-    } else if (bumpedBoat && name === 'eights') {
-      bumpBoat.cur = curPos(bumpBoat, day)
-      bumpedBoat.cur = curPos(bumpedBoat, day)
-      updateEntry(data, name, year, bumpedBoat.club, bumpedBoat.gender, bumpedBoat.number, day, {op: 'set', val: bumpedBoat.cur - bumpBoat.cur})
-      updateEntry(data, name, year, bumpBoat.club, bumpBoat.gender, bumpBoat.number, day, {op: 'set', val: Math.abs(bumpedBoat.cur - curPos(bumpBoat, day-1))})
-    } else
-      log('No idea what to do with the data!', req.body)
+    const {club, gender, number, moves} = record
+    data[club][gender][number].moves = moves
+    //Broadcast changes
+    broadcast({type: 'update', record: {name, year, ...record}})
     fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data, null, 2), 'utf8', () => res.sendStatus(200))
   }).catch((err) => res.status(400).json({err: err}))
 })
