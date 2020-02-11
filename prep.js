@@ -48,6 +48,9 @@ const cheerio = require('cheerio')
 const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ...args])
 const isTorpids = () => event.indexOf('torpids') > -1
 
+// Examples
+// http://eodg.atm.ox.ac.uk/user/dudhia/rowing/torpids/t19sta.html
+// http://eodg.atm.ox.ac.uk/user/dudhia/rowing/eights/e19sta.html
 const startingOrder = `http://eodg.atm.ox.ac.uk/user/dudhia/rowing/${event}/${event.substring(0,1)}${year.toString().substring(2,4)}sta.html`
 const boatsPerDiv = isTorpids() ? 12 : 13
 const fbase = `${__dirname}/data/${isTorpids() ? 'torpids' : 'eights'}_${year}`
