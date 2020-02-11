@@ -297,14 +297,14 @@ export default {
       const message = JSON.parse(event.data)
       if (message.type === 'update') {
         const {club, gender, number, moves, name, year} = message.record
+        console.log(this.chartData[club][gender][number].moves)
+        console.log(club, gender, number, moves, name, year, this.event)
         if (this.event.year !== year || this.event.name.toLowerCase() !== name)
           return
         /*if (this.chartData[club][gender][number].moves[day-1].status !== moves[moves.length-1].status)
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} result ${(move.status ? 'confirmed' : 'withdrawn')}`, 'info')
         else
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')*/
-        console.log(this.chartData[club][gender][number].moves)
-        console.log(club, gender, number, moves, name, year)
         this.chartData[club][gender][number].moves = moves
       } else if (message.type === 'users') {
         if (this.reporters < message.reporters)
