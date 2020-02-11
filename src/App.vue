@@ -292,18 +292,17 @@ export default {
   },
   beforeMount() {
     this.auth = this.$route.query.auth
-    /*const socket = new ReconnectingWebSocket(`${window.location.origin.replace('http','ws')}/live`)
+    const socket = new ReconnectingWebSocket(`${window.location.origin.replace('http','ws')}/live`)
     socket.onmessage = (event) => {
       const message = JSON.parse(event.data)
       if (message.type === 'update') {
-        const {club, gender, number, moves, name, year} = record
-        let hasChanged = false
+        const {club, gender, number, moves, name, year} = message.record
         if (this.event.year !== year || this.event.name.toLowerCase() !== name)
           return
-        if (this.chartData[club][gender][number].moves[day-1].status !== move.status)
+        /*if (this.chartData[club][gender][number].moves[day-1].status !== moves[moves.length-1].status)
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} result ${(move.status ? 'confirmed' : 'withdrawn')}`, 'info')
         else
-          this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')
+          this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')*/
         this.chartData[club][gender][number].moves = moves
       } else if (message.type === 'users') {
         if (this.reporters < message.reporters)
@@ -320,7 +319,7 @@ export default {
       if (this.auth)
         socket.send(JSON.stringify({type: 'reporter', auth: this.auth}))
       this.socket = socket
-    }*/
+    }
   },
   mounted() {
     let now = new Date().getTime()
