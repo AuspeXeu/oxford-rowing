@@ -114,17 +114,6 @@ app.get('/events', (req, res) => {
     res.json(events)
   })
 })
-//Whats the position of a boat on a given day?
-const curPos = (boat, day) => boat.moves.slice(0,day).reduce((acc, itm) => acc + itm.moves, 0) * -1 + boat.start
-//Get all boats of gender
-const getBoats = (data, gender, day) => {
-  let boats = []
-  for (const club in data) {
-    const ary = data[club][gender].map((boat, idx) => Object.assign({club: club, gender: gender, number: idx}, boat, {cur: curPos(boat, day)}))
-    boats = boats.concat(ary)
-  }
-  return boats
-}
 //An announcement is made
 app.post('/announce', authReq, (req, res) => {
   const announcement = {text: req.body.text.trim(), date: new Date().getTime()}
