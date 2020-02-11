@@ -303,6 +303,8 @@ export default {
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} result ${(move.status ? 'confirmed' : 'withdrawn')}`, 'info')
         else
           this.notify(`${this.clubToName(club)} ${(gender === 'men' ? 'M' : 'W')}${this.romanize(number + 1)} moves ${move.moves}`, 'info')*/
+        console.log(this.chartData[club][gender][number].moves)
+        console.log(club, gender, number, moves, name, year)
         this.chartData[club][gender][number].moves = moves
       } else if (message.type === 'users') {
         if (this.reporters < message.reporters)
