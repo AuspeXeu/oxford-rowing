@@ -296,9 +296,8 @@ export default {
     socket.onmessage = (event) => {
       const message = JSON.parse(event.data)
       if (message.type === 'update') {
-        const {club, gender, number, moves, name, year} = message.record
-        console.log(this.chartData[club][gender][number].moves)
-        console.log(club, gender, number, moves, name, year, this.event)
+        const {club, gender, number, moves, name} = message.record
+        const year = parseInt(message.record.year, 10)
         if (this.event.year !== year || this.event.name.toLowerCase() !== name)
           return
         /*if (this.chartData[club][gender][number].moves[day-1].status !== moves[moves.length-1].status)
@@ -447,7 +446,6 @@ export default {
           res.men.set(pos, boat)
         }
       })
-      console.log(res.women.get())
       return res
     },
     days() {
@@ -547,6 +545,12 @@ export default {
       if (this.verified && this.boatSelected) {
         const delta = this.curPos(this.boatSelected) - lane
         this.boatSelected.moves.push({moves: delta, status: false})
+        const {club, gender, number, moves} = this.boatSelected
+        axios.post(`/bump/${this.event.name.toLowerCase()}/${this.event.year}`, {club, gender, number, moves}, {headers: {'authorization': this.auth}})
+          .then(() => this.notify('Result entered', 'success'))
+          .catch(() => {
+            this.notify('Failed to enter result', 'error')
+          })
       }
     },
     retractBoat(boat) {
@@ -556,7 +560,7 @@ export default {
         axios.post(`/bump/${this.event.name.toLowerCase()}/${this.event.year}`, {club, gender, number, moves}, {headers: {'authorization': this.auth}})
           .then(() => this.notify('Result retracted', 'success'))
           .catch(() => {
-            this.notify('Failed to retract result status', 'error')
+            this.notify('Failed to retract result', 'error')
           })
       }
     },

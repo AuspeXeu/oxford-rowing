@@ -124,7 +124,8 @@ app.post('/announce', authReq, (req, res) => {
 })
 //Receive new results and adjust data accordingly
 app.post('/bump/:name/:year', authReq, (req, res) => {
-  const {name, year} = req.params
+  const {name} = req.params
+  const year = parseInt(req.params.year, 10)
   const record = req.body
 
   //if (year !== new Date().getFullYear())
