@@ -37,10 +37,10 @@
     "compression": "1.7.4",
     "express": "4.17.1",
     "express-uws": "4.0.2",
-    "moment": "2.24.0",
+    "moment": "2.25.3",
     "nconf": "0.10.0",
     "request": "2.88.2",
-    "uuid": "7.0.3",
+    "uuid": "8.0.0",
     "vue": "2.6.11"
   },
   "devDependencies": {
