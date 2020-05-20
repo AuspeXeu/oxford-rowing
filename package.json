@@ -40,7 +40,7 @@
     "moment": "2.25.3",
     "nconf": "0.10.0",
     "request": "2.88.2",
-    "uuid": "8.0.0",
+    "uuid": "8.1.0",
     "vue": "2.6.11"
   },
   "devDependencies": {
