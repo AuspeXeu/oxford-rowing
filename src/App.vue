@@ -5,7 +5,7 @@
     <v-toolbar fixed app dense>
       <v-toolbar-title>
         <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
-        <span class="noselect hidden-sm-and-down">Live Bumps</span>
+        <span class="noselect hidden-sm-and-down">Live Bumps {{boatsPerDiv}}</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-tooltip bottom>
