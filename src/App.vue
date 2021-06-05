@@ -476,10 +476,10 @@ export default {
     },
     boatsPerDiv() {
       console.log(this.event)
-      if (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011)) {
-        return 12
-      } else if (this.event && ((this.event.name.toLowerCase() === 'torpids' || this.event.year === 2021))) {
+      if (this.event && (this.event.name.toLowerCase() === 'torpids' && this.event.year === 2021)) {
         return 9
+      } else if (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011)) {
+        return 12
       } else {
         return 13
       }
