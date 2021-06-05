@@ -7,7 +7,7 @@
         <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
         <span class="noselect hidden-sm-and-down">Live Bumps</span>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
+      <v-spacer/>
       <v-tooltip bottom>
         <v-btn slot="activator" flat icon @click.native="bladesOnly = !bladesOnly">
           <v-img
@@ -52,7 +52,7 @@
                 <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
                 <g v-for="div in divsMen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-260),rotate(-90)`">{{ divName(div) }}</text>
+                  <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-220),rotate(-90)`">{{ divName(div) }}</text>
                 </g>
                 <g v-for="boat in boatsMen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${verified ? 1.0 : boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
@@ -69,7 +69,7 @@
                 <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
                 <g v-for="div in divsWomen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
                   <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-260),rotate(-90)`">{{ divName(div) }}</text>
+                  <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-220),rotate(-90)`">{{ divName(div) }}</text>
                 </g>
                 <g v-for="boat in boatsWomen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${verified ? 1.0 : boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>

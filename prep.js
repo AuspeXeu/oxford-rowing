@@ -2,6 +2,9 @@
 // This can either be 'torpids' or 'eights'
 const event = 'torpids'
 const year = 2021
+const isTorpids = () => event.indexOf('torpids') > -1
+// const boatsPerDiv = isTorpids() ? 12 : 13
+const boatsPerDiv = 9 // This is for Summer Torpids 2021
 
 // These ids can be obtained from https://ourcs.co.uk/racing/entries/events/
 // Example: 'https://ourcs.co.uk/racing/entries/events/event/198/crew_lists/' -> is 198 for the year 2019
@@ -47,13 +50,11 @@ const moment = require('moment')
 const cheerio = require('cheerio')
 
 const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ...args])
-const isTorpids = () => event.indexOf('torpids') > -1
 
 // Examples
 // http://eodg.atm.ox.ac.uk/user/dudhia/rowing/torpids/t19sta.html
 // http://eodg.atm.ox.ac.uk/user/dudhia/rowing/eights/e19sta.html
 const startingOrder = `http://eodg.atm.ox.ac.uk/user/dudhia/rowing/${event}/${event.substring(0,1)}${year.toString().substring(2,4)}sta.html`
-const boatsPerDiv = isTorpids() ? 12 : 13
 const fbase = `${__dirname}/data/${isTorpids() ? 'torpids' : 'eights'}_${year}`
 const table = {
   BAL: {call: ['Balliol']},
