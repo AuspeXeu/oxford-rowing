@@ -1,7 +1,7 @@
 /*** Only the following parameters need to be adjusted each event ***/
 // This can either be 'torpids' or 'eights'
-const event = 'eights'
-const year = 2019
+const event = 'torpids'
+const year = 2021
 
 // These ids can be obtained from https://ourcs.co.uk/racing/entries/events/
 // Example: 'https://ourcs.co.uk/racing/entries/events/event/198/crew_lists/' -> is 198 for the year 2019
@@ -22,6 +22,7 @@ const eightsCrews = [
 ].map((data) => ({...data, event: 'eights'}))
 
 const torpidsCrews = [
+  {id: 217, year: 2021},
   {id: 195, year: 2019},
   {id: 184, year: 2018},
   {id: 173, year: 2017},
@@ -151,10 +152,11 @@ const downloadCrewlist = async (url, dst) => {
       })
       fs.writeFileSync(dst, JSON.stringify(crewlist, null, 2))
     })
+    .catch((err) => log(`Error downloading crew list ${err}`))
 }
 
 const crewLists = async () => {
-  for (const {id, yr, evt} of crews) {
+  for (const {id, year: yr, event: evt} of crews) {
     const url = `https://ourcs.co.uk/racing/entries/events/event/${id}/crew_lists/`
     const fname = `${__dirname}/data/${evt}_${yr}_crews.json`
     if (!fs.existsSync(fname)) {
@@ -207,3 +209,4 @@ axios.get(startingOrder)
     fs.writeFileSync(`${fbase}_divs.json`, JSON.stringify(timetable, null, 2))
     fs.writeFileSync(`${fbase}.json`, JSON.stringify(starting, null, 2))
   })
+  .catch((err) => log(`Error downloading starting order ${err}`))
