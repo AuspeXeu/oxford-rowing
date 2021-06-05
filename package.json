@@ -15,11 +15,6 @@
   "bugs": {
     "url": "https://github.com/AuspeXeu/oxford-rowing"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run lint && npm run deps && npm run ncu"
-    }
-  },
   "scripts": {
     "api": "nodemon server.js",
     "frontend": "vue-cli-service serve",
@@ -27,7 +22,6 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "server": "node server.js",
-    "deps": "depcheck . --ignores=\"husky,sqlite3,@vue/cli-plugin-babel,@vue/cli-plugin-eslint,@vue/cli-service,concurrently,vue,babel-eslint,eslint,eslint-plugin-vue,vue-template-compiler\"",
     "ncu": "ncu"
   },
   "dependencies": {
@@ -49,10 +43,8 @@
     "@vue/cli-service": "4.4.1",
     "babel-eslint": "10.1.0",
     "concurrently": "5.2.0",
-    "depcheck": "0.9.2",
     "eslint": "7.1.0",
     "eslint-plugin-vue": "6.2.2",
-    "husky": "4.2.5",
     "nodemon": "2.0.4",
     "vue-template-compiler": "2.6.11"
   },
