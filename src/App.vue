@@ -475,7 +475,13 @@ export default {
       return this.scale * 460
     },
     boatsPerDiv() {
-      return (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011) ? 12 : 13)
+      if (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011)) {
+        return 12
+      } else if (this.event && ((this.event.name.toLowerCase() === 'torpids' || this.event.year === 2021))) {
+        return 9
+      } else {
+        return 13
+      }
     },
     boats() {
       let boats = []
