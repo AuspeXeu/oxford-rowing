@@ -5,7 +5,7 @@
     <v-toolbar fixed app dense>
       <v-toolbar-title>
         <v-toolbar-side-icon @click.native="drawer = !drawer"></v-toolbar-side-icon>
-        <span class="noselect hidden-sm-and-down">Live Bumps {{boatsPerDiv}}</span>
+        <span class="noselect hidden-sm-and-down">Live Bumps</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-tooltip bottom>
@@ -475,7 +475,6 @@ export default {
       return this.scale * 460
     },
     boatsPerDiv() {
-      console.log(this.event)
       if (this.event && (this.event.name.toLowerCase() === 'torpids' && this.event.year === 2021)) {
         return 9
       } else if (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011)) {
