@@ -50,9 +50,9 @@
             <svg width="100%" :height="(Math.max(rowsMen, rowsWomen) + (verified ? boatsPerDiv : 0)) * 38 * scale / 0.64">
               <g id="containerMen" :transform="`translate(40,15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
-                <g v-for="div in divsMen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
-                  <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number < divsMen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-220),rotate(-90)`">{{ divName(div) }}</text>
+                <g :id="`men_${div.number}`" v-for="div in divsMen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * (div.number - 1)) * (47.5 + 10)) -5)})`">
+                  <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number > 1" fill="transparent" style="stroke:#000;stroke-width:5;" />
+                  <text x="0" y="35" font-size="35" :transform="`translate(${100 + days * 90}, ${div.number === 1? 5 : -5}),rotate(90)`">{{ divName(div) }}</text>
                 </g>
                 <g v-for="boat in boatsMen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${verified ? 1.0 : boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
@@ -67,9 +67,9 @@
               </g>
               <g v-if="divsWomen.length > 0" id="containerWomen" :transform="`translate(${offset+70},15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
-                <g v-for="div in divsWomen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * div.number)  * (47.5 + 10)) -5)})`">
-                  <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number < divsWomen.length" fill="transparent" style="stroke:#000;stroke-width:5;" />
-                  <text x="0" y="35" font-size="35" :transform="`translate(${55 + days * 90},-220),rotate(-90)`">{{ divName(div) }}</text>
+                <g :id="`women_${div.number}`" v-for="div in divsWomen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * (div.number - 1)) * (47.5 + 10)) -5)})`">
+                  <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number > 1" fill="transparent" style="stroke:#000;stroke-width:5;" />
+                  <text x="0" y="35" font-size="35" :transform="`translate(${100 + days * 90}, ${div.number === 1? 5 : -5}),rotate(90)`">{{ divName(div) }}</text>
                 </g>
                 <g v-for="boat in boatsWomen" :key="boat.start" :transform="`translate(0,${((boat.start - 1) * (47.5 + 10))})`" :style="`opacity:${verified ? 1.0 : boat.opacity}`">
                   <text x="0" y="35" font-size="25" transform="translate(-40,0)">{{boat.start}}.</text>
