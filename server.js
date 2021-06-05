@@ -15,7 +15,7 @@ const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ..
 conf.file({file: 'cfg.json'})
 conf.defaults({
   port: 3019,
-  bind: '127.0.0.1',
+  bind: '0.0.0.0',
   auth: [],
   announcement: {text: 'We are live!', date: new Date().getTime()},
   key: false,
