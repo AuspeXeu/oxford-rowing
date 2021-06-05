@@ -1,0 +1,35 @@
+version: '2.2'
+services:
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot-data/conf:/etc/letsencrypt
+      - ./certbot-data/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    restart: "unless-stopped"
+
+  nginx:
+    image: nginx:stable-alpine
+    hostname: nginx
+    container_name: nginx
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx-config:/etc/nginx/conf.d/:ro
+      - ./certbot-data/conf:/etc/letsencrypt:ro
+      - ./certbot-data/www:/var/www/certbot:ro
+    links:
+      - bumps
+    restart: "unless-stopped"
+
+  bumps:
+    build: .
+    hostname: bumps
+    container_name: bumps
+    volumes:
+      - ./bumps-data:/usr/app/data
+    environment:
+      TZ: "Europe/Berlin"
+    restart: "unless-stopped"

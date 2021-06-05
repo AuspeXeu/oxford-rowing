@@ -174,7 +174,7 @@
             <v-list-tile-title>Reporters: {{reporters}} Viewers: {{viewers}}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
-        <v-divider></v-divider>
+        <v-divider/>
       </v-list>
       <v-list class="pt-0" dense v-if="announcement">
         <v-list-tile>
@@ -204,12 +204,14 @@
     <v-footer app fixed>
       <img class="noselect pl-1" src="./assets/woo_crest.png" alt="Wolfson" style="width:24px;"/>
       <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank" rel="noopener">Wolfson Boat Club</a></div>
-      <v-spacer></v-spacer>
-      <div class="noselect"><a href="mailto:chrisvaas@gmail.com">Chris Vaas</a></div>
-      <v-btn id="btn-github" flat icon href="https://github.com/AuspeXeu/oxford-rowing" target="_blank" rel="noopener" small>
-        <v-icon>fa-github</v-icon>
-      </v-btn>
-      <div class="noselect pr-2">© {{ new Date().getFullYear() }}</div>
+      <v-spacer/>
+      <form action="https://www.paypal.com/donate" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="GZ6R4Q69L3ZG4" />
+        <input style="text-decoration: underline blue;" type="submit" name="submit" value="Donate ❤️"/>
+        <img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" width="1" height="1" />
+      </form>
+      <div class="noselect px-1"><a href="mailto:chrisvaas@gmail.com">Contact</a></div>
+      <div class="noselect">{{ new Date().getFullYear() }}</div>
     </v-footer>
     <v-snackbar top v-model="feature" :timeout="0">
       {{ feature ? feature.text : '' }}
@@ -790,9 +792,6 @@ body {
 }
 .live {
   color: red !important;
-}
-#btn-github {
-  margin: 0px;
 }
 .custom-card {
   padding-bottom: 0px;
