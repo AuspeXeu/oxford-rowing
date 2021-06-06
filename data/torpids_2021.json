@@ -10,7 +10,7 @@
         "moves": []
       },
       {
-        "start": 54,
+        "start": 53,
         "moves": []
       }
     ],
@@ -32,7 +32,7 @@
         "moves": []
       },
       {
-        "start": 52,
+        "start": 51,
         "moves": []
       }
     ],
@@ -42,7 +42,7 @@
         "moves": []
       },
       {
-        "start": 49,
+        "start": 47,
         "moves": []
       }
     ]
@@ -114,6 +114,14 @@
       {
         "start": 38,
         "moves": []
+      },
+      {
+        "start": 56,
+        "moves": []
+      },
+      {
+        "start": 59,
+        "moves": []
       }
     ]
   },
@@ -126,6 +134,14 @@
       {
         "start": 32,
         "moves": []
+      },
+      {
+        "start": 61,
+        "moves": []
+      },
+      {
+        "start": 63,
+        "moves": []
       }
     ],
     "women": [
@@ -135,6 +151,10 @@
       },
       {
         "start": 39,
+        "moves": []
+      },
+      {
+        "start": 55,
         "moves": []
       }
     ]
@@ -156,7 +176,7 @@
         "moves": []
       },
       {
-        "start": 45,
+        "start": 44,
         "moves": []
       }
     ]
@@ -170,6 +190,10 @@
       {
         "start": 43,
         "moves": []
+      },
+      {
+        "start": 60,
+        "moves": []
       }
     ],
     "women": [
@@ -179,10 +203,6 @@
       },
       {
         "start": 36,
-        "moves": []
-      },
-      {
-        "start": 47,
         "moves": []
       }
     ]
@@ -201,6 +221,10 @@
     "women": [
       {
         "start": 9,
+        "moves": []
+      },
+      {
+        "start": 53,
         "moves": []
       }
     ]
@@ -222,7 +246,11 @@
         "moves": []
       },
       {
-        "start": 50,
+        "start": 48,
+        "moves": []
+      },
+      {
+        "start": 60,
         "moves": []
       }
     ]
@@ -238,13 +266,21 @@
         "moves": []
       },
       {
-        "start": 51,
+        "start": 50,
         "moves": []
       }
     ],
     "women": [
       {
         "start": 26,
+        "moves": []
+      },
+      {
+        "start": 57,
+        "moves": []
+      },
+      {
+        "start": 64,
         "moves": []
       }
     ]
@@ -264,6 +300,10 @@
       {
         "start": 14,
         "moves": []
+      },
+      {
+        "start": 58,
+        "moves": []
       }
     ]
   },
@@ -276,6 +316,10 @@
       {
         "start": 44,
         "moves": []
+      },
+      {
+        "start": 59,
+        "moves": []
       }
     ],
     "women": [
@@ -284,11 +328,11 @@
         "moves": []
       },
       {
-        "start": 43,
+        "start": 42,
         "moves": []
       },
       {
-        "start": 51,
+        "start": 49,
         "moves": []
       }
     ]
@@ -329,7 +373,7 @@
         "moves": []
       },
       {
-        "start": 52,
+        "start": 50,
         "moves": []
       }
     ]
@@ -377,17 +421,13 @@
         "moves": []
       },
       {
-        "start": 53,
+        "start": 52,
         "moves": []
       }
     ],
     "women": [
       {
         "start": 17,
-        "moves": []
-      },
-      {
-        "start": 41,
         "moves": []
       }
     ]
@@ -406,6 +446,10 @@
     "women": [
       {
         "start": 18,
+        "moves": []
+      },
+      {
+        "start": 54,
         "moves": []
       }
     ]
@@ -433,6 +477,10 @@
       {
         "start": 17,
         "moves": []
+      },
+      {
+        "start": 54,
+        "moves": []
       }
     ],
     "women": [
@@ -441,7 +489,7 @@
         "moves": []
       },
       {
-        "start": 48,
+        "start": 46,
         "moves": []
       }
     ]
@@ -450,6 +498,10 @@
     "men": [
       {
         "start": 20,
+        "moves": []
+      },
+      {
+        "start": 62,
         "moves": []
       }
     ],
@@ -471,7 +523,7 @@
         "moves": []
       },
       {
-        "start": 50,
+        "start": 49,
         "moves": []
       }
     ],
@@ -481,7 +533,7 @@
         "moves": []
       },
       {
-        "start": 42,
+        "start": 41,
         "moves": []
       }
     ]
@@ -491,6 +543,14 @@
       {
         "start": 26,
         "moves": []
+      },
+      {
+        "start": 57,
+        "moves": []
+      },
+      {
+        "start": 64,
+        "moves": []
       }
     ],
     "women": [
@@ -499,7 +559,25 @@
         "moves": []
       },
       {
-        "start": 44,
+        "start": 43,
+        "moves": []
+      }
+    ]
+  },
+  "WRO": {
+    "men": [
+      {
+        "start": 27,
+        "moves": []
+      }
+    ],
+    "women": [
+      {
+        "start": 24,
+        "moves": []
+      },
+      {
+        "start": 45,
         "moves": []
       }
     ]
@@ -508,10 +586,6 @@
     "men": [
       {
         "start": 37,
-        "moves": []
-      },
-      {
-        "start": 49,
         "moves": []
       }
     ],
@@ -536,29 +610,15 @@
       }
     ]
   },
-  "WRO": {
-    "men": [
-      {
-        "start": 27,
-        "moves": []
-      }
-    ],
-    "women": [
-      {
-        "start": 24,
-        "moves": []
-      },
-      {
-        "start": 46,
-        "moves": []
-      }
-    ]
-  },
   "SPC": {
     "men": [
       {
         "start": 31,
         "moves": []
+      },
+      {
+        "start": 58,
+        "moves": []
       }
     ],
     "women": [
@@ -567,7 +627,7 @@
         "moves": []
       },
       {
-        "start": 53,
+        "start": 51,
         "moves": []
       }
     ]
@@ -576,6 +636,10 @@
     "men": [
       {
         "start": 21,
+        "moves": []
+      },
+      {
+        "start": 56,
         "moves": []
       }
     ],
@@ -595,7 +659,7 @@
     ],
     "women": [
       {
-        "start": 54,
+        "start": 52,
         "moves": []
       }
     ]
@@ -614,11 +678,19 @@
       {
         "start": 33,
         "moves": []
+      },
+      {
+        "start": 55,
+        "moves": []
       }
     ],
     "women": [
       {
         "start": 31,
+        "moves": []
+      },
+      {
+        "start": 63,
         "moves": []
       }
     ]
@@ -631,5 +703,18 @@
       }
     ],
     "women": []
+  },
+  "OSG": {
+    "men": [],
+    "women": [
+      {
+        "start": 61,
+        "moves": []
+      },
+      {
+        "start": 62,
+        "moves": []
+      }
+    ]
   }
 }
