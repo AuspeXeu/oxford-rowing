@@ -202,13 +202,15 @@
       </v-flex>
     </v-navigation-drawer>
     <v-footer app fixed>
-      <a href="http://www.wolfsonrowing.org/" target="_blank" rel="noopener">
-        <img class="noselect mx-1" src="./assets/woo_crest.png" alt="Wolfson" style="width:20px;"/>
+      <a href="https://www.wolfsonrowing.org/" target="_blank" rel="noopener">
+        <img class="ml-1" src="./assets/woo_crest.png" alt="Sponsor: Wolfson" title="Sponsor: Wolfson College Boat Club" style="width:20px;margin-top:4px;"/>
       </a>
       <a href="https://erg.studio/" target="_blank" rel="noopener">
         <img
-          style="width:24px;"
-          class="mx-1"
+          style="width:28px;margin-top:4px;"
+          class="ml-1"
+          alt="Sponsor: ErgStudio"
+          title="Sponsor: ErgStudio"
           src="/ergstudio.png"/>
       </a>
       <v-spacer/>
@@ -272,10 +274,11 @@ export default {
       liveTimer: false,
       viewers: 0,
       features: [
-        {key: 'localtime', text: 'Race times are displayed in your local time :)'},
-        {key: 'crewlist', text: `Click on a boat's crest to see its crew list!`},
-        {key: 'crewlisthist', text: 'We now added crew lists for all events back until 2017'},
-        {key: 'history', text: 'We added much more historic data as far as 1826!'}
+        {key: `localtime-${new Date().getFullYear()}`, text: 'Race times are displayed in your local time :)'},
+        {key: `crewlist-${new Date().getFullYear()}`, text: `Click on a boat's crest to see its crew list!`},
+        {key: `crewlisthist-${new Date().getFullYear()}`, text: 'We now added crew lists for all events back until 2017'},
+        {key: `history-${new Date().getFullYear()}`, text: 'We added much more historic data as far as 1826!'},
+        {key: `results-${new Date().getFullYear()}`, text: 'Race results are provided by Wolfson College Boat Club.'}
       ],
       feature: null,
       reporters: 0,
@@ -596,7 +599,7 @@ export default {
       }
     },
     dismissFeature(feature) {
-      this.saveStorage('features', (this.loadStorage('features') || []).concat([feature.key]))
+      this.saveStorage('features', (this.loadStorage('features') || []).concat([feature.key]).filter((val) => val.endsWith(new Date().getFullYear())))
       this.features = this.features.filter(itm => this.loadStorage('features').map(f => f.key).indexOf(itm.key) === -1)
       this.nextFeature()
     },
