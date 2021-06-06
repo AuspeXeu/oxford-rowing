@@ -193,12 +193,12 @@
         </v-list-tile>
       </v-list>
       <v-flex>
-          <v-select
-            class="px-4"
-            :item-text="({name, year}) => `${name} ${year}`"
-            return-object
-            v-model="event"
-            :items="events"/>
+        <v-select
+          class="px-4"
+          :item-text="({name, year}) => `${name} ${year}`"
+          return-object
+          v-model="event"
+          :items="events"/>
       </v-flex>
     </v-navigation-drawer>
     <v-footer app fixed>
@@ -649,7 +649,7 @@ export default {
       }.bind(this), 150)
     },
     confirmBoat(boat) {
-      if (this.verified) {
+      if (this.verified && boat.moves.length > 0) {
         if (!boat.moves[boat.moves.length-1].status) {
           boat.moves.forEach((itm) => itm.status = true)
         } else {
