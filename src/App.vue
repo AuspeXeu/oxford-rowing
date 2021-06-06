@@ -13,7 +13,7 @@
           <v-img
             src="/blades.png"
             :max-width="30"
-          ></v-img>
+          />
         </v-btn>
         <span>Blades?</span>
       </v-tooltip>
@@ -22,7 +22,7 @@
           <v-img
             src="/spoons.png"
             :max-width="30"
-          ></v-img>
+          />
         </v-btn>
         <span>Spoons?</span>
       </v-tooltip>
@@ -202,16 +202,25 @@
       </v-flex>
     </v-navigation-drawer>
     <v-footer app fixed>
-      <img class="noselect pl-1" src="./assets/woo_crest.png" alt="Wolfson" style="width:24px;"/>
-      <div class="pl-2 noselect"><a href="http://www.wolfsonrowing.org/" target="_blank" rel="noopener">Wolfson Boat Club</a></div>
+      <a href="http://www.wolfsonrowing.org/" target="_blank" rel="noopener">
+        <img class="noselect mx-1" src="./assets/woo_crest.png" alt="Wolfson" style="width:20px;"/>
+      </a>
+      <a href="https://erg.studio/" target="_blank" rel="noopener">
+        <img
+          style="width:24px;"
+          class="mx-1"
+          src="/ergstudio.png"/>
+      </a>
       <v-spacer/>
       <form action="https://www.paypal.com/donate" method="post" target="_top">
         <input type="hidden" name="hosted_button_id" value="GZ6R4Q69L3ZG4" />
         <input style="text-decoration: underline blue;" type="submit" name="submit" value="Donate ❤️"/>
         <img alt="" border="0" src="https://www.paypal.com/en_DE/i/scr/pixel.gif" width="1" height="1" />
       </form>
-      <div class="noselect px-1"><a href="mailto:chrisvaas@gmail.com">Contact</a></div>
-      <div class="noselect">{{ new Date().getFullYear() }}</div>
+      <div class="noselect px-1">
+        <a href="mailto:chrisvaas@gmail.com">Contact</a>
+      </div>
+      <div class="noselect mr-1">© {{ new Date().getFullYear() }}</div>
     </v-footer>
     <v-snackbar top v-model="feature" :timeout="0">
       {{ feature ? feature.text : '' }}
