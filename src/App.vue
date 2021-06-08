@@ -224,8 +224,9 @@
       </div>
       <div class="noselect mr-1">© {{ new Date().getFullYear() }}</div>
     </v-footer>
-    <v-snackbar top v-model="feature" :timeout="0">
-      {{ feature ? feature.text : '' }}
+    <v-snackbar top v-if="feature" :value="true" :timeout="0">
+      <span>{{ feature.text }}</span>
+      <a v-if="feature.link" :href="feature.link.url" class="pl-1" target="_blank" rel="noopener">{{ feature.link.text }}</a>
       <v-btn flat color="pink" @click="dismissFeature(feature)">Close</v-btn>
     </v-snackbar>
     <v-snackbar
@@ -274,12 +275,13 @@ export default {
       liveTimer: false,
       viewers: 0,
       features: [
-        {key: `localtime-${new Date().getFullYear()}`, text: 'Race times are displayed in your local time :)'},
-        {key: `crewlist-${new Date().getFullYear()}`, text: `Click on a boat's crest to see its crew list!`},
-        {key: `crewlisthist-${new Date().getFullYear()}`, text: 'We now added crew lists for all events back until 2017'},
-        {key: `history-${new Date().getFullYear()}`, text: 'We added much more historic data as far as 1826!'},
-        {key: `results-${new Date().getFullYear()}`, text: 'Race results are provided by Wolfson College Boat Club.'}
-      ],
+        {key: 'fantasy', text: `Did you know, we are providing the data for`, link: {text: 'FantasyBumps', url: 'https://fantasybumps.org.uk/torpids2021/'}},
+        {key: 'results', text: 'Race results are provided by Wolfson College Boat Club.'},
+        {key: 'localtime', text: 'Race times are displayed in your local time :)'},
+        {key: 'crewlist', text: `Click on a boat's crest to see its crew list!`},
+        {key: 'crewlisthist', text: 'We now added crew lists for all events back until 2017!'},
+        {key: 'history', text: 'We added much more historic data as far as 1826!'}
+      ].map((f) => ({...f, key: `${f.key}-${new Date().getFullYear()}`})),
       feature: null,
       reporters: 0,
       clubSelected: false,
