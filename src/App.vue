@@ -200,6 +200,24 @@
           v-model="event"
           :items="events"/>
       </v-flex>
+      <v-list class="pt-0" dense>
+        <v-list-tile href="https://oxfordbumpsracing.com" target="_blank">
+          <v-list-tile-content>
+            <v-list-tile-title>Live Stream</v-list-tile-title>
+          </v-list-tile-content>
+          <v-list-tile-action>
+            <v-icon>camera</v-icon>
+          </v-list-tile-action>
+        </v-list-tile>
+        <v-list-tile href="https://fantasybumps.org.uk/torpids2021/" target="_blank">
+          <v-list-tile-content>
+            <v-list-tile-title>FantasyBumps</v-list-tile-title>
+          </v-list-tile-content>
+          <v-list-tile-action>
+            <v-icon>link</v-icon>
+          </v-list-tile-action>
+        </v-list-tile>
+      </v-list>
     </v-navigation-drawer>
     <v-footer app fixed>
       <a href="https://www.wolfsonrowing.org/" target="_blank" rel="noopener">
