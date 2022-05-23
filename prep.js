@@ -1,14 +1,15 @@
 /*** Only the following parameters need to be adjusted each event ***/
 // This can either be 'torpids' or 'eights'
-const event = 'torpids'
+const event = 'eights'
 const year = 2022
 const isTorpids = () => event.indexOf('torpids') > -1
 // const boatsPerDiv = isTorpids() ? 12 : 13
-const boatsPerDiv = 12 // This is for Summer Torpids 2021
+const boatsPerDiv = 12 // This is for Summer Eights 2022
 
 // These ids can be obtained from https://ourcs.co.uk/racing/entries/events/
 // Example: 'https://ourcs.co.uk/racing/entries/events/event/198/crew_lists/' -> is 198 for the year 2019
 const eightsCrews = [
+  {id: 230, year: 2022},
   {id: 198, year: 2019},
   {id: 186, year: 2018},
   {id: 174, year: 2017},
@@ -54,7 +55,8 @@ const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ..
 
 // Examples
 // http://eodg.atm.ox.ac.uk/user/dudhia/rowing/torpids/t22wed.html
-const startingOrder = `http://eodg.atm.ox.ac.uk/user/dudhia/rowing/${event}/${event.substring(0,1)}${year.toString().substring(2,4)}wed.html`
+// http://eodg.atm.ox.ac.uk/user/dudhia/rowing/eights/e22sta.html
+const startingOrder = `http://eodg.atm.ox.ac.uk/user/dudhia/rowing/${event}/${event.substring(0,1)}${year.toString().substring(2,4)}sta.html`
 const fbase = `${__dirname}/data/${isTorpids() ? 'torpids' : 'eights'}_${year}`
 const table = {
   BAL: {call: ['Balliol']},
