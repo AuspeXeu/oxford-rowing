@@ -502,7 +502,7 @@ export default {
     boatsPerDiv() {
       if (this.event && (this.event.name.toLowerCase() === 'torpids' && this.event.year === 2021)) {
         return 9
-      } else if (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011)) {
+      } else if (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011 || this.event.year >= 2022)) {
         return 12
       } else {
         return 13
