@@ -156,6 +156,8 @@ app.post('/bump/:name/:year', authReq, (req, res) => {
       //Broadcast changes
       broadcast({type: 'update', record: {name, year, ...record}})
       fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data, null, 2), 'utf8', () => res.sendStatus(200))
+    } else {
+      res.sendStatus(200)
     }
   }).catch((err) => res.status(400).json({err: err}))
 })
