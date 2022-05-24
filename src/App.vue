@@ -269,7 +269,7 @@ export default {
   },
   data() {
     return {
-      countDownDate: new Date('February 26, 2020 12:00:00').getTime(),
+      countDownDate: new Date('May 25, 2020 12:00:00').getTime(),
       announcementDraft: '',
       bladesOnly: false,
       spoonsOnly: false,
@@ -285,8 +285,7 @@ export default {
       liveTimer: false,
       viewers: 0,
       features: [
-        {key: 'fantasy', text: `Did you know, we are providing the data for`, link: {text: 'FantasyBumps', url: 'https://fantasybumps.org.uk/torpids2021/'}},
-        {key: 'results', text: 'Race results are provided by Wolfson College Boat Club.'},
+        {key: 'fantasy-2022', text: `Did you know, we are providing the data for`, link: {text: 'FantasyBumps', url: 'https://fantasybumps.org.uk/'}},
         {key: 'localtime', text: 'Race times are displayed in your local time :)'},
         {key: 'crewlist', text: `Click on a boat's crest to see its crew list!`},
         {key: 'crewlisthist', text: 'We now added crew lists for all events back until 2017!'},
