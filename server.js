@@ -8,6 +8,7 @@ const conf = require('nconf')
 const bodyParser = require('body-parser')
 const {v4: uuid} = require('uuid')
 const moment = require('moment')
+const { isDeepStrictEqual } = require('util')
 
 const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ...args])
 
@@ -150,10 +151,12 @@ app.post('/bump/:name/:year', authReq, (req, res) => {
     promise = Promise.resolve(dataCache[`${name}_${year}`])
   promise.then((data) => {
     const {club, gender, number, moves} = record
-    data[club][gender][number].moves = moves
-    //Broadcast changes
-    broadcast({type: 'update', record: {name, year, ...record}})
-    fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data, null, 2), 'utf8', () => res.sendStatus(200))
+    if (!isDeepStrictEqual(data[club][gender][number].moves, moves)) {
+      data[club][gender][number].moves = moves
+      //Broadcast changes
+      broadcast({type: 'update', record: {name, year, ...record}})
+      fs.writeFile(`${__dirname}/data/${name}_${year}.json`, JSON.stringify(data, null, 2), 'utf8', () => res.sendStatus(200))
+    }
   }).catch((err) => res.status(400).json({err: err}))
 })
 //Endpoint to verify authorization code
