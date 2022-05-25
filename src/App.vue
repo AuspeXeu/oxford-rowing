@@ -525,7 +525,7 @@ export default {
       return boats
     },
     divsMen() {
-      if (this.divs?.men) {
+      if (this.divs && this.divs.men) {
         return this.divs.men.map((time, idx) => ({time: time, number: idx + 1}))
       }
       const ary = Array.from({length: Math.ceil(this.rowsMen / this.boatsPerDiv)}, (x,i) => i)
@@ -533,7 +533,7 @@ export default {
       return ary.map((_, idx) => ({number: idx+1}))
     },
     divsWomen() {
-      if (this.divs?.men) {
+      if (this.divs && this.divs.men) {
         return this.divs.women.map((time, idx) => ({time: time, number: idx + 1}))
       }
       const ary = Array.from({length: Math.ceil(this.rowsWomen / this.boatsPerDiv)}, (x,i) => i)
