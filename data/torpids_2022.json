@@ -38,7 +38,7 @@
             "status": true
           },
           {
-            "moves": 2,
+            "moves": 3,
             "status": true
           }
         ]
@@ -193,7 +193,7 @@
             "status": true
           },
           {
-            "moves": -7,
+            "moves": -8,
             "status": true
           }
         ]
@@ -308,7 +308,7 @@
             "status": true
           },
           {
-            "moves": 1,
+            "moves": 2,
             "status": true
           }
         ]
@@ -415,8 +415,8 @@
             "status": true
           },
           {
-            "moves": 0,
-            "status": false
+            "moves": -1,
+            "status": true
           }
         ]
       }
@@ -857,7 +857,7 @@
             "status": true
           },
           {
-            "moves": 3,
+            "moves": 1,
             "status": true
           }
         ]
@@ -901,7 +901,7 @@
             "status": true
           },
           {
-            "moves": 1,
+            "moves": 2,
             "status": true
           }
         ]
@@ -1058,7 +1058,7 @@
             "status": true
           },
           {
-            "moves": -2,
+            "moves": 1,
             "status": true
           }
         ]
@@ -1874,7 +1874,7 @@
             "status": true
           },
           {
-            "moves": 3,
+            "moves": 1,
             "status": true
           }
         ]
@@ -1960,7 +1960,7 @@
             "status": true
           },
           {
-            "moves": 2,
+            "moves": 3,
             "status": true
           }
         ]
@@ -2399,7 +2399,7 @@
             "status": true
           },
           {
-            "moves": -1,
+            "moves": 0,
             "status": true
           }
         ]
@@ -2579,7 +2579,7 @@
             "status": true
           },
           {
-            "moves": 0,
+            "moves": -2,
             "status": true
           }
         ]
@@ -2615,11 +2615,11 @@
         "start": 26,
         "moves": [
           {
-            "moves": -1,
+            "moves": 0,
             "status": true
           },
           {
-            "moves": -1,
+            "moves": -2,
             "status": true
           },
           {
@@ -2786,7 +2786,7 @@
             "status": true
           },
           {
-            "moves": 1,
+            "moves": -2,
             "status": true
           }
         ]
@@ -2855,7 +2855,7 @@
             "status": true
           },
           {
-            "moves": -5,
+            "moves": -2,
             "status": true
           }
         ]
