@@ -436,7 +436,7 @@
           sodipodi:nodetypes="cccccccc" />
     </g>
     <g id="EXC" transform="scale(0.5)">
-      <title>Exceter</title>
+      <title>Exeter</title>
       <circle
           style="opacity:1;fill:#c30b0b;fill-opacity:1;stroke:#fff;stroke-width:7;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
           cx="48"
