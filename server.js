@@ -8,6 +8,7 @@ const conf = require('nconf')
 const bodyParser = require('body-parser')
 const {v4: uuid} = require('uuid')
 const moment = require('moment')
+const { celebrate, Joi, errors } = require('celebrate');
 const { isDeepStrictEqual } = require('util')
 
 const log = (...args) => console.log(...[moment().format('HH:mm - DD.MM.YY'), ...args])
@@ -27,6 +28,18 @@ conf.defaults({
 if (!conf.get('auth').length) {
   conf.set('auth', [uuid()])
   conf.save()
+}
+
+const eventValidation = {
+  body: {
+    name: Joi.string().valid('torpids', 'eights').required(),
+    year: Joi.number().min(Number(moment().format('YYYY'))).required(),
+    divs: {
+      men: Joi.array().items(Joi.object({size: Joi.number().min(1), time: Joi.string().pattern(/^[0-9]{2}:[0-9]{2}$/)})),
+      women: Joi.array().items(Joi.object({size: Joi.number().min(1), time: Joi.string().pattern(/^[0-9]{2}:[0-9]{2}$/)}))
+    },
+    order: Joi.object().pattern(/\w+/, Joi.object({men: Joi.array().items(Joi.object({start: Joi.number().min(1), moves: Joi.array().length(0)})), women: Joi.array().items({start: Joi.number().min(1), moves: Joi.array().length(0)})}))
+  }
 }
 
 const reporters = new Set()
@@ -75,7 +88,7 @@ const authReq = (req, res, next) => {
   if (isAuth(req.get('authorization')))
     next()
   else
-    res.status(401).send('')
+    res.sendStatus(401)
 }
 //Broadcast to all WebSocket clients
 const broadcast = (msg) => {
@@ -107,6 +120,21 @@ const logEvent = (ev, ip, id) => {
   if (eventBuffer.length > 1000)
     flushEventBuffer()
 }
+app.post('/event', authReq, celebrate(eventValidation), (req, res) => {
+  const {name, year, divs, order} = req.body
+  const evtFile = `${__dirname}/data/${name}_${year}.json`
+  const divFile = `${__dirname}/data/${name}_${year}_divs.json`
+  if (fs.existsSync(evtFile)) {
+    // Check if any results have been entered, otherwise reject the event update/creation
+    const data = JSON.parse(fs.readFileSync(evtFile, 'utf8'))
+    if (Object.values(data).flatMap((club) => Object.values(club)).flatMap((itm) => itm).some(({moves}) => moves.length > 0)) {
+      return res.status(500).send('cannot overwrite event that contains already moves for some boats')
+    }
+  }
+  fs.writeFileSync(evtFile, JSON.stringify(order, null, 2))
+  fs.writeFileSync(divFile, JSON.stringify(divs, null, 2))
+  res.sendStatus(200)
+})
 app.get('/events', (req, res) => {
   fs.readdir(`${__dirname}/data`, (err, files) => {
     const events = files.filter(fname => fname.match(/.*?[0-9]{4}.json/)).map((fname) => {
@@ -212,7 +240,9 @@ app.ws('/live', (ws, req) => {
 //Get websocket for /live endpoint
 const aWss = wss.getWss('/live')
 
-//Serve home
+// Validation error handling
+app.use(errors())
+// Serve home
 app.get('*', (req, res) => res.sendFile(`${__dirname}/dist/index.html`))
 
 //Finally start listening
