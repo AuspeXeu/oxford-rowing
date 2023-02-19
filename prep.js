@@ -1,10 +1,10 @@
 /*** Only the following parameters need to be adjusted each event ***/
 // This can either be 'torpids' or 'eights'
-const event = 'eights'
-const year = 2022
+const event = 'torpids'
+const year = 2023
 const isTorpids = () => event.indexOf('torpids') > -1
 // const boatsPerDiv = isTorpids() ? 12 : 13
-const boatsPerDiv = 12 // This is for Summer Eights 2022
+const boatsPerDiv = 12 // This is for Torpids 2023
 
 // These ids can be obtained from https://ourcs.co.uk/racing/entries/events/
 // Example: 'https://ourcs.co.uk/racing/entries/events/event/198/crew_lists/' -> is 198 for the year 2019
@@ -26,6 +26,7 @@ const eightsCrews = [
 ].map((data) => ({...data, event: 'eights'}))
 
 const torpidsCrews = [
+  {id: 239, year: 2023},
   {id: 229, year: 2022},
   {id: 217, year: 2021},
   {id: 195, year: 2019},
@@ -169,6 +170,7 @@ const crewLists = async () => {
 }
 crewLists()
 
+log(`Downloading ${startingOrder}`)
 axios.get(startingOrder)
   .then((response) => {
     const starting = {}
