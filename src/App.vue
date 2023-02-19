@@ -47,10 +47,10 @@
       <v-container>
         <v-layout row v-resize="onResize">
           <v-flex id="svg-container" xs12 md10 sm10 offset-sm1 offset-md2 offset-lg3 offset-xl4>
-            <svg width="100%" :height="(Math.max(rowsMen, rowsWomen) + (verified ? boatsPerDiv : 0)) * 38 * scale / 0.64">
+            <svg width="100%" :height="Math.max(rowsMen, rowsWomen) * 38 * scale / 0.64">
               <g id="containerMen" :transform="`translate(40,15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
-                <g :id="`men_${div.number}`" v-for="div in divsMen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * (div.number - 1)) * (47.5 + 10)) -5)})`">
+                <g :id="`men_${div.number}`" v-for="div in divsMen" :key="div.number" :transform="`translate(0,${(((div.size * (div.number - 1)) * (47.5 + 10)) -5)})`">
                   <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number > 1" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" :transform="`translate(${100 + days * 90}, ${div.number === 1? 5 : -5}),rotate(90)`">{{ divName(div) }}</text>
                 </g>
@@ -67,7 +67,7 @@
               </g>
               <g v-if="divsWomen.length > 0" id="containerWomen" :transform="`translate(${offset+70},15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
-                <g :id="`women_${div.number}`" v-for="div in divsWomen" :key="div.number" :transform="`translate(0,${(((boatsPerDiv * (div.number - 1)) * (47.5 + 10)) -5)})`">
+                <g :id="`women_${div.number}`" v-for="div in divsWomen" :key="div.number" :transform="`translate(0,${(((div.size * (div.number - 1)) * (47.5 + 10)) -5)})`">
                   <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number > 1" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" :transform="`translate(${100 + days * 90}, ${div.number === 1? 5 : -5}),rotate(90)`">{{ divName(div) }}</text>
                 </g>
@@ -308,7 +308,7 @@ export default {
       verified: false,
       announceDialog: false,
       boatsHigh: [],
-      divs: false,
+      divs: null,
       crewDialog: false,
       crews: false,
       events: [],
@@ -499,15 +499,6 @@ export default {
     offset() {
       return this.scale * 460
     },
-    boatsPerDiv() {
-      if (this.event && (this.event.name.toLowerCase() === 'torpids' && this.event.year === 2021)) {
-        return 9
-      } else if (this.event && (this.event.name.toLowerCase() === 'torpids' || this.event.year <= 2011 || this.event.year >= 2022)) {
-        return 12
-      } else {
-        return 13
-      }
-    },
     boats() {
       let boats = []
       for (const key in this.chartData) {
@@ -525,20 +516,26 @@ export default {
       return boats
     },
     divsMen() {
-      if (this.divs && this.divs.men) {
-        return this.divs.men.map((time, idx) => ({time: time, number: idx + 1}))
+      if (this.divs?.men) {
+        return this.divs.men.map(({time, size}, idx) => ({time, size, number: idx + 1}))
+      } else if (this.divs) {
+        const {size} = this.divs
+        const ary = Array.from({length: Math.ceil(this.rowsMen / size)}, (x, i) => i)
+        ary.shift()
+        return ary.map((_, idx) => ({size, number: idx + 1}))
       }
-      const ary = Array.from({length: Math.ceil(this.rowsMen / this.boatsPerDiv)}, (x,i) => i)
-      ary.shift()
-      return ary.map((_, idx) => ({number: idx+1}))
+      return []
     },
     divsWomen() {
-      if (this.divs && this.divs.men) {
-        return this.divs.women.map((time, idx) => ({time: time, number: idx + 1}))
+      if (this.divs?.men) {
+        return this.divs.women.map(({time, size}, idx) => ({time, size, number: idx + 1}))
+      } else if (this.divs) {
+        const {size} = this.divs
+        const ary = Array.from({length: Math.ceil(this.rowsWomen / size)}, (x,i) => i)
+        ary.shift()
+        return ary.map((_, idx) => ({size, number: idx + 1}))
       }
-      const ary = Array.from({length: Math.ceil(this.rowsWomen / this.boatsPerDiv)}, (x,i) => i)
-      ary.shift()
-      return ary.map((_, idx) => ({number: idx+1}))
+      return []
     },
     boatsMen() {
       let boats = []
@@ -716,7 +713,7 @@ export default {
       if (!event) {
         return
       }
-      this.divs = false
+      this.divs = null
       this.chartData = {}
       axios.get(`/data/${event.name.toLowerCase()}_${event.year}.json`)
         .then((response) => {
@@ -736,14 +733,10 @@ export default {
           this.event = event
         })
       axios.get(`/data/${event.name.toLowerCase()}_${event.year}_divs.json`)
-        .then((response) => {
-          this.divs = response.data
-        })
-        .catch(() => this.divs = false)
+        .then((response) => this.divs = response.data)
+        .catch(() => this.divs = null)
       axios.get(`/data/${event.name.toLowerCase()}_${event.year}_crews.json`)
-        .then((response) => {
-          this.crews = response.data
-        })
+        .then((response) => this.crews = response.data)
         .catch(() => this.crews = false)
     },
     selectBoat(boat) {
