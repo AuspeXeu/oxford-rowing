@@ -3,7 +3,6 @@ const fs = require('fs')
 const https = require('https')
 const http = require('http')
 const express = require('express')
-const expressWs = require('express-uws')
 const conf = require('nconf')
 const bodyParser = require('body-parser')
 const {v4: uuid} = require('uuid')
@@ -61,7 +60,7 @@ if (conf.get('key')) {
   }).listen(80)
 } else
   server = http.createServer(app)
-const wss = expressWs(app, server)
+const wss = require('express-ws')(app, server);
 
 app.use(compression())
 //Server static data
@@ -74,7 +73,7 @@ app.use('/data', express.static(`${__dirname}/data`))
 //Parse JSON of incoming requests
 app.use(bodyParser.json())
 //Enable CORS
-app.use((req, res, next) => {
+app.use((_, res, next) => {
   res.header('Access-Control-Allow-Credentials', true)
   res.header('Access-Control-Allow-Origin', '*')
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization')
@@ -190,10 +189,10 @@ app.post('/bump/:name/:year', authReq, (req, res) => {
   }).catch((err) => res.status(400).json({err: err}))
 })
 //Endpoint to verify authorization code
-app.get('/verify', authReq, (req, res) => res.status(200).send(''))
+app.get('/verify', authReq, (_, res) => res.status(200).send(''))
 
 //Generate a user report
-const userReport = () => ({type: 'users', viewers: Math.max(0, aWss.clients.length - reporters.size), reporters: reporters.size})
+const userReport = () => ({type: 'users', viewers: Math.max(0, aWss.clients.size - reporters.size), reporters: reporters.size})
 //Send user report to all WebSocket clients every 30 seconds
 setInterval(() => broadcast(userReport()), 30 * 1000)
 

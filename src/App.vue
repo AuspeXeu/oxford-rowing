@@ -317,7 +317,7 @@ export default {
   },
   beforeMount() {
     this.auth = this.$route.query.auth
-    const socket = new ReconnectingWebSocket(`${window.location.origin.replace('http','ws')}/live`)
+    const socket = new ReconnectingWebSocket(`${window.location.origin.replace('http','ws').replace('8080', '3019')}/live`)
     socket.onmessage = (event) => {
       const message = JSON.parse(event.data)
       if (message.type === 'update') {
