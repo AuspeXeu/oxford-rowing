@@ -1,1230 +1,3780 @@
 {
-  "ORO":{
-    "men":[
+  "ORO": {
+    "men": [
       {
-        "start":1,
-        "moves":[
-          
+        "start": 1,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":23,
-        "moves":[
-          
+        "start": 23,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":60,
-        "moves":[
-          
+        "start": 59,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":66,
-        "moves":[
-          
+        "start": 65,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":68,
-        "moves":[
-          
+        "start": 67,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":7,
-        "moves":[
-          
+        "start": 7,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":46,
-        "moves":[
-          
+        "start": 46,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":66,
-        "moves":[
-          
+        "start": 66,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":79,
-        "moves":[
-          
+        "start": 79,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "CHB":{
-    "men":[
+  "CHB": {
+    "men": [
       {
-        "start":2,
-        "moves":[
-          
+        "start": 2,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":26,
-        "moves":[
-          
+        "start": 26,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":2,
-        "moves":[
-          
+        "start": 2,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":37,
-        "moves":[
-          
+        "start": 37,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":63,
-        "moves":[
-          
+        "start": 63,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "KEB":{
-    "men":[
+  "KEB": {
+    "men": [
       {
-        "start":3,
-        "moves":[
-          
+        "start": 3,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":32,
-        "moves":[
-          
+        "start": 32,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":58,
-        "moves":[
-          
+        "start": 57,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":8,
-        "moves":[
-          
+        "start": 8,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":60,
-        "moves":[
-          
+        "start": 60,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "PMB":{
-    "men":[
+  "PMB": {
+    "men": [
       {
-        "start":4,
-        "moves":[
-          
+        "start": 4,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":31,
-        "moves":[
-          
+        "start": 31,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":78,
-        "moves":[
-          
+        "start": 77,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":82,
-        "moves":[
-          
+        "start": 81,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":6,
-        "moves":[
-          
+        "start": 6,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":38,
-        "moves":[
-          
+        "start": 38,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "WOO":{
-    "men":[
+  "WOO": {
+    "men": [
       {
-        "start":5,
-        "moves":[
-          
+        "start": 5,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":43,
-        "moves":[
-          
+        "start": 42,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":57,
-        "moves":[
-          
+        "start": 56,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":67,
-        "moves":[
-          
+        "start": 66,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":3,
-        "moves":[
-          
+        "start": 3,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":23,
-        "moves":[
-          
+        "start": 23,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":45,
-        "moves":[
-          
+        "start": 45,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":70,
-        "moves":[
-          
+        "start": 70,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "WAD":{
-    "men":[
+  "WAD": {
+    "men": [
       {
-        "start":6,
-        "moves":[
-          
+        "start": 6,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":38,
-        "moves":[
-          
+        "start": 38,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -2,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":4,
-        "moves":[
-          
+        "start": 4,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":40,
-        "moves":[
-          
+        "start": 40,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":77,
-        "moves":[
-          
+        "start": 77,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "BAL":{
-    "men":[
+  "BAL": {
+    "men": [
       {
-        "start":7,
-        "moves":[
-          
+        "start": 7,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":41,
-        "moves":[
-          
+        "start": 41,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":15,
-        "moves":[
-          
+        "start": 15,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":54,
-        "moves":[
-          
+        "start": 54,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -2,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SEH":{
-    "men":[
+  "SEH": {
+    "men": [
       {
-        "start":8,
-        "moves":[
-          
+        "start": 8,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":40,
-        "moves":[
-          
+        "start": 40,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":76,
-        "moves":[
-          
+        "start": 75,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":5,
-        "moves":[
-          
+        "start": 5,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":58,
-        "moves":[
-          
+        "start": 58,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SCO":{
-    "men":[
+  "SCO": {
+    "men": [
       {
-        "start":9,
-        "moves":[
-          
+        "start": 9,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":46,
-        "moves":[
-          
+        "start": 45,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":14,
-        "moves":[
-          
+        "start": 14,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -2,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":59,
-        "moves":[
-          
+        "start": 59,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "MAG":{
-    "men":[
+  "MAG": {
+    "men": [
       {
-        "start":10,
-        "moves":[
-          
+        "start": 10,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":47,
-        "moves":[
-          
+        "start": 46,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":9,
-        "moves":[
-          
+        "start": 9,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":41,
-        "moves":[
-          
+        "start": 41,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":74,
-        "moves":[
-          
+        "start": 74,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "UCO":{
-    "men":[
+  "UCO": {
+    "men": [
       {
-        "start":11,
-        "moves":[
-          
+        "start": 11,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":37,
-        "moves":[
-          
+        "start": 37,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":63,
-        "moves":[
-          
+        "start": 62,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":73,
-        "moves":[
-          
+        "start": 72,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":1,
-        "moves":[
-          
+        "start": 1,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":32,
-        "moves":[
-          
+        "start": 32,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":65,
-        "moves":[
-          
+        "start": 65,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "TRO":{
-    "men":[
+  "TRO": {
+    "men": [
       {
-        "start":12,
-        "moves":[
-          
-        ]
-      },
-      {
-        "start":42,
-        "moves":[
-          
+        "start": 12,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":22,
-        "moves":[
-          
+        "start": 22,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":55,
-        "moves":[
-          
+        "start": 55,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "JEO":{
-    "men":[
+  "JEO": {
+    "men": [
       {
-        "start":13,
-        "moves":[
-          
+        "start": 13,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":44,
-        "moves":[
-          
+        "start": 43,
+        "moves": [
+          {
+            "moves": -2,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":11,
-        "moves":[
-          
+        "start": 11,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":57,
-        "moves":[
-          
+        "start": 57,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "LMH":{
-    "men":[
+  "LMH": {
+    "men": [
       {
-        "start":14,
-        "moves":[
-          
+        "start": 14,
+        "moves": [
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":59,
-        "moves":[
-          
+        "start": 58,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":21,
-        "moves":[
-          
+        "start": 21,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":76,
-        "moves":[
-          
+        "start": 76,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "NEC":{
-    "men":[
+  "NEC": {
+    "men": [
       {
-        "start":15,
-        "moves":[
-          
+        "start": 15,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":39,
-        "moves":[
-          
+        "start": 39,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":56,
-        "moves":[
-          
+        "start": 55,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":74,
-        "moves":[
-          
+        "start": 73,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":10,
-        "moves":[
-          
+        "start": 10,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":49,
-        "moves":[
-          
+        "start": 49,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "QCO":{
-    "men":[
+  "QCO": {
+    "men": [
       {
-        "start":16,
-        "moves":[
-          
+        "start": 16,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":51,
-        "moves":[
-          
+        "start": 50,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":81,
-        "moves":[
-          
+        "start": 80,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":35,
-        "moves":[
-          
+        "start": 35,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":72,
-        "moves":[
-          
+        "start": 72,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":81,
-        "moves":[
-          
+        "start": 81,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -2,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "MER":{
-    "men":[
+  "MER": {
+    "men": [
       {
-        "start":17,
-        "moves":[
-          
+        "start": 17,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":50,
-        "moves":[
-          
+        "start": 49,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":26,
-        "moves":[
-          
+        "start": 26,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":69,
-        "moves":[
-          
+        "start": 69,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "HEC":{
-    "men":[
+  "HEC": {
+    "men": [
       {
-        "start":18,
-        "moves":[
-          
+        "start": 18,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":55,
-        "moves":[
-          
+        "start": 54,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":12,
-        "moves":[
-          
+        "start": 12,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":51,
-        "moves":[
-          
+        "start": 51,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "LIC":{
-    "men":[
+  "LIC": {
+    "men": [
       {
-        "start":19,
-        "moves":[
-          
+        "start": 19,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":48,
-        "moves":[
-          
+        "start": 47,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":19,
-        "moves":[
-          
+        "start": 19,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":39,
-        "moves":[
-          
+        "start": 39,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":56,
-        "moves":[
-          
+        "start": 56,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          }
         ]
       },
       {
-        "start":84,
-        "moves":[
-          
+        "start": 84,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SHG":{
-    "men":[
+  "SHG": {
+    "men": [
       {
-        "start":20,
-        "moves":[
-          
+        "start": 20,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":69,
-        "moves":[
-          
+        "start": 68,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":75,
-        "moves":[
-          
+        "start": 74,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":85,
-        "moves":[
-          
+        "start": 84,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":30,
-        "moves":[
-          
+        "start": 30,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":50,
-        "moves":[
-          
+        "start": 50,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "EXC":{
-    "men":[
+  "EXC": {
+    "men": [
       {
-        "start":21,
-        "moves":[
-          
+        "start": 21,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":54,
-        "moves":[
-          
+        "start": 53,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":72,
-        "moves":[
-          
+        "start": 71,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":25,
-        "moves":[
-          
+        "start": 25,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":68,
-        "moves":[
-          
+        "start": 68,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":83,
-        "moves":[
-          
+        "start": 83,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "MAN":{
-    "men":[
+  "MAN": {
+    "men": [
       {
-        "start":22,
-        "moves":[
-          
+        "start": 22,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":64,
-        "moves":[
-          
+        "start": 63,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":24,
-        "moves":[
-          
+        "start": 24,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":62,
-        "moves":[
-          
+        "start": 62,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "WRO":{
-    "men":[
+  "WRO": {
+    "men": [
       {
-        "start":24,
-        "moves":[
-          
+        "start": 24,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":62,
-        "moves":[
-          
+        "start": 61,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":31,
-        "moves":[
-          
+        "start": 31,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":52,
-        "moves":[
-          
+        "start": 52,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":80,
-        "moves":[
-          
+        "start": 80,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "BRC":{
-    "men":[
+  "BRC": {
+    "men": [
       {
-        "start":25,
-        "moves":[
-          
+        "start": 25,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":52,
-        "moves":[
-          
+        "start": 51,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":28,
-        "moves":[
-          
+        "start": 28,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":48,
-        "moves":[
-          
+        "start": 48,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":78,
-        "moves":[
-          
+        "start": 78,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SOM":{
-    "men":[
+  "SOM": {
+    "men": [
       {
-        "start":27,
-        "moves":[
-          
+        "start": 27,
+        "moves": [
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":20,
-        "moves":[
-          
+        "start": 20,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":53,
-        "moves":[
-          
+        "start": 53,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "COO":{
-    "men":[
+  "COO": {
+    "men": [
       {
-        "start":28,
-        "moves":[
-          
+        "start": 28,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":80,
-        "moves":[
-          
+        "start": 79,
+        "moves": [
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":29,
-        "moves":[
-          
+        "start": 29,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":64,
-        "moves":[
-          
+        "start": 64,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SPC":{
-    "men":[
+  "SPC": {
+    "men": [
       {
-        "start":29,
-        "moves":[
-          
+        "start": 29,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":53,
-        "moves":[
-          
+        "start": 52,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 85,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":27,
-        "moves":[
-          
+        "start": 27,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":67,
-        "moves":[
-          
+        "start": 67,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":75,
-        "moves":[
-          
+        "start": 75,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SJO":{
-    "men":[
+  "SJO": {
+    "men": [
       {
-        "start":30,
-        "moves":[
-          
+        "start": 30,
+        "moves": [
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":83,
-        "moves":[
-          
+        "start": 82,
+        "moves": [
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":16,
-        "moves":[
-          
+        "start": 16,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":43,
-        "moves":[
-          
+        "start": 43,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "LIN":{
-    "men":[
+  "LIN": {
+    "men": [
       {
-        "start":33,
-        "moves":[
-          
+        "start": 33,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":65,
-        "moves":[
-          
+        "start": 64,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":79,
-        "moves":[
-          
+        "start": 78,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":18,
-        "moves":[
-          
+        "start": 18,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":42,
-        "moves":[
-          
+        "start": 42,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":73,
-        "moves":[
-          
+        "start": 73,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":85,
-        "moves":[
-          
+        "start": 85,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SAC":{
-    "men":[
+  "SAC": {
+    "men": [
       {
-        "start":34,
-        "moves":[
-          
+        "start": 34,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":13,
-        "moves":[
-          
+        "start": 13,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
         ]
       },
       {
-        "start":82,
-        "moves":[
-          
+        "start": 82,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "GTM":{
-    "men":[
+  "GTM": {
+    "men": [
       {
-        "start":35,
-        "moves":[
-          
+        "start": 35,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":70,
-        "moves":[
-          
+        "start": 69,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":84,
-        "moves":[
-          
+        "start": 83,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":17,
-        "moves":[
-          
+        "start": 17,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":44,
-        "moves":[
-          
+        "start": 44,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SAY":{
-    "men":[
+  "SAY": {
+    "men": [
       {
-        "start":36,
-        "moves":[
-          
+        "start": 36,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":77,
-        "moves":[
-          
+        "start": 76,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":33,
-        "moves":[
-          
+        "start": 33,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       },
       {
-        "start":61,
-        "moves":[
-          
+        "start": 61,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "SHI":{
-    "men":[
+  "SHI": {
+    "men": [
       {
-        "start":45,
-        "moves":[
-          
+        "start": 44,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":71,
-        "moves":[
-          
+        "start": 70,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":36,
-        "moves":[
-          
+        "start": 36,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "RPC":{
-    "men":[
+  "RPC": {
+    "men": [
       {
-        "start":49,
-        "moves":[
-          
+        "start": 48,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":47,
-        "moves":[
-          
+        "start": 47,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]
   },
-  "OSG":{
-    "men":[
+  "OSG": {
+    "men": [
       {
-        "start":61,
-        "moves":[
-          
+        "start": 60,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ],
-    "women":[
+    "women": [
       {
-        "start":34,
-        "moves":[
-          
+        "start": 34,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
         ]
       },
       {
-        "start":71,
-        "moves":[
-          
+        "start": 71,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
         ]
       }
     ]

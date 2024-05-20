@@ -437,7 +437,7 @@
           },
           {
             "moves": -2,
-            "status": false
+            "status": true
           }
         ]
       },
@@ -1012,8 +1012,8 @@
             "status": true
           },
           {
-            "moves": -3,
-            "status": false
+            "moves": -4,
+            "status": true
           }
         ]
       }
@@ -1239,7 +1239,7 @@
           },
           {
             "moves": 1,
-            "status": false
+            "status": true
           }
         ]
       },
@@ -2250,7 +2250,7 @@
           },
           {
             "moves": 1,
-            "status": false
+            "status": true
           }
         ]
       },
@@ -2610,7 +2610,7 @@
           },
           {
             "moves": -2,
-            "status": false
+            "status": true
           }
         ]
       },
@@ -2675,7 +2675,7 @@
           },
           {
             "moves": 2,
-            "status": false
+            "status": true
           }
         ]
       },
@@ -2716,8 +2716,8 @@
             "status": true
           },
           {
-            "moves": 0,
-            "status": false
+            "moves": 1,
+            "status": true
           }
         ]
       }
@@ -3104,7 +3104,7 @@
           },
           {
             "moves": 1,
-            "status": false
+            "status": true
           }
         ]
       },
