@@ -50,7 +50,7 @@
             <svg width="100%" :height="Math.max(rowsMen, rowsWomen) * 38 * scale / 0.64">
               <g id="containerMen" :transform="`translate(40,15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(190,-40)`">Men</text>
-                <g :id="`men_${div.number}`" v-for="div in divsMen" :key="div.number" :transform="`translate(0,${(((div.size * (div.number - 1)) * (47.5 + 10)) -5)})`">
+                <g :id="`men_${div.number}`" v-for="div of divsMen" :key="div.number" :transform="`translate(0,${((divOffset(div, divsMen) * (47.5 + 10)) -5)})`">
                   <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number > 1" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" :transform="`translate(${100 + days * 90}, ${div.number === 1? 5 : -5}),rotate(90)`">{{ divName(div) }}</text>
                 </g>
@@ -67,7 +67,7 @@
               </g>
               <g v-if="divsWomen.length > 0" id="containerWomen" :transform="`translate(${offset+70},15),scale(${scale})`">
                 <text x="0" y="35" font-size="25" :transform="`translate(180,-40)`">Women</text>
-                <g :id="`women_${div.number}`" v-for="div in divsWomen" :key="div.number" :transform="`translate(0,${(((div.size * (div.number - 1)) * (47.5 + 10)) -5)})`">
+                <g :id="`women_${div.number}`" v-for="div of divsWomen" :key="div.number" :transform="`translate(0,${((divOffset(div, divsWomen) * (47.5 + 10)) - 5)})`">
                   <path :d="`M 0 0 L ${100 + days * 79} 0`" v-if="div.number > 1" fill="transparent" style="stroke:#000;stroke-width:5;" />
                   <text x="0" y="35" font-size="35" :transform="`translate(${100 + days * 90}, ${div.number === 1? 5 : -5}),rotate(90)`">{{ divName(div) }}</text>
                 </g>
@@ -531,7 +531,7 @@ export default {
         return this.divs.women.map(({time, size}, idx) => ({time, size, number: idx + 1}))
       } else if (this.divs) {
         const {size} = this.divs
-        const ary = Array.from({length: Math.ceil(this.rowsWomen / size)}, (x,i) => i)
+        const ary = Array.from({length: Math.ceil(this.rowsWomen / size)}, (x, i) => i)
         ary.shift()
         return ary.map((_, idx) => ({size, number: idx + 1}))
       }
@@ -569,6 +569,11 @@ export default {
     }
   },
   methods: {
+    divOffset(div, divs) {
+      return divs
+        .filter(({number}) => number < div.number)
+        .reduce((acc, {size}) => acc + size, 0)
+    },
     moveBoat(lane) {
       if (this.verified && this.boatSelected) {
         const delta = this.curPos(this.boatSelected) - lane
@@ -705,7 +710,7 @@ export default {
     },
     clubToName(club) {
       const table = {
-        BAL: 'Balliol',BRC: 'Brasenose', CHB: 'Christ Church', COO: 'Corpus Christi', EXC: 'Exeter', GTM: 'Green Templeton', HEC: 'Hertford', JEO: 'Jesus', KEB: 'Keble', LMH: 'Lady Margaret', LIN: 'Linacre', LIC: 'Lincoln', MAG: 'Magdalen', MAN: 'Mansfield', MER: 'Merton', NEC: 'New College', ORO: 'Oriel', OSG: 'Osler House', PMB: 'Pembroke', QCO: `Queen's`, RPC: `Regent's`, SOM: 'Somerville', SAC: `Anne's`, SAY: `Antony's`, SBH: `Benet's`, SCO: `Catherine's`, SEH: `Teddy`, SHI: `Hilda's`, SHG: `Hugh's`, SJO: `John's`, SPC: `Peter's`, TRO: 'Trinity', UCO: 'Univ', WAD: 'Wadham', WOO: 'Wolfson', WRO: 'Worcester'
+        BAL: 'Balliol',BRC: 'Brasenose', CHB: 'Christ Church', COO: 'Corpus Christi', EXC: 'Exeter', GTM: 'Green Templeton', HEC: 'Hertford', JEO: 'Jesus', KEB: 'Keble', LMH: 'Lady Margaret', LIN: 'Linacre', LIC: 'Lincoln', MAG: 'Magdalen', MAN: 'Mansfield', MER: 'Merton', NEC: 'New College', ORO: 'Oriel', OSG: 'Osler House', PMB: 'Pembroke', QCO: `Queen's`, RPC: `Regent's`, SOM: 'Somerville', SAC: `Anne's`, SAY: `Antony's`, SBH: `Benet's`, SCO: `Catherine's`, SEH: `Teddy`, SHI: `Hilda's`, SHG: `Hugh's`, SJO: `John's`, SPC: `Peter's`, TRO: 'Trinity', UCO: 'Univ', WAD: 'Wadham', WOO: 'Wolfson', WRO: 'Worcester', REC: 'Reuben'
       }
       return table[club]
     },

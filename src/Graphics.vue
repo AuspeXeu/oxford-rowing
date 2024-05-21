@@ -151,6 +151,24 @@
           style="opacity:1;fill:#15468a;fill-opacity:1;stroke:none;stroke-width:1.00000644;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
           d="M 48.486837,0.94584658 A 47.500614,47.053571 0 0 0 35.986686,2.6136266 V 93.340727 a 47.500614,47.053571 0 0 0 12.500151,1.71226 47.500614,47.053571 0 0 0 12.500162,-1.66776 V 2.6581166 A 47.500614,47.053571 0 0 0 48.486837,0.94584658 Z"/>
     </g>
+    <g id="REC" transform="scale(0.5)">
+        <title>Reuben</title>
+        <path
+            transform="rotate(90)"
+            d="m 95.500004,-47.999695 a 47.5,47.5 0 0 1 -23.750001,41.1362072 47.5,47.5 0 0 1 -47.5,-1.1e-6 A 47.5,47.5 0 0 1 0.50000381,-47.999695"
+            style="opacity:1;fill:#0d0e48;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+            id="path4304-51" />
+        <path
+            transform="rotate(-90)"
+            d="m -0.49754333,47.997154 a 47.5,47.500305 0 0 1 -23.75000067,41.136472 47.5,47.500305 0 0 1 -47.500001,-2e-6 47.5,47.500305 0 0 1 -23.749998,-41.13647"
+            style="opacity:1;fill:#00992c;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+            id="path4304-51-9" />
+        <path
+            style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1.00001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+            d="m 48.004303,0.9930311 c -4.223034,0.003022 -13.889493,0.6607266 -23.530167,6.340091 l 0.02276,81.4091419 c 10.349202,5.764561 19.28236,6.340394 23.50741,6.357907 4.223034,-0.003 14.2234,-1.003332 23.444632,-6.35526 l 0.0054,-81.4820857 C 61.921281,1.6865976 52.229354,1.0105469 48.004303,0.9930311 Z"
+            id="rect4858-31"
+            inkscape:connector-curvature="0" />
+    </g>
     <g id="SAY" transform="scale(0.5)">
       <title>St Antonys</title>
       <circle

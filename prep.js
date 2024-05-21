@@ -86,6 +86,7 @@ const table = {
   SAC: {call: [`Anne's`, `St Anne's`]},
   SAY: {call: [`Antony's`, `St Antony's`]},
   SBH: {call: [`Benet's`, `St Benet's Hall`, `St Benet's`]},
+  REC: {call: ['Reuben']},
   SCO: {call: [`Catherine's`, `St Catherine's`]},
   SEH: {call: ['Teddy', 'S.E.H.', 'St Edmund Hall']},
   SHI: {call: [`Hilda's`, `St Hilda's`]},
