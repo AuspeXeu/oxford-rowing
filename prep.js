@@ -9,6 +9,7 @@ const boatsPerDiv = 12 // This is for Torpids 2023
 // These ids can be obtained from https://ourcs.co.uk/racing/entries/events/
 // Example: 'https://ourcs.co.uk/racing/entries/events/event/198/crew_lists/' -> is 198 for the year 2019
 const eightsCrews = [
+  {id: 253, year: 2024},
   {id: 241, year: 2023},
   {id: 230, year: 2022},
   {id: 198, year: 2019},
