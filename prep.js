@@ -1,7 +1,7 @@
 /*** Only the following parameters need to be adjusted each event ***/
 // This can either be 'torpids' or 'eights'
 const event = 'eights'
-const year = 2023
+const year = 2025
 const isTorpids = () => event.indexOf('torpids') > -1
 // const boatsPerDiv = isTorpids() ? 12 : 13
 const boatsPerDiv = 12 // This is for Torpids 2023
@@ -9,6 +9,7 @@ const boatsPerDiv = 12 // This is for Torpids 2023
 // These ids can be obtained from https://ourcs.co.uk/racing/entries/events/
 // Example: 'https://ourcs.co.uk/racing/entries/events/event/198/crew_lists/' -> is 198 for the year 2019
 const eightsCrews = [
+  {id: 264, year: 2025},
   {id: 253, year: 2024},
   {id: 241, year: 2023},
   {id: 230, year: 2022},
@@ -28,6 +29,8 @@ const eightsCrews = [
 ].map((data) => ({...data, event: 'eights'}))
 
 const torpidsCrews = [
+  {id: 262, year: 2025},
+  {id: 250, year: 2024},
   {id: 239, year: 2023},
   {id: 229, year: 2022},
   {id: 217, year: 2021},
