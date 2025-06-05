@@ -1,0 +1,3555 @@
+{
+  "ORO": {
+    "men": [
+      {
+        "start": 1,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 22,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 59,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 63,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 4,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 42,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 62,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 69,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "CHB": {
+    "men": [
+      {
+        "start": 2,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 28,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 67,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 1,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 34,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "KEB": {
+    "men": [
+      {
+        "start": 3,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 36,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 58,
+        "moves": [
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 8,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 52,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "WOO": {
+    "men": [
+      {
+        "start": 4,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 41,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 4,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 56,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 69,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 7,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 27,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 47,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "PMB": {
+    "men": [
+      {
+        "start": 5,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 29,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 79,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 6,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 41,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 68,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "BAL": {
+    "men": [
+      {
+        "start": 6,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 39,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 65,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 11,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 53,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SEH": {
+    "men": [
+      {
+        "start": 7,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 40,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 77,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 2,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 55,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 66,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "MAG": {
+    "men": [
+      {
+        "start": 8,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 45,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 9,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 37,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "UCO": {
+    "men": [
+      {
+        "start": 9,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 34,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 62,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 70,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 3,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 35,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "WAD": {
+    "men": [
+      {
+        "start": 10,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 43,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 5,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 43,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "LMH": {
+    "men": [
+      {
+        "start": 11,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 23,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 67,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SCO": {
+    "men": [
+      {
+        "start": 12,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 44,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 19,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "JEO": {
+    "men": [
+      {
+        "start": 13,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 48,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -3,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 10,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 51,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "NEC": {
+    "men": [
+      {
+        "start": 14,
+        "moves": [
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 35,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 57,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 72,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 85,
+        "moves": [
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 14,
+        "moves": [
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 50,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 73,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "HEC": {
+    "men": [
+      {
+        "start": 15,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 50,
+        "moves": [
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 83,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 16,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 49,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "TRO": {
+    "men": [
+      {
+        "start": 16,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 76,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 84,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 18,
+        "moves": [
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "LIC": {
+    "men": [
+      {
+        "start": 17,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 49,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 17,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 38,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "MER": {
+    "men": [
+      {
+        "start": 18,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 51,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 28,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 63,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "QCO": {
+    "men": [
+      {
+        "start": 19,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 52,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 31,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 61,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SHG": {
+    "men": [
+      {
+        "start": 20,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 64,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 74,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 32,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 48,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "EXC": {
+    "men": [
+      {
+        "start": 21,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 54,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 3,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 75,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -5,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 20,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 60,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 71,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "WRO": {
+    "men": [
+      {
+        "start": 23,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 60,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 82,
+        "moves": [
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 30,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 46,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 70,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "BRC": {
+    "men": [
+      {
+        "start": 24,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 47,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 26,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 45,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 74,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SJO": {
+    "men": [
+      {
+        "start": 25,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 78,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 13,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 44,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "MAN": {
+    "men": [
+      {
+        "start": 26,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 66,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 22,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 56,
+        "moves": [
+          {
+            "moves": -3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SPC": {
+    "men": [
+      {
+        "start": 27,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 53,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 81,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 25,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 58,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 65,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "COO": {
+    "men": [
+      {
+        "start": 30,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 29,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "LIN": {
+    "men": [
+      {
+        "start": 31,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 21,
+        "moves": [
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 39,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "GTM": {
+    "men": [
+      {
+        "start": 32,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 68,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 80,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 5,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 15,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 40,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SOM": {
+    "men": [
+      {
+        "start": 33,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 71,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 24,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 54,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SAY": {
+    "men": [
+      {
+        "start": 37,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 33,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 57,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SAC": {
+    "men": [
+      {
+        "start": 38,
+        "moves": [
+          {
+            "moves": 2,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 12,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 72,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "SHI": {
+    "men": [
+      {
+        "start": 42,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 73,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 36,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 2,
+            "status": true
+          }
+        ]
+      },
+      {
+        "start": 64,
+        "moves": [
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "RPC": {
+    "men": [
+      {
+        "start": 46,
+        "moves": [
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": []
+  },
+  "REC": {
+    "men": [
+      {
+        "start": 55,
+        "moves": [
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": [
+      {
+        "start": 59,
+        "moves": [
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 1,
+            "status": true
+          },
+          {
+            "moves": 0,
+            "status": true
+          }
+        ]
+      }
+    ]
+  },
+  "OSG": {
+    "men": [
+      {
+        "start": 61,
+        "moves": [
+          {
+            "moves": 3,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          },
+          {
+            "moves": -1,
+            "status": true
+          }
+        ]
+      }
+    ],
+    "women": []
+  }
+}
